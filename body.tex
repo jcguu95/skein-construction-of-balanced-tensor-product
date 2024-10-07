@@ -142,6 +142,57 @@ TODO
 
 \end{definition}
 
+\begin{notation} (${}^{m'}_{n'}I^{m}_{n}$)
+
+  \noindent Denote the equivalence class of the vector
+  $(\phi \otimes \pi \otimes \psi) \in V$ by
+  \[\III{m'}{n'}{m}{n}{\phi}{\psi}{c}{\pi}{c'}.\]
+  When $m' = m$ and $n' = n$, we omit the primed symbols and write
+  \[
+    \III{}{}{m}{n}{\phi}{\psi}{c}{\pi}{c'} :=
+    \III{m}{n}{m}{n}{\phi}{\psi}{c}{\pi}{c'}.
+  \]
+  When $\pi = 1_{c}$ (thus $c' = c$), we abbreviate it further to
+  \[
+    \II{m'}{n'}{m}{n}{\phi}{\psi}{c} :=
+    \III{m'}{n'}{m}{n}{\phi}{\psi}{c}{1_{c}}{c},
+  \]
+  and
+  \[
+    \II{}{}{m}{n}{\phi}{\psi}{c} :=
+    \III{m}{n}{m}{n}{\phi}{\psi}{c}{1_{c}}{c}.
+  \]
+\end{notation}
+
+\begin{remark} (Skein Nature of the Notation ${}^{m'}_{n'}I^{m}_{n}$)
+
+  \noindent Informally yet instructively, it is helpful to view
+  $\III{m'}{n'}{m}{n}{\phi}{\psi}{c}{\pi}{c'}$ as a skein flowing from the
+  right to the left, starting from $m \boxtimes n$ to $m' \boxtimes n'$,
+  passing through $\phi \boxtimes \psi$; during the process, the upper strain
+  emits a particle $c$, which transforms to via $\pi$ to $\overline{c}$, and
+  hits the lower strain.
+
+  \noindent By the given relation, the
+  transformation
+  \[
+    \pi = 1_{\overline{c}} \circ \pi = \pi \circ 1_{c}
+  \]
+  can be absorbed into each of the strain, so
+  \[
+    \III{m'}{n'}{m}{n}{\phi}{\psi}{c}{\pi}{c'} =
+    \III{m'}{n'}{m}{n}{\phi}{{}_{\pi}\psi}{c}{1_{c}}{c} =
+    \III{m'}{n'}{m}{n}{\phi_{\pi}}{\psi}{c'}{1_{c'}}{c'}.
+  \]
+  Hence under the defined composition rule (see the equation for
+  $\phi'' \otimes \pi'' \otimes \psi''$ above), we have
+  \[
+    \III{m''}{n''}{m'}{n'}{\phi'}{\psi'}{c'}{\pi'}{\overline{c}'} \circ
+    \III{m'}{n'}{m}{n}{\phi}{\psi}{c}{\pi}{\overline{c}} =
+    \III{m''}{n''}{m}{n}{\phi''}{\psi'}{c' \otimes c}{\pi''}{\overline{c}' \otimes \overline{c}}.
+  \]
+\end{remark}
+
 \noindent TODO: Provide a basis for the hom spaces in case of semisimple,
 finite, $\otimes$-strict.
 
@@ -152,5 +203,4 @@ finite, $\otimes$-strict.
   \[
     sk(M,C,N) := Kar(p.sk(M,C,N)).
   \]
-
 \end{definition}
