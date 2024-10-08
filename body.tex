@@ -314,17 +314,69 @@ $\II{mc}{1}{m}{c}{n}{u}{c^{\star}}$ and $\II{m}{c}{mc}{1}{1}{1}{c}$, where $n$ d
 \end{proof}
 
 \begin{lemma}\label{lemma/construction-of-theta} (Construction of $\Theta$)
+
+  \noindent Given the assumptions in the main theorem (\ref{theorem/main-theorem}), there exists a linear functor
+  \[
+    Theta: Fun(sk(M,C,N), L) \to Fun^{C-bal}(M \times N, L).
+  \]
 \end{lemma}
 
 \begin{proof}
-  .
+  \noindent (Object) Let $G$ be an object of the domain. Define $\Theta(G)$ to
+  be $F := G \circ \boxtimes_{C} \in Fun(M \times N, L)$. We shall provide the
+  balanced structure $\alpha$ for $F$, so that $(F, \alpha)$ is $C$-balanced.
+  We need to provide the data
+  \[
+    \alpha_{m,c,n}: F(m \lhd c, n) = G(\II{}{}{mc}{n}{1}{1}{1}) \xrightarrow{\sim} G(\II{}{}{m}{cn}{1}{1}{1}) = F(m, c \rhd n),
+  \]
+  which is clearly satisfied by $G(\II{m}{cn}{mc}{n}{1}{1}{c}).$ So defined $\alpha$ is clearly natural.
+
+  \noindent (Morphism) Let $G \xrightarrow{\eta} G'$ be a morphism in
+  $Fun(sk(M,C,N), L)$. Its image under $\Theta$ is simply the horizontal
+  composition $\eta \star (1_{\boxtimes_{C}})$. The remaining commutativity to
+  be checked (cf p11 of Jin's note 20240906-110000) is a direct consequence of
+  $\eta$'s naturality.
 \end{proof}
 
-\begin{lemma}\label{lemma/theta-is-faithful} ($\Theta$ is faithful)
+\begin{lemma}\label{lemma/theta-is-faithful} ($\Theta$ is faithful) The linear
+  functor $\Theta$ (\ref{lemma/construction-of-theta}) is faithful.
 \end{lemma}
 
+\begin{proof}
+  (We use the same notation found in this section.) This amounts to showing
+  that the following map is an injective linear map:
+  \[
+    (G \xrightarrow{\eta} G') \mapsto (F \xrightarrow{\Theta(\eta) = \eta \star (1_{\boxtimes_{C}})} F').
+  \]
+  It is clearly linear. For injectivity, we notice that whenever we have
+  linear functors
+  \[
+    X \xrightarrow{f} Y,\quad Y \xrightarrow{g, g'} Z,
+  \]
+  and a linear natural transformation $\eta: g \to g'$, then the map $(\eta \mapsto \eta \star 1_{f})$ is injective is equivalent to
+  \[
+    (\forall x \in Obj(X), \eta_{f(x)} = 0) \Rightarrow (\forall y \in Obj(Y), \eta_{y} = 0).
+  \]
+  This holds if $f$ is surjective on objects. However, in our case
+  $f = \boxtimes_{C}$ is not as strong. Fortunately, clearly it also holds if
+  $f$ is almost-surjective, in the sense that each $y \in Obj(Y)$ has an
+  $x \in Obj(X)$ such that $y$ is a subobject of $f(X)$. Indeed,
+  \[
+    1_{g(y)} = g(1_{y}) = g(\pi_{y} \circ \iota_{y}),
+  \]
+  so
+  \[
+    (g(y) \xrightarrow{\eta_{y}} g'(y)) = \eta_{y} \circ 1_{g(y)} = \eta_{y} \circ g(\pi \circ \iota) = g(\pi) \circ \eta_{f(x)} \circ g(\iota) = g(\pi) \circ 0 \circ g(\iota) = 0.
+  \]
+  This applies to our case by putting $f = \boxtimes_{C}$ and $g = G$, because
+  each object $\II{}{}{m}{n}{\phi}{\psi}{c}$ is clearly a subobject of
+  $\boxtimes_{C}(m,n) = \II{}{}{m}{n}{1}{1}{1}$. Therefore, $\Theta$ is faithful.
+\end{proof}
+
 \begin{lemma}\label{lemma/theta-is-full} ($\Theta$ is full)
+  The linear functor $\Theta$ (\ref{lemma/construction-of-theta}) is full.
 \end{lemma}
 
 \begin{lemma}\label{lemma/theta-is-essentially-surjective} ($\Theta$ is essentially surjective)
+  The linear functor $\Theta$ (\ref{lemma/construction-of-theta}) is essentially surjective.
 \end{lemma}
