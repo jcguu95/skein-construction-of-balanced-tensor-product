@@ -310,20 +310,37 @@ on possible strategies for relaxation.
   with the obvious composition rule.
 \end{definition}
 
-\begin{definition} (Skein Category)
+\begin{definition}\label{definition/skein-category} (Skein Category)
 
-  \noindent Let $C$ be a tensor category, and $M_{C}, _{C}N$ be module categories.
-  Define the skein category $sk(M,C,N)$ to the Karoubi completion of its pre-skein category
+  \noindent Let $C$ be a tensor category. Let $M_{C}$ and $_{C}N$ be module
+  categories. Define the skein category $sk(M,C,N)$ to the Karoubi completion
+  of its pre-skein category
   \[
     sk(M,C,N) := Kar(p.sk(M,C,N)).
   \]
   \noindent Thus, a typical object of the skein category $sk(M,C,N)$ is an
   idempotent skein $\II{m}{n}{m}{n}{\phi}{\psi}{c}$.
+
+  More generally, for any $n \in \mathbb{N}$, let
+  $C_{0}, C_{1}, \ldots, C_{n}$ be finite, semisimple, pivotal tensor
+  categories. Let
+  ${}_{C_{0}}M^{1}_{C_{1}}, \, {}_{C_{1}}M^{2}_{C_{2}}, \ldots, {}_{C_{n-1}}M^{n}_{C_{n}}, \, $
+  be finite, semisimple bimodule categories. One can in a similar way define the $C_{0}-C_{n}$ bimodule category
+  \[
+    sk(M^{1}, C_{1}, M^{2}, C_{2}, M^{3}, \ldots, C_{n-1}, M^{n}).
+  \]
+  \noindent Let $F^{i}: M^{i} \to M'^{i}$ be a $C_{i-1}-C_{i}$ bimodule category functor. Then it naturally induces a linear functor
+  \[
+    F^{i}:
+    sk(M^{1}, C_{1}, M^{2}, C_{2}, M^{3}, \ldots M^{i} \ldots, C_{n-1}, M^{n})
+    \to
+    sk(M^{1}, C_{1}, M^{2}, C_{2}, M^{3}, \ldots M'^{i} \ldots, C_{n-1}, M^{n}).
+  \]
 \end{definition}
 
-\noindent The skein category $sk(M,C,N)$ is our model for $M \boxtimes_{C} N$;
-we will prove this later. A necessary ingredient is the canonical map
-$\boxtimes_{C}$ given in the defining universal property.
+\noindent The skein category $sk(M,C,N)$ is equivalent to $M \boxtimes_{C} N$ (proven
+in \ref{lemma/main-lemma}, \ref{theorem/main-theorem}). A necessary ingredient
+is the canonical map $\boxtimes_{C}$ given in the defining universal property.
 
 \begin{definition}\label{definition/canonical-map} (Canonical Map $\boxtimes_{C}$)
   \noindent Let $C$ be a tensor category, and $M_{C}, _{C}N$ be module categories. Define the functor
@@ -700,14 +717,30 @@ To prove that $\Theta$ is essentially surjective, we need the following lemma.
     \boxtimes_{C_{n-1}}
     M^{n})_{C_{n}}.
   \]
+  \noindent (3) Moreover, in addition to the previous part, if
+  $F^{i}: M^{i} \to M'^{i}$ is a $C_{i-1}-C_{i}$ bimodule category functor,
+  then the naturally induced linear functor (cf.
+  \ref{definition/skein-category})
+  \[
+    F^{i}:
+    sk(M^{1}, C_{1}, M^{2}, C_{2}, M^{3}, \ldots M^{i} \ldots, C_{n-1}, M^{n})
+    \to
+    sk(M^{1}, C_{1}, M^{2}, C_{2}, M^{3}, \ldots M'^{i} \ldots, C_{n-1}, M^{n}),
+  \]
+  corresponds to the functor
+  \[
+    F^{i}:
+    M^{1} \boxtimes_{C_{1}} M^{2} \boxtimes_{C_{2}} M^{3} \boxtimes_{C_{3}} \ldots M^{i} \ldots \boxtimes_{C_{n-1}} M^{n}
+    \to
+    M^{1} \boxtimes_{C_{1}} M^{2} \boxtimes_{C_{2}} M^{3} \boxtimes_{C_{3}} \ldots M'^{i} \ldots \boxtimes_{C_{n-1}} M^{n}.
+  \]
+  under the equivalence.
 \end{theorem}
 
 \begin{proof}
   The first part is proved by restricting the proof of lemma \ref{lemma/main-lemma} to $C-E$ bimodule maps.
-  The second part follows directly from induction and the first part.
+  The second part follows directly from induction and the first part. The third part is obvious.
 \end{proof}
-
-% TODO Add a theorem about effects of induced functors.
 
 \section{Prospects and Discussions}
 
