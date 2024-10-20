@@ -1,22 +1,5 @@
-% TODO: regularize all references.
-
-% TODO: Explain that we can get to $_{C}M_{D}N_{E}$ easily from our
-% construction for $M_{C}N$. Actually, make this the main theorem (for even
-% more M, N..), and demote the current main theorem down to a proposition.
-
-% TODO Add a corollary to Z(C) \simeq CC, and cite Schweigert and Kirillov's
-% papers.
-
-% TODO Prospects-
-%
-% 1: Add a'' `to appear` paper for our work on TV and Lurie's 3-functor.
-%
-% 2: TQFT with defects (and in the introduction), the work of Catherin?
-%
-% 3: Computation model for \boxtimes_C. Mention the recent work of meataxe. Application to VOA. (also mention this in the introduction.)
-
-% % TODO Discussion
-% Why need pivotality (dunno how to compose different exchangers.) Can we remove pivotality? Why need semisimplicity (& basis theorem)?
+% TODO: regularize all references. TODO Add a'' `to appear` paper for our work
+% on TV and Lurie's 3-functor.
 
 \section{Introduction}
 
@@ -29,17 +12,20 @@ Deligne tensor product for two linear categories.
 
 The Deligne tensor product is later generalized by the balanced tensor product
 (TODO: reference): given a tensor category $C$ and module categories
-$M_{C} \,,\, {}_{C}N$, the balanced tensor product $M \boxtimes_{C} N$ is a
-linear category that best approximates the Deligne tensor product in the
-context of $C$-module categories. In the theory of topological phase, this
-construction corresponds to fusing two domains (labeled by $M$ and $N$) over
-the domain wall (labeled by $C$) (TODO: ref Kong). In the theory ($3$D, fully
-extended) topological quantum field theory, this provides the natural
-composition for the $1$-morphisms in a usual target $3$-category $TC$ (TODO:
-ref). In the theory of vertex operator algebra (VOA), this construction help
-study them by relating various VOAs, and constructing new VOAs. As a very
-special case, the Drinfeld center $Z(C)$ for $C$ can be constructed as
-$C \boxtimes_{C \boxtimes C^{op}} C$.
+$M_{C} \,,\, {}_{C}N$, the balanced tensor product $M \boxtimes_{C} N$ is a linear
+category that best approximates the Deligne tensor product in the context of
+$C$-module categories. In the theory of topological phase, this construction
+corresponds to fusing two domains (labeled by $M$ and $N$) over the domain
+wall (labeled by $C$) (TODO: ref Kong). In the theory ($3$D, fully extended)
+topological quantum field theory, this provides the natural composition for
+the $1$-morphisms in a usual target $3$-category $TC$ (TODO: ref). In the
+theory of vertex operator algebra (VOA), this construction help study them by
+relating various VOAs, and constructing new VOAs. As a special case, the
+Drinfeld center $Z(C)$ for $C$ can be constructed as $C \boxtimes_{C \boxtimes C^{op}} C$ (cf.
+corollary TODO) (TODO: ref Kirillov, Schweigert.). Given the work
+(https://arxiv.org/abs/2406.13438), it is also interesting to explore the
+computational aspect of balanced tensor product, now enabled thanks to the
+current work.
 
 As in the context of classical algebra, such tensor product is first defined
 via a universal property. What makes the situation slightly different is that
@@ -55,12 +41,17 @@ However, these models hinder (right word?) the
 (2) it makes it difficult to see the relation between the fully extended $3$D
 topological field theories (targeting $TC$) to the Turaev-Viro state sum.
 
-This note provides a skein-theoretic model for $M \boxtimes_{C} N$, resolving
-these drawbacks. In the following work, the authors will use this result to
-show a well- and long- expected relation between the Turaev-Viro state sum and
-the fully extended $3$D TFT targeting $TC$. We expect the same method will
-also work for revealing the relation between their analogues in $4$D, i.e. the
-Crane-Yetter state sum model.
+This note provides a skein-theoretic model for $M \boxtimes_{C} N$, resolving these
+drawbacks. In the following work, the authors will use this result to show a
+well- and long- expected relation between the Turaev-Viro state sum and the
+fully extended $3$D TFT targeting $TC$. We expect the same method will also
+work for revealing the relation between their analogues in $4$D, i.e. the
+Crane-Yetter state sum model, and its generalization to using Fusion
+2-categories (TODO: https://arxiv.org/abs/1812.11933 Reutter and Douglas.).
+Such a proof implies the conjecture (given therein) that, despite the strength
+and generality of the construction, it is nevertheless an extended topological
+field theory, and therefore cannot detect exotic structures (TODO: Reutter
+2022). Also, this work can serve as the basis for implementing state sum model with defect (cf https://arxiv.org/abs/2205.06874) as a 3-functor.
 
 \subsection*{A note to experts}\label{subsection/a-note-to-experts}
 
@@ -76,6 +67,11 @@ $m' \boxtimes n'$, exchanging an extra ``particle'' during the process (the vert
 stroke in ``$I$''). With this notation, we conveniently have
 ${}^{m''}_{n''}I^{m'}_{n'} \circ {}^{m'}_{n'}I^{m}_{n} = {}^{m''}_{n''}I^{m}_{n}$.
 See more details in remark \ref{remark/skein-nature-of-the-notation-I}.
+
+This work assumes all of the best conditions: finiteness, semisimplicity,
+pivotality. It is possible and useful to relax some of them. But for
+simplicity, we postpone it to future work. See section (TODO) for a discussion
+on possible strategies for relaxation.
 
 \section{Balanced Tensor Product}\label{section/balanced-tensor-product}
 
@@ -646,18 +642,18 @@ To prove that $\Theta$ is essentially surjective, we need the following lemma.
   $ker(a \circ b) \supseteq ker(b)$.
 \end{proof}
 
-\begin{theorem} (Main Theorem: Skein Construction of Balanced Tensor Product) \label{theorem/main-theorem}
+\begin{lemma} (Main Lemma: Skein Construction of Balanced Tensor Product) \label{lemma/main-lemma}
 
   \noindent Let $C$ be a finite, semisimple, pivotal tensor category. Let
   $M_{C}, \, {}_{C}N$ be finite, semisimple $C$-module categories. Then the
   canonical map (\ref{definition/canonical-map}) $\boxtimes_{C}$:
   $M \times N \to sk(M,C,N)$ satisfies the universal property in the
   definition of $M \boxtimes_{C} N$. In particular, we have an equivalence of
-  category
+  categories
   \[
     sk(M,C,N) \simeq M \boxtimes_{C} N.
   \]
-\end{theorem}
+\end{lemma}
 
 \begin{proof}
   % TODO FIXME Need to show that this universal property is satisfied in the'' `universe` of abelian linear category.
@@ -671,3 +667,48 @@ To prove that $\Theta$ is essentially surjective, we need the following lemma.
   (\ref{lemma/theta-is-full}), and is essentially surjective in
   (\ref{lemma/theta-is-essentially-surjective}).
 \end{proof}
+
+
+\begin{theorem} (Main Theorem: Skein Construction of Balanced Tensor Product) \label{theorem/main-theorem}
+
+  \noindent (1) Let $C, D, E$ be finite, semisimple, pivotal tensor
+  categories. Let ${}_{C}M_{D}, \, {}_{D}N_{E}$ be finite, semisimple bimodule
+  categories. Then the canonical map (\ref{definition/canonical-map})
+  $\boxtimes_{D}$: $M \times N \to sk(M,D,N)$ satisfies the universal property
+  in the definition of ${}_{C}M_{D} \boxtimes_{D} {}_{D}N_{E}$. In particular,
+  we have an equivalence of $C-E$ bimodule categories.
+  \[
+    {}_{C}sk(M,D,N)_{E} \simeq {}_{C}M_{D} \boxtimes_{D} {}_{D}N_{E}.
+  \]
+
+  \noindent (2) More generally, for any $n \in \mathbb{N}$, let
+  $C_{0}, C_{1}, \ldots, C_{n}$ be finite, semisimple, pivotal tensor categories. Let
+  ${}_{C_{0}}M^{1}_{C_{1}}, \, {}_{C_{1}}M^{2}_{C_{2}}, \ldots,
+  {}_{C_{n-1}}M^{n}_{C_{n}}, \,
+  $ be finite, semisimple bimodule categories.
+  Then we
+  have an equivalence of $C_{0}-C_{n}$ bimodule categories.
+  \[
+    {}_{C_{0}}sk(M^{1},C_{1},M^{2},C_{2}, \ldots, C_{n-1}, M^{n})_{C_{n}}
+    \simeq
+    {}_{C_{0}}(M^{1}
+    \boxtimes_{C_{1}}
+    M^{2}
+    \boxtimes_{C_{2}}
+    M^{3}
+    \ldots
+    \boxtimes_{C_{n-1}}
+    M^{n})_{C_{n}}.
+  \]
+\end{theorem}
+
+\begin{proof}
+  The first part is proved by restricting the proof of lemma \ref{lemma/main-lemma} to $C-E$ bimodule maps.
+  The second part follows directly from induction and the first part.
+\end{proof}
+
+% TODO Add a theorem about effects of induced functors.
+
+\section{Prospects and Discussions}
+
+TODO. Relaxing conditions: pivotality, finiteness, semisimplicity.
