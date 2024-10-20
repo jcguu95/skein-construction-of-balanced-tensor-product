@@ -133,7 +133,7 @@ on possible strategies for relaxation.
   and whose morphisms are $D$-balanced natural transformations.
 \end{definition}
 
-% TODO FIXME: In this definition, I need M, N are semisimple already. But add
+% TODO: In this definition, I need M, N are semisimple already. But add
 % a later remark saying that this can be circumvented.
 \begin{definition} (Balanced Tensor Product)
 
@@ -203,12 +203,11 @@ on possible strategies for relaxation.
   \[
     (\overline{c}' \otimes \overline{c}) \lhd n \xrightarrow[\sim]{\alpha} \overline{c}' \lhd (\overline{c} \lhd n) \xrightarrow{1_{\overline{c}'} \lhd \psi} \overline{c}' \lhd n' \xrightarrow{\psi'} n''.
   \]
-  % TODO Check that composition descends well to quotients.
+  (TODO: Check that composition descends well to quotients.)
 
 \end{definition}
 
-% TODO At least add a picture. It will make the whole paper much easier to
-% read.
+(TODO: At least add a picture. It will make the whole paper much easier to understand.)
 \begin{notation} (${}^{m'}_{n'}I^{m}_{n}$)
 
   \noindent Denote the equivalence class of the vector
@@ -319,7 +318,7 @@ on possible strategies for relaxation.
     sk(M,C,N) := Kar(p.sk(M,C,N)).
   \]
   \noindent Thus, a typical object of the skein category $sk(M,C,N)$ is an
-  idempotent skein $\II{m}{n}{m}{n}{\phi}{\psi}{c}$.
+  idempotent skein $\II{m}{n}{m}{n}{\phi}{\psi}{c}$. The skein category is obviously a linear category.
 
   More generally, for any $n \in \mathbb{N}$, let
   $C_{0}, C_{1}, \ldots, C_{n}$ be finite, semisimple, pivotal tensor
@@ -369,7 +368,9 @@ object is isomorphic to $\II{}{}{m \lhd c}{1}{\mu_{\phi, \psi}}{1}{1}$, where
   \mu_{\phi,\psi} := m \lhd c \xrightarrow{\phi \lhd c} (m \lhd \overline{c}) \lhd c \xrightarrow[\sim]{\alpha} \xrightarrow{m \lhd \psi} m \lhd c.
 \]
 Indeed, the isomorphism is provided by the following two morphisms
-$\II{mc}{1}{m}{c}{n}{u}{c^{\star}}$ and $\II{m}{c}{mc}{1}{1}{1}{c}$, where $n$ denotes the counit and $u$ denotes the unit for $c$. %TODO Check carefully and provide full proof here (may want to comment out).
+$\II{mc}{1}{m}{c}{n}{u}{c^{\star}}$ and $\II{m}{c}{mc}{1}{1}{1}{c}$, where $n$
+denotes the counit and $u$ denotes the unit for $c$. (TODO: Check carefully
+and provide full proof (but comment the proof out later)).
 
 \noindent We prove another lemma that will be useful later.
 
@@ -393,7 +394,7 @@ We prove our main theorem (\ref{theorem/main-theorem}) in this section, justifyi
 
   \noindent Given the assumptions in the main theorem (\ref{theorem/main-theorem}), there exists a linear functor
   \[
-    Theta: Fun(sk(M,C,N), L) \to Fun^{C-bal}(M \times N, L).
+    \Theta: Fun(sk(M,C,N), L) \to Fun^{C-bal}(M \times N, L).
   \]
   We construct explicitly $\Theta$ in the proof.
 \end{lemma}
@@ -485,8 +486,7 @@ We prove our main theorem (\ref{theorem/main-theorem}) in this section, justifyi
 lemma.
 
 \begin{lemma} (Images of skeins) \label{lemma/image-of-skein}
-
-  % TODO: Discussion: Can we relax conditions? We need to use basis theorem,
+  % TODO: Discussion: Can we relax conditions? We need to use the basis theorem,
   % so it seems that we must require semisimplicity here.
   \noindent
   Let $C$ be a finite, semisimple, pivotal tensor category, $L$ a linear
@@ -519,7 +519,7 @@ lemma.
 
 \begin{proof}
   To prove the first statement, use semisimplicity and the basis theorem
-  (\ref{proposition/basis-theorem}). %TODO Provide a detailed explanation.
+  (\ref{proposition/basis-theorem}). (TODO: Provide a detailed explanation.)
   To prove the second statement, note that the left-hand-side is
   $\tilde{F}(\II{m''}{n'}{m}{n}{\overline{\phi} \otimes \phi}{\overline{\psi} \otimes \psi}{\overline{c} \otimes c}),$ which is
   \begin{multline*}
@@ -678,7 +678,6 @@ lemma.
 \end{lemma}
 
 \begin{proof}
-  % TODO FIXME Need to show that this universal property is satisfied in the'' `universe` of abelian linear category.
   Let $L$ be a linear category. We only need to show that $\boxtimes_{C}$
   induces an equivalence of categories
   \[
@@ -745,6 +744,22 @@ lemma.
 \begin{proof}
   The first part is proved by restricting the proof of lemma \ref{lemma/main-lemma} to $C-E$ bimodule maps.
   The second part follows directly from induction and the first part. The third part is obvious.
+\end{proof}
+
+\begin{corollary}\label{corollary/skein-category-is-abelian}
+  For any $n \in \mathbb{N}$, let $C_{0}, C_{1}, \ldots, C_{n}$ be finite,
+  semisimple, pivotal tensor categories. Let
+  ${}_{C_{0}}M^{1}_{C_{1}}, \, {}_{C_{1}}M^{2}_{C_{2}}, \ldots, {}_{C_{n-1}}M^{n}_{C_{n}}, \, $
+  be finite, semisimple bimodule categories. Then the skein category
+  \[
+    sk(M^{1}, C_{1}, M^{2}, C_{2}, M^{3}, \ldots M^{i} \ldots, C_{n-1}, M^{n})
+  \]
+  is an abelian category.
+\end{corollary}
+\begin{proof}
+  The proof for the case $n=2$ follows from the fact that
+  $M^{1} \boxtimes_{C_{1}} M^{2} \simeq Z_{C_{1}}(M^{1} \boxtimes M^{2})$ (cf
+  TODOrefKirillov). The rest follows from induction.
 \end{proof}
 
 \section{Prospects and Discussions}
