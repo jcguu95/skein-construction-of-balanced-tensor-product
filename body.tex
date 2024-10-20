@@ -11,28 +11,28 @@ known construction that categorifies the tensor product of two algebras is the
 Deligne tensor product for two linear categories.
 
 The Deligne tensor product is later generalized by the balanced tensor product
-(TODO: reference): given a tensor category $C$ and module categories
+[TODO: reference]: given a tensor category $C$ and module categories
 $M_{C} \,,\, {}_{C}N$, the balanced tensor product $M \boxtimes_{C} N$ is a linear
 category that best approximates the Deligne tensor product in the context of
 $C$-module categories. In the theory of topological phase, this construction
 corresponds to fusing two domains (labeled by $M$ and $N$) over the domain
-wall (labeled by $C$) (TODO: ref Kong). In the theory ($3$D, fully extended)
+wall (labeled by $C$) [TODO: ref Kong]. In the theory ($3$D, fully extended)
 topological quantum field theory, this provides the natural composition for
-the $1$-morphisms in a usual target $3$-category $TC$ (TODO: ref). In the
+the $1$-morphisms in a usual target $3$-category $TC$ [TODO: ref]. In the
 theory of vertex operator algebra (VOA), this construction help study them by
 relating various VOAs, and constructing new VOAs. As a special case, the
 Drinfeld center $Z(C)$ for $C$ can be constructed as $C \boxtimes_{C \boxtimes C^{op}} C$ (cf.
-corollary TODO) (TODO: ref Kirillov, Schweigert.). Given the work
-(https://arxiv.org/abs/2406.13438), it is also interesting to explore the
-computational aspect of balanced tensor product, now enabled thanks to the
-current work.
+corollary [TODO]) [TODO: ref Kirillov, Schweigert]. Given the work
+[https://arxiv.org/abs/2406.13438 TODO: fix reference], it is also interesting
+to explore the computational aspect of balanced tensor product, now enabled
+thanks to the current work.
 
 As in the context of classical algebra, such tensor product is first defined
 via a universal property. What makes the situation slightly different is that
 in the classical theory, a construction for the tensor product is quite
 straightforward. In our context, there were known a few constructions too: for
 example (1) category of bimodules (ref: Douglas2014), (2) center construction
-(Etingof2010, KirillovTham2020, H's master).
+[TODO Etingof2010, KirillovTham2020, H's master].
 
 However, these models hinder (right word?) the
 ``topological/skein-theoretical'' nature of tensor categories. This has two drawbacks: (1) the computation about the balanced tensor products becomes more difficult once there are multiple domains to be fused, e.g.
@@ -47,11 +47,13 @@ well- and long- expected relation between the Turaev-Viro state sum and the
 fully extended $3$D TFT targeting $TC$. We expect the same method will also
 work for revealing the relation between their analogues in $4$D, i.e. the
 Crane-Yetter state sum model, and its generalization to using Fusion
-2-categories (TODO: https://arxiv.org/abs/1812.11933 Reutter and Douglas.).
+2-categories [TODO: https://arxiv.org/abs/1812.11933 Reutter and Douglas].
 Such a proof implies the conjecture (given therein) that, despite the strength
 and generality of the construction, it is nevertheless an extended topological
-field theory, and therefore cannot detect exotic structures (TODO: Reutter
-2022). Also, this work can serve as the basis for implementing state sum model with defect (cf https://arxiv.org/abs/2205.06874) as a 3-functor.
+field theory, and therefore cannot detect exotic structures [TODO: Reutter
+2022]. Also, this work can serve as the basis for implementing state sum model
+with defect (cf https://arxiv.org/abs/2205.06874 [TODO: fix reference]) as a
+3-functor.
 
 \subsection*{A note to experts}\label{subsection/a-note-to-experts}
 
@@ -70,7 +72,7 @@ See more details in remark \ref{remark/skein-nature-of-the-notation-I}.
 
 This work assumes all of the best conditions: finiteness, semisimplicity,
 pivotality. It is possible and useful to relax some of them. But for
-simplicity, we postpone it to future work. See section (TODO) for a discussion
+simplicity, we postpone it to future work. See section [TODO] for a discussion
 on possible strategies for relaxation.
 
 \section{Balanced Tensor Product}\label{section/balanced-tensor-product}
@@ -97,7 +99,7 @@ on possible strategies for relaxation.
 
 \begin{remark}
   The triangle and pentagonal identities for $D$ is automatically satisfied
-  (see Jin's note 20240906-110000 p.2).
+  [TODO: see Jin's note 20240906-110000 p.2].
 \end{remark}
 
 \begin{definition} (Balanced Natural Transformation)
@@ -158,12 +160,12 @@ on possible strategies for relaxation.
 \end{definition}
 
 \begin{remark}
-  This definition is a straight generatlization from axXiv:1406.4204. We want
+  This definition is a straight generatlization from axXiv:1406.4204 ([TODO: fix reference]). We want
   to understand $_{C}M \boxtimes_{D} N_{E}$ in terms of skein category. Note
   that that paper implements it using category of modules, while
   KirillovTham2020 and Hoek's master's thesis (and another paper by Etingof et
-  al around 2010) implements it as a center (for the finite + ss case).
-  1202.0061 implements it as $Fun_{D,re}(M^{op},N)$ for finite case.
+  al around 2010) ([TODO Fix reference]) implements it as a center (for the finite + ss case).
+  1202.0061 ([TODO: Fix reference]) implements it as $Fun_{D,re}(M^{op},N)$ for finite case.
   Eventually it's ideal for us to connect our construction back to these
   cases.
 \end{remark}
@@ -172,15 +174,16 @@ on possible strategies for relaxation.
 
 \begin{definition} (Pre-Skein Category)
 
-  \noindent Let $C$ be a tensor category, and $M_{C}, _{C}N$ be module
-  categories. Define the pre-skein category $p.sk(M,C,N)$ to be the category
-  $P$ with $Obj(P) = Obj(M \boxtimes N)$, and the morphism spaces
-  $Mor_{P}((m \boxtimes n), (m' \boxtimes n'))$ are defined to be $V / \sim$,
-  where
+  \noindent Let $C$ be a finite, semisimple, pivotal tensor category. Let
+  $M_{C}$ and $ _{C}N$ be finite and semisimple module categories. Define the
+  pre-skein category $p.sk(M,C,N)$ to be the category $P$ with
+  $Obj(P) = Obj(M \boxtimes N)$, and the morphism spaces $Mor_{P}((m \boxtimes n), (m' \boxtimes n'))$
+  \footnote{The morphism spaces between general objects are defined naturally
+    with direct sum.} are defined to be the vector space $(V \,/ \sim)$, where
   \[
     V := \oplus_{c,\overline{c} \in Obj(C)} Hom_{M}(m, m' \rhd c) \otimes Hom_{C}(c,\overline{c}) \otimes Hom_{N} (\overline{c} \lhd n, n'),
   \]
-  and $\sim$ are generated by the following types of relations
+  and the relations $\sim$ are generated by the following types of relations
   \begin{align}
     \phi \otimes (\pi' \circ \pi) \otimes \psi - (\phi_{\pi} \otimes \pi \otimes \psi)\\
     \phi \otimes (\pi' \circ \pi) \otimes \psi - (\phi \otimes \pi' \otimes _{\pi'}\psi).
@@ -203,11 +206,12 @@ on possible strategies for relaxation.
   \[
     (\overline{c}' \otimes \overline{c}) \lhd n \xrightarrow[\sim]{\alpha} \overline{c}' \lhd (\overline{c} \lhd n) \xrightarrow{1_{\overline{c}'} \lhd \psi} \overline{c}' \lhd n' \xrightarrow{\psi'} n''.
   \]
-  (TODO: Check that composition descends well to quotients.)
+
+  \noindent [TODO: Check that composition descends well to quotients.]
 
 \end{definition}
 
-(TODO: At least add a picture. It will make the whole paper much easier to understand.)
+\noindent [TODO: At least add a picture. It will make the whole paper much easier to understand.]
 \begin{notation} (${}^{m'}_{n'}I^{m}_{n}$)
 
   \noindent Denote the equivalence class of the vector
@@ -248,8 +252,7 @@ on possible strategies for relaxation.
 
 \begin{remark}\label{remark/hom-space-reduction} (Hom Space Reduction)
 
-  \noindent By the given relation, the
-  transformation
+  \noindent By the relations in the definition, the transformation
   \[
     \pi = 1_{\overline{c}} \circ \pi = \pi \circ 1_{c}
   \]
@@ -278,8 +281,7 @@ on possible strategies for relaxation.
   \[
     Hom_{M}(m, m' \rhd x) \otimes Hom_{C}(x, x) \otimes Hom_{N} (x \lhd n, n').
   \]
-  It is instructive to regard the result as the ``inner product'' of $\phi$
-  and $\psi$.
+  It is helpful to regard the result as the ``inner product'' of $\phi$ and $\psi$.
 \end{remark}
 
 \begin{proposition} (Basis Theorem) \label{proposition/basis-theorem}
@@ -342,6 +344,7 @@ in \ref{lemma/main-lemma}, \ref{theorem/main-theorem}). A necessary ingredient
 is the canonical map $\boxtimes_{C}$ given in the defining universal property.
 
 \begin{definition}\label{definition/canonical-map} (Canonical Map $\boxtimes_{C}$)
+
   \noindent Let $C$ be a tensor category, and $M_{C}, _{C}N$ be module categories. Define the functor
   \[
     M \times N \xrightarrow{\boxtimes_{C}} sk(M,C,N)
@@ -353,7 +356,9 @@ is the canonical map $\boxtimes_{C}$ given in the defining universal property.
   to the morphism $\II{m'}{n'}{m}{n}{\phi}{\psi}{1_{1}}$.
 \end{definition}
 
-% add a picture for this proof, especially the part that uses the (co)unit maps.
+\noindent [TODO: add a picture for the following sketced proof, especially the
+part that uses the (co)unit maps.]
+
 \noindent To quickly convince the reader that the skein category $sk(M,C,N)$
 is indeed $M \boxtimes_{C} N$; we consider $N$ to be the trivial left
 $C$-module category $_{C}C$, and argue that
@@ -369,9 +374,10 @@ object is isomorphic to $\II{}{}{m \lhd c}{1}{\mu_{\phi, \psi}}{1}{1}$, where
 \]
 Indeed, the isomorphism is provided by the following two morphisms
 $\II{mc}{1}{m}{c}{n}{u}{c^{\star}}$ and $\II{m}{c}{mc}{1}{1}{1}{c}$, where $n$
-denotes the counit and $u$ denotes the unit for $c$. (TODO: Check carefully
-and provide full proof (but comment the proof out later)).
+denotes the counit and $u$ denotes the unit for $c$. [TODO: Check carefully
+and provide full proof (but comment the proof out later)].
 
+\hfill\break
 \noindent We prove another lemma that will be useful later.
 
 \begin{lemma}\label{lemma/I-provides-subobject}
@@ -388,16 +394,20 @@ and provide full proof (but comment the proof out later)).
 
 \section{Proof of Equivalence}\label{section/proof-of-equivalence}
 
-We prove our main theorem (\ref{theorem/main-theorem}) in this section, justifying that the skein construction $sk(M,C,N)$ is isomorphic to $M \boxtimes_{C} N$.
+We prove our main theorem (\ref{theorem/main-theorem}) in this section, justifying that the skein
+construction $sk(M,C,N)$ is isomorphic to $M \boxtimes_{C} N$, and the obvious
+generalization to the case of more bimodule categories.
 
 \begin{lemma}\label{lemma/construction-of-theta} (Construction of $\Theta$)
 
-  \noindent Given the assumptions in the main theorem (\ref{theorem/main-theorem}), there exists a linear functor
+  \noindent Given the assumptions in the main lemma (\ref{lemma/main-lemma}),
+  there exists a linear functor
   \[
     \Theta: Fun(sk(M,C,N), L) \to Fun^{C-bal}(M \times N, L).
   \]
-  We construct explicitly $\Theta$ in the proof.
 \end{lemma}
+
+\noindent We construct $\Theta$ explicitly in the proof.
 
 \begin{proof}
   \noindent (Object) Let $G$ be an object of the domain. Define $\Theta(G)$ to
@@ -411,8 +421,8 @@ We prove our main theorem (\ref{theorem/main-theorem}) in this section, justifyi
 
   \noindent (Morphism) Let $G \xrightarrow{\eta} G'$ be a morphism in
   $Fun(sk(M,C,N), L)$. Its image under $\Theta$ is simply the horizontal
-  composition $\eta \star (1_{\boxtimes_{C}})$. The remaining commutativity to
-  be checked (cf p11 of Jin's note 20240906-110000) is a direct consequence of
+  composition $\eta \star (1_{\boxtimes_{C}})$. The remaining commutativity to be checked
+  [TODO: cf p11 of Jin's note 20240906-110000] is a direct consequence of
   $\eta$'s naturality.
 \end{proof}
 
@@ -488,6 +498,7 @@ lemma.
 \begin{lemma} (Images of skeins) \label{lemma/image-of-skein}
   % TODO: Discussion: Can we relax conditions? We need to use the basis theorem,
   % so it seems that we must require semisimplicity here.
+
   \noindent
   Let $C$ be a finite, semisimple, pivotal tensor category, $L$ a linear
   category, $M_{C}$ and $_{C}N$ be finite and semisimple module categories,
@@ -519,7 +530,7 @@ lemma.
 
 \begin{proof}
   To prove the first statement, use semisimplicity and the basis theorem
-  (\ref{proposition/basis-theorem}). (TODO: Provide a detailed explanation.)
+  (\ref{proposition/basis-theorem}). [TODO: Provide a detailed explanation.]
   To prove the second statement, note that the left-hand-side is
   $\tilde{F}(\II{m''}{n'}{m}{n}{\overline{\phi} \otimes \phi}{\overline{\psi} \otimes \psi}{\overline{c} \otimes c}),$ which is
   \begin{multline*}
@@ -664,7 +675,7 @@ lemma.
   $ker(a \circ b) \supseteq ker(b)$.
 \end{proof}
 
-\begin{lemma} (Main Lemma: Skein Construction of Balanced Tensor Product) \label{lemma/main-lemma}
+\begin{lemma} (Main Lemma) \label{lemma/main-lemma}
 
   \noindent Let $C$ be a finite, semisimple, pivotal tensor category. Let
   $M_{C}, \, {}_{C}N$ be finite, semisimple $C$-module categories. Then the
@@ -746,10 +757,13 @@ lemma.
   The second part follows directly from induction and the first part. The third part is obvious.
 \end{proof}
 
-\begin{corollary}\label{corollary/skein-category-is-abelian}
-  For any $n \in \mathbb{N}$, let $C_{0}, C_{1}, \ldots, C_{n}$ be finite,
-  semisimple, pivotal tensor categories. Let
-  ${}_{C_{0}}M^{1}_{C_{1}}, \, {}_{C_{1}}M^{2}_{C_{2}}, \ldots, {}_{C_{n-1}}M^{n}_{C_{n}}, \, $
+\begin{corollary}\label{corollary/skein-category-is-abelian} (Skein Categories are Abelian)
+
+  \noindent For any $n \in \mathbb{N}$, let $C_{0}, C_{1}, \ldots, C_{n}$ be
+  finite, semisimple, pivotal tensor categories. Let
+  \[
+    {}_{C_{0}}M^{1}_{C_{1}}, \, {}_{C_{1}}M^{2}_{C_{2}}, \ldots, {}_{C_{n-1}}M^{n}_{C_{n}}, \,
+  \]
   be finite, semisimple bimodule categories. Then the skein category
   \[
     sk(M^{1}, C_{1}, M^{2}, C_{2}, M^{3}, \ldots M^{i} \ldots, C_{n-1}, M^{n})
@@ -759,9 +773,11 @@ lemma.
 \begin{proof}
   The proof for the case $n=2$ follows from the fact that
   $M^{1} \boxtimes_{C_{1}} M^{2} \simeq Z_{C_{1}}(M^{1} \boxtimes M^{2})$ (cf
-  TODOrefKirillov). The rest follows from induction.
+  [TODOrefKirillov]). The rest follows from induction.
 \end{proof}
 
 \section{Prospects and Discussions}
 
-TODO. Relaxing conditions: pivotality, finiteness, semisimplicity.
+[TODO]
+
+[TODO. Relaxing conditions: pivotality, finiteness, semisimplicity.]
