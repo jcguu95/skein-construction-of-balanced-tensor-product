@@ -1,5 +1,3 @@
-[TODO: Add a convention that sets the based field to be $\mathbb{C}$, every tensor category to be finite, semisimple, pivotal, and every module category to be finite and semisimple. Remove conditions in statements.]
-
 \section{Introduction}
 
 Classical theory of algebras admits a categorification to tensor categories
@@ -65,30 +63,42 @@ detect exotic structures \cite{reutter/no-go-exotic}. Also, this work can
 serve as the basis for implementing state sum model with defect (cf
 \cite{meusburger/defect-tv}) as a 3-functor.
 
-\subsection*{A note to experts}\label{subsection/a-note-to-experts}
+\subsection{Conventions}\label{subsection/conventions}
+
+For simplicity, throughout the whole paper, unless otherwise mentioned, we assume
+\begin{enumerate}
+  \item The base field to be the complex number field $\mathbb{C}$.
+  \item Every tensor category is finite, semisimple, pivotal, and defined over $\mathbb{C}$.
+  \item Every (bi-)module category is finite, semisimple, and defined over
+  $\mathbb{C}$.
+  \item Every (bi-)module category functor is right exact (following
+        \cite{douglas/balanced-product}).
+        % TODO Why do we need right-exactness? Does this mean we have to check
+        % right-exactness for our result as well?
+\end{enumerate}
+
+\subsection{A Note to Experts}\label{subsection/a-note-to-experts}
 
 The idea of main theorem provided in this paper is well-expected, at least by
 multiple (mathematical) physicists. However, to our best knowledge, it has not
 been mathematically proven.
 
-This work assumes all of the best conditions: finiteness, semisimplicity,
-pivotality. It is possible and useful to relax some of them. But for
-simplicity, we postpone it to future work.
+This work assumes all of the best conditions (cf
+\ref{subsection/conventions}): finiteness, semisimplicity, pivotality. It is
+possible and useful to relax some of them. But for simplicity, we postpone it
+to future work.
 
-\section{Balanced Tensor Product}\label{section/balanced-tensor-product}
+\section{Balanced Tensor Product (Algebra)}\label{section/balanced-tensor-product}
 
 \begin{definition} (Balanced Module Category Functor)
 
   \noindent Let $C, D, E$ be tensor categories. Let $_{C}M_{D}$ be a
   $C{\text -}D$ bimodule category, $_{D}N_{E}$ be a $D{\text -}E$ bimodule
-  category, $_{C}L_{E}$ be a $C{\text -}E$ bimodule category.
-
-  \noindent Then a $D$-balanced $C{\text -}E$ bimodule category functor (from
-  $M \times N$ to $L$) is a pair
-  \[(M \times N \xrightarrow{F} L, \alpha)\] where $F$ is a right-exact bilinear
-  % TODO Why do we need right-exactness? Does this mean we have to check
-  % right-exactness for our result as well?
-  $C{\text -}E$ bimodule category functor and $\alpha$ is a natural isomorphism between the
+  category, $_{C}L_{E}$ be a $C{\text -}E$ bimodule category. \quad Then a
+  $D$-balanced $C{\text -}E$ bimodule category functor (from $M \times N$ to $L$)
+  is a pair
+  \[(M \times N \xrightarrow{F} L, \alpha)\] where $F$ is a bilinear $C{\text -}E$
+  bimodule category functor and $\alpha$ is a natural isomorphism between the
   following two functors from $M \times D \times N$ to $L$
   \[
     \begin{tikzcd}
@@ -130,29 +140,27 @@ simplicity, we postpone it to future work.
 
 \begin{definition} (Category of Balanced Functors)
 
-  \noindent Let $C, D, E$ be tensor categories. Let $_{C}M_{D}$ be a $C{\text -}D$
-  bimodule category, $_{D}N_{E}$ be a $D{\text -}E$ bimodule category, $_{C}L_{E}$ be
-  a $C{\text -}E$ bimodule category. Let $F, F'$ be $D$-balanced $C{\text -}E$ bimodule
-  category functors from $M \times N$ to $L$.
-
-  \noindent Then the category of balanced functors
+  \noindent Let $C, D, E$ be tensor categories. Let $_{C}M_{D}$ be a
+  $C{\text -}D$ bimodule category, $_{D}N_{E}$ be a $D{\text -}E$ bimodule
+  category, $_{C}L_{E}$ be a $C{\text -}E$ bimodule category. Let $F, F'$ be
+  $D$-balanced $C{\text -}E$ bimodule category functors from $M \times N$ to $L$.
+  \quad Then the category of balanced functors
   $Fun^{D{\text -}bal}_{C,E}(M \times N, L)$ is defined to be the category whose
-  objects are $D$-balanced $C{\text -}E$ bimodule category functors $M \times N \to L$
-  and whose morphisms are $D$-balanced natural transformations.
+  objects are $D$-balanced $C{\text -}E$ bimodule category functors
+  $M \times N \to L$ and whose morphisms are $D$-balanced natural transformations.
 \end{definition}
 
 % TODO: In this definition, I need M, N are semisimple already. But add
 % a later remark saying that this can be circumvented.
 \begin{definition} (Balanced Tensor Product)
 
-  \noindent Let $C, D, E$ be tensor categories. Let $_{C}M_{D}$ be a $C{\text -}D$
-  bimodule category, and $_{D}N_{E}$ be a $D{\text -}E$ bimodule category.
-
-  \noindent Then the balanced tensor product $_{C}(M \boxtimes_{D} N)_{E}$ is
-  the $C{\text -}E$ bimodule category defined as the initial $D$-balanced module
-  functor from $M \times N$; i.e. for each map from $M \times N$ to some $C{\text -}E$
-  bimodule category $L$, there exists a unique $C{\text -}E$ bimodule category functor
-  $G$ such that the following diagram commutes,
+  \noindent Let $C, D, E$ be tensor categories. Let $_{C}M_{D}$ be a
+  $C{\text -}D$ bimodule category, and $_{D}N_{E}$ be a $D{\text -}E$ bimodule
+  category. \quad Then the balanced tensor product $_{C}(M \boxtimes_{D} N)_{E}$ is
+  the $C{\text -}E$ bimodule category defined as the initial $D$-balanced
+  module functor from $M \times N$; i.e. for each map from $M \times N$ to some
+  $C{\text -}E$ bimodule category $L$, there exists a unique $C{\text -}E$
+  bimodule category functor $G$ such that the following diagram commutes,
 
   \[
     \begin{tikzcd}
@@ -161,7 +169,7 @@ simplicity, we postpone it to future work.
     \end{tikzcd}
   \]
 
-  \noindent and that it induces an equivalence of category
+  \noindent and that it induces an equivalence of categories
   \[Fun_{C,E}(M \boxtimes_{D} N, L) \simeq Fun_{C,E}^{D{\text -}bal}(M \times N, L).\]
 \end{definition}
 
@@ -176,15 +184,15 @@ simplicity, we postpone it to future work.
   connect our construction back to these cases.
 \end{remark}
 
-\section{Skein Construction}\label{section/skein-construction}
+\section{Skein Construction (Topology)}\label{section/skein-construction}
 
 \begin{definition} (Pre-Skein Category)
 
-  \noindent Let $C$ be a finite, semisimple, pivotal tensor category. Let
-  $M_{C}$ and $ _{C}N$ be finite and semisimple module categories. Define the
-  pre-skein category $p.sk(M,C,N)$ to be the category $P$ with
-  $Obj(P) = Obj(M \boxtimes N)$, and the morphism spaces $Mor_{P}((m \boxtimes n), (m' \boxtimes n'))$
-  are defined to be the vector space $(V \,/ \sim)$, where
+  \noindent Let $C$ be a tensor category. Let $M_{C}$ and $ _{C}N$ be module
+  categories. \quad Define the pre-skein category $p.sk(M,C,N)$ to be the
+  category $P$ with $Obj(P) = Obj(M \boxtimes N)$, and the morphism spaces
+  $Mor_{P}((m \boxtimes n), (m' \boxtimes n'))$ are defined to be the vector space
+  $(V \,/ \sim)$, where
   \[
     V := \oplus_{c,\overline{c} \in Obj(C)} Hom_{M}(m, m' \lhd c) \otimes Hom_{C}(c,\overline{c}) \otimes Hom_{N} (\overline{c} \rhd n, n'),
   \]
@@ -259,12 +267,12 @@ simplicity, we postpone it to future work.
 \begin{remark}\label{remark/skein-nature-of-the-notation-I} (Skein Nature of the Notation ${}^{m'}_{n'}I^{m}_{n}$)
 
   \noindent Informally yet instructively, it is helpful to view
-  $\III{m'}{n'}{m}{n}{\phi}{\psi}{c}{\pi}{c'}$ as a skein flowing from the
-  right to the left, starting from $m \boxtimes n$ to $m' \boxtimes n'$,
-  passing through $\phi \boxtimes \psi$; during the process, the upper strain
-  emits a particle $c$, which transforms to via $\pi$ to $\overline{c}$, and
-  hits the lower strain. Hence under the defined composition rule (see the
-  equation for $\phi'' \otimes \pi'' \otimes \psi''$ above), we have
+  $\III{m'}{n'}{m}{n}{\phi}{\psi}{c}{\pi}{c'}$ as a skein flowing from the right to
+  the left, starting from $m \boxtimes n$ to $m' \boxtimes n'$, passing through $\phi \boxtimes \psi$;
+  during the process, the upper strain emits a particle $c$ at $\phi$, which
+  transforms to via $\pi$ to $\overline{c}$, and hits the lower strain at
+  $\psi$. Hence under the defined composition rule (see the equation for
+  $\phi'' \otimes \pi'' \otimes \psi''$ above), we have
   \[
     \III{m''}{n''}{m'}{n'}{\phi'}{\psi'}{c'}{\pi'}{\overline{c}'} \circ
     \III{m'}{n'}{m}{n}{\phi}{\psi}{c}{\pi}{\overline{c}} =
@@ -307,12 +315,16 @@ simplicity, we postpone it to future work.
   It is helpful to regard the result as the ``inner product'' of $\phi$ and $\psi$.
 \end{remark}
 
+% TODO I think this is the only place we need semisimplicity and finiteness?
+% We many have to fix the definition of skein category as well (it's currently
+% defined on simple ones and extend by direct sums), if we are to remove the
+% assumptions.
 \begin{proposition} (Basis Theorem) \label{proposition/basis-theorem}
 
   \noindent Let $C$ be a finite, semisimple tensor category, and
-  $M_{C}, _{C}N$ be finite, semisimple module categories over $C$. Thus the
-  vector spaces $Hom_{M}(m, m' \lhd c), Hom_{N}(c \rhd n, n')$ have finite bases
-  $\beta(m, m' \lhd c), \beta(c \rhd n, n')$ respectively. Then the hom space
+  $M_{C}, _{C}N$ be finite, semisimple module categories over $C$. \quad Thus
+  the vector spaces $Hom_{M}(m, m' \lhd c), Hom_{N}(c \rhd n, n')$ have finite bases
+  $\beta(m, m' \lhd c), \beta(c \rhd n, n')$ respectively. \quad Then the hom space
   $Hom_{p.sk(M,C,N)}(m \boxtimes n, m' \boxtimes n')$ has a linear basis
   \[
     \bigsqcup_{c \in Irr(C)} \beta(m, m' \lhd c) \times \beta(c \rhd n, n').
@@ -322,9 +334,10 @@ simplicity, we postpone it to future work.
   This follows immediately from the reductions given in \ref{remark/hom-space-reduction}.
 \end{proof}
 
-\begin{definition} (Karoubi Completion)
+\begin{definition} \label{definition/karoubi-completion} (Karoubi Completion)
 
-  \noindent Let $C$ be a category. The Karoubi completion $Kar(C)$ of $C$ is defined to be the category with
+  \noindent Let $C$ be a category. \quad The Karoubi completion $Kar(C)$ of
+  $C$ is defined to be the category with
   \[
     Obj(Kar(C)) = \{(c, f) \,|\, c \in Obj(C), f \in End_{C}(c), f = f^{2}\}
   \] and
@@ -337,8 +350,8 @@ simplicity, we postpone it to future work.
 \begin{definition}\label{definition/skein-category} (Skein Category)
 
   \noindent Let $C$ be a tensor category. Let $M_{C}$ and $_{C}N$ be module
-  categories. Define the skein category $sk(M,C,N)$ to the Karoubi completion
-  of its pre-skein category
+  categories. \quad Define the skein category $sk(M,C,N)$ to the Karoubi
+  completion of its pre-skein category
   \[
     sk(M,C,N) := Kar(p.sk(M,C,N)).
   \]
@@ -347,11 +360,10 @@ simplicity, we postpone it to future work.
   a linear category.
 
   More generally, for any $n \in \mathbb{N}$, let
-  $C_{0}, C_{1}, \ldots, C_{n}$ be finite, semisimple, pivotal tensor
-  categories. Let
+  $C_{0}, C_{1}, \ldots, C_{n}$ be tensor categories. Let
   ${}_{C_{0}}M^{1}_{C_{1}}, \, {}_{C_{1}}M^{2}_{C_{2}}, \ldots, {}_{C_{n{\text -}1}}M^{n}_{C_{n}}$
-  be finite, semisimple bimodule categories. One can in a similar way define
-  the $C_{0}{\text -}C_{n}$ bimodule category
+  be bimodule categories. One can in a similar way define the
+  $C_{0}{\text -}C_{n}$ bimodule category
   \[
     sk(M^{1}, C_{1}, M^{2}, C_{2}, M^{3}, \ldots, C_{n{\text -}1}, M^{n}).
   \]
@@ -362,8 +374,8 @@ simplicity, we postpone it to future work.
 
   \noindent Assume the notation in \ref{definition/skein-category}. Let
   $1 \leq i \leq n$, and let $F: M^{i} \to M'^{i}$ be a
-  $C_{i{\text -}1}{\text -}C_{i}$ bimodule category functor. Then it naturally
-  induces a linear functor between the skein categories
+  $C_{i{\text -}1}{\text -}C_{i}$ bimodule category functor. \quad Then $F$
+  naturally induces a linear functor between the skein categories
   \[
     sk(M^{1}, C_{1}, M^{2}, C_{2}, M^{3}, \ldots M^{i} \ldots, C_{n{\text -}1}, M^{n})
     \xrightarrow{F}
@@ -374,7 +386,7 @@ simplicity, we postpone it to future work.
   induced linear functor $sk(M,C,N) \to sk(M,C,N')$ sending the objects and morphisms via the map:
   \[
     \II{m'}{n'}{m}{n}{\phi}{\psi}{c}
-    \mapsto
+    \quad \mapsto \quad
     \II{m'}{F(n')}{m}{F(n)}{\phi}{F(\psi) \circ \alpha}{c}.
   \]
 \end{definition}
@@ -388,7 +400,8 @@ property.
 
 \begin{definition}\label{definition/canonical-map} (Canonical Map $\boxtimes_{C}$)
 
-  \noindent Let $C$ be a tensor category, and $M_{C}, _{C}N$ be module categories. Define the functor
+  \noindent Let $C$ be a tensor category, and $M_{C}, _{C}N$ be module
+  categories. \quad Define the functor
   \[
     M \times N \xrightarrow{\boxtimes_{C}} sk(M,C,N)
   \]
@@ -401,8 +414,8 @@ property.
 
 \noindent From the main theorem, we must have $sk(M,C,C) \simeq M$. To quickly
 convince the reader that the main theorem is true before it is proven, we
-provide another direct proof for this equivalence in the appendix
-\ref{theorem/degenerated-main-theorem}.
+provide another direct proof for this equivalence in the appendix (cf
+\ref{theorem/degenerated-main-theorem}).
 
 \hfill\break
 \noindent We prove another lemma that will be useful later.
@@ -410,16 +423,17 @@ provide another direct proof for this equivalence in the appendix
 \begin{lemma}\label{lemma/I-provides-subobject}
 
   \noindent Let $C$ be a tensor category, and $M_{C}, _{C}N$ be module
-  categories. Then any typical object $\II{}{}{m}{n}{\phi}{\psi}{c}$ (recall
-  that it is an idempotent skein) in $sk(M,C,N)$ is a subobject of the
-  canonical object $\boxtimes_{C}((m,n)) = \II{}{}{m}{n}{1_{m}}{1_{n}}{1}$.
+  categories. \quad Then any typical object $\II{}{}{m}{n}{\phi}{\psi}{c}$ in
+  $sk(M,C,N)$ is a subobject of the canonical object
+  $\boxtimes_{C}((m,n)) = \II{}{}{m}{n}{1_{m}}{1_{n}}{1}$.
 \end{lemma}
 \begin{proof}
+  Recall that a typical object is an idempotent skein (cf \ref{definition/karoubi-completion}).
   Indeed, both the inclusion arrow $\iota$ and the surjection arrow $\pi$ are
   given by the skein $\II{}{}{m}{n}{1_{m}}{1_{n}}{1}.$
 \end{proof}
 
-\section{Proof of the Main Theorem}\label{section/proof-of-equivalence}
+\section{Proof of the Main Equivalence Theorem}\label{section/proof-of-equivalence}
 
 We prove our main theorem (\ref{theorem/main-theorem}) in this section, justifying that the skein
 construction $sk(M,C,N)$ is isomorphic to $M \boxtimes_{C} N$, and the obvious
@@ -428,7 +442,7 @@ generalization to the case of more bimodule categories.
 \begin{lemma}\label{lemma/construction-of-theta} (Construction of $\Theta$)
 
   \noindent Given the assumptions in the main lemma (\ref{lemma/main-lemma}),
-  there exists a linear functor
+  \quad then there exists a linear functor
   \[
     \Theta: Fun(sk(M,C,N), L) \to Fun^{C{\text -}bal}(M \times N, L).
   \]
@@ -458,7 +472,7 @@ generalization to the case of more bimodule categories.
 \end{proof}
 
 \begin{lemma}\label{lemma/theta-is-faithful} ($\Theta$ is faithful) The linear
-  functor $\Theta$ (\ref{lemma/construction-of-theta}) is faithful.
+  functor $\Theta$ (cf. \ref{lemma/construction-of-theta}) is faithful.
 \end{lemma}
 
 \begin{proof}
@@ -493,7 +507,7 @@ generalization to the case of more bimodule categories.
 \end{proof}
 
 \begin{lemma}\label{lemma/theta-is-full} ($\Theta$ is full)
-  The linear functor $\Theta$ (\ref{lemma/construction-of-theta}) is full.
+  The linear functor $\Theta$ (cf. \ref{lemma/construction-of-theta}) is full.
 \end{lemma}
 
 \begin{proof}
@@ -531,11 +545,11 @@ lemma.
   % so it seems that we must require semisimplicity here.
 
   \noindent
-  Let $C$ be a finite, semisimple, pivotal tensor category, $L$ a linear
-  category, $M_{C}$ and $_{C}N$ be finite and semisimple module categories,
-  and $(F,\alpha) \in Fun^{C{\text -}bal}(M \times N, L)$. For each morphism in
-  $sk(M,C,N)$ of the form $\III{m'}{n'}{m}{n}{\phi}{\psi}{c}{\pi}{c'}$, define
-  the image of it under $\tilde{F}$ to be the composed morphism
+  Let $C$ be a tensor category, $L$ a linear category, $M_{C}$ and $_{C}N$ be
+  module categories, and $(F,\alpha) \in Fun^{C{\text -}bal}(M \times N, L)$. \quad For
+  each morphism in $sk(M,C,N)$ of the form
+  $\III{m'}{n'}{m}{n}{\phi}{\psi}{c}{\pi}{c'}$, define the image of it under
+  $\tilde{F}$ to be the composed morphism
   \[
     F(m,n)
     \xrightarrow{F(\phi \times 1)}
@@ -642,7 +656,8 @@ lemma.
 \end{proof}
 
 \begin{lemma}\label{lemma/theta-is-essentially-surjective} ($\Theta$ is essentially surjective)
-  The linear functor $\Theta$ (\ref{lemma/construction-of-theta}) is essentially surjective.
+  The linear functor $\Theta$ (cf. \ref{lemma/construction-of-theta}) is
+  essentially surjective.
 \end{lemma}
 
 \begin{proof}
@@ -715,12 +730,11 @@ lemma.
 
 \begin{lemma} (Main Lemma) \label{lemma/main-lemma}
 
-  \noindent Let $C$ be a finite, semisimple, pivotal tensor category. Let
-  $M_{C}, \, {}_{C}N$ be finite, semisimple $C$-module categories. Then the
-  canonical map (\ref{definition/canonical-map}) $\boxtimes_{C}$:
-  $M \times N \to sk(M,C,N)$ satisfies the universal property in the
-  definition of $M \boxtimes_{C} N$. In particular, we have an equivalence of
-  categories
+  \noindent Let $C$ be tensor category. Let $M_{C}, \, {}_{C}N$ be $C$-module
+  categories. Then the canonical map (\ref{definition/canonical-map})
+  $\boxtimes_{C}$: $M \times N \to sk(M,C,N)$ satisfies the universal property
+  in the definition of $M \boxtimes_{C} N$. In particular, we have an
+  equivalence of categories
   \[
     sk(M,C,N) \simeq M \boxtimes_{C} N.
   \]
@@ -741,23 +755,21 @@ lemma.
 
 \begin{theorem} (Main Theorem: Skein Construction of Balanced Tensor Product) \label{theorem/main-theorem}
 
-  \noindent (1) Let $C, D, E$ be finite, semisimple, pivotal tensor
-  categories. Let ${}_{C}M_{D}, \, {}_{D}N_{E}$ be finite, semisimple bimodule
-  categories. Then the canonical map (\ref{definition/canonical-map})
-  $\boxtimes_{D}$: $M \times N \to sk(M,D,N)$ satisfies the universal property
-  in the definition of ${}_{C}M_{D} \boxtimes_{D} {}_{D}N_{E}$. In particular,
-  we have an equivalence of $C{\text -}E$ bimodule categories.
+  \noindent (1) Let $C, D, E$ be tensor categories. Let
+  ${}_{C}M_{D}, \, {}_{D}N_{E}$ be, bimodule categories. \quad Then the
+  canonical map (\ref{definition/canonical-map}) $\boxtimes_{D}$:
+  $M \times N \to sk(M,D,N)$ satisfies the universal property in the
+  definition of ${}_{C}M_{D} \boxtimes_{D} {}_{D}N_{E}$. In particular, we
+  have an equivalence of $C{\text -}E$ bimodule categories.
   \[
     {}_{C}sk(M,D,N)_{E} \simeq {}_{C}M_{D} \boxtimes_{D} {}_{D}N_{E}.
   \]
 
   \noindent (2) More generally, for any $n \in \mathbb{N}$, let
-  $C_{0}, C_{1}, \ldots, C_{n}$ be finite, semisimple, pivotal tensor categories. Let
-  ${}_{C_{0}}M^{1}_{C_{1}}, \, {}_{C_{1}}M^{2}_{C_{2}}, \ldots,
-  {}_{C_{n{\text -}1}}M^{n}_{C_{n}}, \,
-  $ be finite, semisimple bimodule categories.
-  Then we
-  have an equivalence of $C_{0}{\text -}C_{n}$ bimodule categories.
+  $C_{0}, C_{1}, \ldots, C_{n}$ be tensor categories. Let
+  ${}_{C_{0}}M^{1}_{C_{1}}, \, {}_{C_{1}}M^{2}_{C_{2}}, \ldots, {}_{C_{n{\text -}1}}M^{n}_{C_{n}}, \, $
+  be bimodule categories. \quad Then we have an equivalence of
+  $C_{0}{\text -}C_{n}$ bimodule categories.
   \[
     {}_{C_{0}}sk(M^{1},C_{1},M^{2},C_{2}, \ldots, C_{n{\text -}1}, M^{n})_{C_{n}}
     \simeq
@@ -795,11 +807,12 @@ lemma.
 \begin{corollary}\label{corollary/skein-category-is-abelian} (Skein Categories are Abelian)
 
   \noindent For any $n \in \mathbb{N}$, let $C_{0}, C_{1}, \ldots, C_{n}$ be
-  finite, semisimple, pivotal tensor categories. Let
+  tensor categories. Let
   \[
     {}_{C_{0}}M^{1}_{C_{1}}, \, {}_{C_{1}}M^{2}_{C_{2}}, \ldots, {}_{C_{n{\text -}1}}M^{n}_{C_{n}}, \,
   \]
-  be finite, semisimple bimodule categories. Then the skein category
+  be bimodule categories. Then the skein category (cf
+  \ref{definition/skein-category})
   \[
     sk(M^{1}, C_{1}, M^{2}, C_{2}, M^{3}, \ldots M^{i} \ldots, C_{n{\text -}1}, M^{n})
   \]
@@ -818,9 +831,9 @@ lemma.
 convince the reader that the main theorem is true before it is proven, we
 provide another direct proof for this equivalence:
 
-\begin{theorem} \label{theorem/degenerated-main-theorem} Let $C$ be a finite,
-  semisimple, pivotal tensor category. Let $M_{C}$ be a right $C$-module
-  category. Then we have an equivalence of categories $sk(M,C,C) \simeq M$.
+\begin{theorem} \label{theorem/degenerated-main-theorem} Let $C$ be a tensor
+  category. Let $M_{C}$ be a right $C$-module category. Then we have an
+  equivalence of categories $sk(M,C,C) \simeq M$.
 \end{theorem}
 
 \begin{proof}
