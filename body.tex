@@ -1,3 +1,5 @@
+[TODO: Add a convention that sets the based field to be $\mathbb{C}$, every tensor category to be finite, semisimple, pivotal, and every module category to be finite and semisimple. Remove conditions in statements.]
+
 \section{Introduction}
 
 Classical theory of algebras admits a categorification to tensor categories
@@ -69,15 +71,6 @@ The idea of main theorem provided in this paper is well-expected, at least by
 multiple (mathematical) physicists. However, to our best knowledge, it has not
 been mathematically proven.
 
-One might expect to see drawings of skeins in this paper, but we deliberately
-avoid them due to the excessive time and energy they require. Instead, we
-introduce the notation ${}^{m'}_{n'}I^{m}_{n}$, which mimics a skein flowing
-from the right to the left, from the initial data $m \boxtimes n$ to the final data
-$m' \boxtimes n'$, exchanging an extra ``particle'' during the process (the vertical
-stroke in ``$I$''). With this notation, we conveniently have
-${}^{m''}_{n''}I^{m'}_{n'} \circ {}^{m'}_{n'}I^{m}_{n} = {}^{m''}_{n''}I^{m}_{n}$.
-See more details in remark \ref{remark/skein-nature-of-the-notation-I}.
-
 This work assumes all of the best conditions: finiteness, semisimplicity,
 pivotality. It is possible and useful to relax some of them. But for
 simplicity, we postpone it to future work.
@@ -86,14 +79,16 @@ simplicity, we postpone it to future work.
 
 \begin{definition} (Balanced Module Category Functor)
 
-  \noindent Let $C, D, E$ be tensor categories. Let $_{C}M_{D}$ be a $C-D$
-  bimodule category, $_{D}N_{E}$ be a $D-E$ bimodule category, $_{C}L_{E}$ be a $C-E$ bimodule category.
+  \noindent Let $C, D, E$ be tensor categories. Let $_{C}M_{D}$ be a
+  $C{\text -}D$ bimodule category, $_{D}N_{E}$ be a $D{\text -}E$ bimodule
+  category, $_{C}L_{E}$ be a $C{\text -}E$ bimodule category.
 
-  \noindent Then a $D$-balanced $C-E$ bimodule category functor (from $M \times N$ to $L$) is a pair
+  \noindent Then a $D$-balanced $C{\text -}E$ bimodule category functor (from
+  $M \times N$ to $L$) is a pair
   \[(M \times N \xrightarrow{F} L, \alpha)\] where $F$ is a right-exact bilinear
   % TODO Why do we need right-exactness? Does this mean we have to check
   % right-exactness for our result as well?
-  $C-E$ bimodule category functor and $\alpha$ is a natural isomorphism between the
+  $C{\text -}E$ bimodule category functor and $\alpha$ is a natural isomorphism between the
   following two functors from $M \times D \times N$ to $L$
   \[
     \begin{tikzcd}
@@ -115,13 +110,13 @@ simplicity, we postpone it to future work.
 
 \begin{definition} (Balanced Natural Transformation)
 
-  \noindent Let $C, D, E$ be tensor categories. Let $_{C}M_{D}$ be a $C-D$
-  bimodule category, $_{D}N_{E}$ be a $D-E$ bimodule category, $_{C}L_{E}$ be
-  a $C-E$ bimodule category. Let $F, F'$ be $D$-balanced $C-E$ bimodule
+  \noindent Let $C, D, E$ be tensor categories. Let $_{C}M_{D}$ be a $C{\text -}D$
+  bimodule category, $_{D}N_{E}$ be a $D{\text -}E$ bimodule category, $_{C}L_{E}$ be
+  a $C{\text -}E$ bimodule category. Let $F, F'$ be $D$-balanced $C{\text -}E$ bimodule
   category functors from $M \times N$ to $L$. A $D$-balanced transformation
   from $F$ to $F'$ is a natural transformation $ F \xrightarrow{\eta} F'$ such
   that the following diagram commutes (in a naturally compatible way with the
-  $C-E$ bimodule structures.)
+  $C{\text -}E$ bimodule structures.)
 
   \[
     \begin{tikzcd}
@@ -135,14 +130,14 @@ simplicity, we postpone it to future work.
 
 \begin{definition} (Category of Balanced Functors)
 
-  \noindent Let $C, D, E$ be tensor categories. Let $_{C}M_{D}$ be a $C-D$
-  bimodule category, $_{D}N_{E}$ be a $D-E$ bimodule category, $_{C}L_{E}$ be
-  a $C-E$ bimodule category. Let $F, F'$ be $D$-balanced $C-E$ bimodule
+  \noindent Let $C, D, E$ be tensor categories. Let $_{C}M_{D}$ be a $C{\text -}D$
+  bimodule category, $_{D}N_{E}$ be a $D{\text -}E$ bimodule category, $_{C}L_{E}$ be
+  a $C{\text -}E$ bimodule category. Let $F, F'$ be $D$-balanced $C{\text -}E$ bimodule
   category functors from $M \times N$ to $L$.
 
   \noindent Then the category of balanced functors
-  $Fun^{D-bal}_{C,E}(M \times N, L)$ is defined to be the category whose
-  objects are $D$-balanced $C-E$ bimodule category functors $M \times N \to L$
+  $Fun^{D{\text -}bal}_{C,E}(M \times N, L)$ is defined to be the category whose
+  objects are $D$-balanced $C{\text -}E$ bimodule category functors $M \times N \to L$
   and whose morphisms are $D$-balanced natural transformations.
 \end{definition}
 
@@ -150,13 +145,13 @@ simplicity, we postpone it to future work.
 % a later remark saying that this can be circumvented.
 \begin{definition} (Balanced Tensor Product)
 
-  \noindent Let $C, D, E$ be tensor categories. Let $_{C}M_{D}$ be a $C-D$
-  bimodule category, and $_{D}N_{E}$ be a $D-E$ bimodule category.
+  \noindent Let $C, D, E$ be tensor categories. Let $_{C}M_{D}$ be a $C{\text -}D$
+  bimodule category, and $_{D}N_{E}$ be a $D{\text -}E$ bimodule category.
 
   \noindent Then the balanced tensor product $_{C}(M \boxtimes_{D} N)_{E}$ is
-  the $C-E$ bimodule category defined as the initial $D$-balanced module
-  functor from $M \times N$; i.e. for each map from $M \times N$ to some $C-E$
-  bimodule category $L$, there exists a unique $C-E$ bimodule category functor
+  the $C{\text -}E$ bimodule category defined as the initial $D$-balanced module
+  functor from $M \times N$; i.e. for each map from $M \times N$ to some $C{\text -}E$
+  bimodule category $L$, there exists a unique $C{\text -}E$ bimodule category functor
   $G$ such that the following diagram commutes,
 
   \[
@@ -167,7 +162,7 @@ simplicity, we postpone it to future work.
   \]
 
   \noindent and that it induces an equivalence of category
-  \[Fun_{C,E}(M \boxtimes_{D} N, L) \simeq Fun_{C,E}^{D-bal}(M \times N, L).\]
+  \[Fun_{C,E}(M \boxtimes_{D} N, L) \simeq Fun_{C,E}^{D{\text -}bal}(M \times N, L).\]
 \end{definition}
 
 \begin{remark}
@@ -196,8 +191,8 @@ simplicity, we postpone it to future work.
   and the relations $\sim$ are generated by the following types of relations
   [TODO: Add a picture.]
   \begin{align}
-    \phi \otimes (\overline{\pi} \circ \pi) \otimes \psi &- (\phi_{\pi} \otimes \overline{\pi} \otimes \psi) \\
-    \phi \otimes (\overline{\pi} \circ \pi) \otimes \psi &- (\phi \otimes \pi \otimes {}_{\overline{\pi}}\psi),
+    \phi \otimes (\overline{\pi} \circ \pi) \otimes \psi &- (\phi_{\pi} \otimes \overline{\pi} \otimes \psi) \label{relation/a} \\
+    \phi \otimes (\overline{\pi} \circ \pi) \otimes \psi &- (\phi \otimes \pi \otimes {}_{\overline{\pi}}\psi) \label{relation/b},
   \end{align}
   where
   \begin{align}
@@ -205,37 +200,40 @@ simplicity, we postpone it to future work.
     {}_{\overline{\pi}}\psi &:= \left( \overline{c} \rhd n \xrightarrow{\overline{\pi} \rhd 1_{n}} \overline{\overline{c}} \rhd n \xrightarrow{\psi} n' \right)
   \end{align}
 
-
   \noindent [TODO: Add a picture for composition.]
 
   \noindent We define the composition on the level of $V$. It is
   straightforward to check that it descends properly to $(V \, / \sim)$ using
-  the $2$-categorically compositional nature of tensor categories:
+  the $2$-categorically compositional nature of tensor categories.
   % TODO: If have time, add a complete proof for this claim, perhaps in the appendix.
   The composition
-  $(\phi' \otimes \pi' \otimes \psi' ) \circ (\phi \otimes \pi \otimes \psi )$
-  is defined to be $(\phi'' \otimes \pi'' \otimes \psi'')$ where \\
-  $\pi'' \in Hom_{C}(c' \otimes c, \overline{c}' \otimes \overline{c})$ is equal to
   \[
-    c' \otimes c \xrightarrow{\pi' \otimes \pi} \overline{c'} \otimes \overline{c},
+    (\phi' \otimes \pi' \otimes \psi' ) \circ (\phi \otimes \pi \otimes \psi)
   \]
-  \noindent $\phi'' \in Hom_{M}(m, m'' \lhd (c' \otimes c))$ is equal to
-  \[
-    m \xrightarrow{\phi} m' \lhd c \xrightarrow{\phi' \lhd 1_{c}} (m'' \lhd c') \lhd c \xrightarrow[\sim]{\alpha} m'' \lhd (c' \otimes c),
-  \]
-  \noindent $\psi'' \in Hom_{N}((\overline{c}' \otimes \overline{c}) \rhd n, n'')$ is equal to
-  \[
-    (\overline{c}' \otimes \overline{c}) \rhd n \xrightarrow[\sim]{\alpha} \overline{c}' \rhd (\overline{c} \rhd n) \xrightarrow{1_{\overline{c}'} \rhd \psi} \overline{c}' \rhd n' \xrightarrow{\psi'} n''.
-  \]
+  is defined to be $(\phi'' \otimes \pi'' \otimes \psi'')$ where
+  \begin{itemize}
+    \item
+    $\pi'' \in Hom_{C}(c' \otimes c, \overline{c}' \otimes \overline{c})$ is equal to
+    \[
+      c' \otimes c \xrightarrow{\pi' \otimes \pi} \overline{c'} \otimes \overline{c},
+    \]
+    \item
+    \noindent $\phi'' \in Hom_{M}(m, m'' \lhd (c' \otimes c))$ is equal to
+    \[
+      m \xrightarrow{\phi} m' \lhd c \xrightarrow{\phi' \lhd 1_{c}} (m'' \lhd c') \lhd c \xrightarrow[\sim]{\alpha} m'' \lhd (c' \otimes c),
+    \]
+    \item
+    \noindent $\psi'' \in Hom_{N}((\overline{c}' \otimes \overline{c}) \rhd n, n'')$ is equal to
+    \[
+      (\overline{c}' \otimes \overline{c}) \rhd n \xrightarrow[\sim]{\alpha} \overline{c}' \rhd (\overline{c} \rhd n) \xrightarrow{1_{\overline{c}'} \rhd \psi} \overline{c}' \rhd n' \xrightarrow{\psi'} n''.
+    \]
+  \end{itemize}
 
   \noindent Finally, extend the definition of the morphism spaces to those between
   general objects via direct sum.
 
 \end{definition}
 
-\noindent [TODO: At least add a picture to the notation $I$. It will make the
-whole paper much easier to understand. Remembeer to change the notice to
-expert.]
 \begin{notation} (${}^{m'}_{n'}I^{m}_{n}$)
 
   \noindent Denote the equivalence class of the vector
@@ -272,6 +270,7 @@ expert.]
     \III{m'}{n'}{m}{n}{\phi}{\psi}{c}{\pi}{\overline{c}} =
     \III{m''}{n''}{m}{n}{\phi''}{\psi'}{c' \otimes c}{\pi''}{\overline{c}' \otimes \overline{c}}.
   \]
+  [TODO: Add a picture for this.]
 \end{remark}
 
 \begin{remark}\label{remark/hom-space-reduction} (Hom Space Reduction)
@@ -344,28 +343,48 @@ expert.]
     sk(M,C,N) := Kar(p.sk(M,C,N)).
   \]
   \noindent Thus, a typical object of the skein category $sk(M,C,N)$ is an
-  idempotent skein $\II{m}{n}{m}{n}{\phi}{\psi}{c}$. The skein category is obviously a linear category.
+  idempotent skein $\II{m}{n}{m}{n}{\phi}{\psi}{c}$. The skein category is obviously
+  a linear category.
 
   More generally, for any $n \in \mathbb{N}$, let
   $C_{0}, C_{1}, \ldots, C_{n}$ be finite, semisimple, pivotal tensor
   categories. Let
-  ${}_{C_{0}}M^{1}_{C_{1}}, \, {}_{C_{1}}M^{2}_{C_{2}}, \ldots, {}_{C_{n-1}}M^{n}_{C_{n}}, \, $
-  be finite, semisimple bimodule categories. One can in a similar way define the $C_{0}-C_{n}$ bimodule category
+  ${}_{C_{0}}M^{1}_{C_{1}}, \, {}_{C_{1}}M^{2}_{C_{2}}, \ldots, {}_{C_{n{\text -}1}}M^{n}_{C_{n}}$
+  be finite, semisimple bimodule categories. One can in a similar way define
+  the $C_{0}{\text -}C_{n}$ bimodule category
   \[
-    sk(M^{1}, C_{1}, M^{2}, C_{2}, M^{3}, \ldots, C_{n-1}, M^{n}).
+    sk(M^{1}, C_{1}, M^{2}, C_{2}, M^{3}, \ldots, C_{n{\text -}1}, M^{n}).
   \]
-  \noindent Let $F^{i}: M^{i} \to M'^{i}$ be a $C_{i-1}-C_{i}$ bimodule category functor. Then it naturally induces a linear functor
+  [TODO. Add a picture for a typical skein in this generalization.]
+\end{definition}
+
+\begin{definition} \label{definition/induced-functor-on-skein-category} (Induced Functor on Skein Category)
+
+  \noindent Assume the notation in \ref{definition/skein-category}. Let
+  $1 \leq i \leq n$, and let $F: M^{i} \to M'^{i}$ be a
+  $C_{i{\text -}1}{\text -}C_{i}$ bimodule category functor. Then it naturally
+  induces a linear functor between the skein categories
   \[
-    F^{i}:
-    sk(M^{1}, C_{1}, M^{2}, C_{2}, M^{3}, \ldots M^{i} \ldots, C_{n-1}, M^{n})
-    \to
-    sk(M^{1}, C_{1}, M^{2}, C_{2}, M^{3}, \ldots M'^{i} \ldots, C_{n-1}, M^{n}).
+    sk(M^{1}, C_{1}, M^{2}, C_{2}, M^{3}, \ldots M^{i} \ldots, C_{n{\text -}1}, M^{n})
+    \xrightarrow{F}
+    sk(M^{1}, C_{1}, M^{2}, C_{2}, M^{3}, \ldots M'^{i} \ldots, C_{n{\text -}1}, M^{n}).
+  \]
+  For example, if $n=2$, $M^{1} = M$, $M^{2} = N$, $C^{1} = C$, $N \xrightarrow{F} N'$
+  (with the left $C$-module structure given by $\alpha$), then we have an
+  induced linear functor $sk(M,C,N) \to sk(M,C,N')$ sending the objects and morphisms via the map:
+  \[
+    \II{m'}{n'}{m}{n}{\phi}{\psi}{c}
+    \mapsto
+    \II{m'}{F(n')}{m}{F(n)}{\phi}{F(\psi) \circ \alpha}{c}.
   \]
 \end{definition}
 
-\noindent The skein category $sk(M,C,N)$ is equivalent to $M \boxtimes_{C} N$ (proven
-in \ref{lemma/main-lemma}, \ref{theorem/main-theorem}). A necessary ingredient
-is the canonical map $\boxtimes_{C}$ given in the defining universal property.
+\noindent The main result of this paper is to show that the skein category
+$sk(M,C,N)$ is equivalent to $M \boxtimes_{C} N$, and that the induced functor $M \boxtimes_{C} N \to M \boxtimes_{C} N'$
+coincides with the one in \ref{definition/induced-functor-on-skein-category}
+(proven in \ref{lemma/main-lemma}, \ref{theorem/main-theorem}). A necessary
+ingredient is the canonical map $\boxtimes_{C}$ given in the defining universal
+property.
 
 \begin{definition}\label{definition/canonical-map} (Canonical Map $\boxtimes_{C}$)
 
@@ -380,26 +399,10 @@ is the canonical map $\boxtimes_{C}$ given in the defining universal property.
   to the morphism $\II{m'}{n'}{m}{n}{\phi}{\psi}{1_{1}}$.
 \end{definition}
 
-\noindent [TODO: add a picture for the following sketched proof, especially the
-part that uses the (co)unit maps.]
-
-\noindent To quickly convince the reader that the skein category $sk(M,C,N)$
-is indeed $M \boxtimes_{C} N$; we consider $N$ to be the trivial left
-$C$-module category $_{C}C$, and argue that
-$M \xrightarrow{\boxtimes_{C}} sk(M,C,C)$ is an isomorphism if $C$ is a
-finite, pivotal tensor category and if $M$ is semisimple. It is
-straightforward to see that it is indeed fully faithful, so it suffices to
-show that it is essentially surjective. A typical object in the codomain
-$sk(M,C,C)$ is some idempotent skein $\II{}{}{m}{c}{\phi}{\psi}{\overline{c}}$
-(without loss of generality, assume $m$ to be simple). We contend that this
-object is isomorphic to $\II{}{}{m \lhd c}{1}{\mu_{\phi, \psi}}{1}{1}$, where
-\[
-  \mu_{\phi,\psi} := m \lhd c \xrightarrow{\phi \lhd c} (m \lhd \overline{c}) \lhd c \xrightarrow[\sim]{\alpha} \xrightarrow{m \lhd \psi} m \lhd c.
-\]
-Indeed, the isomorphism is provided by the following two morphisms
-$\II{mc}{1}{m}{c}{n}{u}{c^{\star}}$ and $\II{m}{c}{mc}{1}{1}{1}{c}$, where $n$
-denotes the counit and $u$ denotes the unit for $c$. [TODO: Check carefully
-and provide full proof (but comment the proof out later)].
+\noindent From the main theorem, we must have $sk(M,C,C) \simeq M$. To quickly
+convince the reader that the main theorem is true before it is proven, we
+provide another direct proof for this equivalence in the appendix
+\ref{theorem/degenerated-main-theorem}.
 
 \hfill\break
 \noindent We prove another lemma that will be useful later.
@@ -416,7 +419,7 @@ and provide full proof (but comment the proof out later)].
   given by the skein $\II{}{}{m}{n}{1_{m}}{1_{n}}{1}.$
 \end{proof}
 
-\section{Proof of Equivalence}\label{section/proof-of-equivalence}
+\section{Proof of the Main Theorem}\label{section/proof-of-equivalence}
 
 We prove our main theorem (\ref{theorem/main-theorem}) in this section, justifying that the skein
 construction $sk(M,C,N)$ is isomorphic to $M \boxtimes_{C} N$, and the obvious
@@ -427,7 +430,7 @@ generalization to the case of more bimodule categories.
   \noindent Given the assumptions in the main lemma (\ref{lemma/main-lemma}),
   there exists a linear functor
   \[
-    \Theta: Fun(sk(M,C,N), L) \to Fun^{C-bal}(M \times N, L).
+    \Theta: Fun(sk(M,C,N), L) \to Fun^{C{\text -}bal}(M \times N, L).
   \]
 \end{lemma}
 
@@ -437,11 +440,15 @@ generalization to the case of more bimodule categories.
   \noindent (Object) Let $G$ be an object of the domain. Define $\Theta(G)$ to
   be $F := G \circ \boxtimes_{C} \in Fun(M \times N, L)$. We shall provide the
   balanced structure $\alpha$ for $F$, so that $(F, \alpha)$ is $C$-balanced. 
-  We need to provide the $C$-balanced data for $F$
+  We need to provide the $C$-balanced data for $F$:
   \[
-    \alpha_{m,c,n}: F(m \lhd c, n) = G(\II{}{}{mc}{n}{1}{1}{1}) \xrightarrow{\sim} G(\II{}{}{m}{cn}{1}{1}{1}) = F(m, c \rhd n),
+    \alpha_{m,c,n}: F(m \lhd c, n) =
+    G(\II{}{}{mc}{n}{1}{1}{1})
+    \xrightarrow{\sim} G(\II{}{}{m}{cn}{1}{1}{1})
+    = F(m, c \rhd n),
   \]
-  which is clearly satisfied by $G(\II{m}{cn}{mc}{n}{1}{1}{c}).$ So defined $\alpha$ is clearly natural.
+  which is clearly satisfied by $G(\II{m}{cn}{mc}{n}{1}{1}{c}).$ So defined
+  $\alpha$ is clearly natural.
 
   \noindent (Morphism) Let $G \xrightarrow{\eta} G'$ be a morphism in
   $Fun(sk(M,C,N), L)$. Its image under $\Theta$ is simply the horizontal
@@ -526,37 +533,44 @@ lemma.
   \noindent
   Let $C$ be a finite, semisimple, pivotal tensor category, $L$ a linear
   category, $M_{C}$ and $_{C}N$ be finite and semisimple module categories,
-  and $(F,\alpha) \in Fun^{C-bal}(M \times N, L)$. For each object
-  $\II{m'}{n'}{m}{n}{\phi}{\psi}{c}$ in $sk(M,C,N)$, define
-  $\tilde{F}(\II{m'}{n'}{m}{n}{\phi}{\psi}{c})$ to be
+  and $(F,\alpha) \in Fun^{C{\text -}bal}(M \times N, L)$. For each morphism in
+  $sk(M,C,N)$ of the form $\III{m'}{n'}{m}{n}{\phi}{\psi}{c}{\pi}{c'}$, define
+  the image of it under $\tilde{F}$ to be the composed morphism
   \[
     F(m,n)
     \xrightarrow{F(\phi \times 1)}
     F(m' \lhd c, n)
+    \xrightarrow{F((1 \lhd \pi) \times 1)}
+    F(m' \lhd c', n)
     \xrightarrow[\sim]{\alpha}
-    F(m', c \rhd n)
+    F(m', c' \rhd n)
     \xrightarrow{F(1 \times \psi)}
     F(m',n').
   \]
-  Suppose we have two identical skeins $\II{m'}{n'}{m}{n}{\phi}{\psi}{c}$ and $ \II{m'}{n'}{m}{n}{\phi'}{\psi'}{c'}$ in
-  $sk(M,C,N)$, then
-  \[
+  Suppose we have two skeins $\II{m'}{n'}{m}{n}{\phi}{\psi}{c}$ and
+  $ \II{m'}{n'}{m}{n}{\phi'}{\psi'}{c'}$ as identical morphisms in $sk(M,C,N)$
+  (recall the definitional relations (\ref{relation/a}) (\ref{relation/b})),
+  then
+  \begin{equation} \label{eqn/a}
     \tilde{F}(\II{m'}{n'}{m}{n}{\phi}{\psi}{c}) = \tilde{F}(\II{m'}{n'}{m}{n}{\phi'}{\psi'}{c'}).
-  \]
+  \end{equation}
   Moreover, $\tilde{F}$ preserves compositions, i.e.
-  \[
+  \begin{equation} \label{eqn/b}
     \tilde{F}(\II{m''}{n''}{m'}{n'}{\overline{\phi}}{\overline{\psi}}{\overline{c}} \circ \II{m'}{n'}{m}{n}{\phi}{\psi}{c})
     = \tilde{F}(\II{m''}{n''}{m'}{n'}{\overline{\phi}}{\overline{\psi}}{\overline{c}})
     \circ
     \tilde{F}(\II{m'}{n'}{m}{n}{\phi}{\psi}{c}).
-  \]
+  \end{equation}
 \end{lemma}
 
 \begin{proof}
-  To prove the first statement, use semisimplicity and the basis theorem
-  (\ref{proposition/basis-theorem}). [TODO: Provide a detailed explanation.]
-  To prove the second statement, note that the left-hand-side is
-  $\tilde{F}(\II{m''}{n'}{m}{n}{\overline{\phi} \otimes \phi}{\overline{\psi} \otimes \psi}{\overline{c} \otimes c}),$ which is
+  To prove the first statement (\ref{eqn/a}), check the equality against the
+  definitional relations (\ref{relation/a}) (\ref{relation/b}).
+
+  \noindent To prove the second statement (\ref{eqn/b}), note that the
+  left-hand-side is
+  $\tilde{F}(\II{m''}{n'}{m}{n}{\overline{\phi} \otimes \phi}{\overline{\psi} \otimes \psi}{\overline{c} \otimes c}),$
+  which is
   \begin{multline*}
     F(m,n)
     \xrightarrow{F(\phi \times 1)}
@@ -632,7 +646,7 @@ lemma.
 \end{lemma}
 
 \begin{proof}
-  Let $(F, \alpha) \in Fun^{C-bal}(M \times N, L)$. It suffices to construct $G \in Fun(sk(M,C,N), L)$ such $\Theta(G) \simeq (F,\alpha)$.
+  Let $(F, \alpha) \in Fun^{C{\text -}bal}(M \times N, L)$. It suffices to construct $G \in Fun(sk(M,C,N), L)$ such $\Theta(G) \simeq (F,\alpha)$.
 
   Recall that $L$ is an abelian category (so each $L$-morphism has an image),
   $F: M \times N \to L$ is a linear functor, and that
@@ -716,7 +730,7 @@ lemma.
   Let $L$ be a linear category. We only need to show that $\boxtimes_{C}$
   induces an equivalence of categories
   \[
-    Fun(sk(M,C,N), L) \xrightarrow[\sim]{\Theta} Fun^{C-bal}(M \times N, L).
+    Fun(sk(M,C,N), L) \xrightarrow[\sim]{\Theta} Fun^{C{\text -}bal}(M \times N, L).
   \]
   We constructed $\Theta$ in (\ref{lemma/construction-of-theta}), proved that
   $\Theta$ is faithfulness in (\ref{lemma/theta-is-faithful}), is full in
@@ -732,7 +746,7 @@ lemma.
   categories. Then the canonical map (\ref{definition/canonical-map})
   $\boxtimes_{D}$: $M \times N \to sk(M,D,N)$ satisfies the universal property
   in the definition of ${}_{C}M_{D} \boxtimes_{D} {}_{D}N_{E}$. In particular,
-  we have an equivalence of $C-E$ bimodule categories.
+  we have an equivalence of $C{\text -}E$ bimodule categories.
   \[
     {}_{C}sk(M,D,N)_{E} \simeq {}_{C}M_{D} \boxtimes_{D} {}_{D}N_{E}.
   \]
@@ -740,12 +754,12 @@ lemma.
   \noindent (2) More generally, for any $n \in \mathbb{N}$, let
   $C_{0}, C_{1}, \ldots, C_{n}$ be finite, semisimple, pivotal tensor categories. Let
   ${}_{C_{0}}M^{1}_{C_{1}}, \, {}_{C_{1}}M^{2}_{C_{2}}, \ldots,
-  {}_{C_{n-1}}M^{n}_{C_{n}}, \,
+  {}_{C_{n{\text -}1}}M^{n}_{C_{n}}, \,
   $ be finite, semisimple bimodule categories.
   Then we
-  have an equivalence of $C_{0}-C_{n}$ bimodule categories.
+  have an equivalence of $C_{0}{\text -}C_{n}$ bimodule categories.
   \[
-    {}_{C_{0}}sk(M^{1},C_{1},M^{2},C_{2}, \ldots, C_{n-1}, M^{n})_{C_{n}}
+    {}_{C_{0}}sk(M^{1},C_{1},M^{2},C_{2}, \ldots, C_{n{\text -}1}, M^{n})_{C_{n}}
     \simeq
     {}_{C_{0}}(M^{1}
     \boxtimes_{C_{1}}
@@ -753,31 +767,28 @@ lemma.
     \boxtimes_{C_{2}}
     M^{3}
     \ldots
-    \boxtimes_{C_{n-1}}
+    \boxtimes_{C_{n{\text -}1}}
     M^{n})_{C_{n}}.
   \]
   \noindent (3) Moreover, in addition to the previous part, if
-  $F^{i}: M^{i} \to M'^{i}$ is a $C_{i-1}-C_{i}$ bimodule category functor,
-  then the naturally induced linear functor (cf.
-  \ref{definition/skein-category})
+  $F^{i}: M^{i} \to M'^{i}$ is a $C_{i{\text -}1}{\text -}C_{i}$ bimodule category
+  functor, then the naturally induced linear functor (cf.
+  \ref{definition/induced-functor-on-skein-category})
   \[
     F^{i}:
-    sk(M^{1}, C_{1}, M^{2}, C_{2}, M^{3}, \ldots M^{i} \ldots, C_{n-1}, M^{n})
+    sk(M^{1}, C_{1}, M^{2}, C_{2}, M^{3}, \ldots M^{i} \ldots, C_{n{\text -}1}, M^{n})
     \to
-    sk(M^{1}, C_{1}, M^{2}, C_{2}, M^{3}, \ldots M'^{i} \ldots, C_{n-1}, M^{n}),
+    sk(M^{1}, C_{1}, M^{2}, C_{2}, M^{3}, \ldots M'^{i} \ldots, C_{n{\text -}1}, M^{n}),
   \]
   corresponds to the functor
   \[
-    F^{i}:
-    M^{1} \boxtimes_{C_{1}} M^{2} \boxtimes_{C_{2}} M^{3} \boxtimes_{C_{3}} \ldots M^{i} \ldots \boxtimes_{C_{n-1}} M^{n}
-    \to
-    M^{1} \boxtimes_{C_{1}} M^{2} \boxtimes_{C_{2}} M^{3} \boxtimes_{C_{3}} \ldots M'^{i} \ldots \boxtimes_{C_{n-1}} M^{n}.
+    F^{i}: M^{1} \boxtimes_{C_{1}} M^{2} \boxtimes_{C_{2}} M^{3} \boxtimes_{C_{3}} \ldots M^{i} \ldots \boxtimes_{C_{n{\text -}1}} M^{n} \to M^{1} \boxtimes_{C_{1}} M^{2} \boxtimes_{C_{2}} M^{3} \boxtimes_{C_{3}} \ldots M'^{i} \ldots \boxtimes_{C_{n{\text -}1}} M^{n}.
   \]
   under the equivalence.
 \end{theorem}
 
 \begin{proof}
-  The first part is proved by restricting the proof of lemma \ref{lemma/main-lemma} to $C-E$ bimodule maps.
+  The first part is proved by restricting the proof of lemma \ref{lemma/main-lemma} to $C{\text -}E$ bimodule maps.
   The second part follows directly from induction and the first part. The third part is obvious.
 \end{proof}
 
@@ -786,11 +797,11 @@ lemma.
   \noindent For any $n \in \mathbb{N}$, let $C_{0}, C_{1}, \ldots, C_{n}$ be
   finite, semisimple, pivotal tensor categories. Let
   \[
-    {}_{C_{0}}M^{1}_{C_{1}}, \, {}_{C_{1}}M^{2}_{C_{2}}, \ldots, {}_{C_{n-1}}M^{n}_{C_{n}}, \,
+    {}_{C_{0}}M^{1}_{C_{1}}, \, {}_{C_{1}}M^{2}_{C_{2}}, \ldots, {}_{C_{n{\text -}1}}M^{n}_{C_{n}}, \,
   \]
   be finite, semisimple bimodule categories. Then the skein category
   \[
-    sk(M^{1}, C_{1}, M^{2}, C_{2}, M^{3}, \ldots M^{i} \ldots, C_{n-1}, M^{n})
+    sk(M^{1}, C_{1}, M^{2}, C_{2}, M^{3}, \ldots M^{i} \ldots, C_{n{\text -}1}, M^{n})
   \]
   is an abelian category.
 \end{corollary}
@@ -800,3 +811,67 @@ lemma.
   \cite{kirillov/fact-homo-4d-tqft}). The rest follows from induction.
 \end{proof}
 
+\appendix
+\section{Appendix}
+
+\noindent From the main theorem, we must have $sk(M,C,C) \simeq M$. To quickly
+convince the reader that the main theorem is true before it is proven, we
+provide another direct proof for this equivalence:
+
+\begin{theorem} \label{theorem/degenerated-main-theorem} Let $C$ be a finite,
+  semisimple, pivotal tensor category. Let $M_{C}$ be a right $C$-module
+  category. Then we have an equivalence of categories $sk(M,C,C) \simeq M$.
+\end{theorem}
+
+\begin{proof}
+  We provide two proofs. The first proof is to use the main theorem
+  \ref{theorem/main-theorem}, and the known fact that
+  $M \boxtimes_{C} C \simeq M$. The second proof is direct, without using the
+  main theorem:
+
+  Construct the functor
+  $M \xrightarrow{1_{M} \times 1} M \times C \xrightarrow{\boxtimes_{C}} sk(M,C,C)$,
+  where $\boxtimes_{C}$ is the canonical map (\ref{definition/canonical-map}).
+  We contend that this is an equivalence of categories. It is straightforward
+  to see that it is indeed fully faithful, so it suffices to show that it is
+  essentially surjective. A typical object in the codomain $sk(M,C,C)$ is some
+  idempotent skein $\II{}{}{m}{c}{\phi}{\psi}{d}$ (without loss of generality,
+  assume $m$ to be simple). We contend that this object is isomorphic to
+  $\II{}{}{m \lhd c}{1}{\mu_{\phi, \psi}}{1}{1}$, where
+  \[
+    \mu_{\phi,\psi} :=
+    m \lhd c
+    \xrightarrow{\phi \lhd c}
+    (m \lhd d) \lhd c
+    \xrightarrow[\sim]{\alpha}
+    m \lhd (d \otimes c)
+    \xrightarrow{m \lhd \psi}
+    m \lhd c.
+  \]
+  Indeed, the isomorphism is provided by the following two morphisms
+  \begin{align*}
+    \II{}{}{m \lhd c}{1}{\mu_{\phi, \psi}}{1}{1}
+    \xleftarrow{
+    \II{}{}{m \lhd c}{1}{\mu_{\phi, \psi}}{1}{1}
+    \, \circ \,
+    \II{mc}{1}{m}{c}{u}{n}{c^{\star}}
+    \, \circ \,
+    \II{}{}{m}{c}{\phi}{\psi}{\overline{c}}}
+    \II{}{}{m}{c}{\phi}{\psi}{\overline{c}}
+    \\
+    \II{}{}{m}{c}{\phi}{\psi}{\overline{c}}
+    \xleftarrow{
+    \II{}{}{m}{c}{\phi}{\psi}{\overline{c}}
+    \, \circ \,
+    \II{m}{c}{mc}{1}{1}{1}{c}
+    \, \circ \,
+    \II{}{}{m \lhd c}{1}{\mu_{\phi, \psi}}{1}{1}
+    }
+    \II{}{}{m \lhd c}{1}{\mu_{\phi, \psi}}{1}{1},
+  \end{align*}
+  where $c^{\star}$ denotes the pivotal dual of $c$, $n$ denotes the counit,
+  and $u$ denotes the unit for $c$. The two given morphisms may seem
+  unnecessarily long, but they have to be so by the definition of of Karoubi
+  completion (in which objects must be ``absorbed'' into morphism). [TODO: add
+  a picture this proof, especially the part that uses the (co)unit maps.].
+\end{proof}
