@@ -1,23 +1,30 @@
 \abstract{
 
-The balanced tensor product $M \boxtimes_{C} N$ (where $C$ is a tensor
-  category and $M_{C}, _{C}N$ are $C$-module categories) is a generalization
-  of the Deligne tensor product, categorifying the classical theory of
-  algebras and modules. It proves to find applications in several areas:
-  representation theory, (conformal and topological) quantum field theory, and
-  topological phases.
+The theory of tensor categories has found applications across various fields,
+including representation theory \cite{egno/tensor-cats}, quantum field theory
+(conformal in 2 dimensions \cite{schweigert/rcft-tft} \cite{yadav/gv-voa}, and
+topological in 3 and 4 dimensions), quantum invariants of low-dimensional
+objects \cite{turaev/big-book} \cite{beliakova/low-dim-topo}, topological
+phases of matter \cite{kong/topological-order}, and topological quantum
+computation \cite{wang/topo-quantum-compute}. In essence, it is a
+categorification of the classical theory of algebras and modules. In this
+analogy, the Deligne tensor product $\boxtimes$ generalizes the linear tensor
+product $\otimes_{\mathbb{C}}$, while the balanced tensor product
+$\boxtimes_{C}$ extends the tensor product over an algebra $\otimes_{A}$,
+where $\mathbb{C}$ is a field, $A$ is a $\mathbb{C}$-algebra, and $C$ is a
+tensor category.
 
-The balanced tensor product is defined via a universal property, which is
-  satisfied by a few constructions using, for example, category of bimodules
-  and generalized center constructions. The existing constructions fall short
-  by obscuring the topological and the skein-theoretical nature of these
-  products, making computations and connections to topological quantum field
-  theories difficult.
-
-This paper propose a skein-theoretic construction for the balanced tensor
-  product. It simplifies these computations and clarifies the relationship
-  between the Turaev-Viro state sum and fully extended 3D TQFTs. This approach
-  is expected to extend to 4D models, including the Crane-Yetter state sum,
-  and aid in the study of vertex operator algebras and topological phases.
+Before this work, several algebraic constructions for balanced tensor products
+were known, including categories of modules \cite{douglas/balanced-product},
+internal Hom spaces \cite{davydov/picard}, and generalized categorical centers
+\cite{etingof/fusion-cat-and-homotopy} \cite{kirillov/fact-homo-4d-tqft}
+\cite{hoek/master}. In this paper, we introduce a topological construction
+based on skein theory that offers a better mix of algebra and topology. This
+approach not only works for products of multiple module categories, but also
+provides the missing key to proving that the Turaev-Viro state sum model
+\cite{viro/turaev-viro-model} naturally arises from the 3-functor in the
+classification of fully extended field theories \cite{lurie/tqft}. Building on
+this result, we establish this long-anticipated proof in
+\cite{guu/tv-as-3-functor}.
 
 }
