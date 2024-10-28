@@ -43,7 +43,7 @@ least two advantages over previous constructions.
         \[ {}_{A}{M}_{B} \boxtimes_{B} {}_{B}{N}_{C} \boxtimes_{{C}} {}_{C}{L}_{D} \ldots \]
 \end{enumerate}
 
-\subsection{Applications}
+\subsection{Applications} \label{section/applications},
 
 \begin{enumerate}
   \item \textbf{(Skein Nature of eTFTs)} In an upcoming work
@@ -333,24 +333,8 @@ from \cite{douglas/balanced-product}.
   It is helpful to regard the result as the ``inner product'' of $\phi$ and $\psi$.
 \end{remark}
 
-% TODO I think this is the only place we need semisimplicity and finiteness?
-% We many have to fix the definition of skein category as well (it's currently
-% defined on simple ones and extend by direct sums), if we are to remove the
-% assumptions.
-\begin{proposition} (Basis Theorem) \label{proposition/basis-theorem}
-
-  \noindent Let $C$ be a finite, semisimple tensor category, and
-  $M_{C}, _{C}N$ be finite, semisimple module categories over $C$. \quad Thus
-  the vector spaces $Hom_{M}(m, m' \lhd c), Hom_{N}(c \rhd n, n')$ have finite bases
-  $\beta(m, m' \lhd c), \beta(c \rhd n, n')$ respectively. \quad Then the hom space
-  $Hom_{p.sk(M,C,N)}(m \boxtimes n, m' \boxtimes n')$ has a linear basis
-  \[
-    \bigsqcup_{c \in Irr(C)} \beta(m, m' \lhd c) \times \beta(c \rhd n, n').
-  \]
-\end{proposition}
-\begin{proof}
-  This follows immediately from the reductions given in \ref{remark/hom-space-reduction}.
-\end{proof}
+\noindent The hom vector spaces are finite dimensional. An explicit basis is
+constructed in \ref{proposition/basis-theorem}.
 
 \begin{definition} \label{definition/karoubi-completion} (Karoubi Completion)
 
@@ -921,4 +905,27 @@ provide another direct proof for this equivalence:
     \includegraphics[width=8cm]{4}
     \includegraphics[width=8cm]{5}
   \end{center}
+\end{proof}
+
+\noindent For computation purpose (cf. sec \ref{section/applications}), one
+may find the following basis theorem useful.
+
+% TODO I think this is the only place we need semisimplicity and finiteness?
+% We many have to fix the definition of skein category as well (it's currently
+% defined on simple ones and extend by direct sums), if we are to remove the
+% assumptions. // EDIT: Actually no, ss and finiteness makes Deligne products
+% easier to handle.
+\begin{proposition} (Basis Theorem) \label{proposition/basis-theorem}
+
+  \noindent Let $C$ be a finite, semisimple tensor category, and
+  $M_{C}, _{C}N$ be finite, semisimple module categories over $C$. \quad Thus
+  the vector spaces $Hom_{M}(m, m' \lhd c), Hom_{N}(c \rhd n, n')$ have finite bases
+  $\beta(m, m' \lhd c), \beta(c \rhd n, n')$ respectively. \quad Then the hom space
+  $Hom_{p.sk(M,C,N)}(m \boxtimes n, m' \boxtimes n')$ has a linear basis
+  \[
+    \bigsqcup_{c \in Irr(C)} \beta(m, m' \lhd c) \times \beta(c \rhd n, n').
+  \]
+\end{proposition}
+\begin{proof}
+  This follows immediately from the reductions given in \ref{remark/hom-space-reduction}.
 \end{proof}
