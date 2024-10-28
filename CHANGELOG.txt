@@ -1,0 +1,32 @@
+Version 2: git@7f32963
+Version 3: git@1a5ca40
+
+------
+
+CHANGE (3 <- 2):
+
+1. Rewrite some parts in the introduction by make the following clear: (1)
+   advantages of our methods (2) the applications. Declare that we do not
+   claim any novelty of the main idea in this paper.
+
+2. Add a new application: A short and simple reproof for Kirillov+Tham2020,
+   which shows that Crane-Yetter model is a factorization homology.
+
+3. Start counting from section 1, instead of 0.
+
+4. Change "subobject" to "retract", and mention it as a general fact about
+   Karoubi completion.
+
+5. Move the Basis Theorem into the appendix, as it is not used anywhere in the
+   paper.
+
+6. Mention that "rigidity" may be enough for our work, instead of the stronger
+   condition "pivotality" that we currently use.
+
+7. Add a (hidden) TODO in the tex source file: Manuel may want to provide an
+   alternate clever proof (or at least a sketch) for the main lemma.
+
+8. Address Manuel's worry on whether we should add idempotents for matrices of
+   skeins as well while doing Karoubi completion. (cf the text in version 3:
+   "Thus, a typical object of the skein category sk(M, C, N) is the direct sum
+   of some idempotent skeins [..]")
