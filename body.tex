@@ -350,6 +350,15 @@ constructed in \ref{proposition/basis-theorem}.
   with the obvious composition rule.
 \end{definition}
 
+\begin{remark} \label{remark/karoubi-retract} (Karoubi Retracts)
+
+  \noindent It is straightforward to check that every object $(c,f)$ in
+  $Kar(C)$ is a retract of the original object $c = (c, 1_{c})$. So we have
+  \[
+    (c, f) \xrightarrow{\iota} c = (c, 1_{c}) \xrightarrow{\pi} (c, f).
+  \]
+\end{remark}
+
 \begin{definition}\label{definition/skein-category} (Skein Category)
 
   \noindent Let $C$ be a tensor category. Let $M_{C}$ and $_{C}N$ be module
@@ -358,9 +367,10 @@ constructed in \ref{proposition/basis-theorem}.
   \[
     sk(M,C,N) := Kar(p.sk(M,C,N)).
   \]
-  \noindent Thus, a typical object of the skein category $sk(M,C,N)$ is an
-  idempotent skein $\II{m}{n}{m}{n}{\phi}{\psi}{c}$. The skein category is obviously
-  a linear category.
+  \noindent Thus, a typical object of the skein category $sk(M,C,N)$ is the
+  direct sum of some idempotent skeins $\II{m}{n}{m}{n}{\phi}{\psi}{c}$
+  ($m \in Obj(M), n \in Obj(N)$). The skein category is obviously a linear
+  category.
 
   More generally, for any $n \in \mathbb{N}$, let
   $C_{0}, C_{1}, \ldots, C_{n}$ be tensor categories. Let
@@ -427,17 +437,15 @@ provide another direct proof for this equivalence in the appendix (cf
 \hfill\break
 \noindent We prove another lemma that will be useful later.
 
-\begin{lemma}\label{lemma/I-provides-subobject}
+\begin{lemma}\label{lemma/I-provides-subobject} (Objects are Retracts)
 
   \noindent Let $C$ be a tensor category, and $M_{C}, _{C}N$ be module
   categories. \quad Then any typical object $\II{}{}{m}{n}{\phi}{\psi}{c}$ in
-  $sk(M,C,N)$ is a subobject of the canonical object
-  $\boxtimes_{C}((m,n)) = \II{}{}{m}{n}{1_{m}}{1_{n}}{1}$.
+  $sk(M,C,N)$ is a retract (in particular, a subobject) of the canonical
+  object $\boxtimes_{C}((m,n)) = \II{}{}{m}{n}{1_{m}}{1_{n}}{1}$.
 \end{lemma}
 \begin{proof}
-  Recall that a typical object is an idempotent skein (cf \ref{definition/karoubi-completion}).
-  Indeed, both the inclusion arrow $\iota$ and the surjection arrow $\pi$ are
-  given by the skein $\II{}{}{m}{n}{1_{m}}{1_{n}}{1}.$
+  This directly follows from \ref{remark/karoubi-retract}.
 \end{proof}
 
 \section{Proof of the Main Equivalence Theorem}\label{section/proof-of-equivalence}
@@ -746,6 +754,9 @@ lemma.
     sk(M,C,N) \simeq M \boxtimes_{C} N.
   \]
 \end{lemma}
+
+% \begin{remark}
+% \end{remark}
 
 \begin{proof}
   We only need to show that $\boxtimes_{C}$ induces an equivalence of categories
