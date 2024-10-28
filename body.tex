@@ -755,7 +755,35 @@ lemma.
   \]
 \end{lemma}
 
+% % TODO: Ask Manuel to provide a proof.
 % \begin{remark}
+%   The whole proof can be conceptually simplified while viewed at the level of
+%   arrows. Indeed, from $M \times N$ to $sk(M,C,N)$, we have a chain of
+%   functors:
+%   \[
+%     sk(M,C,N)
+%     \leftarrow
+%     psk(M,C,N)
+%     \leftarrow
+%     M \boxtimes N
+%     \leftarrow
+%     M \otimes N
+%     \leftarrow
+%     M \times N.
+%   \]
+%   All we need to show is that while applying $Fun(-, L)$, we obtain a chain of
+%   equivalences:
+%   \[
+%     Fun(sk(M,C,N), L)
+%     \rightarrow
+%     Fun(psk(M,C,N), L)
+%     \rightarrow
+%     Fun^{C{\text -}bal}(M \boxtimes N, L)
+%     \rightarrow
+%     Fun^{C{\text -}bal}(M \otimes N, L)
+%     \rightarrow
+%     Fun^{C{\text -}bal}(M \times N, L).
+%   \]
 % \end{remark}
 
 \begin{proof}
