@@ -1,12 +1,12 @@
-### Compilation
+# Compilation
 
 Structure is given in `main.tex`.
 
 To make the document, run `$ make`.
 
-### TODO
+# TODOs
 
-1. Prove that sk(M,C,N) is abelian.
+### Prove that sk(M,C,N) is abelian.
 
 This is a significant gap in our work. Manuel noted that there exists an
 alternative definition of a k-linear category. However, we are using Douglas's
@@ -43,11 +43,11 @@ algorithm; however, the paper notes that it is not yet efficient enough to
 compute anything new. This algorithm relies on the Meat-Axe algorithm, which
 is well-introduced in [3].
 
-2. Deal with right-exactness.
+### Deal with right-exactness.
 
 This part should not be difficult, as we assume semisimplicity.
 
-3. Comment on Deligne vs Kelly Tensor Product.
+### Comment on Deligne vs Kelly Tensor Product.
 
 To relax our assumptions (finite and semisimple), challenges emerge when
 taking the Deligne tensor product in the early stages of our construction. In
@@ -58,18 +58,18 @@ is known to generalize Deligne tensor product [4].
 Manuel will add a casual remark on this, aimed at helping those interested in
 future generalizations of the work.
 
-4. Manuel's clever proof for Main Lemma.
+### Manuel's clever proof for Main Lemma.
 
 Manuel has come up with another clever and insightful proof for the main
 lemma, breaking down the steps and utilizing several established theorems. He
 will add it to the construction section, and Jin will integrate it into the text
 soon.
 
-5. Draw better pictures.
+### Draw better pictures.
 
-6. Jin clarifies with T Gannon applications to VOA.
+### Jin clarifies with T Gannon applications to VOA.
 
-## Reference
+# Reference
 
 [1] [Karoubi envelope in nLab](https://ncatlab.org/nlab/show/Karoubi+envelope)
 [2] [[2406.13438] Computing the center of a fusion category](https://arxiv.org/abs/2406.13438)
