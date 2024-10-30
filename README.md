@@ -6,7 +6,7 @@ To make the document, run `$ make`.
 
 # TODOs
 
-### Prove that sk(M,C,N) is abelian.
+### 1. Prove that sk(M,C,N) is abelian.
 
 This is a significant gap in our work. Manuel noted that there exists an
 alternative definition of a k-linear category. However, we are using Douglas's
@@ -23,13 +23,13 @@ There are three possible ways to prove it.
   abelian, assuming X meets certain conditions. The issue is that Jin is not
   aware of any theorems supporting this conclusion. It appears to be
   established that Karoubi completion is always "pseudo-abelian" [1], which is
-  a strickly weaker property than "abelian" [1].
+  a strictly weaker property than "abelian" [1].
 
 + (c) (Idea from Manuel): Demonstrate that a specific hom-space algebra is a
   finite-dimensional semisimple algebra. We have finite dimensionality,
   supported by Jin's basis theorem already, so what's remaining is
   semisimplicity. Manuel mentioned that this parallels a proof by Thibault
-  Decoppet in an easier case.
+  Décoppet in an easier case.
 
 However, Jin believes this approach could prove very challenging, as it
 closely approaches the process of semisimplifying a finite-dimensional algebra
@@ -43,11 +43,11 @@ algorithm; however, the paper notes that it is not yet efficient enough to
 compute anything new. This algorithm relies on the Meat-Axe algorithm, which
 is well-introduced in [3].
 
-### Deal with right-exactness.
+### 2. Deal with right-exactness.
 
 This part should not be difficult, as we assume semisimplicity.
 
-### Comment on Deligne vs Kelly Tensor Product.
+### 3. Comment on Deligne vs Kelly Tensor Product.
 
 To relax our assumptions (finite and semisimple), challenges emerge when
 taking the Deligne tensor product in the early stages of our construction. In
@@ -58,20 +58,20 @@ is known to generalize Deligne tensor product [4].
 Manuel will add a casual remark on this, aimed at helping those interested in
 future generalizations of the work.
 
-### Manuel's clever proof for Main Lemma.
+### 4. Manuel's clever proof for Main Lemma.
 
 Manuel has come up with another clever and insightful proof for the main
 lemma, breaking down the steps and utilizing several established theorems. He
 will add it to the construction section, and Jin will integrate it into the text
 soon.
 
-### Draw better pictures.
+### 5. Draw better pictures.
 
-### Jin clarifies with T Gannon applications to VOA.
+### 6. Jin clarifies with T Gannon applications to VOA.
 
 # Reference
 
-[1] [Karoubi envelope in nLab](https://ncatlab.org/nlab/show/Karoubi+envelope)
-[2] [[2406.13438] Computing the center of a fusion category](https://arxiv.org/abs/2406.13438)
-[3] Representations of groups - A computational approach-[Klaus Lux, Herbert Pahlings]
-[4] Work of Ignacio López Franco
++ [1] [Karoubi envelope in nLab](https://ncatlab.org/nlab/show/Karoubi+envelope)
++ [2] [[2406.13438] Computing the center of a fusion category](https://arxiv.org/abs/2406.13438)
++ [3] Representations of groups - A computational approach-[Klaus Lux, Herbert Pahlings]
++ [4] Work of Ignacio López Franco
