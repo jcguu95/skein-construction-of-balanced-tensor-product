@@ -31,7 +31,7 @@ There are three possible ways to prove it.
   semisimplicity. Manuel mentioned that this parallels a proof by Thibault
   Décoppet in an easier case.
 
-However, Jin believes this approach could prove very challenging, as it
+However, Jin believes this approach (c) could prove very challenging, as it
 closely approaches the process of semisimplifying a finite-dimensional algebra
 with given structural coefficients. This is nearly as difficult as providing a
 constructive proof of the Artin-Wedderburn theorem. While Jin is not an expert
@@ -68,6 +68,12 @@ soon.
 ### 5. Draw better pictures.
 
 ### 6. Jin clarifies with T Gannon applications to VOA.
+
+### (Small) Just use "retracts" instead of subobjects throughout.
+
+\eta*(1_{\boxtimes_C}:=\eta_{\boxtimes_C}
+
+horizontal composition \circ_h
 
 # Reference
 
