@@ -75,6 +75,12 @@ soon.
 
 horizontal composition \circ_h
 
+### Explain how a direct proof for abelian+semisimple could be done
+
+Add a remark citing (2.5.5 of Dualizable Tensor Categories) that their direct
+proof for separability (in particular, abelian and semisimple) should be
+translatable into our context.
+
 # Reference
 
 + [1] [Karoubi envelope in nLab](https://ncatlab.org/nlab/show/Karoubi+envelope)
