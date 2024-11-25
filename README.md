@@ -65,9 +65,7 @@ lemma, breaking down the steps and utilizing several established theorems. He
 will add it to the construction section, and Jin will integrate it into the text
 soon.
 
-### 5. Draw better pictures.
-
-### 6. Jin clarifies with T Gannon applications to VOA.
+### 5. Jin clarifies with T Gannon applications to VOA.
 
 ### (Small) Just use "retracts" instead of subobjects throughout.
 
