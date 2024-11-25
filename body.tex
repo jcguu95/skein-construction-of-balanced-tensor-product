@@ -787,14 +787,17 @@ lemma.
 % \end{remark}
 
 \begin{proof}
-  We only need to show that $\boxtimes_{C}$ induces an equivalence of categories
+  We only need to show that $sk(M,C,N)$ is a $k$-linear category (in
+  particular, an abelian category, following the definition in
+  \cite{douglas/balanced-product}), and that $\boxtimes_{C}$ induces an equivalence of
+  categories
   \[
     Fun(sk(M,C,N), L) \xrightarrow[\sim]{\Theta} Fun^{C{\text -}bal}(M \times N, L).
   \]
-  We constructed $\Theta$ in (\ref{lemma/construction-of-theta}), proved that
-  $\Theta$ is faithfulness in (\ref{lemma/theta-is-faithful}), is full in
-  (\ref{lemma/theta-is-full}), and is essentially surjective in
-  (\ref{lemma/theta-is-essentially-surjective}).
+  For $k$-linearity, the crux is to show that the skein category is abelian.
+  We postpone the proof to appendix [TODO]. For the second statement, we
+  constructed $\Theta$ in (\ref{lemma/construction-of-theta}), proved that $\Theta$ is faithfulness in (\ref{lemma/theta-is-faithful}), is full
+  in (\ref{lemma/theta-is-full}), and is essentially surjective in (\ref{lemma/theta-is-essentially-surjective}).
 \end{proof}
 
 
@@ -855,26 +858,28 @@ lemma.
   dimensions $(1+1)$ \cite{guu/tv-as-3-functor}.
 \end{remark}
 
-\begin{corollary}\label{corollary/skein-category-is-abelian} (Skein Categories are Abelian)
+% TODO This corollary is wrong. Remove it later.
+%
+% \begin{corollary}\label{corollary/skein-category-is-abelian} (Skein Categories are Abelian)
 
-  \noindent For any $n \in \mathbb{N}$, let $C_{0}, C_{1}, \ldots, C_{n}$ be
-  tensor categories. Let
-  \[
-    {}_{C_{0}}M^{1}_{C_{1}}, \, {}_{C_{1}}M^{2}_{C_{2}}, \ldots, {}_{C_{n{\text -}1}}M^{n}_{C_{n}}, \,
-  \]
-  be bimodule categories. Then the skein category (cf
-  \ref{definition/skein-category})
-  \[
-    sk(M^{1}, C_{1}, M^{2}, C_{2}, M^{3}, \ldots M^{i} \ldots, C_{n{\text -}1}, M^{n})
-  \]
-  is an abelian category.
-\end{corollary}
-\begin{proof}
-  The proof for the case $n=2$ follows from the fact that
-  $M^{1} \boxtimes_{C_{1}} M^{2} \simeq Z_{C_{1}}(M^{1} \boxtimes M^{2})$ is
-  abelian (cf \cite{kirillov/fact-homo-4d-tqft}). The rest follows from
-  induction.
-\end{proof}
+%   \noindent For any $n \in \mathbb{N}$, let $C_{0}, C_{1}, \ldots, C_{n}$ be
+%   tensor categories. Let
+%   \[
+%     {}_{C_{0}}M^{1}_{C_{1}}, \, {}_{C_{1}}M^{2}_{C_{2}}, \ldots, {}_{C_{n{\text -}1}}M^{n}_{C_{n}}, \,
+%   \]
+%   be bimodule categories. Then the skein category (cf
+%   \ref{definition/skein-category})
+%   \[
+%     sk(M^{1}, C_{1}, M^{2}, C_{2}, M^{3}, \ldots M^{i} \ldots, C_{n{\text -}1}, M^{n})
+%   \]
+%   is an abelian category.
+% \end{corollary}
+% \begin{proof}
+%   The proof for the case $n=2$ follows from the fact that
+%   $M^{1} \boxtimes_{C_{1}} M^{2} \simeq Z_{C_{1}}(M^{1} \boxtimes M^{2})$ is
+%   abelian (cf \cite{kirillov/fact-homo-4d-tqft}). The rest follows from
+%   induction.
+% \end{proof}
 
 \appendix
 \section{Appendix}
