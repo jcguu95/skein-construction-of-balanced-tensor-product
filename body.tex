@@ -82,16 +82,66 @@ least two advantages over previous constructions.
 
 \subsection{Conventions}\label{subsection/conventions}
 
-For simplicity, throughout the whole paper, unless otherwise mentioned, we assume the following.
-\begin{enumerate}
-  \item Every category is $\mathbb{C}$-linear (in particular, abelian).
-  \item Every tensor category is finite, semisimple, rigid.
-  \item Every (bi-)module category is finite, semisimple.
-  \item Every (bi-)module category functor is right exact (following \cite{douglas/balanced-product}).
-        % TODO Why do we need right-exactness? Does this mean we have to check
-        % right-exactness for our result as well?
-        % ANSWER: Every functor M\to N is automatically both left and right exact when M is semisimple.
-\end{enumerate}
+We fix a field $k$ and denote by $\Vect_k$ the category of $k$-vector spaces. We assume all categories, functors and natural transformations are enriched over $\Vect_k$. We always write $\otimes$ instead of $\otimes_k$.
+
+\begin{definition}
+  A $\Vect_k$-enriched functor $F:M\to N$ is called linear if it is right
+  exact, i.e. if it preserves all finite colimits. We denote the category of
+  linear functors $M\to N$ by $Lin(M,N)$. A $\Vect_k$-enriched functor
+  $M\otimes N \to L$ is called bilinear if it is linear in each variable. We
+  denote the category of bilinear functors $M\otimes N \to L$ by
+  $Bilin(M\otimes N, L)$.
+\end{definition}
+
+\begin{definition}
+  A $k$-linear category is an abelian category with a compatible $\Vect_k$
+  enrichment.
+\end{definition}
+
+\begin{definition}
+  An object in a $k$-linear category is simple if it has no nontrivial subobjects.
+\end{definition}
+
+\begin{definition}
+  A $k$-linear category is semisimple if every object splits as a direct sum
+  of simple objects.
+\end{definition}
+
+
+\begin{definition}
+  A $k$-linear category $M$ is finite if
+  \begin{itemize}
+    \item $Hom_M(X,Y)$ is finite dimensional, for all objects $X,Y\in M$;
+    \item every object of $M$ has finite length;
+    \item $M$ has enough projectives;
+    \item $M$ has finitely many isomorphism classes of simple objects.
+  \end{itemize}
+\end{definition}
+
+\begin{remark}
+  In a finite semisimple $k$-linear category every object splits as a finite
+  direct sum of simple objects.
+\end{remark}
+
+\begin{remark}
+  When $M,N$ are semisimple, every functor $M\to L$ is automatically linear
+  and every functor $M\otimes N\to L$ is automatically bilinear.
+\end{remark}
+
+\begin{definition}
+  A tensor category is a rigid $k$-linear monoidal category, where the
+  monoidal structure is given by a bilinear functor. 
+\end{definition}
+
+\begin{definition}
+ When $C$ is a tensor category, any $C$-module category $M$ is assumed to be $k$-linear by definition and the structure map $C\times M\to M$ is assumed to be bilinear. 
+\end{definition}
+
+\begin{notation}
+
+Given a right $C$-module category $M_C$, we denote by $m\lhd c\in M$ the object that results from acting with $c\in C$ on $m\in M$. Similarly, we use $c\rhd n$ in the context of a right $C$-module category $_{C}N$.\end{notation}
+
+
 
 \subsection{A Note to Experts}\label{subsection/a-note-to-experts}
 
@@ -115,26 +165,22 @@ generalizations for future work.
 \noindent In this section we recall the definition of the balanced tensor product
 from \cite{douglas/balanced-product}.
 
-\begin{definition} (Balanced Module Category Functor)
+\begin{definition} (Balanced Functor)
 
-  \noindent Let $C, D, E$ be tensor categories. Let $_{C}M_{D}$ be a
-  $C{\text -}D$ bimodule category, $_{D}N_{E}$ be a $D{\text -}E$ bimodule
-  category, $_{C}L_{E}$ be a $C{\text -}E$ bimodule category. \quad Then a
-  $D$-balanced $C{\text -}E$ bimodule category functor $M \times N\to L$
+  \noindent Let $C$ be a monoidal category, let $M_{C}$, $_{C}N$ be $C$-module categories and let $L$ be a category. \quad Then a
+  $C$-balanced functor $M \times N\to L$
   is a pair
-  \[(M \times N \xrightarrow{F} L, \alpha)\] where $F$ is a bilinear $C{\text -}E$
-  bimodule category functor and $\alpha$ is a natural isomorphism between the
-  following two functors from $M \times D \times N$ to $L$
+  \[(M \times N \xrightarrow{F} L, \alpha)\] where $F$ is a functor and $\alpha$ is a natural isomorphism 
   \[
     \begin{tikzcd}
-      M \times D \times N \arrow[r] \arrow[dr] &
+      M \times C \times N \arrow[r] \arrow[dr] &
       M \times N \arrow[d, Rightarrow, "\alpha"] \arrow[r, "F"] &
       L \\
       & M \times N \arrow[ur, "F"'] \\
     \end{tikzcd}
   \]
-  where the object $(m,d,n)$ in $M \times D \times N$ is sent by the first
-  upper arrow to $(m \lhd d, n)$, and by the first lower arrow to $(m, d \rhd n)$.
+  where the object $(m,c,n)$ in $M \times C \times N$ is sent by the first
+  upper arrow to $(m \lhd c, n)$, and by the first lower arrow to $(m, c \rhd n)$.
 \end{definition}
 
 % TODO
@@ -145,96 +191,68 @@ from \cite{douglas/balanced-product}.
 
 \begin{definition} (Balanced Natural Transformation)
 
-  \noindent Let $C, D, E$ be tensor categories. Let $_{C}M_{D}$ be a $C{\text -}D$
-  bimodule category, $_{D}N_{E}$ be a $D{\text -}E$ bimodule category, $_{C}L_{E}$ be
-  a $C{\text -}E$ bimodule category. Let $F, F'$ be $D$-balanced $C{\text -}E$ bimodule
-  category functors from $M \times N$ to $L$. A $D$-balanced transformation
-  from $F$ to $F'$ is a natural transformation $ F \xrightarrow{\eta} F'$ such
-  that the following diagram commutes (in a naturally compatible way with the
-  $C{\text -}E$ bimodule structures.)
+  \noindent Let $C$ be a monoidal category, let $M_{C}$, $_{C}N$ be $C$-module categories and let $L$ be a category. Let $(F,\alpha), (G,\beta)$ be $C$-balanced functors from $M \times N$ to $L$. A $C$-balanced natural transformation
+  from $(F,\alpha)$ to $(G,\beta)$ is a natural transformation $ F \xrightarrow{\eta} G$ such
+  that the following diagram commutes.
 
   \[
     \begin{tikzcd}
       F(m \lhd c, n) \arrow[r, "\alpha_{m,c,n}"] \arrow[d, "\eta_{m \lhd c, n}"'] &
       F(m, c \rhd n) \arrow[d, "\eta_{m, c \rhd n}"] \\
-      F'(m \lhd c, n) \arrow[r, "\alpha_{m,c,n}'"'] &
-      F'(m, c \rhd n)
+      G(m \lhd c, n) \arrow[r, "\beta_{m,c,n}"'] &
+      G(m, c \rhd n)
     \end{tikzcd}
   \]
 \end{definition}
 
 \begin{definition} (Category of Balanced Functors)
 
-  \noindent Let $C, D, E$ be tensor categories. Let $_{C}M_{D}$ be a
-  $C{\text -}D$ bimodule category, $_{D}N_{E}$ be a $D{\text -}E$ bimodule
-  category, $_{C}L_{E}$ be a $C{\text -}E$ bimodule category. Let $F, F'$ be
-  $D$-balanced $C{\text -}E$ bimodule category functors from $M \times N$ to $L$.
-  \quad Then the category of balanced functors
-  $Fun^{D{\text -}bal}_{C,E}(M \times N, L)$ is defined to be the category whose
-  objects are $D$-balanced $C{\text -}E$ bimodule category functors
-  $M \times N \to L$ and whose morphisms are $D$-balanced natural transformations.
+  \noindent Let $C$ be a monoidal category, let $M_{C}$, $_{C}N$ be $C$-module categories and let $L$ be a category. \quad Then the category of $C$-balanced functors
+  $Fun^{C{\text -}bal}(M \times N, L)$ is defined to be the category whose
+  objects are $C$-balanced functors
+  $M \times N \to L$ and whose morphisms are $C$-balanced natural transformations.
 \end{definition}
+
+\begin{notation}
+ When $M,C,N,L$ are $k$-linear, we denote by $Bilin^{C{\text -}bal}(M \times N, L)$ the full subcategory of $Fun^{C{\text -}bal}(M \times N, L)$ whose objects are bilinear $C$-balanced functors.
+\end{notation}
+
 
 % TODO: In this definition, I need M, N are semisimple already. But add
 % a later remark saying that this can be circumvented.
 
-\begin{definition} (Balanced Tensor Product)
-
-  \noindent Let $C, D, E$ be tensor categories. Let $_{C}M_{D}$ be a
-  $C{\text -}D$ bimodule category, and $_{D}N_{E}$ be a $D{\text -}E$ bimodule
-  category. \quad Then the balanced tensor product $_{C}(M \boxtimes_{D} N)_{E}$ is
-  the $C{\text -}E$ bimodule category defined as the initial $D$-balanced
-  module functor from $M \times N$; i.e. for each map from $M \times N$ to some
-  $C{\text -}E$ bimodule category $L$, there exists a unique (up to a unique
-  natural isomorphism) $C{\text -}E$ bimodule category functor $G$ such that
-  the following diagram commutes,
-
-  \[
-    \begin{tikzcd}
-      M \times N \arrow[r, "F"] \arrow[d, "\boxtimes_{D}"'] & L \\
-      _{C}(M \boxtimes_{D} N)_{E} \arrow[ur, "G"']
-    \end{tikzcd}
-  \]
-
-  \noindent and that it induces an equivalence of categories
-  \[Fun_{C,E}(M \boxtimes_{D} N, L) \simeq Fun_{C,E}^{D{\text -}bal}(M \times N, L).\]
+\begin{definition}\label{def_balanced} (Balanced Tensor Product)
+  \noindent Let $C$ be a tensor category and let $M_C$, $_{C}N$ be $k$-linear module categories.
+  \quad Then the balanced tensor product $M \boxtimes_{C} N$ is a $k$-linear
+  category $M\boxtimes_{C} N$ together with a $C$-balanced bilinear functor
+  $M\otimes N\to M\boxtimes_{C} N$ such
+  that \[Lin(M \boxtimes_{C} N, L) \to Bilin^{C-bal}(M \otimes N, L)\] is an
+  equivalence, for any $k$-linear category $L$.
 \end{definition}
 
 \section{Skein Construction (Topology)}\label{section/skein-construction}
 
 \begin{definition} (Pre-Skein Category)
-
-  \noindent Let $C$ be a tensor category. Let $M_{C}$ and $ _{C}N$ be module
-  categories. \quad Define the pre-skein category $p.sk(M,C,N)$ to be the
-  category $P$ with $Obj(P) = Obj(M \boxtimes N)$, and the morphism spaces
-  $Mor_{P}((m \boxtimes n), (m' \boxtimes n'))$ are defined to be the vector space
-  $(V \,/ \sim)$, where
-  \[
-    V := \oplus_{c,\overline{c} \in Obj(C)} Hom_{M}(m, m' \lhd c) \otimes Hom_{C}(c,\overline{c}) \otimes Hom_{N} (\overline{c} \rhd n, n'),
-  \]
-  and the relations $\sim$ are generated by the following types of relations
+  For $C$ a monoidal category and $M_C$, $_{C}N$ module categories, we define
+  a new category $M\otimes_C N$ as follows. Its objects are pairs $(m,n)$ with
+  $m\in M$ and $n\in N$, which we denote by $m\boxtimes n$. The $k$-vector space
+  $Hom_{M\otimes_C N}(m\boxtimes n, m'\boxtimes n')$ is the quotient
+  of $$V((m,n),(m',n')):=\bigoplus_{c,\overline{c} \in Obj(C)} Hom_{M}(m, m' \lhd c) \otimes Hom_{C}(c,\overline{c}) \otimes Hom_{N} (\overline{c} \rhd n, n')$$
+  by the subspace spanned by
   \begin{align}
     \phi \otimes (\overline{\pi} \circ \pi) \otimes \psi &- (\phi_{\pi} \otimes \overline{\pi} \otimes \psi) \label{relation/a} \\
     \phi \otimes (\overline{\pi} \circ \pi) \otimes \psi &- (\phi \otimes \pi \otimes {}_{\overline{\pi}}\psi) \label{relation/b},
   \end{align}
   where
   \begin{align}
-    \phi_{\pi}  &:= \left( m \xrightarrow{\phi} m' \lhd c \xrightarrow{1_{m'} \lhd \pi} m' \lhd c' \right)\\
+    \phi_{\pi}  &:= \left( m \xrightarrow{\phi} m' \lhd c \xrightarrow{1_{m'} \lhd \pi} m' \lhd c' \right) \\
     {}_{\overline{\pi}}\psi &:= \left( \overline{c} \rhd n \xrightarrow{\overline{\pi} \rhd 1_{n}} \overline{\overline{c}} \rhd n \xrightarrow{\psi} n' \right)
   \end{align}
-
-  % % TODO: Make a better picture.
-  % \begin{center}
-  %   \includegraphics[width=18cm]{1}
-  % \end{center}
-  \begin{center}
+  
+    \begin{center}
     \includesvg[width=18cm]{drawing-1}
   \end{center}
-
-  \noindent We define the composition on the level of $V$. It is
-  straightforward to check that it descends properly to $(V \, / \sim)$ using
-  the $2$-categorically compositional nature of tensor categories.
-  % TODO: If have time, add a complete proof for this claim, perhaps in the appendix.
+  
   The composition
   \[
     (\phi' \otimes \pi' \otimes \psi' ) \circ (\phi \otimes \pi \otimes \psi)
@@ -257,24 +275,19 @@ from \cite{douglas/balanced-product}.
       (\overline{c}' \otimes \overline{c}) \rhd n \xrightarrow[\sim]{\alpha} \overline{c}' \rhd (\overline{c} \rhd n) \xrightarrow{1_{\overline{c}'} \rhd \psi} \overline{c}' \rhd n' \xrightarrow{\psi'} n''.
     \]
   \end{itemize}
-
-  % % TODO: Make a better picture.
-  % \begin{center}
-  %   \includegraphics[width=18cm]{2}
-  % \end{center}
-  \begin{center}
+  
+    \begin{center}
     \includesvg[width=18cm]{drawing-2}
   \end{center}
-
-  \noindent Finally, extend the definition of the morphism spaces to those between
-  general objects via direct sum.
-
+  %TODO:picture of phi'' and psi''
+  It is straightforward to check that this composition law respects the relations defining $Hom_{M\otimes_C N}$.
 \end{definition}
 
+    
 \begin{notation} (${}^{m'}_{n'}I^{m}_{n}$)
 
   \noindent Denote the equivalence class of the vector
-  $(\phi \otimes \pi \otimes \psi) \in V$ by
+  $(\phi \otimes \pi \otimes \psi) \in V((m,m'),(n,n'))$ by
   \[\III{m'}{n'}{m}{n}{\phi}{\psi}{c}{\pi}{c'}.\]
   When $m' = m$ and $n' = n$, we omit the primed symbols and write
   \[
@@ -310,12 +323,12 @@ from \cite{douglas/balanced-product}.
 \end{remark}
 
 \begin{remark}\label{remark/hom-space-reduction} (Hom Space Reduction)
-
+%TODO: pictures
   \noindent By the relations in the definition, the transformation
   \[
     \pi = 1_{\overline{c}} \circ \pi = \pi \circ 1_{c}
   \]
-  can be absorbed into each of the strain, so
+  can be absorbed into each of the strands, so
   \[
     \II{m'}{n'}{m}{n}{\phi}{{}_{\pi}\psi}{c} =
     \III{m'}{n'}{m}{n}{\phi}{{}_{\pi}\psi}{c}{1_{c}}{c} =
@@ -1193,54 +1206,6 @@ We will now show that $M\otimes N\to sk(M,C,N)$ presents
 $sk(M,C,N)$ as the balanced tensor product $M\boxtimes_C N$ whenever $M$, $N$
 and $M\boxtimes_C N$ are finite semisimple.
 
-\begin{definition}
-  A $\Vect_k$-enriched functor $F:M\to N$ is called linear if it is right
-  exact, i.e. if it preserves all finite colimits. We denote the category of
-  linear functors $M\to N$ by $Lin(M,N)$. A $\Vect_k$-enriched functor
-  $M\otimes N \to L$ is called bilinear if it is linear in each variable. We
-  denote the category of bilinear functors $M\otimes N \to L$ by
-  $Bilin(M\otimes N, L)$.
-\end{definition}
-
-\begin{definition}
-  A $k$-linear category is an abelian category with a compatible $\Vect_k$
-  enrichment.
-\end{definition}
-
-\begin{definition}
-  An object in a $k$-linear category is simple if it has no nontrivial subobjects.
-\end{definition}
-
-\begin{definition}
-  A $k$-linear category is semisimple if every object splits as a direct sum
-  of simple objects.
-\end{definition}
-
-
-\begin{definition}
-  A $k$-linear category $M$ is finite if
-  \begin{itemize}
-    \item $Hom_M(X,Y)$ is finite dimensional, for all objects $X,Y\in M$;
-    \item every object of $M$ has finite length;
-    \item $M$ has enough projectives;
-    \item $M$ has finitely many isomorphism classes of simple objects.
-  \end{itemize}
-\end{definition}
-
-\begin{remark}
-  In a finite semisimple $k$-linear category every object splits as a finite
-  direct sum of simple objects.
-\end{remark}
-
-\begin{definition}
-  A tensor category is a rigid $k$-linear monoidal category, where the
-  monoidal structure is given by a bilinear functor. 
-\end{definition}
-
-\begin{remark}
-  When $M,N$ are semisimple, every functor $M\to L$ is automatically linear
-  and every functor $M\otimes N\to L$ is automatically bilinear.
-\end{remark}
 
 \begin{definition}\label{def_balanced} (Balanced Tensor Product)
   \noindent Let $C$ be a tensor category and let $M_C$, $_{C}N$ be $k$-linear module categories.
