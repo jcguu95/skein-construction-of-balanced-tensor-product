@@ -10,6 +10,10 @@ To make the document, run `$ make`.
 
 This part should not be difficult, as we assume semisimplicity.
 
+### 2. Change the definition of pre-skein with Manuel's idea.
+
+### 3. Manuel will do deep integration.
+
 # Reference
 
 + [1] [Karoubi envelope in
