@@ -84,7 +84,7 @@ least two advantages over previous constructions.
 For simplicity, throughout the whole paper, unless otherwise mentioned, we assume the following.
 \begin{enumerate}
   \item The base field is $\mathbb{C}$, the field of complex numbers.
-  \item Every tensor category is finite, semisimple, pivotal, and defined over $\mathbb{C}$. %why pivotal?%
+  \item Every tensor category is finite, semisimple, rigid, and defined over $\mathbb{C}$.
   \item Every (bi-)module category is finite, semisimple, and defined over
   $\mathbb{C}$. %we already said everything is over C%
   \item Every (bi-)module category functor is right exact (following
@@ -107,10 +107,9 @@ work is merely a generalization of it to the context of field theories with
 defects.
 
 In this work, we assume ideal conditions—finiteness, semisimplicity, and
-pivotality (see \ref{subsection/conventions}). While it is both possible and
+rigidity (see \ref{subsection/conventions}). While it is both possible and
 beneficial to relax some of these assumptions, for simplicity, we leave such
-generalizations for future work. For example, we expect our proof works even
-if pivotality is demoted to rigidity.
+generalizations for future work.
 
 \section{Balanced Tensor Product (Algebra)}\label{section/balanced-tensor-product}
 
@@ -492,7 +491,7 @@ obvious generalization to the case of more bimodule categories.
     = F(m, c \rhd n),
   \]
   which is clearly satisfied by $G(\II{m}{cn}{mc}{n}{1}{1}{c}).$ So defined
-  $\alpha$ is clearly natural.
+  $\alpha$ is clearly natural, and it is invertible by using the right dual of $c$.
 
   \noindent (Morphism) Let $G \xrightarrow{\eta} G'$ be a morphism in
   $Fun(sk(M,C,N), L)$. Its image under $\Theta$ is simply the horizontal
@@ -1574,7 +1573,7 @@ provide another direct proof for this equivalence:
     }
     \II{}{}{m \lhd c}{1}{\mu_{\phi, \psi}}{1}{1},
   \end{align*}
-  where $c^{\star}$ denotes the pivotal dual of $c$, $n$ denotes the counit, and
+  where $c^{\star}$ denotes the right dual of $c$, $n$ denotes the counit, and
   $u$ denotes the unit for $c$. The two given morphisms may seem unnecessarily
   long, but they have to be so by the definition of of Karoubi completion (in
   which objects must be ``absorbed'' into morphism). The following pictures
