@@ -45,11 +45,12 @@ results that work for general fields. In particular.. [enter what you had].
 And add "this may help extension of this work to more general conditions in
 the future", to clarify the intention of this remark.
 
-[gap] In the proof of proposition 2.17. This was where I got stuck last week.
-More precisely, "finite" got me stuck. In [EGNO, def 1.8.6], the definition of
-"finite" includes "having enough projectives", i.e. each object has to have a
-projective cover. As M \subset N, any m has a projective cover in N. We need
-to argue why that cover can be altered to be in M.
+[gap] (This is resolved, but we need to mention how it's resolved in the
+paper.) In the proof of proposition 2.17. This was where I got stuck last
+week. More precisely, "finite" got me stuck. In [EGNO, def 1.8.6], the
+definition of "finite" includes "having enough projectives", i.e. each object
+has to have a projective cover. As M \subset N, any m has a projective cover
+in N. We need to argue why that cover can be altered to be in M.
 
 # Reference
 
