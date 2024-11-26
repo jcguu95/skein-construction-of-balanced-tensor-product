@@ -185,8 +185,9 @@ from \cite{douglas/balanced-product}.
   category. \quad Then the balanced tensor product $_{C}(M \boxtimes_{D} N)_{E}$ is
   the $C{\text -}E$ bimodule category defined as the initial $D$-balanced
   module functor from $M \times N$; i.e. for each map from $M \times N$ to some
-  $C{\text -}E$ bimodule category $L$, there exists a unique $C{\text -}E$
-  bimodule category functor $G$ such that the following diagram commutes,
+  $C{\text -}E$ bimodule category $L$, there exists a unique (up to a unique
+  natural isomorphism) $C{\text -}E$ bimodule category functor $G$ such that
+  the following diagram commutes,
 
   \[
     \begin{tikzcd}
@@ -198,14 +199,6 @@ from \cite{douglas/balanced-product}.
   \noindent and that it induces an equivalence of categories
   \[Fun_{C,E}(M \boxtimes_{D} N, L) \simeq Fun_{C,E}^{D{\text -}bal}(M \times N, L).\]
 \end{definition}
-
-\begin{definition} (Balanced Tensor Product)
-
-  \noindent Let $C, D, E$ be tensor categories. Let $_{C}M_{D}$ be a
-  $C{\text -}D$ bimodule category, and $_{D}N_{E}$ be a $D{\text -}E$ bimodule
-  category. \quad Then a balanced tensor product of $M$ with $N$ over $D$ is
-  a $C{\text -}E$ bimodule category $_{C}(M \boxtimes_{D} N)_{E}$ equipped with a $D$-balanced $C{\text -}E$ bimodule functor $M\times N\to _{C}(M \boxtimes_{D} N)_{E}$ such that the induced map \[Fun_{C,E}(M \boxtimes_{D} N, L) \to Fun_{C,E}^{D{\text -}bal}(M \times N, L)\] is an equivalence of categories. \end{definition}
-
 
 \section{Skein Construction (Topology)}\label{section/skein-construction}
 
