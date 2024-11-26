@@ -21,9 +21,7 @@ is known to generalize Deligne tensor product [4].
 Manuel will add a casual remark on this, aimed at helping those interested in
 future generalizations of the work.
 
-### 3. Jin clarifies with T Gannon applications to VOA.
-
-### 4. Integrate Manuel's work
+### 3. Integrate Manuel's work
 
 And resolve the following points.
 
