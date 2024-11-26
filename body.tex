@@ -375,10 +375,13 @@ constructed in \ref{proposition/basis-theorem}.
   \[
     sk(M,C,N) := Kar(p.sk(M,C,N)).
   \]
-  \noindent Thus, a typical object of the skein category $sk(M,C,N)$ is the
-  direct sum of some idempotent skeins $\II{m}{n}{m}{n}{\phi}{\psi}{c}$
-  ($m \in Obj(M), n \in Obj(N)$). The skein category is obviously a linear
-  category.
+  \noindent Thus, a typical object of the skein category $sk(M,C,N)$ is an
+  idempotent matrix of skeins (the typical object is an idempotent
+  endomorphism of a direct sum $\oplus_{i} (m_{i} \boxtimes n_{i})$, and an
+  endomorphism of such a direct sum is just a matrix whose entries are maps
+  $(m_{i} \boxtimes n_{i}) \to (m_{j} \boxtimes n_{j})$, i.e. skeins like
+  $\II{m_{j}}{n_{j}}{m_{i}}{n_{i}}{\phi}{\psi}{c}$). The skein category is
+  obviously enriched over $\Vect_{\mathbb{C}}$.
 
   More generally, for any $n \in \mathbb{N}$, let
   $C_{0}, C_{1}, \ldots, C_{n}$ be tensor categories. Let
