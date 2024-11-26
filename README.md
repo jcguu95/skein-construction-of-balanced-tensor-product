@@ -6,11 +6,11 @@ To make the document, run `$ make`.
 
 # TODOs
 
-### 2. Deal with right-exactness.
+### 1. Deal with right-exactness.
 
 This part should not be difficult, as we assume semisimplicity.
 
-### 3. Comment on Deligne vs Kelly Tensor Product.
+### 2. Comment on Deligne vs Kelly Tensor Product.
 
 To relax our assumptions (finite and semisimple), challenges emerge when
 taking the Deligne tensor product in the early stages of our construction. In
@@ -21,21 +21,9 @@ is known to generalize Deligne tensor product [4].
 Manuel will add a casual remark on this, aimed at helping those interested in
 future generalizations of the work.
 
-### 5. Jin clarifies with T Gannon applications to VOA.
+### 3. Jin clarifies with T Gannon applications to VOA.
 
-### (Small) Just use "retracts" instead of subobjects throughout.
-
-\eta*(1_{\boxtimes_C}:=\eta_{\boxtimes_C}
-
-horizontal composition \circ_h
-
-### Explain how a direct proof for abelian+semisimple could be done
-
-Add a remark citing (2.5.5 of Dualizable Tensor Categories) that their direct
-proof for separability (in particular, abelian and semisimple) should be
-translatable into our context.
-
-### Integrate Manuel's work
+### 4. Integrate Manuel's work
 
 And resolve the following points.
 

@@ -519,7 +519,7 @@ obvious generalization to the case of more bimodule categories.
   This holds if $f$ is surjective on objects. However, in our case
   $f = \boxtimes_{C}$ is not as strong. Fortunately, clearly it also holds if
   $f$ is almost-surjective, in the sense that each $y \in Obj(Y)$ has an
-  $x \in Obj(X)$ such that $y$ is a subobject of $f(X)$. Indeed,
+  $x \in Obj(X)$ such that $y$ is a retract of $f(X)$. Indeed,
   \[
     1_{g(y)} = g(1_{y}) = g(\pi_{y} \circ \iota_{y}),
   \]
@@ -528,7 +528,7 @@ obvious generalization to the case of more bimodule categories.
     (g(y) \xrightarrow{\eta_{y}} g'(y)) = \eta_{y} \circ 1_{g(y)} = \eta_{y} \circ g(\pi \circ \iota) = g(\pi) \circ \eta_{f(x)} \circ g(\iota) = g(\pi) \circ 0 \circ g(\iota) = 0.
   \]
   This applies to our case by putting $f = \boxtimes_{C}$ and $g = G$, because
-  each object $\II{}{}{m}{n}{\phi}{\psi}{c}$ is clearly a subobject of
+  each object $\II{}{}{m}{n}{\phi}{\psi}{c}$ is clearly a retract of
   $\boxtimes_{C}(m,n) = \II{}{}{m}{n}{1}{1}{1}$. Therefore, $\Theta$ is faithful.
 \end{proof}
 
@@ -893,12 +893,18 @@ lemma.
 \appendix
 \section{Appendix}
 
-\subsection{Proof for Abelianity of $sk(M,C,N)$}
+\subsection{$sk(M,C,N)$ is $k$-linear}
 
 \noindent This subsection proves the technical condition that the skein
-category $sk(M,C,N)$ is $k$-linear in \ref{semisimple}. We needed this result
-in the main lemma \ref{lemma/main-lemma}. Throughout this subsection, we fix a
-field $k$.
+category $sk(M,C,N)$ is $k$-linear in \ref{semisimple}. In particular, it is
+abelian. We needed this result in the main lemma \ref{lemma/main-lemma}. It is
+more complicated to prove than we expected, and it turns out that we need to
+use some established categorical theories. A more direct and algebraic proof
+may be translated from 2.5.5 of \cite{douglas/balanced-product} to out
+skein-theoretic context.
+
+Throughout this subsection,
+we fix a field $k$.
 
 \begin{definition}
   Denote by $\Vect_k$ the category of $k$-vector spaces. We assume all
