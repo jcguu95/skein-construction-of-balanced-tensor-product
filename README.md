@@ -10,6 +10,12 @@ To make the document, run `$ make`.
 
 Some of them have been published, but we still use their arXiv version.
 
+### 2. Others
+
+1. In application (No-Go), mention how balanced tensor product shows up in
+   Crane-Yetter (i.e. is composition of 2-morphisms). ; "this strategy" -> "a
+   similar strategy".
+
 # Reference
 
 + [1] [Karoubi envelope in
