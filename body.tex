@@ -35,21 +35,33 @@ which strikes a better mix between algebra and topology.
 
 \subsection{Results}
 
-Fix a field $k$ and assume all categories, functors and natural transformations are enriched over $\Vect_k$. Given a tensor category $C$ and $C$-module categories $M_C$ and $_{C}N$, we define a category $M\otimes_C N$ whose objects are pairs $(m,n)$ with $m\in M$ and $n\in N$ and whose morphisms $(m,n)\to (m',n')$ are certain skeins (see Definition \ref{pre-skein}). This comes equipped with a $C$-balanced functor $M\otimes N\to M\otimes_C N$. We then define $sk(M,C,N)$ as the Cauchy completion of $M\otimes_C N$, which can be constructed explicitly in two steps: first add finite direct sums and then add splittings of idempotents. We then obtain a $C$-balanced functor $M\otimes N\to sk(M,C,N)$. The main result in our paper is the following.
+Fix a field $k$ and assume all categories, functors and natural transformations are enriched over $\Vect_k$. Given a rigid monoidal category $C$ and $C$-module categories $M_C$ and $_{C}N$, we define a category $M\otimes_C N$ whose objects are pairs $(m,n)$ with $m\in M$ and $n\in N$ and whose morphisms $(m,n)\to (m',n')$ are certain skeins (see Definition \ref{pre-skein}). This comes equipped with a $C$-balanced functor $M\otimes N\to M\otimes_C N$. 
+
+When $M$, $N$ and their balanced Deligne tensor product $M\boxtimes_C N$ are all $k$-linear finite semisimple, we define $sk(M,C,N)$ as the Cauchy completion of $M\otimes_C N$, which can be constructed explicitly in two steps: first add finite direct sums and then add splittings of idempotents. We then obtain a $C$-balanced functor $M\otimes N\to sk(M,C,N)$. The main result in our paper is the following.
 
 \begin{theorem}\label{sk_bal}
   Let $C$ be a tensor category and let $M_C$,$_{C}N$ be $k$-linear finite semisimple $C$-module categories. Suppose $M\boxtimes_C N$ is also $k$-linear finite semisimple. Then the
   $C$-balanced functor $M\otimes N\to sk(M,C,N)$ exhibits $sk(M,C,N)$ as the
-  balanced tensor product $M\boxtimes_C N$.
+  balanced Deligne tensor product $M\boxtimes_C N$.
 \end{theorem}
 
 Using results from \cite{douglas/dualizable-tensor-categories} (see Remark \ref{semisimple_douglas/dualizable-tensor-categories}), this has the following immediate Corollary.
 
 \begin{corollary}
    Suppose $k$ has characteristic $0$, $C$ is a finite semisimple tensor category and $M_C$,$_{C}N$ are $k$-linear finite semisimple $C$-module categories. Then the $C$-balanced functor $M\otimes N\to sk(M,C,N)$ exhibits
-   $sk(M,C,N)$ as the balanced tensor product $M\boxtimes_C N$.
+   $sk(M,C,N)$ as the balanced Deligne tensor product $M\boxtimes_C N$.
 \end{corollary}
 
+We then discuss the nonsemisimple case. Here one must define $sk(M,C,N)$ by taking a finite cocompletion of $M\otimes_C N$ which preserves finite colimits in $M$ and $N$ (see Definition \ref{sk_nonsemisimple}). We then obtain the following results.
+
+\begin{theorem}
+Let $C$ be a rigid monoidal category and let $M_C$, $_{C}N$ be finitely cocomplete module categories. Then the $C$-balanced functor $M\otimes N\to sk(M,C,N)$ presents $sk(M,C,N)$ as the balanced Kelly tensor product of $M$ and $N$ over $C$. 
+\end{theorem}
+
+\begin{corollary}
+ 
+Let $C$ be a finite tensor category, $M_C$, $_{C}N$ finite $k$-linear $C$-module categories. Then $sk(M,C,N)$ is $k$-linear and the $C$-balanced functor $M\otimes N\to sk(M,C,N)$ presents $sk(M,C,N)$ as the balanced Deligne tensor product of $M$ and $N$ over $C$.
+\end{corollary}
 
 \subsection{Advantages}
 
@@ -102,6 +114,13 @@ Using results from \cite{douglas/dualizable-tensor-categories} (see Remark \ref{
 We fix a field $k$ and denote by $\Vect_k$ the category of $k$-vector spaces. We assume all categories, functors and natural transformations are enriched over $\Vect_k$. We always write $\otimes$ instead of $\otimes_k$.
 
 \begin{definition}
+ 
+Given categories $M,N$ we denote by $M\otimes N$ the category whose objects are pairs $(m,n)$ with $m\in M$ and $n\in N$ and where $Hom_{M\otimes N}((m,n),(m',n'))=Hom_M(m,m')\otimes Hom(n,n')$.  
+ 
+\end{definition}
+
+
+\begin{definition}
   A $\Vect_k$-enriched functor $F:M\to N$ is called linear if it is right
   exact, i.e. if it preserves all finite colimits. We denote the category of
   linear functors $M\to N$ by $Lin(M,N)$. A $\Vect_k$-enriched functor
@@ -151,7 +170,7 @@ We fix a field $k$ and denote by $\Vect_k$ the category of $k$-vector spaces. We
 \end{definition}
 
 \begin{definition}
- When $C$ is a tensor category, any $C$-module category $M$ is assumed to be $k$-linear by definition and the structure map $C\times M\to M$ is assumed to be bilinear. 
+ When $C$ is a tensor category, any $C$-module category $M$ is assumed to be $k$-linear by definition and the structure map $C\otimes M\to M$ is assumed to be bilinear. 
 \end{definition}
 
 \begin{notation}
@@ -185,18 +204,18 @@ from \cite{douglas/balanced-product}.
 \begin{definition} (Balanced Functor)
 
   \noindent Let $C$ be a monoidal category, let $M_{C}$, $_{C}N$ be $C$-module categories and let $L$ be a category. \quad Then a
-  $C$-balanced functor $M \times N\to L$
+  $C$-balanced functor $M \otimes N\to L$
   is a pair
-  \[(M \times N \xrightarrow{F} L, \alpha)\] where $F$ is a functor and $\alpha$ is a natural isomorphism 
+  \[(M \otimes N \xrightarrow{F} L, \alpha)\] where $F$ is a functor and $\alpha$ is a natural isomorphism 
   \[
     \begin{tikzcd}
-      M \times C \times N \arrow[r] \arrow[dr] &
-      M \times N \arrow[d, Rightarrow, "\alpha"] \arrow[r, "F"] &
+      M \otimes C \otimes N \arrow[r] \arrow[dr] &
+      M \otimes N \arrow[d, Rightarrow, "\alpha"] \arrow[r, "F"] &
       L \\
-      & M \times N \arrow[ur, "F"'] \\
+      & M \otimes N \arrow[ur, "F"'] \\
     \end{tikzcd}
   \]
-  where the object $(m,c,n)$ in $M \times C \times N$ is sent by the first
+  where the object $(m,c,n)$ in $M \otimes C \otimes N$ is sent by the first
   upper arrow to $(m \lhd c, n)$, and by the first lower arrow to $(m, c \rhd n)$.
 \end{definition}
 
@@ -208,7 +227,7 @@ from \cite{douglas/balanced-product}.
 
 \begin{definition} (Balanced Natural Transformation)
 
-  \noindent Let $C$ be a monoidal category, let $M_{C}$, $_{C}N$ be $C$-module categories and let $L$ be a category. Let $(F,\alpha), (G,\beta)$ be $C$-balanced functors from $M \times N$ to $L$. A $C$-balanced natural transformation
+  \noindent Let $C$ be a monoidal category, let $M_{C}$, $_{C}N$ be $C$-module categories and let $L$ be a category. Let $(F,\alpha), (G,\beta)$ be $C$-balanced functors from $M \otimes N$ to $L$. A $C$-balanced natural transformation
   from $(F,\alpha)$ to $(G,\beta)$ is a natural transformation $ F \xrightarrow{\eta} G$ such
   that the following diagram commutes.
 
@@ -225,13 +244,13 @@ from \cite{douglas/balanced-product}.
 \begin{definition} (Category of Balanced Functors)
 
   \noindent Let $C$ be a monoidal category, let $M_{C}$, $_{C}N$ be $C$-module categories and let $L$ be a category. \quad Then the category of $C$-balanced functors
-  $Fun^{C{\text -}bal}(M \times N, L)$ is defined to be the category whose
+  $Fun^{C{\text -}bal}(M \otimes N, L)$ is defined to be the category whose
   objects are $C$-balanced functors
-  $M \times N \to L$ and whose morphisms are $C$-balanced natural transformations.
+  $M \otimes N \to L$ and whose morphisms are $C$-balanced natural transformations.
 \end{definition}
 
 \begin{notation}
- We denote by $Bilin^{C{\text -}bal}(M \times N, L)$ the full subcategory of $Fun^{C{\text -}bal}(M \times N, L)$ whose objects are bilinear (i.e. right exact) $C$-balanced functors.
+ We denote by $Bilin^{C{\text -}bal}(M \otimes N, L)$ the full subcategory of $Fun^{C{\text -}bal}(M \otimes N, L)$ whose objects are bilinear (i.e. right exact) $C$-balanced functors.
 \end{notation}
 
 
@@ -795,8 +814,7 @@ Since we are mostly interested in the characteristic zero case, we record the fo
    $sk(M,C,N)$ as the balanced tensor product $M\boxtimes_C N$.
 \end{corollary}
 
-\begin{remark} (Beyond the Semisimple Case?) 
-\end{remark}
+
 
     
     
@@ -824,73 +842,77 @@ We explain how one can adapt the construction of $sk(M,C,N)$ to the non-semisimp
 \begin{definition}
 Suppose $C$ is a rigid monoidal category and $M_C, _{C}N$ are finitely cocomplete $C$-module categories. Their balanced Kelly tensor product is a finitely cocomplete category $M\boxtimes^K_C N$ together with a $C$-balanced bilinear functor $M\otimes N\to M\boxtimes^K_C N$ such that precomposition defines an equivalence $$Lin(M\boxtimes^K_C N,L)\to Bilin^{C-bal}(M\otimes N, L)$$ for any finitely cocomplete category $L$.\end{definition}
 
-Suppose $C$ is a rigid monoidal category and $M_C, _{C}N$ are finitely cocomplete $C$-module categories. We explain how to construct $sk(M,C,N)$ so that $M\otimes N\to sk(M,C,N)$ presents it as the balanced Kelly tensor product of $M$ and $N$ over $C$. We follow very closely the procedure adopted in \cite{lopezfranco/tensor-products} to construct the unbalanced Kelly tensor product, starting from $M\otimes N$. 
+Suppose $C$ is a rigid monoidal category and $M_C, _{C}N$ are finitely cocomplete $C$-module categories. We explain how to construct $sk(M,C,N)$ so that $M\otimes N\to sk(M,C,N)$ presents it as the balanced Kelly tensor product of $M$ and $N$ over $C$. We follow very closely the procedure adopted in \cite{lopezfranco/tensor-products} to construct the unbalanced Kelly tensor product, starting from $M\otimes N$.
 
-Denote $Fun((M\otimes_C N)^{op},\Vect_k)$ by $Psh(M\otimes_C N)$ and denote by $Psh(M\otimes_C N)_{lex}$ the the full subcategory whose objects are those presheaves for which the composite $(M\otimes N)^{op}\to (M\otimes_C N)^{op}\to\Vect_k$ is left exact in each variable (i.e. sends finite colimits in $M$ or $N$ to finite limits in $\Vect_k$). Then this subcategory is reflective (see e.g. \cite[Theorem 6.5]{kelly/basic-concepts-enriched}) so that we have $L:Psh(M\otimes_C N)\to Psh(M\otimes_C N)_{lex}$ left adjoint to the inclusion.
+\begin{definition}
+
+A functor $(M\otimes_C N)^{op}\to \Vect_k$ is said to be left exact in each variable if the composite $M^{op}\otimes N^{op}\to (M\otimes_C N)^{op}\to \Vect_k$ is left exact in each variable. In other words it sends finite colimits in $M$ and finite colimits in $N$ to finite limits in $\Vect_k$. We denote by $Bilex[(M\otimes_C N)^{op},\Vect_k]\subset [(M\otimes_C N)^{op},\Vect_k]$ the full subcategory whose objects are those functors which are left exact in each variable.
+\end{definition}
+ 
+This subcategory is reflective (see e.g. \cite[Theorem 6.5]{kelly/basic-concepts-enriched}) so that we an adjunction 
 
 \[\begin{tikzcd}
-	{Psh(M\otimes_C N)} & {Psh(M\otimes_C N)_{lex}}
-	\arrow[""{name=0, anchor=center, inner sep=0}, "L", curve={height=-6pt}, from=1-1, to=1-2]
+	{[(M\otimes_C N)^{op},\Vect_k]} & {Bilex[(M\otimes_C N)^{op},\Vect_k]}
+	\arrow[""{name=0, anchor=center, inner sep=0}, "R", curve={height=-6pt}, from=1-1, to=1-2]
 	\arrow[""{name=1, anchor=center, inner sep=0}, "i", curve={height=-6pt}, hook', from=1-2, to=1-1]
 	\arrow["\dashv"{anchor=center, rotate=-90}, draw=none, from=0, to=1]
-\end{tikzcd}\]
-
-
-\begin{notation}
- In this section, we use $M(x,y)$ instead of $Hom_M(x,y)$.\end{notation}
+\end{tikzcd}.\] In particular, $Bilex[(M\otimes_C N)^{op},\Vect_k]$ is cocomplete.
 
 
 \begin{lemma}\label{right_exact_0}
  
-The composite $M\otimes N\to Psh(M\otimes_C N)\to Psh(M\otimes_C N)_{lex}$ is right exact in each variable.\end{lemma}
+The composite $M\otimes N\to M\otimes_C N \to [(M\otimes_C N)^{op},\Vect_k]\to Bilex[(M\otimes_C N)^{op},\Vect_k]$ is right exact in each variable.\end{lemma}
 
 \begin{proof}
  
-Denote by $Y$ the Yoneda embedding. Given $\phi\in Psh(M\otimes_C N)_{lex}$ we must show that $Psh(M\otimes_C N)_{lex}(LY-,\phi)$ is left exact in each variable. But $$Psh(M\otimes_C N)_{lex}(LY-,\phi)\simeq Psh(M\otimes_C N)(Y-,\phi)\simeq \phi$$ where we used the adjunction $L\dashv i$ in the first step and the Yoneda Lemma in the second step.\end{proof}
+This is follows from assertion (5.51) in \cite{kelly/basic-concepts-enriched}.\end{proof}
 
-Consider the composite $$M\otimes_C N \to Psh(M\otimes_C N)\to Psh(M\otimes_C N)_{lex}.$$ 
+Denote by $K$ the composite $$M\otimes_C N \to [(M\otimes_C N)^{op},\Vect_k]\to Bilex[(M\otimes_C N)^{op},\Vect_k].$$ 
 
-\begin{definition}We define $sk(M,C,N)$ as the closure of the image of the functor $M\otimes_C N Psh(M\otimes_C N)_{lex}$ under finite colimits. The functor $M\otimes N\to Psh(M\otimes_C N)_{lex}$ factors through this subcategory, so we obtain a functor $M\otimes N \to sk(M,C,N)$.\end{definition}
-
-By restricting the adjunction $L\dashv i$, we obtain an adjunction \[\begin{tikzcd}
-	{Fin(M\otimes_C N)} & {sk(M,C,N)}
-	\arrow[""{name=0, anchor=center, inner sep=0}, "L", curve={height=-6pt}, from=1-1, to=1-2]
-	\arrow[""{name=1, anchor=center, inner sep=0}, "i", curve={height=-6pt}, hook', from=1-2, to=1-1]
-	\arrow["\dashv"{anchor=center, rotate=-90}, draw=none, from=0, to=1]
-\end{tikzcd}.\]
-
-Now $L$ has the property that precomposition defines an equivalence $$Lin(sk(M,C,N)\to Lin(Fin(M\otimes_C N), K)_{bilin}$$ for any finitely cocomplete $K$. Here the right hand side denotes finitely cocontinuous functors $Fin(M\otimes_C N)\to K$ which additionally send finite colimits in $M$ or $N$ to finite colimits in $K$. 
+\begin{definition}\label{sk_nonsemisimple} We define $sk(M,C,N)$ as the closure of the image of the functor $$K:M\otimes_C N \to Bilex[(M\otimes_C N)^{op},\Vect_k]$$ under finite colimits. Thus $sk(M,C,N)$ is finitely cocomplete and comes equipped with a functor $M\otimes_C N \to sk(M,C,N)$.\end{definition}
 
 \begin{lemma}\label{right_exact}
-The functor $M\otimes N\to sk(M,C,N)$ is right exact in each variable.
+The functor $M\otimes N\to M\otimes_C N \to sk(M,C,N)$ is right exact in each variable.
 \end{lemma}
 \begin{proof}
- This follows directly from Lemma \ref{right_exact_0}.\end{proof}
+ This follows directly from Lemma \ref{right_exact_0} and the fact that $sk(M,C,N)\hookrightarrow Bilex[(M\otimes_C N)^{op},\Vect_k]$ reflects colimits.\end{proof}
 
-\begin{lemma}
-Given a finitely cocomplete category $K$, the precomposition functor $Lin(sk(M,C,N),K)\to Bilin(M\otimes_C N, K)$ is an equivalence.\end{lemma}
-\begin{proof} This functor is given by first composing with $L:Fin(M\otimes_C N)\to sk(M,C,N)$ and then with $Y:M\otimes_C N\to Fin(M\otimes_C N)$. The first step is an equivalence from $Lin(sk(M,C,N),K)\to Lin(Fin(M\otimes_C N),K)_{bilin}$, as we have seen. The second step is an equivalence $Lin(Fin(M\otimes_C N),K)_{bilin}\to Bilin(M\otimes_C N, K)$ by definition of the finite cocompletion.  \end{proof}
+\begin{definition}
+We say that a functor $M\otimes_C N \to L$ is bilinear if the composite $M\otimes N\to M\otimes_C N \to L$ is bilinear (i.e. right exact in each variable). We denote by $Bilin(M\otimes_C N, L)\subset Fun(M\otimes_C N, L)$ the full subcategory whose objects are the biliner functors. \end{definition}
+ 
+ 
+\begin{proposition}\label{univ_sk_nonsemisimple}
+Given a finitely cocomplete category $L$, the precomposition functor $Lin(sk(M,C,N),L)\to Bilin(M\otimes_C N, L)$ is an equivalence.\end{proposition}
+\begin{proof} This follows from \cite[Theorem 6.23]{kelly/basic-concepts-enriched}.\end{proof}
 
-\begin{lemma}
-The functor $Bilin(M\otimes_C N,K)\to Bilin^{C-bal}(M\otimes N, K)$ is an equivalence, for any category $K$. \end{lemma}
+\begin{lemma}\label{univ_bilin_bal}
+The functor $Bilin(M\otimes_C N,L)\to Bilin^{C-bal}(M\otimes N, L)$ is an equivalence, for any category $L$. \end{lemma}
+\begin{proof}
+By Lemma \ref{univ_bal} we know that $Fun(M\otimes_C N,K)\to Fun^{C-bal}(M\otimes N, L)$ is an equivalence. By definition, a functor $M\otimes_C N\to L$ is bilinear if and only if the composite $M\otimes N\to M\otimes_C N\to L$ is bilinear, so we obtain an equivalence between the two subcategories.\end{proof}
+
+\begin{theorem}\label{main_nonsemisimple}
+ Let $C$ be a rigid monoidal category and let $M_C$, $_{C}N$ be finitely cocomplete module categories. Then the $C$-balanced functor $M\otimes N\to sk(M,C,N)$ presents $sk(M,C,N)$ as the balanced Kelly tensor product of $M$ and $N$ over $C$.\end{theorem}
+ \begin{proof}
+  
+This follows from Proposition \ref{univ_sk_nonsemisimple} and Lemma \ref{univ_bilin_bal}.\end{proof}
+
+\begin{corollary}
+ 
+Let $C$ be a finite tensor category, $M_C$, $_{C}N$ finite $k$-linear $C$-module categories. Then $sk(M,C,N)$ is $k$-linear and the $C$-balanced functor $M\otimes N\to sk(M,C,N)$ presents $sk(M,C,N)$ as the balanced Deligne tensor product of $M$ and $N$ over $C$.
+\end{corollary}
 \begin{proof}
  
-We know that $Fun(M\otimes_C N,K)\to Fun^{C-bal}(M\otimes N, K)$ is an equivalence. It is clear that a functor $M\otimes_C N\to K$ is bilinear if and only if the corresponding $C$-balanced functor $M\otimes N\to K$ is bilinear, so we obtain an equivaence between the two subcategories.\end{proof}
-
-\begin{proposition}
- The $C$-balanced functor $M\otimes N\to sk(M,C,N)$ presents $sk(M,C,N)$ as the balanced Kelly tensor product of $M$ and $N$ over $C$.\end{proposition}
+This follows fro Theorem \ref{main_nonsemisimple} and Lemma \ref{univ_box}.\end{proof}
+  
 
 
  
  
-This strategy is a
-  direct adaptation of the construction of the Kelly tensor product in
-  \cite{lopezfranco/tensor-products}. The effect is to freely add finite colimits to $M\otimes_C N$ while preserving those finite colimits which exist in $M$ and $N$.
 
-  This would imply that when $M,C,N$ are $k$-linear and finite this procedure
-  recovers the balanced Deligne tensor product, as it is known to agree with
-  the balanced Kelly tensor product in this case (\cite[Remark 3.4]{douglas/balanced-product}).
-
+ 
+ 
+ 
+\subsection{Other}
    
     
 \begin{notation} (${}^{m'}_{n'}I^{m}_{n}$)
