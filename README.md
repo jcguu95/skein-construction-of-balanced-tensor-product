@@ -6,13 +6,9 @@ To make the document, run `$ make`.
 
 # TODOs
 
-### 1. Deal with right-exactness.
+### 1. Update reference
 
-This part should not be difficult, as we assume semisimplicity.
-
-### 2. Change the definition of pre-skein with Manuel's idea.
-
-### 3. Manuel will do deep integration.
+Some of them have been published, but we still use their arXiv version.
 
 # Reference
 
