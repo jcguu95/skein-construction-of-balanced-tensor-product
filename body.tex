@@ -533,50 +533,11 @@ property characterizes [TODO: Jin is confused what this means.] $M\otimes N \to 
 
 \subsection{Skein category sk(M,C,N)}
 
-\begin{definition} (Cauchy Completion (Abstract))
-  A category $M$ is Cauchy complete if it has all finite direct sums and all
-  idempotents split [TODO: Jin is confused what this means. Manuel will explain]. Given any $M$, we denote by $\Cau(M)$ the Cauchy
-  completion of $M$, the smallest subcategory of $Fun(M^{op},\Vect_k)$
-  containing all the representables and closed under finite direct sums and
-  retracts. Its objects can be identified as those $X\in Fun(M^{op},\Vect_k)$
-  such that $\underline{Hom}(X,-):Fun(M^{op},\Vect_k)\to\Vect_k$ preserves all
-  small colimits. Alternatively, they are the retracts of finite direct sums
-  of representables.
-
-  $Cau(M)$ is Cauchy complete [TODO: Manuel will explain this to Jin], and comes equipped with a functor
-  $M\to \Cau(M)$. It is characterized by a universal property. Namely, given
-  any Cauchy complete category $L$, the restriction
-  map $$Fun(\Cau(M),L)\to Fun(M,L)$$ is an equivalence. A reference is
-  \cite[Sections 5.5 and 5.7]{kelly/basic-concepts-enriched}.
-\end{definition}
-
-\noindent We recall the usual explicit construction of the Cauchy completion $Cau(M)$ of a ($\Vect_k$-enriched) category $M$ in [TODO: add reference].
-
-\begin{definition}
-
-Given a category $M$, we define $Mat(M)$ to be the category whose objects are tuples of objects in $M$. We denote such an object by $m_1\oplus\cdots\oplus m_k$. We then define $$Hom_{Mat(M)}(m_1\oplus\cdots\oplus m_k,n_1\oplus\cdots\oplus n_{\ell})$$ to be the $k$-vector space of $(\ell\times k)$ matrices whose $(i,j)$-th entry is a morphism $m_j\to n_i$ in $M$. Composition is defined by matrix product. \end{definition}
-
-\begin{definition}
-  Given a category $M$, we define its Karoubi completion $Kar(M)$ to be the category whose objects are idempotent endomorphisms $m \xrightarrow{p} m$ in $M$, and the hom space $Hom_{Kar(C)}(m \xrightarrow{p} m, n \xrightarrow{q} n)$ is the $k$-linear subspace of $Hom_{M}(m,n)$ consisting of $f$ such that the following diagram commutes
-  \[\begin{tikzcd}
-	m & n \\
-	m & n
-	\arrow["f", from=1-1, to=1-2]
-	\arrow["p", from=1-1, to=2-1]
-	\arrow["f", from=1-1, to=2-2]
-	\arrow["q", from=1-2, to=2-2]
-	\arrow["f"', from=2-1, to=2-2]
-\end{tikzcd}\] commutes.\end{definition}
-
-\begin{definition} (Cauchy Completion, Explicit)
-
-  The explicit construction of the Cauchy completion is given by $Cau(M)=Kar(Mat(M))$. \end{definition}
-
-\noindent So an object in $Cau(M)$ is an idempotent matrix $$m_1\oplus\cdots\oplus m_k \xrightarrow{A} m_1\oplus\cdots\oplus m_k.$$
+[TODO: We may remove this subsection as it now becomes very short.]
 
 \begin{definition} (Skein Category, $sk(M,C,N)$)
   Let $C$ be a monoidal category with right duals, and let $M_C$, $_{C}N$ be module
-  categories over $C$. Define $sk(M,C,N)=\Cau(M\otimes_C N)$.
+  categories over $C$. Define the skein category $sk(M,C,N)$ to be the Cauchy completion $\Cau(M \otimes_{C} N)$ of the pre-skein category $M \otimes_{C} N$. [TODO: Add reference to appendix.]
 \end{definition}
 
 \noindent It has a $C$-balanced functor $M\otimes N \to sk(M,C,N)$, namely the
@@ -621,6 +582,7 @@ just a finitely cocomplete category. We record this in the following lemma.
 \end{proof}
 
 \begin{definition} \label{definition/finite-cocompletion} ($Fin(M)$, finite cocompletion)
+  [TODO: We may want to move this to appendix too.]
   A category $M$ is finitely cocomplete if it has all finite colimits. Given a
   category $M$, we denote by $Fin(M)$ its finite cocompletion, the
   smallest finitely cocomplete subcategory of $Fun(M^{op},\Vect_k)$ that
@@ -685,114 +647,6 @@ $M\otimes N\to Fin(M\otimes_C N)$. [TODO: Add the $\beta$ data explicitly.]
 Now we prove that $sk(M,C,N)$ is a finite semisimple $k$-linear category,
 whenever $M$, $N$ and $M\boxtimes_C N$ are finite semisimple $k$-linear
 categories.
-
-\begin{lemma}\label{direct_sum}
-  Suppose we have a fully faithful functor $F:M\hookrightarrow N$ where $M$ is
-  Cauchy complete. If $F(x)=a'\oplus b'$ then we have $x=a\oplus b$ and
-  isomorphisms $F(a)\simeq a'$, $F(b)\simeq b'$ such that the following
-  diagrams commute.
-  \[
-    \begin{tikzcd}
-      {F(a)} & {F(x)} & {F(b)} \\
-      {a'} & {F(x)} & {b'}
-      \arrow[from=1-1, to=1-2]
-      \arrow["\simeq"', from=1-1, to=2-1]
-      \arrow["{=}", from=1-2, to=2-2]
-      \arrow[from=1-3, to=1-2]
-      \arrow["\simeq", from=1-3, to=2-3]
-      \arrow[from=2-1, to=2-2]
-      \arrow[from=2-3, to=2-2]
-    \end{tikzcd} \begin{tikzcd}
-      {F(a)} & {F(x)} & {F(b)} \\
-      {a'} & {F(x)} & {b'}
-      \arrow["\simeq"', from=1-1, to=2-1]
-      \arrow[from=1-2, to=1-1]
-      \arrow[from=1-2, to=1-3]
-      \arrow["{=}", from=1-2, to=2-2]
-      \arrow["\simeq", from=1-3, to=2-3]
-      \arrow[from=2-2, to=2-1]
-      \arrow[from=2-2, to=2-3]
-    \end{tikzcd}
-  \]
-\end{lemma}
-
-\begin{proof}
-  [TODO: Jin checks this proof.]
-
-  Denote by $i_{a'}:a'\to F(x)$, $r_{a'}:F(x)\to a'$ and $p_{a'}:F(x)\to F(x)$
-  the corresponding inclusion, retraction and idempotent, so that
-  $r_{a'}i_{a'}=\id_{a'}$ and $i_{a'} r_{a'}=p_{a'}$, and similarly for $b'$.
-  We have additional equations $r_{a'}i_{b'}=0=r_{b'}i_{a'}$ and
-  $p_{a'}+p_{b'}=\id_{F(x)}$. Now $F$ is full, so there exists $p_a:x\to x$
-  such that $F(p_a)=p_{a'}$ and similarly for $p_b$. Now $M$ is idempotent
-  complete, so $p_a$ splits, i.e. we obtain $i_a:a\to x$ and $r_a:x\to a$ such
-  that $r_a i_a=\id_a$ and $i_a r_a=p_a$ and similarly for $b$. Now
-  $F(p_a+p_b)=p_{a'}+p_{b'}=\id_{F(x)}$. Since $F$ is faithful we get
-  $p_a+p_b=\id_x$. This means that $x=a\oplus b$. Finally
-  $r_{a'}F(i_a):F(a)\to a'$ and $r_{b'}F(i_b):F(b)\to b'$ are the desired
-  isomorphisms.
-\end{proof}
-
-\begin{lemma}\label{abelian}
-  Suppose we have a fully faithful functor $F:M\hookrightarrow N$ where $M$ is
-  Cauchy complete and $N$ is $k$-linear. Suppose every short exact sequence
-  splits in $N$. Then $M$ is $k$-linear and every short exact sequence splits
-  in $M$.
-\end{lemma}
-
-\begin{proof}
-  [TODO: Jin checks this proof.]
-
-  We start by showing that $M$ is $k$-linear (in particular, abelian). We now
-  show that $M$ has kernels, and these are preserved by $F$. The proof for
-  cokernels is dual. So let $x\to y$ be a morphism in $M$. Then $F(x)\to F(y)$ has
-  a kernel $k'\to F(x)$ in $N$. The short exact sequence $0\to k'\to F(x)\to c'\to 0$
-  splits, where $c'$ is the cokernel of $k'\to F(x)$. So we get $F(x)=k'\oplus c'$.
-  Then, by Lemma \ref{direct_sum}, we have $x=k\oplus c$ where $F(k)\simeq k'$ and
-  \[
-    \begin{tikzcd}
-      {F(k)} & {F(x)} \\
-      {k'} & {F(x)} \arrow[from=1-1, to=1-2] \arrow["\simeq"', from=1-1, to=2-1] \arrow["{=}", from=1-2, to=2-2] \arrow[from=2-1, to=2-2]
-    \end{tikzcd}
-  \]
-  commutes. This means $F(k)\to F(x)$ is also a kernel of $F(x)\to F(y)$. But
-  $F$ is fully faithful, so it reflects limits, hence $k\to x$ is a kernel of
-  $x\to y$.
-  
-  We will now show that every monomorphism is a kernel. The proof that every
-  epimorphism is a cokernel is dual. Let $a\hookrightarrow x$ be a
-  monomorphism in $M$. Since $F$ preserves kernels, we know
-  $F(a)\hookrightarrow F(x)$ is a monomorphism. Moreover, if $x\to c$ is the
-  cokernel of $a\hookrightarrow x$, then $F(x)\to F(c)$ is the cokernel of
-  $F(a)\hookrightarrow F(x)$ (because $F$ also preserves cokernels). So $0\to F(a)\to F(x)\to F(c)\to 0$ is exact, so
-  $F(x)=F(a)\oplus F(c)$. Then $x=a\oplus c$ (by Lemma \ref{direct_sum}) and
-  so $a\to x$ is the kernel of $x\to c$. 
-  
-  This concludes the proof that $M$ is $k$-linear. Additionally, we showed that $F:M\to N$ is exact. The fact that every short exact sequence splits in $M$ follows easily from
-  Lemma \ref{direct_sum}, and the facts that $F$ is exact and every short
-  exact sequence splits in $N$.
-\end{proof}
-
-\begin{proposition}\label{cau_semi}
-  Suppose we have a fully faithful functor $M\hookrightarrow N$,
-  where $M$ is Cauchy complete and $N$ is $k$-linear finite semisimple. Then
-  $M$ is $k$-linear finite semisimple.
-\end{proposition}
-
-\begin{proof}
-  [TODO: Jin checks this proof.]
-
-  By Lemma \ref{abelian} the category $M$ also $k$-linear and every short exact sequence splits in $M$, which implies that every object in $M$ is projective and also that $F:M\to N$ exact. Since $F$ is faithful and $N$ is finite, all $Hom$ spaces in $M$ are finite dimensional.
-
-  Since $F$ is exact and fully faithful, it preserves and reflects
-  monomorphisms, therefore $x\in M$ is simple if and only if $F(x)\in N$ is
-  simple. So in particular, given $N$ has finitely many isomorphism classes of
-  simple objects, the same is true of $M$.
-
-  If $F(x)=\bigoplus_{i=1}^n x'_i$ with $x'_i$ simple, then by induction and
-  Lemma \ref{direct_sum} we have $x=\bigoplus_{i=1}^n x_i$ where
-  $F(x_i)\simeq x_i'$ so $x_i$ is simple.
-\end{proof}
 
 \begin{lemma}\label{semisimple}
   Let $C$ be a tensor category and let $M_C$,$_{C}N$ be $k$-linear finite semisimple $C$-module categories. Suppose $M\boxtimes_C N$ is also $k$-linear finite semisimple. Then $sk(M,C,N)$ is
@@ -869,6 +723,161 @@ Since we are mostly interested in the characteristic zero case, we record the fo
 \appendix
 \section{Appendix}
    
+\subsection{Completions}
+
+\noindent In this subsection, we collect results about completions of categories.
+
+\begin{definition} (Cauchy Completion (Abstract))
+  A category $M$ is Cauchy complete if it has all finite direct sums and all
+  idempotents split [TODO: Jin is confused what this means. Manuel will explain]. Given any $M$, we denote by $\Cau(M)$ the Cauchy
+  completion of $M$, the smallest subcategory of $Fun(M^{op},\Vect_k)$
+  containing all the representables and closed under finite direct sums and
+  retracts. Its objects can be identified as those $X\in Fun(M^{op},\Vect_k)$
+  such that $\underline{Hom}(X,-):Fun(M^{op},\Vect_k)\to\Vect_k$ preserves all
+  small colimits. Alternatively, they are the retracts of finite direct sums
+  of representables.
+
+  $Cau(M)$ is Cauchy complete [TODO: Manuel will explain this to Jin], and comes equipped with a functor
+  $M\to \Cau(M)$. It is characterized by a universal property. Namely, given
+  any Cauchy complete category $L$, the restriction
+  map $$Fun(\Cau(M),L)\to Fun(M,L)$$ is an equivalence. A reference is
+  \cite[Sections 5.5 and 5.7]{kelly/basic-concepts-enriched}.
+\end{definition}
+
+\noindent We recall the usual explicit construction of the Cauchy completion $Cau(M)$ of a ($\Vect_k$-enriched) category $M$ in [TODO: add reference].
+
+\begin{definition}
+
+Given a category $M$, we define $Mat(M)$ to be the category whose objects are tuples of objects in $M$. We denote such an object by $m_1\oplus\cdots\oplus m_k$. We then define $$Hom_{Mat(M)}(m_1\oplus\cdots\oplus m_k,n_1\oplus\cdots\oplus n_{\ell})$$ to be the $k$-vector space of $(\ell\times k)$ matrices whose $(i,j)$-th entry is a morphism $m_j\to n_i$ in $M$. Composition is defined by matrix product. \end{definition}
+
+\begin{definition}
+  Given a category $M$, we define its Karoubi completion $Kar(M)$ to be the category whose objects are idempotent endomorphisms $m \xrightarrow{p} m$ in $M$, and the hom space $Hom_{Kar(C)}(m \xrightarrow{p} m, n \xrightarrow{q} n)$ is the $k$-linear subspace of $Hom_{M}(m,n)$ consisting of $f$ such that the following diagram commutes
+  \[\begin{tikzcd}
+	m & n \\
+	m & n
+	\arrow["f", from=1-1, to=1-2]
+	\arrow["p", from=1-1, to=2-1]
+	\arrow["f", from=1-1, to=2-2]
+	\arrow["q", from=1-2, to=2-2]
+	\arrow["f"', from=2-1, to=2-2]
+\end{tikzcd}\] commutes.\end{definition}
+
+\begin{definition} (Cauchy Completion, Explicit)
+
+  The explicit construction of the Cauchy completion is given by $Cau(M)=Kar(Mat(M))$. \end{definition}
+
+\noindent So an object in $Cau(M)$ is an idempotent matrix $$m_1\oplus\cdots\oplus m_k \xrightarrow{A} m_1\oplus\cdots\oplus m_k.$$
+
+\noindent We introduce a few lemmas about Cauchy complete categories.
+
+\begin{lemma}\label{direct_sum}
+  Suppose we have a fully faithful functor $F:M\hookrightarrow N$ where $M$ is
+  Cauchy complete. If $F(x)=a'\oplus b'$ then we have $x=a\oplus b$ and
+  isomorphisms $F(a)\simeq a'$, $F(b)\simeq b'$ such that the following
+  diagrams commute.
+  \[
+    \begin{tikzcd}
+      {F(a)} & {F(x)} & {F(b)} \\
+      {a'} & {F(x)} & {b'}
+      \arrow[from=1-1, to=1-2]
+      \arrow["\simeq"', from=1-1, to=2-1]
+      \arrow["{=}", from=1-2, to=2-2]
+      \arrow[from=1-3, to=1-2]
+      \arrow["\simeq", from=1-3, to=2-3]
+      \arrow[from=2-1, to=2-2]
+      \arrow[from=2-3, to=2-2]
+    \end{tikzcd} \begin{tikzcd}
+      {F(a)} & {F(x)} & {F(b)} \\
+      {a'} & {F(x)} & {b'}
+      \arrow["\simeq"', from=1-1, to=2-1]
+      \arrow[from=1-2, to=1-1]
+      \arrow[from=1-2, to=1-3]
+      \arrow["{=}", from=1-2, to=2-2]
+      \arrow["\simeq", from=1-3, to=2-3]
+      \arrow[from=2-2, to=2-1]
+      \arrow[from=2-2, to=2-3]
+    \end{tikzcd}
+  \]
+\end{lemma}
+
+\begin{proof}
+  [TODO: Jin checks this proof.]
+
+  Denote by $i_{a'}:a'\to F(x)$, $r_{a'}:F(x)\to a'$ and $p_{a'}:F(x)\to F(x)$
+  the corresponding inclusion, retraction and idempotent, so that
+  $r_{a'}i_{a'}=\id_{a'}$ and $i_{a'} r_{a'}=p_{a'}$, and similarly for $b'$.
+  We have additional equations $r_{a'}i_{b'}=0=r_{b'}i_{a'}$ and
+  $p_{a'}+p_{b'}=\id_{F(x)}$. Now $F$ is full, so there exists $p_a:x\to x$
+  such that $F(p_a)=p_{a'}$ and similarly for $p_b$. Now $M$ is idempotent
+  complete, so $p_a$ splits, i.e. we obtain $i_a:a\to x$ and $r_a:x\to a$ such
+  that $r_a i_a=\id_a$ and $i_a r_a=p_a$ and similarly for $b$. Now
+  $F(p_a+p_b)=p_{a'}+p_{b'}=\id_{F(x)}$. Since $F$ is faithful we get
+  $p_a+p_b=\id_x$. This means that $x=a\oplus b$. Finally
+  $r_{a'}F(i_a):F(a)\to a'$ and $r_{b'}F(i_b):F(b)\to b'$ are the desired
+  isomorphisms.
+\end{proof}
+
+\begin{lemma}\label{abelian}
+  Suppose we have a fully faithful functor $F:M\hookrightarrow N$ where $M$ is
+  Cauchy complete and $N$ is $k$-linear. Suppose every short exact sequence
+  splits in $N$. Then $M$ is $k$-linear and every short exact sequence splits
+  in $M$.
+\end{lemma}
+
+\begin{proof}
+  [TODO: Jin checks this proof.]
+
+  We start by showing that $M$ is $k$-linear (in particular, abelian). We now
+  show that $M$ has kernels, and these are preserved by $F$. The proof for
+  cokernels is dual. So let $x\to y$ be a morphism in $M$. Then $F(x)\to F(y)$ has
+  a kernel $k'\to F(x)$ in $N$. The short exact sequence $0\to k'\to F(x)\to c'\to 0$
+  splits, where $c'$ is the cokernel of $k'\to F(x)$. So we get $F(x)=k'\oplus c'$.
+  Then, by Lemma \ref{direct_sum}, we have $x=k\oplus c$ where $F(k)\simeq k'$ and
+  \[
+    \begin{tikzcd}
+      {F(k)} & {F(x)} \\
+      {k'} & {F(x)} \arrow[from=1-1, to=1-2] \arrow["\simeq"', from=1-1, to=2-1] \arrow["{=}", from=1-2, to=2-2] \arrow[from=2-1, to=2-2]
+    \end{tikzcd}
+  \]
+  commutes. This means $F(k)\to F(x)$ is also a kernel of $F(x)\to F(y)$. But
+  $F$ is fully faithful, so it reflects limits, hence $k\to x$ is a kernel of
+  $x\to y$.
+
+  We will now show that every monomorphism is a kernel. The proof that every
+  epimorphism is a cokernel is dual. Let $a\hookrightarrow x$ be a
+  monomorphism in $M$. Since $F$ preserves kernels, we know
+  $F(a)\hookrightarrow F(x)$ is a monomorphism. Moreover, if $x\to c$ is the
+  cokernel of $a\hookrightarrow x$, then $F(x)\to F(c)$ is the cokernel of
+  $F(a)\hookrightarrow F(x)$ (because $F$ also preserves cokernels). So $0\to F(a)\to F(x)\to F(c)\to 0$ is exact, so
+  $F(x)=F(a)\oplus F(c)$. Then $x=a\oplus c$ (by Lemma \ref{direct_sum}) and
+  so $a\to x$ is the kernel of $x\to c$.
+
+  This concludes the proof that $M$ is $k$-linear. Additionally, we showed that $F:M\to N$ is exact. The fact that every short exact sequence splits in $M$ follows easily from
+  Lemma \ref{direct_sum}, and the facts that $F$ is exact and every short
+  exact sequence splits in $N$.
+\end{proof}
+
+\begin{proposition}\label{cau_semi}
+  Suppose we have a fully faithful functor $M\hookrightarrow N$,
+  where $M$ is Cauchy complete and $N$ is $k$-linear finite semisimple. Then
+  $M$ is $k$-linear finite semisimple.
+\end{proposition}
+
+\begin{proof}
+  [TODO: Jin checks this proof.]
+
+  By Lemma \ref{abelian} the category $M$ also $k$-linear and every short exact sequence splits in $M$, which implies that every object in $M$ is projective and also that $F:M\to N$ exact. Since $F$ is faithful and $N$ is finite, all $Hom$ spaces in $M$ are finite dimensional.
+
+  Since $F$ is exact and fully faithful, it preserves and reflects
+  monomorphisms, therefore $x\in M$ is simple if and only if $F(x)\in N$ is
+  simple. So in particular, given $N$ has finitely many isomorphism classes of
+  simple objects, the same is true of $M$.
+
+  If $F(x)=\bigoplus_{i=1}^n x'_i$ with $x'_i$ simple, then by induction and
+  Lemma \ref{direct_sum} we have $x=\bigoplus_{i=1}^n x_i$ where
+  $F(x_i)\simeq x_i'$ so $x_i$ is simple.
+\end{proof}
+
 \subsection{The non-semisimple case}
 
 We explain how one can adapt the construction of $sk(M,C,N)$ to the non-semisimple case. 
