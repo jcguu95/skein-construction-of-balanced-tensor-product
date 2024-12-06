@@ -835,55 +835,61 @@ Since we are mostly interested in the characteristic zero case, we record the fo
 \appendix
 \section{Appendix}
    
-\subsection{The non-semisimple case}
+\subsection{The non-semisimple case}\label{section-nonsemisimple}
 
-We explain how one can adapt the construction of $sk(M,C,N)$ to the non-semisimple case. 
-
-\begin{definition}
-Suppose $C$ is a rigid monoidal category and $M_C, _{C}N$ are finitely cocomplete $C$-module categories. Their balanced Kelly tensor product is a finitely cocomplete category $M\boxtimes^K_C N$ together with a $C$-balanced bilinear functor $M\otimes N\to M\boxtimes^K_C N$ such that precomposition defines an equivalence $$Lin(M\boxtimes^K_C N,L)\to Bilin^{C-bal}(M\otimes N, L)$$ for any finitely cocomplete category $L$.\end{definition}
-
-Suppose $C$ is a rigid monoidal category and $M_C, _{C}N$ are finitely cocomplete $C$-module categories. We explain how to construct $sk(M,C,N)$ so that $M\otimes N\to sk(M,C,N)$ presents it as the balanced Kelly tensor product of $M$ and $N$ over $C$. We follow very closely the procedure adopted in \cite{lopezfranco/tensor-products} to construct the unbalanced Kelly tensor product, starting from $M\otimes N$.
+We explain how one can adapt the construction of $sk(M,C,N)$ to the non-semisimple case. We will refer to results in \cite{kelly/basic-concepts-enriched}. For the reader's convenience, we review all the necessary results in \ref{review_kelly}. 
 
 \begin{definition}
+Suppose $C$ is a monoidal category and $M_C, _{C}N$ are finitely cocomplete $C$-module categories. Their balanced Kelly tensor product is a finitely cocomplete category $M\boxtimes^K_C N$ together with a $C$-balanced bilinear functor $M\otimes N\to M\boxtimes^K_C N$ such that precomposition defines an equivalence $$Lin(M\boxtimes^K_C N,L)\to Bilin^{C-bal}(M\otimes N, L)$$ for any finitely cocomplete category $L$.\end{definition}
 
-A functor $(M\otimes_C N)^{op}\to \Vect_k$ is said to be left exact in each variable if the composite $M^{op}\otimes N^{op}\to (M\otimes_C N)^{op}\to \Vect_k$ is left exact in each variable. In other words it sends finite colimits in $M$ and finite colimits in $N$ to finite limits in $\Vect_k$. We denote by $Bilex[(M\otimes_C N)^{op},\Vect_k]\subset [(M\otimes_C N)^{op},\Vect_k]$ the full subcategory whose objects are those functors which are left exact in each variable.
+Suppose $C$ is a monoidal category with right duals and $M_C, _{C}N$ are finitely cocomplete $C$-module categories. We explain how to construct $sk(M,C,N)$ so that $M\otimes N\to sk(M,C,N)$ presents it as the balanced Kelly tensor product of $M$ and $N$ over $C$. We follow very closely the procedure adopted in \cite{lopezfranco/tensor-products} to construct the unbalanced Kelly tensor product, starting from $M\otimes N$.
+
+\begin{definition}
+
+A functor $(M\otimes_C N)^{op}\to L$ is said to be left exact in each variable if the composite $M^{op}\otimes N^{op}\to (M\otimes_C N)^{op}\to L$ is left exact in each variable. In other words it sends finite colimits in $M$ and finite colimits in $N$ to finite limits in $L$. We denote by $Bilex((M\otimes_C N)^{op},\Vect_k)\subset Fun(M\otimes_C N)^{op},\Vect_k)$ the full subcategory whose objects are those functors which are left exact in each variable.
 \end{definition}
+
+
+\begin{definition}
+We say that a functor $M\otimes_C N \to L$ is bilinear if the composite $M\otimes N\to M\otimes_C N \to L$ is bilinear (i.e. right exact in each variable). We denote by $Bilin(M\otimes_C N, L)\subset Fun(M\otimes_C N, L)$ the full subcategory whose objects are the bilinear functors. \end{definition}
+
  
-This subcategory is reflective (see e.g. \cite[Theorem 6.5]{kelly/basic-concepts-enriched}) so that we an adjunction 
+The subcategory $Bilex((M\otimes_C N)^{op},\Vect_k)\subset Fun((M\otimes_C N)^{op},\Vect_k)$ is reflective (see \cite[Theorem 6.5]{kelly/basic-concepts-enriched} or Theorem \ref{reflective}) so that we have an adjunction 
 
 \[\begin{tikzcd}
-	{[(M\otimes_C N)^{op},\Vect_k]} & {Bilex[(M\otimes_C N)^{op},\Vect_k]}
-	\arrow[""{name=0, anchor=center, inner sep=0}, "R", curve={height=-6pt}, from=1-1, to=1-2]
-	\arrow[""{name=1, anchor=center, inner sep=0}, "i", curve={height=-6pt}, hook', from=1-2, to=1-1]
-	\arrow["\dashv"{anchor=center, rotate=-90}, draw=none, from=0, to=1]
-\end{tikzcd}.\] In particular, $Bilex[(M\otimes_C N)^{op},\Vect_k]$ is cocomplete.
+	{Bilex((M\otimes_C N)^{op},\Vect_k)} & {Fun((M\otimes_C N)^{op},\Vect_k)}
+	\arrow[""{name=0, anchor=center, inner sep=0}, "i"', shift right=3, hook, from=1-1, to=1-2]
+	\arrow[""{name=1, anchor=center, inner sep=0}, "R"', shift right=3, from=1-2, to=1-1]
+	\arrow["\dashv"{anchor=center, rotate=-90}, draw=none, from=1, to=0]
+\end{tikzcd}.\] In particular, $Bilex((M\otimes_C N)^{op},\Vect_k)$ is cocomplete.
 
-
+\begin{definition}\label{def_K}
+We denote by $K:M\otimes_C N\to Bilex((M\otimes_C N)^{op}$ the composite \[\begin{tikzcd}
+	{M\otimes_C N} & {Fun((M\otimes_C N)^{op},\Vect_k)} & {Bilex((M\otimes_C N)^{op},\Vect_k)}
+	\arrow["Y", from=1-1, to=1-2]
+	\arrow["R", from=1-2, to=1-3]
+\end{tikzcd},\] where $Y$ is the Yoneda embedding.\end{definition}
 \begin{lemma}\label{right_exact_0}
  
-The composite $M\otimes N\to M\otimes_C N \to [(M\otimes_C N)^{op},\Vect_k]\to Bilex[(M\otimes_C N)^{op},\Vect_k]$ is right exact in each variable.\end{lemma}
+The functor $K:M\otimes_C N\to Bilex((M\otimes_C N)^{op}$ is bilinear.\end{lemma}
 
 \begin{proof}
  
-This is follows from assertion (5.51) in \cite{kelly/basic-concepts-enriched}.\end{proof}
+This follows from assertion (5.51) in \cite{kelly/basic-concepts-enriched}. But we can give the following proof. We must show that $Bilex((M\otimes_C N)^{op},\Vect_k)(RY-,\phi):(M\otimes_C N)^{op}\to\Vect_k$ is left exact in each variable, for any $\phi\in Bilex((M\otimes_C N)^{op},\Vect_k)$. This follows from the calculation $$Bilex((M\otimes_C N)^{op},\Vect_k)(RY-,\phi)\simeq Fun((M\otimes_C N)^{op},\Vect_k)(Y-,\phi)\simeq \phi$$ where the first step uses the adjunction $R\dashv i$ and the second step is the Yoneda Lemma.\end{proof} 
 
-Denote by $K$ the composite $$M\otimes_C N \to [(M\otimes_C N)^{op},\Vect_k]\to Bilex[(M\otimes_C N)^{op},\Vect_k].$$ 
-
-\begin{definition}\label{sk_nonsemisimple} We define $sk(M,C,N)$ as the closure of the image of the functor $$K:M\otimes_C N \to Bilex[(M\otimes_C N)^{op},\Vect_k]$$ under finite colimits. Thus $sk(M,C,N)$ is finitely cocomplete and comes equipped with a functor $M\otimes_C N \to sk(M,C,N)$.\end{definition}
+\begin{definition}\label{sk_nonsemisimple} Let $C$ be a monoidal category with right duals and let $M_C$, $_{C}N$ be finitely cocomplete $C$-module categories. We define $sk(M,C,N)$ as the closure of the full image of the functor $$K:M\otimes_C N \to Bilex((M\otimes_C N)^{op},\Vect_k)$$ under finite colimits. This means $sk(M,C,N)$ is the smallest replete full subcategory of $Bilex((M\otimes_C N)^{op},\Vect_k)$ which contains every object of the form $K(m,n)$ and is closed under finite colimits. Thus $sk(M,C,N)$ is finitely cocomplete and comes equipped with a functor $Z:M\otimes_C N \to sk(M,C,N)$.\end{definition}
 
 \begin{lemma}\label{right_exact}
-The functor $M\otimes N\to M\otimes_C N \to sk(M,C,N)$ is right exact in each variable.
+The functor $Z:M\otimes_C N \to sk(M,C,N)$ is bilinear.
 \end{lemma}
 \begin{proof}
- This follows directly from Lemma \ref{right_exact_0} and the fact that $sk(M,C,N)\hookrightarrow Bilex[(M\otimes_C N)^{op},\Vect_k]$ reflects colimits.\end{proof}
+ This follows from Lemma \ref{right_exact_0} and the fact that the fully faithful functor $$sk(M,C,N)\hookrightarrow Bilex((M\otimes_C N)^{op},\Vect_k)$$ reflects colimits.\end{proof}
 
-\begin{definition}
-We say that a functor $M\otimes_C N \to L$ is bilinear if the composite $M\otimes N\to M\otimes_C N \to L$ is bilinear (i.e. right exact in each variable). We denote by $Bilin(M\otimes_C N, L)\subset Fun(M\otimes_C N, L)$ the full subcategory whose objects are the biliner functors. \end{definition}
  
  
 \begin{proposition}\label{univ_sk_nonsemisimple}
-Given a finitely cocomplete category $L$, the precomposition functor $Lin(sk(M,C,N),L)\to Bilin(M\otimes_C N, L)$ is an equivalence.\end{proposition}
-\begin{proof} This follows from \cite[Theorem 6.23]{kelly/basic-concepts-enriched}.\end{proof}
+Given a finitely cocomplete category $L$, the functor $$Lin(sk(M,C,N),L)\to Bilin(M\otimes_C N, L)$$ given by precomposition with $Z$ is an equivalence.\end{proposition}
+\begin{proof} See \cite[Theorem 6.23]{kelly/basic-concepts-enriched} or Theorem \ref{f_theory_small_sketch}.\end{proof}
 
 \begin{lemma}\label{univ_bilin_bal}
 The functor $Bilin(M\otimes_C N,L)\to Bilin^{C-bal}(M\otimes N, L)$ is an equivalence, for any category $L$. \end{lemma}
@@ -891,24 +897,138 @@ The functor $Bilin(M\otimes_C N,L)\to Bilin^{C-bal}(M\otimes N, L)$ is an equiva
 By Lemma \ref{univ_bal} we know that $Fun(M\otimes_C N,K)\to Fun^{C-bal}(M\otimes N, L)$ is an equivalence. By definition, a functor $M\otimes_C N\to L$ is bilinear if and only if the composite $M\otimes N\to M\otimes_C N\to L$ is bilinear, so we obtain an equivalence between the two subcategories.\end{proof}
 
 \begin{theorem}\label{main_nonsemisimple}
- Let $C$ be a rigid monoidal category and let $M_C$, $_{C}N$ be finitely cocomplete module categories. Then the $C$-balanced functor $M\otimes N\to sk(M,C,N)$ presents $sk(M,C,N)$ as the balanced Kelly tensor product of $M$ and $N$ over $C$.\end{theorem}
+ Let $C$ be a monoidal category with right duals and let $M_C$, $_{C}N$ be finitely cocomplete module categories. Then the $C$-balanced functor $M\otimes N\to sk(M,C,N)$ presents $sk(M,C,N)$ as the balanced Kelly tensor product of $M$ and $N$ over $C$.\end{theorem}
  \begin{proof}
   
 This follows from Proposition \ref{univ_sk_nonsemisimple} and Lemma \ref{univ_bilin_bal}.\end{proof}
 
 \begin{corollary}
  
-Let $C$ be a finite tensor category, $M_C$, $_{C}N$ finite $k$-linear $C$-module categories. Then $sk(M,C,N)$ is $k$-linear and the $C$-balanced functor $M\otimes N\to sk(M,C,N)$ presents $sk(M,C,N)$ as the balanced Deligne tensor product of $M$ and $N$ over $C$.
-\end{corollary}
+Let $C$ be a finite tensor category, $M_C$, $_{C}N$ finite $k$-linear $C$-module categories. Then $sk(M,C,N)$ is $k$-linear and the $C$-balanced functor $M\otimes N\to sk(M,C,N)$ presents $sk(M,C,N)$ as the balanced Deligne tensor product of $M$ and $N$ over $C$.\end{corollary}
 \begin{proof}
  
-This follows fro Theorem \ref{main_nonsemisimple} and Lemma \ref{univ_box}.\end{proof}
+This follows from Theorem \ref{main_nonsemisimple} and Lemma \ref{univ_box}.\end{proof}
   
+\subsection{Review of necessary results from \cite{kelly/basic-concepts-enriched}}\label{review_kelly}
 
+Here we review the concepts from \cite{kelly/basic-concepts-enriched} that are needed in \ref{section-nonsemisimple}. 
 
+First we note that the results in \cite{kelly/basic-concepts-enriched} can be applied to categories enriched over very general kinds of symmetric monoidal categories $V$. To be precise, the results we need apply when $V$ is a locally bounded, closed symmetric monoidal category. We won't need to define these terms, as we won't prove the results from \cite{kelly/basic-concepts-enriched}. All that needs to be said is that $\Vect_k$ satisfies these properties, and we will always take $V=\Vect_k$. 
+
+\begin{definition}
+
+Consider a functor $F:I\to A$. A cone over $F$ is an object $a\in A$ together with a natural transformation $a\Rightarrow F$ (where $a$ denotes the constant functor $a:I\to A$). A cocone under $F$ is an object $b\in A$ together with a natural transformation $F\Rightarrow b$.\end{definition}
+
+\begin{definition}
  
+Let $A$ be a category. A cone in $A$ consists of a category $I$, a functor $F:I\to A$ and a cone over $F$. A cocone in $A$ consists of a category $I$, a functor $F:I\to A$ and a cocone under $F$.\end{definition}
+
+We often denote a cocone in $A$ simply by writing $a_i\to a$ which denotes $a_i=F(i)$ and the component $a_i\to a$ of the natural transformation corresponding to $i\in I$.
+
+
+\begin{definition}
+A small sketch is a pair $(A^{op},\Phi)$ where $A$ is a small category and $\Phi$ is a small set of cocones in $A$. We often refer to a cocone in $\Phi$ as a $\Phi$-cocone in $A$.\end{definition}
+
+\begin{remark}Note that in \cite{kelly/basic-concepts-enriched} $\Phi$ is allowed to be a set of cylinders. Cocones are particular kinds of cylinders and we won't need the extra generality.\end{remark}
+
+\begin{definition}
+Given a small sketch $(A^{op},\Phi)$ and a category $B$, a $\Phi$-comodel in $B$ is a functor $A\to B$ sending the $\Phi$-cocones in $A$ to colimit cocones in $B$. We denote by $\Phi-Com(A,B)\subset Fun(A,B)$ the full subcategory whose objects are the $\Phi$-comodels. A $\Phi$-algebra is a functor $A^{op}\to \Vect_k$ sending all $\Phi$-cocones in $A$ (which become cones in $A^{op}$) to limit cones in $\Vect_k$. We denote by $\Phi-Alg\subset Fun(A^{op},\Vect_k)$ the full subcategory whose objects are the $\Phi-algebras$. 
+\end{definition}
+
+
+\begin{definition}
+
+Given a small sketch $(A^{op},\Phi)$, we define $\Theta_{\Phi}$ to be the set of all morphisms in $Fun(A^{op},\Vect_k)$ of the form $colim_i Y(a_i)\to Y(a)$ where $a_i\to a$ is a $\Phi$-cocone in $A$ and $Y$ is the Yoneda embedding.\end{definition}
+
+\begin{definition}
+ 
+Given a category $P$, we say that an object $p\in P$ is orthogonal to a morphism $\theta:m\to n$ in $P$ if $\theta^*:Hom_P(n,b)\to Hom_P(m,p)$ is an isomorphism.\end{definition}
+
+\begin{definition}
+A full subcategory $C\subset P$ is called reflective if the fully faithful inclusion functor $C\hookrightarrow P$ has a left adjoint $R:P\to C$. The left adjoint is called the reflector.\end{definition}
+
+\begin{theorem}\cite[Theorem 6.5]{kelly/basic-concepts-enriched}\label{reflective}
+ 
+\noindent Let $A$ be a small category and let $\Theta$ be a set of morphisms in $Fun(A^{op},\Vect_k)$. Let $C_{\Theta}\subset Fun(A^{op},\Vect_k)$ be the full subcategory whose objects are those orthogonal to every $\theta\in\Theta$. Then $C_{\Theta}$ is a reflective subcategory.\end{theorem}
+
+\begin{remark}
+ The category $C_{\Theta}$ is denoted $\Theta$-Alg in \cite{kelly/basic-concepts-enriched}.\end{remark}
+
+
+\begin{lemma}\cite[Theorem 6.11]{kelly/basic-concepts-enriched}
+ Let $(A^{op},\Phi)$ be a small sketch. Then the reflective subcategory $C_{\Theta_{\Phi}}\subset Fun(A^{op},\Vect_k)$ is the category $\Phi$-Alg.\end{lemma}
+ 
+ \begin{proof} An object $\phi \in Fun(A^{op},\Vect_k)$ is orthogonal to a morphism $colim_i Y(a_i)\to Y(a)$ in $\Theta_{\Phi}$ if $$Fun(A^{op},\Vect_k)(Y(a),\phi)\to Fun(A^{op},\Vect_k)(colim_i Y(a_i),\phi)$$ is an isomorphism. That is to say $\phi(a)\to lim_i \phi(a_i)$ is an isomorphism, i.e. $\phi(a)\to \phi(a_i)$ is a limit cone. So the objects of $Fun(A^{op},\Vect_k)$ which are orthogonal to every $\theta\in \Theta_{\Phi}$ are exactly the $\Phi$-algebras. \end{proof}
+ 
+\begin{definition}
+Given a small sketch $(A^{op},\Phi)$ we denote by $C_{\Phi}$ the category $\Phi-Alg$.
+\end{definition}
+
+
+So we obtain an adjunction \[\begin{tikzcd}
+	{C_{\Phi}} & {Fun(A^{op},\Vect_k)}
+	\arrow[""{name=0, anchor=center, inner sep=0}, "i_{\Phi}"', shift right=3, hook, from=1-1, to=1-2]
+	\arrow[""{name=1, anchor=center, inner sep=0}, "R_{\Phi}"', shift right=3, from=1-2, to=1-1]
+	\arrow["\dashv"{anchor=center, rotate=-90}, draw=none, from=1, to=0]
+\end{tikzcd}.\]
+
+\begin{definition} Given a small sketch $(A^{op},\Phi)$, and denoting by $Y:A\to Fun(A^{op},\Vect_k)$ the Yoneda embedding, we can define $K_{\Phi}:A\to C_{\Phi}$ as the composite functor \[\begin{tikzcd}
+	A & {Fun(A^{op},\Vect_k)} & {C_{\Phi}}
+	\arrow["Y", hook, from=1-1, to=1-2]
+	\arrow["R", from=1-2, to=1-3]
+\end{tikzcd}.\]\end{definition}
+
+\begin{lemma}
+Given a small sketch $(A^{op},\Phi)$, the functor $K_{\Phi}:A\to C_{\Phi}$ is a $\Phi$-comodel, i.e. it sends $\Phi$-cocones in $A$ to colimit cocones in $C_{\Phi}$.\end{lemma}
+\begin{proof}This is (a special case of) statement (5.51) in \cite{kelly/basic-concepts-enriched}. Since the proof is short, we can record it here. We must show that, given any object $\phi\in C_{\Phi}=\Phi-Alg$, the functor $C_{\Phi}(RY-,\phi):A^{op}\to\Vect_k$ is a $\Phi$-algebra, i.e. sends $\Phi$-cocones in $A$ to limit cones in $\Vect_k$. But $C_{\Phi}(R_{\Phi}Y-,\phi)\simeq Fun(A^{op},\Vect_k)(Y-,\phi)\simeq\phi$.\end{proof}
+
+
+\begin{remark}
+
+Since $C_{\Phi}\subset Fun(A^{op},\Vect_k)$ is a reflective subcategory and $Fun(A^{op},\Vect_k)$ is cocomplete, $C_{\Phi}$ is also cocomplete.\end{remark}
+
+\begin{definition}
+A diagram type is just a small category. Given a diagram type $I$, a diagram of type $I$ in $D$ is a functor $I\to D$. Let $\mathcal{F}$ be a set of diagram types. An $\mathcal{F}$-colimit in a category $D$ is a colimit of a diagram of type $I$ where $I\in \mathcal{F}$. A functor $D\to B$ is $\mathcal{F}$-cocontinuous if it sends $\mathcal{F}$-colimits in $D$ to $\mathcal{F}$-colimits in $B$. We denote by $\mathcal{F}-Cocts(D,B)\subset Fun(D,B)$ the full subcategory whose objects are the $\mathcal{F}$-cocontinuous functors.\end{definition}
+
+\begin{remark}
+ In \cite{kelly/basic-concepts-enriched} a more general notion of indexing type is used. Here we only need the more restricted notion of diagram type defined above.\end{remark}
+
+\begin{definition}
+
+A subcategory $D\subset C$ is replete if given $d\in D$ and an isomorphism $f:d\to c$ in $C$, then $c$ and $f$ are also in $D$.\end{definition}
  
 
+\begin{definition}
+Let $\mathcal{F}$ be a set of diagram types and suppose $C$ is $\mathcal{F}$-cocomplete. Let $K\subset C$ be a full subcategory. the closure of $K$ under $\mathcal{F}$-colimits in $C$ is the smallest replete full subcategory of $C$ containing $K$ and closed under $\mathcal{F}$-colimits. \end{definition}
+
+\begin{definition}
+
+Let $(A^{op},\Phi)$ be a small sketch. Define $D_{\Phi}$ as the closure of the full image of $K_{\Phi}$ in $C_{\Phi}$ under $\mathcal{F}$-colimits. Notice that $K_{\Phi}:A\to C_{\Phi}$ factors through $D_{\Phi}\hookrightarrow C_{\Phi}$, so we obtain a functor $Z_{\Phi}:A_{\Phi}\to D_{\Phi}$.\end{definition}
+
+\begin{lemma}
+Suppose $(A^{op},\Phi)$ is a small sketch. Then the functor $Z_{\Phi}:A\to D_{\Phi}$ is a $\Phi$-comodel, i.e. it sends $\Phi$-cocones in $A$ to colimit cocones in $D_{\Phi}$.
+\end{lemma}
+\begin{proof}
+This follows from the fact that $K_{\Phi}$ is a $\Phi$-comodel and the fully faithful inclusion $D_{\Phi}\hookrightarrow C_{\Phi}$ reflects colimits.\end{proof}
+
+\begin{definition}
+ The type of a cocone $a\Rightarrow F$ is the type of the diagram $F$.\end{definition}
+ 
+\begin{lemma}
+Let $(A^{op},\Phi)$ be a small sketch and let $\mathcal{F}$ be a small set of diagram types, containing the types of all $\Phi$-cocones. Given an $\mathcal{F}$-cocontinuous functor $H:D_{\Phi}\to B$, the composite $\begin{tikzcd}
+	A & D_{\Phi} & B
+	\arrow["Z_{\Phi}", from=1-1, to=1-2]
+	\arrow["H", from=1-2, to=1-3]
+\end{tikzcd}$ is a $\Phi$-comodel.\end{lemma}
+ \begin{proof}Recall that $Z_{\Phi}$ is a $\Phi$-comodel, i.e. it sends $\Phi$-cocones in $A$ to colimit cocones in $D_{\Phi}$. Since $\mathcal{F}$ contains the type of every $\Phi$-cocone, $Z_{\Phi}$ sends $\Phi$-cocones in $A$ to $\mathcal{F}$-colimit cocones in $D_{\Phi}$. But $H$ sends $\mathcal{F}$-colimits in $D_{\Phi}$ to $\mathcal{F}$-colimits in $B$, so finally the composite sends $\Phi$-cocones in $A$ to colimit cocones in $B$.\end{proof} 
+  
+This means that precomposition with $Z_{\Phi}$ defines a functor $Z_{\Phi}^*:\mathcal{F}-Cocts(A,B)\to\Phi-Com(A,B)$ for any category $B$.
+
+\begin{theorem}\cite[Theorem 6.23]{kelly/basic-concepts-enriched}\label{f_theory_small_sketch}
+Suppose $(A^{op},\Phi)$ is a small sketch and $\mathcal{F}$ is a small set of diagram types containing the types of all $\Phi$-cocones. Let $B$ be an $\mathcal{F}$-cocomplete category. Then $$Z_{\Phi}^*:\mathcal{F}-Cocts(D_{\Phi},B)\to\Phi-Com(A,B)$$ is an equivalence.
+\end{theorem}
+
+In section \ref{section-nonsemisimple}, we use the procedure described here to define $sk(M,C,N)$. We have $A=M\otimes_C N$, which is a small category whenever $M,N,C$ are small. We take $\mathcal{F}$ to be a set of finite categories containing exactly one representative of each isomorphism class (it is a small set). So $\mathcal{F}$-colimits are just finite colimits. We take $\Phi$ to be the set of all cocones of the kinds $m_i\otimes n\to m\otimes n$ and $m\otimes n_i\to m\otimes n$ where $m_i\to m$ is any finite colimit cocone in $M$ (with type in $\mathcal{F}$) and $n_i\to n$ is any finite colimit cocone in $N$ (with type in $\mathcal{F}$). The fact that we require the types to be in the small set $\mathcal{F}$ and the fact that the categories $M$, $N$ are small together imply that $\Phi$ is a small set.  Then one obtains $C_{\Phi}=\Phi-Alg=Bilex((M\otimes_C N)^{op},\Vect_k)$ and $K_{\Phi}:M\otimes_C N\to Bilex((M\otimes_C N)^{op},\Vect_k)$ is the functor $K$ of Definition \ref{def_K}. Finally, the category $D_{\Phi}$ obtained as the closure of the full image of $K_{\Phi}$ in $C_{\Phi}$ under finite colimits is exactly $sk(M,C,N)$ (Definition \ref{sk_nonsemisimple}). Now $\mathcal{F}$-cocomplete is synonymous with finitely cocomplete and $\mathcal{F}$-cocontinuous means right exact. So the $\mathcal{F}$-cocontinuous functors $sk(M,C,N)\to L$ are exaclty the linear functors. Moreover, $\Phi$-comodels $M\otimes_C N\to L$ are exactly the bilinear functors. So we obtain Proposition \ref{univ_sk_nonsemisimple}.
  
  
  
