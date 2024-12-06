@@ -80,7 +80,7 @@ which strikes a better mix between algebra and topology. It has a few advantages
 
 % \subsection{Results}
 
-% Fix a field $k$, and assume all categories, functors and natural transformations are enriched over $\Vect_k$ [TODO: Figure out a better way to say this sentence]. Let $C$ be a rigid monoidal category, and let $M_C$ and $_{C}N$ be $C$-module categories, we define the pre-skein category $M\otimes_C N$ whose objects are pairs $(m,n)$ with $m\in M$ and $n\in N$ and whose morphisms $(m,n)\to (m',n')$ are certain skeins (see Definition \ref{pre-skein}). Then we have a $C$-balanced functor $M\otimes N\to M\otimes_C N$.
+% Fix a field $k$, and assume all categories, functors and natural transformations are enriched over $\Vect_k$ [TODO: Figure out a better way to say this sentence]. Let $C$ be a rigid monoidal category, and let $M_C$ and $_{C}N$ be $C$-module categories. We define the pre-skein category $M\otimes_C N$ whose objects are pairs $(m,n)$ with $m\in M$ and $n\in N$ and whose morphisms $(m,n)\to (m',n')$ are certain skeins (see Definition \ref{pre-skein}). Then we have a $C$-balanced functor $M\otimes N\to M\otimes_C N$.
 
 % When $M$, $N$ and their balanced tensor product $M\boxtimes_C N$ are all $k$-linear finite semisimple, we define the skein category $sk(M,C,N)$ as the Cauchy completion of $M\otimes_C N$, which can be constructed explicitly in two steps:
 % \begin{enumerate}
@@ -214,7 +214,7 @@ from \cite{douglas/balanced-product}.
 
 \begin{definition} (Balanced Functor)
 
-  \noindent Let $C$ be a monoidal category, $M_{C}$, $_{C}N$ be $C$-module categories, and $L$ be a category. \quad Then a
+  \noindent Let $C$ be a monoidal category, $M_{C}$, $_{C}N$ $C$-module categories, and $L$ a category. \quad Then a
   $C$-balanced functor $M \otimes N\to L$
   is a pair
   \[(M \otimes N \xrightarrow{F} L, \alpha)\] where $F$ is a [TODO: linear functor?] functor and $\alpha$ is a natural isomorphism
@@ -275,7 +275,7 @@ from \cite{douglas/balanced-product}.
   equivalence, for any $k$-linear category $L$.
 \end{definition}
 
-In \cite{douglas/balanced-product} the authors construct $M\boxtimes_C N$ for any finite tensor category $C$ and any finite $C$-module categories $M, N$, thus establishing existence in this setting. They do this by using the fact that the module categories $M,N$ can be realized as categories of modules over algebra objects $A_M$ and $A_N$ in $C$ and then showing that the category of $A_M-A_N$-bimodule objects in $C$ is $k$-linear and satisfies the required universal property. In the present paper, we will give an alternative construction of $M\boxtimes_C N$ when $M,N$ [TODO: FIXME: Manuel - This part is missing.]
+In \cite{douglas/balanced-product} the authors construct $M\boxtimes_C N$ for any finite tensor category $C$ and any finite $C$-module categories $M, N$, thus establishing existence in this setting. They do this by using the fact that the module categories $M,N$ can be realized as categories of modules over algebra objects $A_M$ and $A_N$ in $C$ and then showing that the category of $A_M-A_N$-bimodule objects in $C$ is $k$-linear and satisfies the required universal property. In the present paper, we will give an alternative construction of $M\boxtimes_C N$ when $M$, $N$, and $M \boxtimes_{C} N$ are semisimple.
 
 \section{Skein Construction (Topology)}\label{section/skein-construction}
 
@@ -288,8 +288,8 @@ and develop some of its properties.
   For $C$ a monoidal category and $M_C$, $_{C}N$ module categories, we define
   the pre-skein category $M\otimes_C N$ as follows. Its objects are pairs $(m,n)$ with
   $m\in M$ and $n\in N$, which we denote by $m\boxtimes n$. The hom space
-  $Hom_{M\otimes_C N}(m\boxtimes n, m'\boxtimes n')$, as a $k$-linear vector space, is the quotient
-  of the $k$-linear vector space $$V((m,n),(m',n')):=\bigoplus_{c,\overline{c} \in Obj(C)} Hom_{M}(m, m' \lhd c) \otimes Hom_{C}(c,\overline{c}) \otimes Hom_{N} (\overline{c} \rhd n, n')$$
+  $Hom_{M\otimes_C N}(m\boxtimes n, m'\boxtimes n')$, as a $k$-vector space, is the quotient
+  of the $k$-vector space $$V((m,n),(m',n')):=\bigoplus_{c,\overline{c} \in Obj(C)} Hom_{M}(m, m' \lhd c) \otimes Hom_{C}(c,\overline{c}) \otimes Hom_{N} (\overline{c} \rhd n, n')$$
   by the $k$-linear subspace spanned by
   \begin{align}
     \phi \otimes (\overline{\pi} \circ \pi) \otimes \psi &- (\phi_{\pi} \otimes \overline{\pi} \otimes \psi) \label{relation/a} \\
@@ -333,7 +333,7 @@ and develop some of its properties.
 
 \begin{remark}
  
-We abuse notation by writing $(\phi\otimes\pi\otimes\psi)$ to denote the corresponding equivalence class in $Hom_{M\otimes_C N}((m,n),(m',n'))$. We say that the morphisms in $M\otimes_C N$ are skeins.\end{remark}
+We abuse notation by writing $(\phi\otimes\pi\otimes\psi)$ to denote the corresponding equivalence class in $Hom_{M\otimes_C N}((m,n),(m',n'))$. We say that the morphisms in $M\otimes_C N$ are skeins. [TODO: Manuel: Maybe skeins are just the "pure tensors" and not sums of those?]\end{remark}
 
 
 \begin{remark}\label{absorb}
@@ -427,7 +427,6 @@ property characterizes [TODO: Jin is confused what this means.] $M\otimes N \to 
 \end{proof}
 
 \begin{remark}
-  [TODO: Manuel will check this remark, and remove this TODO after doing so.]
   Hence the pre-skein category $M \otimes_{C} N$ almost satisfies the universal property that defines the balanced tensor product $M \boxtimes_{C} N$, except that it is not abelian (thus not $k$-linear). We fix this by defining the skein category $sk(M,C,N)$ as a certain completion of the pre-skein category.
 \end{remark}
 
@@ -589,7 +588,7 @@ just a finitely cocomplete category. We record this in the following lemma.
   $X\in Fun(M^{op},\Vect_k)$ such that
   $\underline{Hom}(X,-):Fun(M^{op},\Vect_k)\to \Vect_k$ preserves filtered
   colimits. Alternatively, they are the coequalisers of pairs of morphisms
-  between finite coproducts of representables. [TODO: Manuel explains what underlined Hom is. Jin cannot understand this.] [TODO: We need to provide better references for each claim given here.]
+  between finite coproducts of representables. [TODO: Manuel explains what underlined Hom is. Jin cannot understand this. Manuel says ``Just remove the underline. It means we take the vector space of morphisms and not the set.'' Jin: ``So should it be $Hom_{Fun(M^{op}, Vect_{k})}$?''] [TODO: We need to provide better references for each claim given here.]
 
   There is fully
   faithful functor $M\to Fin(M)$ induced by the Yoneda embedding $M \to Fun(M^{op}, \Vect_{k})$. It is characterized by a universal
@@ -648,7 +647,7 @@ whenever $M$, $N$ and $M\boxtimes_C N$ are finite semisimple $k$-linear
 categories.
 
 \begin{lemma}\label{semisimple}
-  Let $C$ be a tensor category and let $M_C$,$_{C}N$ be $k$-linear finite semisimple $C$-module categories. Suppose $M\boxtimes_C N$ is also $k$-linear finite semisimple. Then $sk(M,C,N)$ is
+  Let $C$ be a tensor category and let $M_C$,$_{C}N$ be $k$-linear finite semisimple $C$-module categories. Suppose $M\boxtimes_C N$ is also $k$-linear finite semisimple. [TODO: Manuel wants to call it a theorem, but Jin lemma.] Then $sk(M,C,N)$ is
   $k$-linear finite semisimple.
 \end{lemma}
 
@@ -1664,7 +1663,7 @@ provide another direct proof for this equivalence:
   \end{center}
 \end{proof}
 
-\noindent For computation purpose (cf. one of the application in the introduction), one
+\noindent For computation purpose (cf. one of the applications in the introduction), one
 may find the following basis theorem useful.
 
 % TODO I think this is the only place we need semisimplicity and finiteness?
