@@ -667,10 +667,23 @@ Since we are mostly interested in the characteristic zero case, we record the fo
 \begin{theorem}
    Suppose $k$ has characteristic $0$, $C$ is a finite semisimple tensor category and $M_C$,$_{C}N$ are $k$-linear finite semisimple $C$-module categories. Then the $C$-balanced functor $M\otimes N\to sk(M,C,N)$ exhibits
    $sk(M,C,N)$ as the balanced tensor product $M\boxtimes_C N$.
-\end{theorem}
+ \end{theorem}
 
-\noindent [TODO: Jin adds a theorem for multiple module categories.]
-    
+[TODO: Jin adds the definition of $sk(M^{1},..,M^{n})$]
+
+\begin{corollary}
+  Suppose that $n \in \mathbb{N}$, $k$ has characteristic $0$,
+  $C_{0}, \ldots, C_{n}$ are finite semisimple tensor categories, and
+  $_{C_{0}}M^{1}_{C_{1}}, _{C_{1}}M^{2}_{C_{2}}, \ldots, _{C_{n{\text -}1}}M^{n}_{C_{n}}$
+  are $k$-linear finite semisimple module categories. Then we have an
+  equivalence of $C_{0}{\text -}C_{n}$ module categories
+  \[
+    sk(M^{1}, C_{1}, M^{2}, C_{2}, \ldots, C_{n{\text -} 1}, M^{n})
+    \simeq
+    (M^{1} \boxtimes_{C_{1}} M^{2} \boxtimes_{C_{2}} \ldots \boxtimes_{C_{n{\text -}1}} M^{n}).
+  \]
+\end{corollary}
+
 \appendix
 \section{Appendix}
    
