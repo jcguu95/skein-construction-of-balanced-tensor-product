@@ -678,7 +678,7 @@ Since we are mostly interested in the characteristic zero case, we record the fo
 
 \noindent In this subsection, we collect results about completions of categories.
 
-\begin{definition} (Cauchy Completion (Abstract))
+\begin{definition} \label{definition/cauchy-completion/abstract} (Cauchy Completion (Abstract))
   A category $M$ is Cauchy complete if it has all finite direct sums and all
   idempotents split [TODO: Jin is confused what this means. Manuel will explain]. Given any $M$, we denote by $\Cau(M)$ the Cauchy
   completion of $M$, the smallest subcategory of $Fun(M^{op},\Vect_k)$
@@ -713,7 +713,7 @@ Given a category $M$, we define $Mat(M)$ to be the category whose objects are tu
 	\arrow["f"', from=2-1, to=2-2]
 \end{tikzcd}\] commutes.\end{definition}
 
-\begin{definition} (Cauchy Completion, Explicit)
+\begin{definition} \label{definition/cauchy-completion/explicit} (Cauchy Completion, Explicit)
 
   The explicit construction of the Cauchy completion is given by $Cau(M)=Kar(Mat(M))$. \end{definition}
 
@@ -848,8 +848,11 @@ Given a category $M$, we define $Mat(M)$ to be the category whose objects are tu
 \end{definition}
 
 \begin{remark}
-  From our descriptions of $Cau(M)$ [TODO: Jin adds reference numbers for ease of reading; there are two definitions.] and $Fin(M)$ [TODO: Jin adds reference numbers for ease of reading] it is immediate that we have
-  fully faithful functors $M\hookrightarrow Cau(M)\hookrightarrow Fin(M)$.
+  From our descriptions of $Cau(M)$
+  (\ref{definition/cauchy-completion/abstract},
+  \ref{definition/cauchy-completion/explicit}) and $Fin(M)$
+  (\ref{definition/finite-cocompletion}) it is immediate that we have fully
+  faithful functors $M\hookrightarrow Cau(M)\hookrightarrow Fin(M)$.
 \end{remark}
 
 \subsection{The non-semisimple case}
