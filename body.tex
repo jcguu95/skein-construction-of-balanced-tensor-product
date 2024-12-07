@@ -136,10 +136,8 @@ Given categories $M,N$ we denote by $M\otimes N$ the category whose objects are 
 
 \noindent We make the following definition following \cite{douglas/balanced-product}.
 
-\begin{definition}
-  [TODO: Stress that ``abelian'' is the key here.]
-  A $k$-linear category is an abelian category with a compatible $\Vect_k$
-  enrichment.
+\begin{definition} [TODO: Manuel checks this new definition.]
+  A $k$-linear category an abelian $\Vect_{k}$-enriched category.
 \end{definition}
 
 \begin{definition} (\cite{egno/tensor-cats})
@@ -230,12 +228,6 @@ from \cite{douglas/balanced-product}.
   upper arrow to $(m \lhd c, n)$, and by the first lower arrow to $(m, c \rhd n)$.
 \end{definition}
 
-% TODO
-% \begin{remark}
-%   The triangle and pentagonal identities for $D$ is automatically satisfied
-%   [TODO: see Jin's note 20240906-110000 p.2].
-% \end{remark}
-
 \begin{definition} (Balanced Natural Transformation)
 
   \noindent Let $C$ be a monoidal category, let $M_{C}$, $_{C}N$ be $C$-module categories and let $L$ be a category. Let $(F,\alpha), (G,\beta)$ be $C$-balanced functors from $M \otimes N$ to $L$. A $C$-balanced natural transformation
@@ -262,10 +254,6 @@ from \cite{douglas/balanced-product}.
  We denote by $Bilin^{C{\text -}bal}(M \otimes N, L)$ the full subcategory of $Fun^{C{\text -}bal}(M \otimes N, L)$ whose objects are bilinear (thus right exact) $C$-balanced functors.
 \end{definition}
 
-
-% TODO: In this definition, I need M, N are semisimple already. But add
-% a later remark saying that this can be circumvented.
-
 \begin{definition}\label{def_balanced} (Balanced Tensor Product)
   \noindent Let $C$ be a tensor category, and let $M_C$, $_{C}N$ be $k$-linear module categories over $C$.
   \quad Then the balanced tensor product $M \boxtimes_{C} N$ is a $k$-linear
@@ -288,7 +276,9 @@ and develop some of its properties.
 as Manuel suggested in
 https://github.com/jcguu95/skein-construction-of-balanced-tensor-product/issues/7
 ? Or should we just add a remark explain why the exchanged particle only goes
-one way?]
+one way?
+
+Jin thinks we need bi-dual.]
 
 \begin{definition}\label{pre-skein} (Pre-Skein Category)
   For $C$ a monoidal category and $M_C$, $_{C}N$ module categories, we define
@@ -333,7 +323,6 @@ one way?]
     \begin{center}
     \includesvg[width=18cm]{drawing-2}
   \end{center}
-  %TODO:picture of phi'' and psi''
   It is straightforward to check that this composition law respects the relations defining $Hom_{M\otimes_C N}$.
 \end{definition}
 
@@ -373,7 +362,7 @@ We abuse notation by writing $(\phi\otimes\pi\otimes\psi)$ to denote the corresp
   (\phi\otimes\id_1\otimes\id_n)$.
 \end{proof}
     
-\begin{definition}\label{definition/todo-unnamed-001}.
+\begin{definition}\label{definition/preskeinification}.
   We define a functor $M\otimes N\to M\otimes_C N$ by the identity on objects,
   and $\phi\otimes\psi\mapsto\phi\otimes\id_1\otimes\psi$ on morphisms. We
   define also morphisms $\beta_{m,c,n}:(m\lhd c,n)\to (m, c \rhd n)$ by
@@ -403,12 +392,10 @@ We abuse notation by writing $(\phi\otimes\pi\otimes\psi)$ to denote the corresp
   $(\phi\lhd\id_c)\otimes\pi\otimes(\id_{\bar{c}}\rhd\psi)$.
 \end{proof}
 
-[TODO: Jin, Manuel Do we really just need right dual?]
-
 \begin{lemma}\label{balanced}
   If every object in $C$ has a right dual, then the natural transformation
   $\beta$ described above is an isomorphism, so it provides a balancing for
-  the functor $M\otimes N\to M\otimes_C N$ given in \ref{definition/todo-unnamed-001}.
+  the functor $M\otimes N\to M\otimes_C N$ given in \ref{definition/preskeinification}.
 \end{lemma}
 
 \begin{proof}
@@ -611,7 +598,7 @@ just a finitely cocomplete category. We record this in the following lemma.
   fully faithful functors $M\hookrightarrow Cau(M)\hookrightarrow Fin(M)$.
 \end{remark}
 
-Recall that \ref{definition/todo-unnamed-001} and \ref{balanced} provide a $C$-balanced functor
+Recall that \ref{definition/preskeinification} and \ref{balanced} provide a $C$-balanced functor
 $M\otimes N \to M\otimes_C N$ provided that $C$ has right duals. Compose it with
 $M\otimes_C N \to Fin(M\otimes_C N)$, and we obtain a $C$-balanced functor
 $M\otimes N\to Fin(M\otimes_C N)$. [TODO: Add the $\beta$ data explicitly.]
