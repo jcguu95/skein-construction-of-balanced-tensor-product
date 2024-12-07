@@ -603,20 +603,26 @@ balanced data $\alpha$ explicitly.]
 
   Suppose $C$ is a finite tensor category [TODO: (Manuel) or do we just have to require right duals?]
   and $M_C$ and $_{C}N$ are $k$-linear finite
-  semisimple module categories. Then the map
-  $Fin(M\otimes_C N)\to M\boxtimes_C N$ corresponding to the $C$-balanced
-  functor $M\otimes N\to M\boxtimes_C N$ via the equivalence of Lemma
-  \ref{univ_finbal} is an equivalence.
+  semisimple module categories.
+  Then we have an equivalence of categories $Fin(M\otimes_C N) \to M\boxtimes_C N$.
+  [TODO: Manuel explains in the proof where that functor is from, and why it is an equivalence.]
+  % Then the map
+  % $Fin(M\otimes_C N)\to M\boxtimes_C N$ corresponding to the $C$-balanced
+  % functor $M\otimes N\to M\boxtimes_C N$ via the equivalence of Lemma
+  % \ref{univ_finbal} is an equivalence.
 \end{proposition}
 
 \begin{proof}
-  Since $M,N$ are semisimple, any functor $M\otimes N\to L$ is bilinear. So
-  Lemma \ref{univ_box} states
-  that \[Lin(M \boxtimes_{C} N, L) \to Fun^{C-bal}(M \otimes N, L)\] is an
-  equivalence for any finitely cocomplete $L$. So the $C$-balanced functor
-  $M\otimes N\to Fin(M\otimes_C N)$ induces a map
-  $M\boxtimes_C N\to Fin(M\otimes_C N)$. It is now easy to check that these
-  two functors are inverse to each other. [TODO: Jin makes this proof clearer. Don't say ``now it is easy''.]
+  [TODO: Manuel makes this proof clearer. Why are two functors inverse to each
+  other? (And what are the two functors, explicitly?) Don't say ``now it is
+  easy''.]
+  % Since $M,N$ are semisimple, any functor $M\otimes N\to L$ is bilinear. So
+  % Lemma \ref{univ_box} states
+  % that \[Lin(M \boxtimes_{C} N, L) \to Fun^{C-bal}(M \otimes N, L)\] is an
+  % equivalence for any finitely cocomplete $L$. So the $C$-balanced functor
+  % $M\otimes N\to Fin(M\otimes_C N)$ induces a map
+  % $M\boxtimes_C N\to Fin(M\otimes_C N)$. It is now easy to check that these
+  % two functors are inverse to each other.
 \end{proof}
 
 Now we prove that $sk(M,C,N)$ is a finite semisimple $k$-linear category,
