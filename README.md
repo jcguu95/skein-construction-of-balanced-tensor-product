@@ -6,13 +6,15 @@ To make the document, run `$ make`.
 
 # TODOs
 
-### 1. Deal with right-exactness.
+### 1. Update reference
 
-This part should not be difficult, as we assume semisimplicity.
+Some of them have been published, but we still use their arXiv version.
 
-### 2. Change the definition of pre-skein with Manuel's idea.
+### 2. Others
 
-### 3. Manuel will do deep integration.
+1. In application (No-Go), mention how balanced tensor product shows up in
+   Crane-Yetter (i.e. is composition of 2-morphisms). ; "this strategy" -> "a
+   similar strategy".
 
 # Reference
 

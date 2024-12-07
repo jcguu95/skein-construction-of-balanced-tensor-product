@@ -31,39 +31,7 @@ internal Hom spaces \cite{davydov/picard}, and generalized categorical centers
 balanced tensor products.
 
 In this paper, we provide a topological construction based on skein theory,
-which strikes a better mix between algebra and topology. 
-
-\subsection{Results}
-
-Fix a field $k$ and assume all categories, functors and natural transformations are enriched over $\Vect_k$. Given a rigid monoidal category $C$ and $C$-module categories $M_C$ and $_{C}N$, we define a category $M\otimes_C N$ whose objects are pairs $(m,n)$ with $m\in M$ and $n\in N$ and whose morphisms $(m,n)\to (m',n')$ are certain skeins (see Definition \ref{pre-skein}). This comes equipped with a $C$-balanced functor $M\otimes N\to M\otimes_C N$. 
-
-When $M$, $N$ and their balanced Deligne tensor product $M\boxtimes_C N$ are all $k$-linear finite semisimple, we define $sk(M,C,N)$ as the Cauchy completion of $M\otimes_C N$, which can be constructed explicitly in two steps: first add finite direct sums and then add splittings of idempotents. We then obtain a $C$-balanced functor $M\otimes N\to sk(M,C,N)$. The main result in our paper is the following.
-
-\begin{theorem}\label{sk_bal}
-  Let $C$ be a tensor category and let $M_C$,$_{C}N$ be $k$-linear finite semisimple $C$-module categories. Suppose $M\boxtimes_C N$ is also $k$-linear finite semisimple. Then the
-  $C$-balanced functor $M\otimes N\to sk(M,C,N)$ exhibits $sk(M,C,N)$ as the
-  balanced Deligne tensor product $M\boxtimes_C N$.
-\end{theorem}
-
-Using results from \cite{douglas/dualizable-tensor-categories} (see Remark \ref{semisimple_douglas/dualizable-tensor-categories}), this has the following immediate Corollary.
-
-\begin{corollary}
-   Suppose $k$ has characteristic $0$, $C$ is a finite semisimple tensor category and $M_C$,$_{C}N$ are $k$-linear finite semisimple $C$-module categories. Then the $C$-balanced functor $M\otimes N\to sk(M,C,N)$ exhibits
-   $sk(M,C,N)$ as the balanced Deligne tensor product $M\boxtimes_C N$.
-\end{corollary}
-
-We then discuss the nonsemisimple case. Here one must define $sk(M,C,N)$ by taking a finite cocompletion of $M\otimes_C N$ which preserves finite colimits in $M$ and $N$ (see Definition \ref{sk_nonsemisimple}). We then obtain the following results.
-
-\begin{theorem}
-Let $C$ be a rigid monoidal category and let $M_C$, $_{C}N$ be finitely cocomplete module categories. Then the $C$-balanced functor $M\otimes N\to sk(M,C,N)$ presents $sk(M,C,N)$ as the balanced Kelly tensor product of $M$ and $N$ over $C$. 
-\end{theorem}
-
-\begin{corollary}
- 
-Let $C$ be a finite tensor category, $M_C$, $_{C}N$ finite $k$-linear $C$-module categories. Then $sk(M,C,N)$ is $k$-linear and the $C$-balanced functor $M\otimes N\to sk(M,C,N)$ presents $sk(M,C,N)$ as the balanced Deligne tensor product of $M$ and $N$ over $C$.
-\end{corollary}
-
-\subsection{Advantages}
+which strikes a better mix between algebra and topology. It has a few advantages:
 
 \begin{enumerate}
   \item Its topological nature allows us to use skein diagrams to calculate the
@@ -74,9 +42,9 @@ Let $C$ be a finite tensor category, $M_C$, $_{C}N$ finite $k$-linear $C$-module
   \item It generalizes seamlessly to balanced tensor products involving more than
         two module categories (see the picture in definition
         \ref{definition/skein-category}).
-\end{enumerate}
+      \end{enumerate}
 
-\subsection{Applications} \label{section/applications}
+\noindent Finally, we list some of the (potential) applications of this work.
 
 \begin{enumerate}
   \item \textbf{(Skein Nature of eTFTs)} In an upcoming work
@@ -86,8 +54,8 @@ Let $C$ be a finite tensor category, $M_C$, $_{C}N$ finite $k$-linear $C$-module
         from the 3-functor in the classification of fully extended field
         theories \cite{lurie/tqft} \cite{douglas/dualizable-tensor-categories}.
   \item \textbf{(No-Go: Detection of Exotic Smooth Structures)} We anticipate
-        that this approach can be extended to its 4D analogue, the
-        Crane-Yetter model. Additionally, this strategy should apply to a
+        that this approach can be extended to a $4$-dimensional analogue of Turaev-Viro theory, the
+        Crane-Yetter model. Additionally, a similar strategy should apply to a
         broader generalization based on fusion 2-categories, as explored in
         \cite{douglas/fusion-2-cat-4d-tqft}. Proving this would lend support
         to the conjecture proposed there, which suggests that despite the
@@ -109,18 +77,55 @@ Let $C$ be a finite tensor category, $M_C$, $_{C}N$ finite $k$-linear $C$-module
         aspects of balanced tensor products.
 \end{enumerate}
 
-\subsection{Conventions}\label{subsection/conventions}
 
-We fix a field $k$ and denote by $\Vect_k$ the category of $k$-vector spaces. We assume all categories, functors and natural transformations are enriched over $\Vect_k$. We always write $\otimes$ instead of $\otimes_k$.
+% \subsection{Results}
 
-\begin{definition}
- 
-Given categories $M,N$ we denote by $M\otimes N$ the category whose objects are pairs $(m,n)$ with $m\in M$ and $n\in N$ and where $Hom_{M\otimes N}((m,n),(m',n'))=Hom_M(m,m')\otimes Hom(n,n')$.  
- 
+% Fix a field $k$, and assume all categories, functors and natural transformations are enriched over $\Vect_k$ [TODO: Figure out a better way to say this sentence]. Let $C$ be a rigid monoidal category, and let $M_C$ and $_{C}N$ be $C$-module categories. We define the pre-skein category $M\otimes_C N$ whose objects are pairs $(m,n)$ with $m\in M$ and $n\in N$ and whose morphisms $(m,n)\to (m',n')$ are certain skeins (see Definition \ref{pre-skein}). Then we have a $C$-balanced functor $M\otimes N\to M\otimes_C N$.
+
+% When $M$, $N$ and their balanced tensor product $M\boxtimes_C N$ are all $k$-linear finite semisimple, we define the skein category $sk(M,C,N)$ as the Cauchy completion of $M\otimes_C N$, which can be constructed explicitly in two steps:
+% \begin{enumerate}
+%   \item add finite direct sums
+%   \item add splittings of idempotents
+% \end{enumerate}
+% We then obtain a $C$-balanced functor $M\otimes N\to sk(M,C,N)$. The main result in our paper is the following.
+
+% \begin{theorem}\label{sk_bal2}
+%   Let $C$ be a tensor category [TODO: (Manuel) or do we just have to require right duals?] and let $M_C$,$_{C}N$ be $k$-linear finite semisimple $C$-module categories. Suppose $M\boxtimes_C N$ is also $k$-linear finite semisimple. Then the
+%   $C$-balanced functor $M\otimes N\to sk(M,C,N)$ exhibits $sk(M,C,N)$ as the
+%   balanced tensor product $M\boxtimes_C N$.
+% \end{theorem}
+
+% \noindent Using results from \cite{douglas/dualizable-tensor-categories} (see Remark \ref{semisimple_douglas/dualizable-tensor-categories}), this has the following immediate Corollary.
+
+% \begin{corollary}
+%    Suppose that $k$ has characteristic $0$, $C$ is a finite semisimple tensor category [TODO: (Manuel) or do we just have to require right duals?], and $M_C$,$_{C}N$ are $k$-linear finite semisimple $C$-module categories. Then the $C$-balanced functor $M\otimes N\to sk(M,C,N)$ exhibits
+%    $sk(M,C,N)$ as the balanced tensor product $M\boxtimes_C N$.
+% \end{corollary}
+
+% [TODO (START/001): Remove this section if we turn out not to solve the non-semisimple case.]
+% We then discuss the nonsemisimple case. Here one must define $sk(M,C,N)$ by taking a finite cocompletion of $M\otimes_C N$ which preserves finite colimits in $M$ and $N$ (see Definition \ref{sk_nonsemisimple}). We then obtain the following results.
+
+% \begin{theorem}
+% Let $C$ be a rigid monoidal category and let $M_C$, $_{C}N$ be finitely cocomplete module categories. Then the $C$-balanced functor $M\otimes N\to sk(M,C,N)$ presents $sk(M,C,N)$ as the balanced Kelly tensor product of $M$ and $N$ over $C$.
+% \end{theorem}
+
+% \begin{corollary}
+
+% Let $C$ be a finite tensor category [TODO: (Manuel) or do we just have to require right duals?], $M_C$, $_{C}N$ finite $k$-linear $C$-module categories. Then $sk(M,C,N)$ is $k$-linear and the $C$-balanced functor $M\otimes N\to sk(M,C,N)$ presents $sk(M,C,N)$ as the balanced tensor product of $M$ and $N$ over $C$.
+% \end{corollary}
+% [TODO (END/001): Remove this section if we turn out not to solve the non-semisimple case.]
+
+\subsection{Preliminaries}\label{subsection/preliminaries}
+
+Throughout the whole paper, unless mentioned otherwise, we fix a field $k$ and denote by $\Vect_k$ the category of $k$-vector spaces. We assume all categories, functors and natural transformations are enriched over $\Vect_k$. We always write $\otimes$ instead of $\otimes_k$.
+
+\begin{definition} ($M \otimes N$)
+Given categories $M,N$ we denote by $M\otimes N$ the category whose objects are pairs $(m,n)$ with $m\in M$ and $n\in N$ and where $Hom_{M\otimes N}((m,n),(m',n'))=Hom_M(m,m')\otimes Hom(n,n')$.
 \end{definition}
 
 
-\begin{definition}
+\begin{definition} (Linear functor, $Lin(M,N)$, $Bilin(M,N)$)
+  [TODO: (Jin) Introduce the notation $Fun(M,N)$ in this definition. Explain somewhere the difference between Fun, Lin, and Bilin. Stress that the key difference is the right-exactness. We may consider to use LinRex instead of Lin, as I find it very confusing.]
   A $\Vect_k$-enriched functor $F:M\to N$ is called linear if it is right
   exact, i.e. if it preserves all finite colimits. We denote the category of
   linear functors $M\to N$ by $Lin(M,N)$. A $\Vect_k$-enriched functor
@@ -129,72 +134,60 @@ Given categories $M,N$ we denote by $M\otimes N$ the category whose objects are 
   $Bilin(M\otimes N, L)$.
 \end{definition}
 
-\begin{definition}
-  A $k$-linear category is an abelian category with a compatible $\Vect_k$
-  enrichment.
+\noindent We make the following definition following \cite{douglas/balanced-product}.
+
+\begin{definition} [TODO: Manuel checks this new definition.]
+  A $k$-linear category an abelian $\Vect_{k}$-enriched category.
 \end{definition}
 
-\begin{definition}
-  An object in a $k$-linear category is simple if it has no nontrivial subobjects.
-\end{definition}
-
-\begin{definition}
-  A $k$-linear category is semisimple if every object splits as a direct sum
-  of simple objects.
-\end{definition}
-
-
-\begin{definition}
-  A $k$-linear category $M$ is finite if
+\begin{definition} \cite{egno/tensor-cats} An object in a $k$-linear category is simple if it has no
+  nontrivial subobjects. A $k$-linear category is semisimple if every object
+  splits as a direct sum of simple objects. A $k$-linear category $M$ is
+  finite if
   \begin{itemize}
-    \item $Hom_M(X,Y)$ is finite dimensional, for all objects $X,Y\in M$;
-    \item every object of $M$ has finite length;
-    \item $M$ has enough projectives;
+    \item $Hom_M(X,Y)$ is finite dimensional, for all objects $X,Y\in M$.
+    \item Every object of $M$ has finite length.
+    \item $M$ has enough projectives.
     \item $M$ has finitely many isomorphism classes of simple objects.
   \end{itemize}
-\end{definition}
-
-\begin{remark}
-  In a finite semisimple $k$-linear category every object splits as a finite
-  direct sum of simple objects.
-\end{remark}
-
-\begin{remark}
-  When $M,N$ are semisimple, every functor $M\to L$ is automatically linear
-  and every functor $M\otimes N\to L$ is automatically bilinear.
-\end{remark}
-
-\begin{definition}
   A tensor category is a rigid $k$-linear monoidal category, where the
-  monoidal structure is given by a bilinear functor. 
+  monoidal structure is given by a bilinear functor.
 \end{definition}
 
-\begin{definition}
+\noindent In a finite semisimple $k$-linear category, every object splits as a
+finite direct sum of simple objects. When $M,N$ are semisimple, every
+$\Vect_{k}$-enriched functor $M\to L$ is automatically exact (thus linear) and
+every $\Vect_{k}$-enriched functor $M\otimes N\to L$ is automatically bilinear.
+
+\begin{assumption}
  When $C$ is a tensor category, any $C$-module category $M$ is assumed to be $k$-linear by definition and the structure map $C\otimes M\to M$ is assumed to be bilinear. 
-\end{definition}
+\end{assumption}
 
-\begin{notation}
+\begin{notation} ($m \lhd c$)
 
-Given a right $C$-module category $M_C$, we denote by $m\lhd c\in M$ the object that results from acting with $c\in C$ on $m\in M$. Similarly, we use $c\rhd n$ in the context of a left $C$-module category $_{C}N$.\end{notation}
+  Given a right (left, resp.) $C$-module category $M_C$ ($_{C}N$, resp.), we denote by $m\lhd c$ ($n \rhd n$, resp.) the object in $M$ ($N$, resp.) that results from acting with $c\in C$ on $m\in M$.
+  \end{notation}
+
+[TODO: Jin adds a remark collecting similar notations, and give pointers to where they are defined: $M \otimes N$, $M \boxtimes N$, $M \boxtimes_{C} N$; $Fun$, $Lin$, $Bilin$, $Fun^{C-bal}$, $Lin^{C-bal}$,$Bilin^{C-bal}$.]
 
 
+% [TODO: We may want to uncomment this subsection.]
+% \subsection{A Note to Experts}\label{subsection/a-note-to-experts}
 
-\subsection{A Note to Experts}\label{subsection/a-note-to-experts}
+% The main theorem provides an algebraic model for balanced tensor products with
+% mathematical rigor, utilizing the skein construction. We do not claim to
+% introduce novel ideas here: This approach closely mirrors the domain-wall
+% perspective in topological phase theory, as outlined in
+% \cite{kong/topological-order}. In fact, the essential techniques have been
+% used in many places to study the Drinfeld center
+% $Z(C) \simeq C \boxtimes_{CC} C$ (e.g. \cite{kirillov/string-net-tv}). This
+% work is merely a generalization of it to the context of field theories with
+% defects.
 
-The main theorem provides an algebraic model for balanced tensor products with
-mathematical rigor, utilizing the skein construction. We do not claim to
-introduce novel ideas here: This approach closely mirrors the domain-wall
-perspective in topological phase theory, as outlined in
-\cite{kong/topological-order}. In fact, the essential techniques have been
-used in many places to study the Drinfeld center
-$Z(C) \simeq C \boxtimes_{CC} C$ (e.g. \cite{kirillov/string-net-tv}). This
-work is merely a generalization of it to the context of field theories with
-defects.
-
-In this work, we assume ideal conditions—finiteness, semisimplicity, and
-rigidity (see \ref{subsection/conventions}). While it is both possible and
-beneficial to relax some of these assumptions, for simplicity, we leave such
-generalizations for future work.
+% In this work, we assume ideal conditions—finiteness, semisimplicity, and
+% rigidity (see \ref{subsection/preliminaries}). While it is both possible and
+% beneficial to relax some of these assumptions, for simplicity, we leave such
+% generalizations for future work.
 
 \section{Balanced Tensor Product (Algebra)}\label{section/balanced-tensor-product}
 
@@ -203,10 +196,10 @@ from \cite{douglas/balanced-product}.
 
 \begin{definition} (Balanced Functor)
 
-  \noindent Let $C$ be a monoidal category, let $M_{C}$, $_{C}N$ be $C$-module categories and let $L$ be a category. \quad Then a
+  \noindent Let $C$ be a monoidal category, $M_{C}$, $_{C}N$ $C$-module categories, and $L$ a category. \quad Then a
   $C$-balanced functor $M \otimes N\to L$
   is a pair
-  \[(M \otimes N \xrightarrow{F} L, \alpha)\] where $F$ is a functor and $\alpha$ is a natural isomorphism 
+  \[(M \otimes N \xrightarrow{F} L, \alpha)\] where $F$ is a [TODO: (Manuel) linear functor?] functor and $\alpha$ is a natural isomorphism
   \[
     \begin{tikzcd}
       M \otimes C \otimes N \arrow[r] \arrow[dr] &
@@ -218,12 +211,6 @@ from \cite{douglas/balanced-product}.
   where the object $(m,c,n)$ in $M \otimes C \otimes N$ is sent by the first
   upper arrow to $(m \lhd c, n)$, and by the first lower arrow to $(m, c \rhd n)$.
 \end{definition}
-
-% TODO
-% \begin{remark}
-%   The triangle and pentagonal identities for $D$ is automatically satisfied
-%   [TODO: see Jin's note 20240906-110000 p.2].
-% \end{remark}
 
 \begin{definition} (Balanced Natural Transformation)
 
@@ -241,44 +228,49 @@ from \cite{douglas/balanced-product}.
   \]
 \end{definition}
 
-\begin{definition} (Category of Balanced Functors)
+\begin{definition} ($Fun^{C-bal}(M \otimes N, L)$ and $Bilin^{C-bal}(M \otimes N, L)$)
 
   \noindent Let $C$ be a monoidal category, let $M_{C}$, $_{C}N$ be $C$-module categories and let $L$ be a category. \quad Then the category of $C$-balanced functors
   $Fun^{C{\text -}bal}(M \otimes N, L)$ is defined to be the category whose
   objects are $C$-balanced functors
   $M \otimes N \to L$ and whose morphisms are $C$-balanced natural transformations.
+
+ We denote by $Bilin^{C{\text -}bal}(M \otimes N, L)$ the full subcategory of $Fun^{C{\text -}bal}(M \otimes N, L)$ whose objects are bilinear (thus right exact) $C$-balanced functors.
 \end{definition}
 
-\begin{notation}
- We denote by $Bilin^{C{\text -}bal}(M \otimes N, L)$ the full subcategory of $Fun^{C{\text -}bal}(M \otimes N, L)$ whose objects are bilinear (i.e. right exact) $C$-balanced functors.
-\end{notation}
-
-
-% TODO: In this definition, I need M, N are semisimple already. But add
-% a later remark saying that this can be circumvented.
-
-\begin{definition}\label{def_balanced} (Balanced Tensor Product)
-  \noindent Let $C$ be a tensor category and let $M_C$, $_{C}N$ be $k$-linear module categories.
+\begin{definition}\label{definition/balanced-tensor-product} (Balanced Tensor Product)
+  \noindent Let $C$ be a tensor category [TODO: (Manuel) or do we just have to require right duals?], and let $M_C$, $_{C}N$ be $k$-linear module categories over $C$.
   \quad Then the balanced tensor product $M \boxtimes_{C} N$ is a $k$-linear
-  category $M\boxtimes_{C} N$ together with a $C$-balanced bilinear functor
+  category together with a $C$-balanced bilinear functor
   $M\otimes N\to M\boxtimes_{C} N$ such
   that \[Lin(M \boxtimes_{C} N, L) \to Bilin^{C-bal}(M \otimes N, L)\] is an
   equivalence, for any $k$-linear category $L$.
 \end{definition}
 
-In \cite{douglas/balanced-product} the authors construct $M\boxtimes_C N$ when $C$ is a finite tensor category and $M,N$ are finite $C$-module categories, thus establishing existence in this setting. They do this by using the fact that the module categories $M,N$ can be realised as categories of modules over algebra objects $A_M$ and $A_N$ in $C$ and then showing that the category of $A_M-A_N$-bimodule objects in $C$ is $k$-linear and satisfies the required universal property. In the present paper, we will give an alternative construction of $M\boxtimes_C N$ when $M,N$
+In \cite{douglas/balanced-product} the authors construct $M\boxtimes_C N$ for any finite tensor category $C$ and any finite $C$-module categories $M, N$, thus establishing existence in this setting. They do this by using the fact that the module categories $M,N$ can be realized as categories of modules over algebra objects $A_M$ and $A_N$ in $C$ and then showing that the category of $A_M-A_N$-bimodule objects in $C$ is $k$-linear and satisfies the required universal property. In the present paper, we will give an alternative construction of $M\boxtimes_C N$ when $M$, $N$, and $M \boxtimes_{C} N$ are semisimple.
 
 \section{Skein Construction (Topology)}\label{section/skein-construction}
 
-\subsection{The category $M\otimes_C N$ and its universal property}
+\subsection{Pre-skein Category $M\otimes_C N$}
+
+\noindent In this section, we present the pre-skein category $M \otimes_{C} N$
+and develop some of its properties.
+
+[TODO: Should we include ``right-dual'' in the definition of preskein category
+as Manuel suggested in
+https://github.com/jcguu95/skein-construction-of-balanced-tensor-product/issues/7
+? Or should we just add a remark explain why the exchanged particle only goes
+one way?
+
+Jin thinks we need bi-dual.]
 
 \begin{definition}\label{pre-skein} (Pre-Skein Category)
   For $C$ a monoidal category and $M_C$, $_{C}N$ module categories, we define
-  a new category $M\otimes_C N$ as follows. Its objects are pairs $(m,n)$ with
-  $m\in M$ and $n\in N$, which we denote by $m\boxtimes n$. The $k$-vector space
-  $Hom_{M\otimes_C N}(m\boxtimes n, m'\boxtimes n')$ is the quotient
-  of $$V((m,n),(m',n')):=\bigoplus_{c,\overline{c} \in Obj(C)} Hom_{M}(m, m' \lhd c) \otimes Hom_{C}(c,\overline{c}) \otimes Hom_{N} (\overline{c} \rhd n, n')$$
-  by the subspace spanned by
+  the pre-skein category $M\otimes_C N$ as follows. Its objects are pairs $(m,n)$ with
+  $m\in M$ and $n\in N$, which we denote by $m\boxtimes n$. The hom space
+  $Hom_{M\otimes_C N}(m\boxtimes n, m'\boxtimes n')$, as a $k$-vector space, is the quotient
+  of the $k$-vector space $$V((m,n),(m',n')):=\bigoplus_{c,\overline{c} \in Obj(C)} Hom_{M}(m, m' \lhd c) \otimes Hom_{C}(c,\overline{c}) \otimes Hom_{N} (\overline{c} \rhd n, n')$$
+  by the $k$-linear subspace spanned by
   \begin{align}
     \phi \otimes (\overline{\pi} \circ \pi) \otimes \psi &- (\phi_{\pi} \otimes \overline{\pi} \otimes \psi) \label{relation/a} \\
     \phi \otimes (\overline{\pi} \circ \pi) \otimes \psi &- (\phi \otimes \pi \otimes {}_{\overline{\pi}}\psi) \label{relation/b},
@@ -293,11 +285,7 @@ In \cite{douglas/balanced-product} the authors construct $M\boxtimes_C N$ when $
     \includesvg[width=18cm]{drawing-1}
   \end{center}
   
-  The composition
-  \[
-    (\phi' \otimes \pi' \otimes \psi' ) \circ (\phi \otimes \pi \otimes \psi)
-  \]
-  is defined to be $(\phi'' \otimes \pi'' \otimes \psi'')$ where
+  \noindent The composition $(\phi' \otimes \pi' \otimes \psi' ) \circ (\phi \otimes \pi \otimes \psi)$ is defined to be $(\phi'' \otimes \pi'' \otimes \psi'')$ where
   \begin{itemize}
     \item
     $\pi'' \in Hom_{C}(c' \otimes c, \overline{c}' \otimes \overline{c})$ is equal to
@@ -319,13 +307,12 @@ In \cite{douglas/balanced-product} the authors construct $M\boxtimes_C N$ when $
     \begin{center}
     \includesvg[width=18cm]{drawing-2}
   \end{center}
-  %TODO:picture of phi'' and psi''
   It is straightforward to check that this composition law respects the relations defining $Hom_{M\otimes_C N}$.
 \end{definition}
 
 \begin{remark}
  
-We abuse notation by writing $(\phi\otimes\pi\otimes\psi)$ to denote the corresponding equivalence class in $Hom_{M\otimes_C N}((m,n),(m',n'))$. We refer to morphisms in $M\otimes_C N$ as skeins.\end{remark}
+We abuse notation by writing $(\phi\otimes\pi\otimes\psi)$ to denote the corresponding equivalence class in $Hom_{M\otimes_C N}((m,n),(m',n'))$. We say that the morphisms in $M\otimes_C N$ are skeins. [TODO: Manuel: Maybe skeins are just the "pure tensors" and not sums of those?]\end{remark}
 
 
 \begin{remark}\label{absorb}
@@ -358,9 +345,12 @@ We abuse notation by writing $(\phi\otimes\pi\otimes\psi)$ to denote the corresp
   \circ
   (\phi\otimes\id_1\otimes\id_n)$.
 \end{proof}
-    
-\begin{definition}
-  We define a functor $M\otimes N\to M\otimes_C N$ by the identity on objects
+
+[TODO: Manuel makes this definition into a proposition, which says that there
+is a $C$-balanced functor $M \otimes C \to M \otimes_{C} N$, and provide an
+explicit balanced data $\alpha$ for the functor.]
+\begin{definition}\label{definition/preskeinification}.
+  We define a functor $M\otimes N\to M\otimes_C N$ by the identity on objects,
   and $\phi\otimes\psi\mapsto\phi\otimes\id_1\otimes\psi$ on morphisms. We
   define also morphisms $\beta_{m,c,n}:(m\lhd c,n)\to (m, c \rhd n)$ by
   $\beta_{m,c,n}=\id_{m\lhd c}\otimes\id_c\otimes\id_{c\lhd n}.$
@@ -392,7 +382,7 @@ We abuse notation by writing $(\phi\otimes\pi\otimes\psi)$ to denote the corresp
 \begin{lemma}\label{balanced}
   If every object in $C$ has a right dual, then the natural transformation
   $\beta$ described above is an isomorphism, so it provides a balancing for
-  the functor $M\otimes N\to M\otimes_C N$.
+  the functor $M\otimes N\to M\otimes_C N$ given in \ref{definition/preskeinification}.
 \end{lemma}
 
 \begin{proof}
@@ -400,14 +390,17 @@ We abuse notation by writing $(\phi\otimes\pi\otimes\psi)$ to denote the corresp
   $(c^*,\eta,\epsilon)$ denote a right dual for $c$. We define
   $\beta^{-1}_{m,c,n}=(\id_m\lhd\eta)\otimes\id_{c^*}\otimes (\epsilon\rhd\id_n)$.
   To prove that this is inverse to $\beta_{m,c,n}$ we use only one of the
-  snake equations.
+  snake equations. [TODO: Manuel explains it in more details.]
 \end{proof}
 
-From now on, we assume that $C$ has right duals. The following universal
-property characterizes $M\otimes N \to M\otimes_C N$.
+[TODO: (Manuel) Jin proposes to not make this global assumption, but to call it every
+time it's needed. If we end up making this assumption, we need to at least
+mention it in the convention section.]
+From now on, we assume that any monoidal category $C$ has right duals. The following universal
+property characterizes [TODO: Manuel explains this.] $M\otimes N \to M\otimes_C N$.
 
 \begin{proposition}\label{univ_bal}
-  Let $L$ be a category and suppose $C$ has right duals. Then composition with
+  Let $L$ be a category, and suppose $C$ has right duals. Then composing with
   $M\otimes N \to M\otimes_C N$ induces an equivalence of categories
   $Fun(M\otimes_C N,L)\to Fun^{C-bal}(M\otimes N,L)$.
 \end{proposition}
@@ -415,12 +408,17 @@ property characterizes $M\otimes N \to M\otimes_C N$.
   It follows from lemma \ref{surjective}, \ref{faithful} and \ref{full}.
 \end{proof}
 
+\begin{remark}
+  Hence the pre-skein category $M \otimes_{C} N$ almost satisfies the universal property that defines the balanced tensor product $M \boxtimes_{C} N$, except that it is not abelian (thus not $k$-linear). We fix this by defining the skein category $sk(M,C,N)$ as a certain completion of the pre-skein category.
+\end{remark}
+
 \begin{lemma}\label{surjective}
   $Fun(M\otimes_C N,L)\to Fun^{C-bal}(M\otimes N,L)$ is surjective on
   objects.
 \end{lemma}
 
 \begin{proof}
+  [TODO: Jin will check this proof.]
   Given a $C$-balanced functor $F:M\otimes N \to L$ with balancing $\beta$, we
   must define $\tilde{F}:M\otimes_C N \to L$ such that its composite with
   $M\otimes N\to M\otimes_C N$ is $F$. We must take $\tilde{F}=F$ on objects.
@@ -467,6 +465,7 @@ property characterizes $M\otimes N \to M\otimes_C N$.
 \end{lemma}
 
 \begin{proof}
+  [TODO: Jin will check this proof.]
   This is immediate from the fact that $M\otimes N \to M\otimes_C N$ is
   surjective on objects.
 \end{proof}
@@ -476,6 +475,7 @@ property characterizes $M\otimes N \to M\otimes_C N$.
 \end{lemma}
 
 \begin{proof}
+  [TODO: Jin will check this proof.]
   Given $\eta:F\to G$ in $Fun^{C-bal}(M\otimes N,L)$ we must define
   $\tilde{\eta}:\tilde{F}\to\tilde{G}$ in $Fun(M\otimes_C N,L)$. Denote by
   $\alpha$ and $\beta$ the balancing of $F$ and $G$, respectively. Since
@@ -511,33 +511,243 @@ property characterizes $M\otimes N \to M\otimes_C N$.
   $(\id_{m\lhd c}\otimes\id_c\otimes\id_{c\rhd n})$.
 \end{proof}
 
-\subsection{The category sk(M,C,N) as Cauchy completion}
+\subsection{Skein Category sk(M,C,N)}
 
-\begin{definition}
+\begin{definition} (Skein Category, $sk(M,C,N)$) Let $C$ be a monoidal category with
+  right duals, and let $M_C$, $_{C}N$ be module categories over $C$. Define
+  the skein category $sk(M,C,N)$ to be the Cauchy completion $\Cau(M \otimes_{C} N)$
+  (cf \ref{definition/cauchy-completion/abstract},
+  \ref{definition/cauchy-completion/explicit}) of the pre-skein category
+  $M \otimes_{C} N$.
+\end{definition}
+
+\noindent It has a $C$-balanced functor $M\otimes N \to sk(M,C,N)$, namely the
+composite $M\otimes N\to M\otimes_C N\to sk(M,C,N)$. [TODO: Manuel explains what the two
+$C$-balanced functors are. In particular, though it is easy, provide the
+explicit $C$-balanced data $\alpha$..
+
+\begin{remark}
+An object in $sk(M,C,N)$ is an idempotent matrix $A:(m_1,n_1)\oplus\cdots\oplus (m_k,n_k)\to (m_1,n_1)\oplus\cdots\oplus (m_k,n_k)$ whose entries are skeins, i.e. elements in (???) [TODO: Manuel fixes this part]\end{remark}
+
+\begin{proposition}\label{univ_sk}
+  Let $L$ be Cauchy complete and suppose $C$ has right duals. Then composition
+  with the $C$-balanced functor $M\otimes N\to sk(M,C,N)$ induces an
+  equivalence of categories $$Fun(sk(M,C,N),L)\to Fun^{C-bal}(M\otimes N,L).$$
+\end{proposition}
+
+\begin{proof}
+  \noindent [TODO: Manuel rewrites the proof. (Jin: I know it is immediate,
+  but from \ref{univ_bal} and a fact that you mentioned in the definition of
+  Cauchy completion. However, I hope you can separate that fact to a easily
+  referable entry ``X'' (so the unfamiliar readers can quickly get to the
+  statement)), and say explicitly that \ref{univ_bal} and ``X'' prove this
+  statement directly.]
+  % Old sketch: From Proposition \ref{univ_bal} and the universal property of
+  % the Cauchy completion, we immediately obtain the following universal
+  % property characterizing $sk(M,C,N)$.
+\end{proof}
+
+\begin{remark}
+  Comparing \ref{univ_sk} with \ref{definition/balanced-tensor-product}, the defining universal property of balanced tensor product, we know we are closed to proving that the skein category $sk(M,C,N)$ is indeed equivalent to the balanced tensor product. What is missing so far are
+  \begin{enumerate}
+    \item $sk(M,C,N)$ is $k$-linear (in particular, abelian) (cf \ref{semisimple}).
+    \item The equivalence in \ref{univ_sk} has to be restricted to their
+          right-exact counterparts:
+          $Lin(M \boxtimes_{C} N, L) \to Bilin^{C-bal}(M \otimes N, L)$ (cf \ref{sk_bal}).
+  \end{enumerate}
+\end{remark}
+
+\subsection{Proof of the Main Theorem}
+
+We will show that $M\otimes N\to sk(M,C,N)$ presents
+$sk(M,C,N)$ as the balanced tensor product $M\boxtimes_C N$ whenever $M$, $N$
+and $M\boxtimes_C N$ are finite semisimple.
+
+In \cite{douglas/balanced-product}, the existence of the balanced tensor
+product is established, for the cases where $M,N,C$ are finite. The authors also remark that
+in this case the universal property described above still holds when $L$ is
+just a finitely cocomplete category. We record this in the following lemma.
+
+\begin{lemma}\label{univ_box}
+  Let $C$ be a finite tensor category [TODO: (Manuel) or do we just have to require right duals?], $M_C$, $_{C}N$ finite $k$-linear $C$-module
+  categories, and $L$ a finitely cocomplete category. Then the restriction
+  functor is an equivalence: \[Lin(M \boxtimes_{C} N, L) \xrightarrow{\sim} Bilin^{C-bal}(M \otimes N, L).\]
+\end{lemma}
+
+\begin{proof}
+  \cite[Remark 3.4]{douglas/balanced-product} [TODO: Manuel adds a clearer proof for this.]
+\end{proof}
+
+Recall that \ref{definition/preskeinification} and \ref{balanced} provide a $C$-balanced functor $M\otimes N \to M\otimes_C N$
+provided that $C$ has right duals. Compose it with $M\otimes_C N \to Fin(M\otimes_C N)$, and
+we obtain a $C$-balanced functor $M\otimes N\to Fin(M\otimes_C N)$. [TODO: Manuel explains
+where all $C$-balanced functors are from (which statement?), and adds missing
+balanced data $\alpha$ explicitly.]
+
+\begin{lemma}\label{univ_finbal}
+
+  Let $C$ be a monoidal category having right duals, let $M_C$ and $_{C}N$ be
+  module categories over $C$, and let $L$ be a finitely cocomplete category. Then the
+  restriction map $$Lin(Fin(M\otimes_C N),L)\to Fun^{C-bal}(M\otimes N,L)$$ is
+  an equivalence.
+\end{lemma}
+
+\begin{proof}
+  That $Lin(Fin(M\otimes_C N),L) \simeq Fun(M \otimes_{C} N, L)$ follows from
+  a claim in \ref{definition/finite-cocompletion}, and that
+  $Fun(M \otimes_{C} N, L) \simeq Fun^{C-bal}(M \otimes N, L)$ follows from
+  \ref{univ_bal}.
+\end{proof}
+
+\begin{proposition}\label{fin_eq_bal}
+
+  Suppose $C$ is a finite tensor category [TODO: (Manuel) or do we just have to require right duals?]
+  and $M_C$ and $_{C}N$ are $k$-linear finite
+  semisimple module categories.
+  Then we have an equivalence of categories $Fin(M\otimes_C N) \to M\boxtimes_C N$.
+  [TODO: Manuel explains in the proof where that functor is from, and why it is an equivalence.]
+  % Then the map
+  % $Fin(M\otimes_C N)\to M\boxtimes_C N$ corresponding to the $C$-balanced
+  % functor $M\otimes N\to M\boxtimes_C N$ via the equivalence of Lemma
+  % \ref{univ_finbal} is an equivalence.
+\end{proposition}
+
+\begin{proof}
+  [TODO: Manuel makes this proof clearer. Why are two functors inverse to each
+  other? (And what are the two functors, explicitly?) Don't say ``now it is
+  easy''.]
+  % Since $M,N$ are semisimple, any functor $M\otimes N\to L$ is bilinear. So
+  % Lemma \ref{univ_box} states
+  % that \[Lin(M \boxtimes_{C} N, L) \to Fun^{C-bal}(M \otimes N, L)\] is an
+  % equivalence for any finitely cocomplete $L$. So the $C$-balanced functor
+  % $M\otimes N\to Fin(M\otimes_C N)$ induces a map
+  % $M\boxtimes_C N\to Fin(M\otimes_C N)$. It is now easy to check that these
+  % two functors are inverse to each other.
+\end{proof}
+
+Now we prove that $sk(M,C,N)$ is a finite semisimple $k$-linear category,
+whenever $M$, $N$ and $M\boxtimes_C N$ are finite semisimple $k$-linear
+categories.
+
+\begin{lemma}\label{semisimple}
+  Let $C$ be a tensor category [TODO: (Manuel) or do we just have to require right duals?], and let $M_C$,$_{C}N$ be $k$-linear finite semisimple $C$-module categories. Suppose $M\boxtimes_C N$ is also $k$-linear finite semisimple. [TODO: Manuel wants to call it a theorem, but Jin wants to call it a lemma.] Then $sk(M,C,N)$ is
+  $k$-linear finite semisimple.
+\end{lemma}
+
+\begin{proof}
+  We have a fully faithful inclusion
+  $sk(M,C,N)=Cau(M\otimes_C N)\hookrightarrow Fin(M\otimes_C N)$. By
+  Proposition \ref{fin_eq_bal}, we have
+  $Fin(M\otimes_C N)\simeq M\boxtimes_C N$, because $M$, $N$ are finite
+  semisimple. Therefore $sk(M,C,N)$ is finite semisimple, by Proposition
+  \ref{cau_semi}.
+\end{proof}
+
+\begin{lemma}\label{sk_bal}
+  Let $C$ be a tensor category [TODO: (Manuel) or do we just have to require right duals?], and let $M_C$,$_{C}N$ be $k$-linear finite semisimple $C$-module categories. Suppose $M\boxtimes_C N$ is also $k$-linear finite semisimple. Then the
+  $C$-balanced functor $M\otimes N\to sk(M,C,N)$ exhibits $sk(M,C,N)$ as the
+  balanced tensor product $M\boxtimes_C N$.
+\end{lemma}
+
+\begin{proof}
+  Recall that proposition \ref{univ_sk} asserts that the restriction map
+  \[
+   l Fun(sk(M,C,N),L) \xrightarrow{\sim} Fun^{C-bal}(M \otimes N,L)
+  \]
+  is an equivalence for every Cauchy complete category $L$. Compare this with
+  the defining universal property of balanced tensor product (cf
+  \ref{definition/balanced-tensor-product}), we need to show that $sk(M,C,N)$
+  is $k$-linear (in particular, abelian), and to restrict the equivalence to
+  their right-exact counterparts:
+  \[
+    Lin(sk(M,C,N),L) \xrightarrow{\sim} Bilin^{C-bal}(M \otimes N, L).
+  \]
+  By \ref{semisimple} we know $sk(M,C,N)$ is $k$-linear, so that resolves the
+  first part, and we also know that it is semisimple, so
+  \[
+    Fun(sk(M,C,N), L) = Lin(sk(M,C,N), L).
+  \]
+  Finally, $M \otimes N$ is semisimple because $M, N$ are [TODO: Manuel
+  explains this part.], so
+  \[
+    Fun^{C-bal}(M \otimes N, L) = Bilin^{C-bal}(M \otimes N, L).
+  \]
+\end{proof}
+
+\begin{remark}\label{semisimple_douglas/dualizable-tensor-categories}
+  Collecting results from \cite{douglas/dualizable-tensor-categories}, we can
+  conclude that $M\boxtimes_C N$ is finite semisimple (so lemma \ref{sk_bal} applies) in any of the following
+  situations:
+  \begin{itemize}
+    \item $C$ is a finite semisimple tensor category and $_{\Vect_k}M_C$,
+    $_{C}N_{\Vect_k}$ are separable bimodule categories (\cite[Proposition 2.5.3,
+    Theorem 2.5.5]{douglas/dualizable-tensor-categories});
+    \item $k$ is perfect, $C$ is a separable tensor category and $M,N$ are
+    finite semisimple (\cite[Proposition
+    2.5.10]{douglas/dualizable-tensor-categories});
+    \item $k$ has characteristic $0$ and $C,M,N$ are finite semisimple
+    (\cite[Corollary 2.6.9]{douglas/dualizable-tensor-categories});
+  \end{itemize}
+\end{remark}
+
+Since we are mostly interested in the characteristic zero case, we record the following direct consequence of lemma \ref{sk_bal}.
+
+\begin{theorem}
+   Suppose $k$ has characteristic $0$, $C$ is a finite semisimple tensor category [TODO: (Manuel) or do we just have to require right duals?], and $M_C$,$_{C}N$ are $k$-linear finite semisimple $C$-module categories. Then the $C$-balanced functor $M\otimes N\to sk(M,C,N)$ exhibits
+   $sk(M,C,N)$ as the balanced tensor product $M\boxtimes_C N$.
+ \end{theorem}
+
+ [TODO: Manuel adds the definition of $sk(M^{1},..,M^{n})$, and more
+ importantly, explain why such a definition is more ``intuitive'' than the
+ algebraic ones (i.e. those defined by modules over algebras).]
+
+\begin{corollary}
+  Suppose that $n \in \mathbb{N}$, $k$ has characteristic $0$,
+  $C_{0}, \ldots, C_{n}$ are finite semisimple tensor categories
+  [TODO: (Manuel) or do we just have to require right duals?], and
+  $_{C_{0}}M^{1}_{C_{1}}, _{C_{1}}M^{2}_{C_{2}}, \ldots, _{C_{n{\text -}1}}M^{n}_{C_{n}}$
+  are $k$-linear finite semisimple module categories. Then we have an
+  equivalence of $C_{0}{\text -}C_{n}$ module categories
+  \[
+    sk(M^{1}, C_{1}, M^{2}, C_{2}, \ldots, C_{n{\text -} 1}, M^{n})
+    \simeq
+    (M^{1} \boxtimes_{C_{1}} M^{2} \boxtimes_{C_{2}} \ldots \boxtimes_{C_{n{\text -}1}} M^{n}).
+  \]
+\end{corollary}
+
+\appendix
+\section{Appendix}
+   
+\subsection{Completions}
+
+\noindent In this subsection, we collect results about completions of categories.
+
+\begin{definition} \label{definition/cauchy-completion/abstract} (Cauchy Completion (Abstract))
   A category $M$ is Cauchy complete if it has all finite direct sums and all
-  idempotents split. Given any $M$, we denote by $\Cau(M)$ the Cauchy
-  completion of $M$. It is the smallest subcategory of $Fun(M^{op},\Vect_k)$
-  containing the representables and closed under finite direct sums and
+  idempotents split [TODO: Manuel explains this]. Given any $M$, we denote by $\Cau(M)$ the Cauchy
+  completion of $M$, the smallest subcategory of $Fun(M^{op},\Vect_k)$
+  containing all the representables and closed under finite direct sums and
   retracts. Its objects can be identified as those $X\in Fun(M^{op},\Vect_k)$
   such that $\underline{Hom}(X,-):Fun(M^{op},\Vect_k)\to\Vect_k$ preserves all
   small colimits. Alternatively, they are the retracts of finite direct sums
   of representables.
 
-  $Cau(M)$ is Cauchy complete and comes equipped with a functor
+  $Cau(M)$ is Cauchy complete [TODO: Manuel explains this], and comes equipped with a functor
   $M\to \Cau(M)$. It is characterized by a universal property. Namely, given
   any Cauchy complete category $L$, the restriction
   map $$Fun(\Cau(M),L)\to Fun(M,L)$$ is an equivalence. A reference is
   \cite[Sections 5.5 and 5.7]{kelly/basic-concepts-enriched}.
 \end{definition}
 
-We now recall the usual explicit construction of the Cauchy completion $Cau(M)$ of a ($\Vect_k$-enriched) category $M$. 
+\noindent We recall the usual explicit construction of the Cauchy completion $Cau(M)$ of a ($\Vect_k$-enriched) category $M$ in [TODO: Manuel adds reference].
 
 \begin{definition}
 
-Given a category $M$, we define $Mat(M)$ to be the category whose objects are tuples of objects in $M$. We denote such an object by $m_1\oplus\cdots\oplus m_k$. We then define $Hom_{Mat(M)}(m_1\oplus\cdots\oplus m_k,n_1\oplus\cdots\oplus n_{\ell})$ to be the $k$-vector space of $\ell\times k$ matrices whose $(i,j)$ entry is a morphism $m_j\to n_i$ in $M$. Composition is given by matrix product and composition in $M$. \end{definition}
+Given a category $M$, we define $Mat(M)$ to be the category whose objects are tuples of objects in $M$. We denote such an object by $m_1\oplus\cdots\oplus m_k$. We then define $$Hom_{Mat(M)}(m_1\oplus\cdots\oplus m_k,n_1\oplus\cdots\oplus n_{\ell})$$ to be the $k$-vector space of $(\ell\times k)$ matrices whose $(i,j)$-th entry is a morphism $m_j\to n_i$ in $M$. Composition is defined by matrix product. \end{definition}
 
 \begin{definition}
-Given a category $M$, we define its Karoubi completion $K(M)$ to be the category whose objects are idempotents $p:m\to m$ in $M$ and where the vector space $Hom_{K(C)}(p:m\to m,q:n\to n)$ is the space maps $f:m\to n$ such that \[\begin{tikzcd}
+  Given a category $M$, we define its Karoubi completion $Kar(M)$ to be the category whose objects are idempotent endomorphisms $m \xrightarrow{p} m$ in $M$, and the hom space $Hom_{Kar(C)}(m \xrightarrow{p} m, n \xrightarrow{q} n)$ is the $k$-linear subspace of $Hom_{M}(m,n)$ consisting of $f$ such that the following diagram commutes
+  \[\begin{tikzcd}
 	m & n \\
 	m & n
 	\arrow["f", from=1-1, to=1-2]
@@ -547,117 +757,13 @@ Given a category $M$, we define its Karoubi completion $K(M)$ to be the category
 	\arrow["f"', from=2-1, to=2-2]
 \end{tikzcd}\] commutes.\end{definition}
 
-\begin{remark}
+\begin{definition} \label{definition/cauchy-completion/explicit} (Cauchy Completion, Explicit)
 
-The explicit construction of the Cauchy completion is given by $Cau(M)=K(Mat(M))$. This means that an object in $Cau(M)$ is an idempotent matrix $A:m_1\oplus\cdots\oplus m_k\to m_1\oplus\cdots\oplus m_k$.\end{remark}
+  The explicit construction of the Cauchy completion is given by $Cau(M)=Kar(Mat(M))$. \end{definition}
 
+\noindent So an object in $Cau(M)$ is an idempotent matrix $$m_1\oplus\cdots\oplus m_k \xrightarrow{A} m_1\oplus\cdots\oplus m_k.$$
 
-\begin{definition}
-  Let $C$ be a monoidal category with right duals and $M_C$, $_{C}N$ module
-  categories. Define $sk(M,C,N)=\Cau(M\otimes_C N)$. It comes equipped with a
-  $C$-balanced functor $M\otimes N \to sk(M,C,N)$, namely the composite
-  $M\otimes N\to M\otimes_C N\to sk(M,C,N)$.
-\end{definition}
-
-\begin{remark}
-An object in $sk(M,C,N)$ is an idempotent matrix $A:(m_1,n_1)\oplus\cdots\oplus (m_k,n_k)\to (m_1,n_1)\oplus\cdots\oplus (m_k,n_k)$ whose entries are skeins.\end{remark}
-
-
-From Proposition \ref{univ_bal} and the universal property of the Cauchy
-completion, we immediately obtain the following universal property
-characterizing $sk(M,C,N)$.
-
-\begin{proposition}\label{univ_sk}
-  Let $L$ be Cauchy complete and suppose $C$ has right duals. Then composition
-  with the $C$-balanced functor $M\otimes N\to sk(M,C,N)$ induces an
-  equivalence of categories $$Fun(sk(M,C,N),L)\to Fun^{C-bal}(M\otimes N,L).$$
-\end{proposition}
-
-\subsection{Proof of the main theorem}
-
-We will now show that $M\otimes N\to sk(M,C,N)$ presents
-$sk(M,C,N)$ as the balanced tensor product $M\boxtimes_C N$ whenever $M$, $N$
-and $M\boxtimes_C N$ are finite semisimple.
-
-In \cite{douglas/balanced-product} the existence of the balanced tensor
-product is established, when $M,N,C$ are finite. The authors also remark that
-in this case the universal property described above still holds when $L$ is
-just a finitely cocomplete category. We record this in the following Lemma.
-
-\begin{lemma}\label{univ_box}
-  Let $C$ be a finite tensor category, $M_C$, $_{C}N$ finite $k$-linear $C$-module
-  categories, and $L$ a finitely cocomplete category. Then the restriction
-  functor \[Lin(M \boxtimes_{C} N, L) \to Bilin^{C-bal}(M \otimes N, L)\] is
-  an equivalence.
-\end{lemma}
-
-\begin{proof}
-  \cite[Remark 3.4]{douglas/balanced-product}
-\end{proof}
-
-\begin{definition}
-  A category $M$ is finitely cocomplete if it has all finite colimits. Given a
-  category $M$, we denote by $Fin(M)$ its finite cocompletion. It is the
-  smallest finitely cocomplete subcategory of $Fun(M^{op},\Vect_k)$ that
-  contains the representables. Its objects can be identified as those
-  $X\in Fun(M^{op},\Vect_k)$ such that
-  $\underline{Hom}(X,-):Fun(M^{op},\Vect_k)\to \Vect_k$ preserves filtered
-  colimits. Alternatively, they are the coequalisers of pairs of morphisms
-  between finite coproducts of representables.
-
-  The category $Fin(M)$ is finitely cocomplete, it comes equipped with a fully
-  faithful functor $M\to Fin(M)$ and it is characterized by a universal
-  property. Namely, for any finitely cocomplete $L$, the restriction map
-  $Lin(Fin(M),L)\to Fun(M,L)$ is an equivalence. References include
-  \cite[Section 5.7]{kelly/basic-concepts-enriched} and \cite[Section
-  2.2.1]{lopezfranco/tensor-products}.
-\end{definition}
-
-\begin{remark}
-  From our descriptions of $Cau(M)$ and $Fin(M)$ it is immediate that we have
-  fully faithful functors $M\hookrightarrow Cau(M)\hookrightarrow Fin(M)$.
-\end{remark}
-
-When $C$ is rigid, Lemma \ref{balanced} provides a $C$-balanced functor
-$M\otimes N \to M\otimes_C N$, which we can compose with
-$M\otimes_C N \to Fin(M\otimes_C N)$ to obtain a $C$-balanced functor
-$M\otimes N\to Fin(M\otimes_C N)$.
-
-\begin{lemma}\label{univ_finbal}
-
-  Let $C$ be a rigid monoidal category and suppose $M_C$ and $_{C}N$ are
-  module categories and $L$ is a finitely cocomplete category. Then the
-  restriction map $$Lin(Fin(M\otimes_C N),L)\to Fun^{C-bal}(M\otimes N,L)$$ is
-  an equivalence.
-\end{lemma}
-
-\begin{proof}
-  Immediate from Proposition \ref{univ_bal} and the universal property of the
-  finite cocompletion.
-\end{proof}
-
-\begin{proposition}\label{fin_eq_bal}
-
-  Suppose $C$ is a finite tensor category and $M_C$ and $_{C}N$ are $k$-linear finite
-  semisimple module categories. Then the map
-  $Fin(M\otimes_C N)\to M\boxtimes_C N$ corresponding to the $C$-balanced
-  functor $M\otimes N\to M\boxtimes_C N$ via the equivalence of Lemma
-  \ref{univ_finbal} is an equivalence.
-\end{proposition}
-
-\begin{proof}
-  Since $M,N$ are semisimple, any functor $M\otimes N\to L$ is bilinear. So
-  Lemma \ref{univ_box} states
-  that \[Lin(M \boxtimes_{C} N, L) \to Fun^{C-bal}(M \otimes N, L)\] is an
-  equivalence for any finitely cocomplete $L$. So the $C$-balanced functor
-  $M\otimes N\to Fin(M\otimes_C N)$ induces a map
-  $M\boxtimes_C N\to Fin(M\otimes_C N)$. It is now easy to check that these
-  two functors are inverse to each other.
-\end{proof}
-
-Now we prove that $sk(M,C,N)$ is a finite semisimple $k$-linear category,
-whenever $M$, $N$ and $M\boxtimes_C N$ are finite semisimple $k$-linear
-categories.
+\noindent We introduce a few lemmas about Cauchy complete categories.
 
 \begin{lemma}\label{direct_sum}
   Suppose we have a fully faithful functor $F:M\hookrightarrow N$ where $M$ is
@@ -690,6 +796,8 @@ categories.
 \end{lemma}
 
 \begin{proof}
+  [TODO: Jin checks this proof.]
+
   Denote by $i_{a'}:a'\to F(x)$, $r_{a'}:F(x)\to a'$ and $p_{a'}:F(x)\to F(x)$
   the corresponding inclusion, retraction and idempotent, so that
   $r_{a'}i_{a'}=\id_{a'}$ and $i_{a'} r_{a'}=p_{a'}$, and similarly for $b'$.
@@ -712,6 +820,8 @@ categories.
 \end{lemma}
 
 \begin{proof}
+  [TODO: Jin checks this proof.]
+
   We start by showing that $M$ is $k$-linear (in particular, abelian). We now
   show that $M$ has kernels, and these are preserved by $F$. The proof for
   cokernels is dual. So let $x\to y$ be a morphism in $M$. Then $F(x)\to F(y)$ has
@@ -727,7 +837,7 @@ categories.
   commutes. This means $F(k)\to F(x)$ is also a kernel of $F(x)\to F(y)$. But
   $F$ is fully faithful, so it reflects limits, hence $k\to x$ is a kernel of
   $x\to y$.
-  
+
   We will now show that every monomorphism is a kernel. The proof that every
   epimorphism is a cokernel is dual. Let $a\hookrightarrow x$ be a
   monomorphism in $M$. Since $F$ preserves kernels, we know
@@ -735,8 +845,8 @@ categories.
   cokernel of $a\hookrightarrow x$, then $F(x)\to F(c)$ is the cokernel of
   $F(a)\hookrightarrow F(x)$ (because $F$ also preserves cokernels). So $0\to F(a)\to F(x)\to F(c)\to 0$ is exact, so
   $F(x)=F(a)\oplus F(c)$. Then $x=a\oplus c$ (by Lemma \ref{direct_sum}) and
-  so $a\to x$ is the kernel of $x\to c$. 
-  
+  so $a\to x$ is the kernel of $x\to c$.
+
   This concludes the proof that $M$ is $k$-linear. Additionally, we showed that $F:M\to N$ is exact. The fact that every short exact sequence splits in $M$ follows easily from
   Lemma \ref{direct_sum}, and the facts that $F$ is exact and every short
   exact sequence splits in $N$.
@@ -745,10 +855,12 @@ categories.
 \begin{proposition}\label{cau_semi}
   Suppose we have a fully faithful functor $M\hookrightarrow N$,
   where $M$ is Cauchy complete and $N$ is $k$-linear finite semisimple. Then
-  $M$ is $k$-linear finite semisimple.
+  $M$ is a $k$-linear finite semisimple category.
 \end{proposition}
 
 \begin{proof}
+  [TODO: Jin checks this proof.]
+
   By Lemma \ref{abelian} the category $M$ also $k$-linear and every short exact sequence splits in $M$, which implies that every object in $M$ is projective and also that $F:M\to N$ exact. Since $F$ is faithful and $N$ is finite, all $Hom$ spaces in $M$ are finite dimensional.
 
   Since $F$ is exact and fully faithful, it preserves and reflects
@@ -761,83 +873,35 @@ categories.
   $F(x_i)\simeq x_i'$ so $x_i$ is simple.
 \end{proof}
 
-\begin{proposition}\label{semisimple}
-  Let $C$ be a tensor category and let $M_C$,$_{C}N$ be $k$-linear finite semisimple $C$-module categories. Suppose $M\boxtimes_C N$ is also $k$-linear finite semisimple. Then $sk(M,C,N)$ is
-  $k$-linear finite semisimple.
-\end{proposition}
+\begin{definition} \label{definition/finite-cocompletion} ($Fin(M)$, finite cocompletion)
+  A category $M$ is finitely cocomplete if it has all finite colimits. Given a
+  category $M$, we denote by $Fin(M)$ its finite cocompletion, the
+  smallest finitely cocomplete subcategory of $Fun(M^{op},\Vect_k)$ that
+  contains all the representables. Its objects can be identified as those
+  $X\in Fun(M^{op},\Vect_k)$ such that
+  $\underline{Hom}(X,-):Fun(M^{op},\Vect_k)\to \Vect_k$ preserves filtered
+  colimits. Alternatively, they are the coequalisers of pairs of morphisms
+  between finite coproducts of representables. [TODO: Manuel explains what underlined Hom is. ] [TODO: Manuel provides better references for each claim given here.]
 
-\begin{proof}
-  We have a fully faithful inclusion
-  $sk(M,C,N)=Cau(M\otimes_C N)\hookrightarrow Fin(M\otimes_C N)$. By
-  Proposition \ref{fin_eq_bal}, we have
-  $Fin(M\otimes_C N)\simeq M\boxtimes_C N$, because $M$, $N$ are finite
-  semisimple. Therefore $sk(M,C,N)$ is finite semisimple, by Proposition
-  \ref{cau_semi}.
-\end{proof}
+  There is fully
+  faithful functor $M\to Fin(M)$ induced by the Yoneda embedding $M \to Fun(M^{op}, \Vect_{k})$. It is characterized by a universal
+  property: for any finitely cocomplete $L$, the restriction map
+  $Lin(Fin(M),L)\to Fun(M,L)$ is an equivalence. References include
+  \cite[Section 5.7]{kelly/basic-concepts-enriched} and \cite[Section
+  2.2.1]{lopezfranco/tensor-products}.
+\end{definition}
 
-\begin{theorem}\label{sk_bal}
-  Let $C$ be a tensor category and let $M_C$,$_{C}N$ be $k$-linear finite semisimple $C$-module categories. Suppose $M\boxtimes_C N$ is also $k$-linear finite semisimple. Then the
-  $C$-balanced functor $M\otimes N\to sk(M,C,N)$ exhibits $sk(M,C,N)$ as the
-  balanced tensor product $M\boxtimes_C N$.
-\end{theorem}
-
-\begin{proof}
-  By Proposition \ref{semisimple} we know $sk(M,C,N)$ is $k$-linear finite semisimple. By Proposition \ref{univ_sk} the restriction map
-  $Fun(sk(M,C,N),L)\to Fun^{C-bal}(M\otimes N,L)$ is an equivalence, for every
-  Cauchy complete category $L$. In particular, this is an equivalence when $L$
-  is $k$-linear.
-  Moreover $Fun^{C-bal}(M\otimes N, L)=Bilin^{C-bal}(M\otimes N, L)$ and $Fun(sk(M,C,N),L)=Lin(sk(M,C,N),L)$ because
-  $M$, $N$ and $sk(M,C,N)$ are semisimple. So $M\otimes N\to sk(M,C,N)$ satisfies the defining
-  universal property of the balanced tensor product (Definition \ref{def_balanced}).
-\end{proof}
-
-\begin{remark}\label{semisimple_douglas/dualizable-tensor-categories}
-  Collecting results from \cite{douglas/dualizable-tensor-categories}, we can
-  conclude that $M\boxtimes_C N$ is finite semisimple (so Theorem \ref{sk_bal} applies) in any of the following
-  situations:
-  \begin{itemize}
-    \item $C$ is a finite semisimple tensor category and $_{\Vect_k}M_C$,
-    $_{C}N_{\Vect_k}$ are separable bimodule categories (\cite[Proposition 2.5.3,
-    Theorem 2.5.5]{douglas/dualizable-tensor-categories});
-    \item $k$ is perfect, $C$ is a separable tensor category and $M,N$ are
-    finite semisimple (\cite[Proposition
-    2.5.10]{douglas/dualizable-tensor-categories});
-    \item $k$ has characteristic $0$ and $C,M,N$ are finite semisimple
-    (\cite[Corollary 2.6.9]{douglas/dualizable-tensor-categories});
-  \end{itemize}
+\begin{remark}
+  From our descriptions of $Cau(M)$
+  (\ref{definition/cauchy-completion/abstract},
+  \ref{definition/cauchy-completion/explicit}) and $Fin(M)$
+  (\ref{definition/finite-cocompletion}) it is immediate that we have fully
+  faithful functors $M\hookrightarrow Cau(M)\hookrightarrow Fin(M)$.
 \end{remark}
 
-Since we are mostly interested in the characteristic zero case, we record the following direct consequence of Theorem \ref{sk_bal}.
+\subsection{The Non-semisimple Case} \label{section-nonsemisimple}
 
-\begin{corollary}
-   Suppose $k$ has characteristic $0$, $C$ is a finite semisimple tensor category and $M_C$,$_{C}N$ are $k$-linear finite semisimple $C$-module categories. Then the $C$-balanced functor $M\otimes N\to sk(M,C,N)$ exhibits
-   $sk(M,C,N)$ as the balanced tensor product $M\boxtimes_C N$.
-\end{corollary}
-
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-\appendix
-\section{Appendix}
-   
-\subsection{The non-semisimple case}\label{section-nonsemisimple}
-
-We explain how one can adapt the construction of $sk(M,C,N)$ to the non-semisimple case. We will refer to results in \cite{kelly/basic-concepts-enriched}. For the reader's convenience, we review all the necessary results in \ref{review_kelly}. 
+We explain how one can adapt the construction of $sk(M,C,N)$ to the non-semisimple case. We will refer to results in \cite{kelly/basic-concepts-enriched}. For the reader's convenience, we review all the necessary results in \ref{review_kelly}.
 
 \begin{definition}
 Suppose $C$ is a monoidal category and $M_C, _{C}N$ are finitely cocomplete $C$-module categories. Their balanced Kelly tensor product is a finitely cocomplete category $M\boxtimes^K_C N$ together with a $C$-balanced bilinear functor $M\otimes N\to M\boxtimes^K_C N$ such that precomposition defines an equivalence $$Lin(M\boxtimes^K_C N,L)\to Bilin^{C-bal}(M\otimes N, L)$$ for any finitely cocomplete category $L$.\end{definition}
@@ -853,8 +917,8 @@ A functor $(M\otimes_C N)^{op}\to L$ is said to be left exact in each variable i
 \begin{definition}
 We say that a functor $M\otimes_C N \to L$ is bilinear if the composite $M\otimes N\to M\otimes_C N \to L$ is bilinear (i.e. right exact in each variable). We denote by $Bilin(M\otimes_C N, L)\subset Fun(M\otimes_C N, L)$ the full subcategory whose objects are the bilinear functors. \end{definition}
 
- 
-The subcategory $Bilex((M\otimes_C N)^{op},\Vect_k)\subset Fun((M\otimes_C N)^{op},\Vect_k)$ is reflective (see \cite[Theorem 6.5]{kelly/basic-concepts-enriched} or Theorem \ref{reflective}) so that we have an adjunction 
+
+The subcategory $Bilex((M\otimes_C N)^{op},\Vect_k)\subset Fun((M\otimes_C N)^{op},\Vect_k)$ is reflective (see \cite[Theorem 6.5]{kelly/basic-concepts-enriched} or Theorem \ref{reflective}) so that we have an adjunction
 
 \[\begin{tikzcd}
 	{Bilex((M\otimes_C N)^{op},\Vect_k)} & {Fun((M\otimes_C N)^{op},\Vect_k)}
@@ -870,12 +934,12 @@ We denote by $K:M\otimes_C N\to Bilex((M\otimes_C N)^{op}$ the composite \[\begi
 	\arrow["R", from=1-2, to=1-3]
 \end{tikzcd},\] where $Y$ is the Yoneda embedding.\end{definition}
 \begin{lemma}\label{right_exact_0}
- 
+
 The functor $K:M\otimes_C N\to Bilex((M\otimes_C N)^{op}$ is bilinear.\end{lemma}
 
 \begin{proof}
- 
-This follows from assertion (5.51) in \cite{kelly/basic-concepts-enriched}. But we can give the following proof. We must show that $Bilex((M\otimes_C N)^{op},\Vect_k)(RY-,\phi):(M\otimes_C N)^{op}\to\Vect_k$ is left exact in each variable, for any $\phi\in Bilex((M\otimes_C N)^{op},\Vect_k)$. This follows from the calculation $$Bilex((M\otimes_C N)^{op},\Vect_k)(RY-,\phi)\simeq Fun((M\otimes_C N)^{op},\Vect_k)(Y-,\phi)\simeq \phi$$ where the first step uses the adjunction $R\dashv i$ and the second step is the Yoneda Lemma.\end{proof} 
+
+This follows from assertion (5.51) in \cite{kelly/basic-concepts-enriched}. But we can give the following proof. We must show that $Bilex((M\otimes_C N)^{op},\Vect_k)(RY-,\phi):(M\otimes_C N)^{op}\to\Vect_k$ is left exact in each variable, for any $\phi\in Bilex((M\otimes_C N)^{op},\Vect_k)$. This follows from the calculation $$Bilex((M\otimes_C N)^{op},\Vect_k)(RY-,\phi)\simeq Fun((M\otimes_C N)^{op},\Vect_k)(Y-,\phi)\simeq \phi$$ where the first step uses the adjunction $R\dashv i$ and the second step is the Yoneda Lemma.\end{proof}
 
 \begin{definition}\label{sk_nonsemisimple} Let $C$ be a monoidal category with right duals and let $M_C$, $_{C}N$ be finitely cocomplete $C$-module categories. We define $M\boxtimes_C^{sk}N$ as the closure of the full image of the functor $$K:M\otimes_C N \to Bilex((M\otimes_C N)^{op},\Vect_k)$$ under finite colimits. This means $M\boxtimes_C^{sk}N$ is the smallest replete full subcategory of $Bilex((M\otimes_C N)^{op},\Vect_k)$ which contains every object of the form $K(m,n)$ and is closed under finite colimits. Thus $M\boxtimes_C^{sk}N$ is finitely cocomplete and comes equipped with a functor $Z:M\otimes_C N \to M\boxtimes_C^{sk}N$.\end{definition}
 
@@ -885,8 +949,8 @@ The functor $Z:M\otimes_C N \to M\boxtimes_C^{sk}N$ is bilinear.
 \begin{proof}
  This follows from Lemma \ref{right_exact_0} and the fact that the fully faithful functor $$M\boxtimes_C^{sk}N\hookrightarrow Bilex((M\otimes_C N)^{op},\Vect_k)$$ reflects colimits.\end{proof}
 
- 
- 
+
+
 \begin{proposition}\label{univ_sk_nonsemisimple}
 Given a finitely cocomplete category $L$, the functor $$Lin(M\boxtimes_C^{sk}N,L)\to Bilin(M\otimes_C N, L)$$ given by precomposition with $Z$ is an equivalence.\end{proposition}
 \begin{proof} See \cite[Theorem 6.23]{kelly/basic-concepts-enriched} or Theorem \ref{f_theory_small_sketch}.\end{proof}
@@ -899,39 +963,39 @@ By Lemma \ref{univ_bal} we know that $Fun(M\otimes_C N,K)\to Fun^{C-bal}(M\otime
 \begin{theorem}\label{main_nonsemisimple}
  Let $C$ be a monoidal category with right duals and let $M_C$, $_{C}N$ be finitely cocomplete module categories. Then the $C$-balanced functor $M\otimes N\to M\boxtimes_C^{sk}N$ presents $M\boxtimes_C^{sk}N$ as the balanced Kelly tensor product of $M$ and $N$ over $C$.\end{theorem}
  \begin{proof}
-  
+
 This follows from Proposition \ref{univ_sk_nonsemisimple} and Lemma \ref{univ_bilin_bal}.\end{proof}
 
 \begin{corollary}
- 
+
 Let $C$ be a finite tensor category, $M_C$, $_{C}N$ finite $k$-linear $C$-module categories. Then $M\boxtimes_C^{sk}N$ is $k$-linear and the $C$-balanced functor $M\otimes N\to M\boxtimes_C^{sk}N$ presents $M\boxtimes_C^{sk}N$ as the balanced Deligne tensor product of $M$ and $N$ over $C$.\end{corollary}
 \begin{proof}
- 
+
 This follows from Theorem \ref{main_nonsemisimple} and Lemma \ref{univ_box}.\end{proof}
 
 \begin{remark}
-When $C$ is a monoidal category with right duals and $M_C,_{C}N$ are $k$-linear semisimple $C$-module categories, we have $$M\boxtimes^K_{C}N\simeq M\boxtimes_C^{sk}N\simeq Fin(M\otimes_C N).$$ 
+When $C$ is a monoidal category with right duals and $M_C,_{C}N$ are $k$-linear semisimple $C$-module categories, we have $$M\boxtimes^K_{C}N\simeq M\boxtimes_C^{sk}N\simeq Fin(M\otimes_C N).$$
 
-\noindent When, additionally, $Fin(M\otimes_C N)$ is semisimple, we have $$M\boxtimes^K_{C}N\simeq M\boxtimes_C^{sk}N\simeq Fin(M\otimes_C N)\simeq Cau(M\otimes_C N)=sk(M,C,N).$$ 
+\noindent When, additionally, $Fin(M\otimes_C N)$ is semisimple, we have $$M\boxtimes^K_{C}N\simeq M\boxtimes_C^{sk}N\simeq Fin(M\otimes_C N)\simeq Cau(M\otimes_C N)=sk(M,C,N).$$
 
 \noindent When $C$ is a finite tensor category and $M,N$ are $k$-linear finite semisimple $C$-module categories, we have $$M\boxtimes^{sk}_C N\simeq Fin(M\otimes_C N)\simeq M\boxtimes_C N.$$
 
 \noindent When $C$ is a finite tensor category and $M,N, M\boxtimes_C N$ are all $k$-linear finite semisimple, we have $$M\boxtimes_C^{sk}N\simeq Fin(M\otimes_C N)\simeq Cau(M\otimes_C N)=sk(M,C,N)\simeq M\boxtimes_C N.$$ See Remark \ref{semisimple_douglas/dualizable-tensor-categories} for conditions on $M,N$ and $C$ under which $M\boxtimes_C N$ is finite semisimple.
 \end{remark}
 
-  
-\subsection{Review of necessary results from \cite{kelly/basic-concepts-enriched}}\label{review_kelly}
 
-Here we review the concepts from \cite{kelly/basic-concepts-enriched} that are needed in \ref{section-nonsemisimple}. 
+\subsubsection{Review of necessary results from \cite{kelly/basic-concepts-enriched}}\label{review_kelly}
 
-First we note that the results in \cite{kelly/basic-concepts-enriched} can be applied to categories enriched over very general kinds of symmetric monoidal categories $V$. To be precise, the results we need apply when $V$ is a locally bounded, closed symmetric monoidal category. We won't need to define these terms, as we won't prove the results from \cite{kelly/basic-concepts-enriched}. All that needs to be said is that $\Vect_k$ satisfies these properties, and we will always take $V=\Vect_k$. 
+Here we review the concepts from \cite{kelly/basic-concepts-enriched} that are needed in \ref{section-nonsemisimple}.
+
+First we note that the results in \cite{kelly/basic-concepts-enriched} can be applied to categories enriched over very general kinds of symmetric monoidal categories $V$. To be precise, the results we need apply when $V$ is a locally bounded, closed symmetric monoidal category. We won't need to define these terms, as we won't prove the results from \cite{kelly/basic-concepts-enriched}. All that needs to be said is that $\Vect_k$ satisfies these properties, and we will always take $V=\Vect_k$.
 
 \begin{definition}
 
 Consider a functor $F:I\to A$. A cone over $F$ is an object $a\in A$ together with a natural transformation $a\Rightarrow F$ (where $a$ denotes the constant functor $a:I\to A$). A cocone under $F$ is an object $b\in A$ together with a natural transformation $F\Rightarrow b$.\end{definition}
 
 \begin{definition}
- 
+
 Let $A$ be a category. A cone in $A$ consists of a category $I$, a functor $F:I\to A$ and a cone over $F$. A cocone in $A$ consists of a category $I$, a functor $F:I\to A$ and a cocone under $F$.\end{definition}
 
 We often denote a cocone in $A$ simply by writing $a_i\to a$ which denotes $a_i=F(i)$ and the component $a_i\to a$ of the natural transformation corresponding to $i\in I$.
@@ -943,7 +1007,7 @@ A small sketch is a pair $(A^{op},\Phi)$ where $A$ is a small category and $\Phi
 \begin{remark}Note that in \cite{kelly/basic-concepts-enriched} $\Phi$ is allowed to be a set of cylinders. Cocones are particular kinds of cylinders and we won't need the extra generality.\end{remark}
 
 \begin{definition}
-Given a small sketch $(A^{op},\Phi)$ and a category $B$, a $\Phi$-comodel in $B$ is a functor $A\to B$ sending the $\Phi$-cocones in $A$ to colimit cocones in $B$. We denote by $\Phi-Com(A,B)\subset Fun(A,B)$ the full subcategory whose objects are the $\Phi$-comodels. A $\Phi$-algebra is a functor $A^{op}\to \Vect_k$ sending all $\Phi$-cocones in $A$ (which become cones in $A^{op}$) to limit cones in $\Vect_k$. We denote by $\Phi-Alg\subset Fun(A^{op},\Vect_k)$ the full subcategory whose objects are the $\Phi-algebras$. 
+Given a small sketch $(A^{op},\Phi)$ and a category $B$, a $\Phi$-comodel in $B$ is a functor $A\to B$ sending the $\Phi$-cocones in $A$ to colimit cocones in $B$. We denote by $\Phi-Com(A,B)\subset Fun(A,B)$ the full subcategory whose objects are the $\Phi$-comodels. A $\Phi$-algebra is a functor $A^{op}\to \Vect_k$ sending all $\Phi$-cocones in $A$ (which become cones in $A^{op}$) to limit cones in $\Vect_k$. We denote by $\Phi-Alg\subset Fun(A^{op},\Vect_k)$ the full subcategory whose objects are the $\Phi-algebras$.
 \end{definition}
 
 
@@ -952,14 +1016,14 @@ Given a small sketch $(A^{op},\Phi)$ and a category $B$, a $\Phi$-comodel in $B$
 Given a small sketch $(A^{op},\Phi)$, we define $\Theta_{\Phi}$ to be the set of all morphisms in $Fun(A^{op},\Vect_k)$ of the form $colim_i Y(a_i)\to Y(a)$ where $a_i\to a$ is a $\Phi$-cocone in $A$ and $Y$ is the Yoneda embedding.\end{definition}
 
 \begin{definition}
- 
+
 Given a category $P$, we say that an object $p\in P$ is orthogonal to a morphism $\theta:m\to n$ in $P$ if $\theta^*:Hom_P(n,p)\to Hom_P(m,p)$ is an isomorphism.\end{definition}
 
 \begin{definition}
 A full subcategory $C\subset P$ is called reflective if the fully faithful inclusion functor $C\hookrightarrow P$ has a left adjoint $R:P\to C$. The left adjoint is called the reflector.\end{definition}
 
 \begin{theorem}\cite[Theorem 6.5]{kelly/basic-concepts-enriched}\label{reflective}
- 
+
 \noindent Let $A$ be a small category and let $\Theta$ be a set of morphisms in $Fun(A^{op},\Vect_k)$. Let $C_{\Theta}\subset Fun(A^{op},\Vect_k)$ be the full subcategory whose objects are those orthogonal to every $\theta\in\Theta$. Then $C_{\Theta}$ is a reflective subcategory.\end{theorem}
 
 \begin{remark}
@@ -968,9 +1032,9 @@ A full subcategory $C\subset P$ is called reflective if the fully faithful inclu
 
 \begin{lemma}\cite[Theorem 6.11]{kelly/basic-concepts-enriched}
  Let $(A^{op},\Phi)$ be a small sketch. Then the reflective subcategory $C_{\Theta_{\Phi}}\subset Fun(A^{op},\Vect_k)$ is the category $\Phi$-Alg.\end{lemma}
- 
+
  \begin{proof} An object $\phi \in Fun(A^{op},\Vect_k)$ is orthogonal to a morphism $colim_i Y(a_i)\to Y(a)$ in $\Theta_{\Phi}$ if $$Fun(A^{op},\Vect_k)(Y(a),\phi)\to Fun(A^{op},\Vect_k)(colim_i Y(a_i),\phi)$$ is an isomorphism. That is to say $\phi(a)\to lim_i \phi(a_i)$ is an isomorphism, i.e. $\phi(a)\to \phi(a_i)$ is a limit cone. So the objects of $Fun(A^{op},\Vect_k)$ which are orthogonal to every $\theta\in \Theta_{\Phi}$ are exactly the $\Phi$-algebras. \end{proof}
- 
+
 \begin{definition}
 Given a small sketch $(A^{op},\Phi)$ we denote by $C_{\Phi}$ the category $\Phi-Alg$.
 \end{definition}
@@ -1007,7 +1071,7 @@ A diagram type is just a small category. Given a diagram type $I$, a diagram of 
 \begin{definition}
 
 A subcategory $D\subset C$ is replete if given $d\in D$ and an isomorphism $f:d\to c$ in $C$, then $c$ and $f$ are also in $D$.\end{definition}
- 
+
 
 \begin{definition}
 Let $\mathcal{F}$ be a set of diagram types and suppose $C$ is $\mathcal{F}$-cocomplete. Let $K\subset C$ be a full subcategory. The closure of $K$ under $\mathcal{F}$-colimits in $C$ is the smallest replete full subcategory of $C$ containing $K$ and closed under $\mathcal{F}$-colimits. \end{definition}
@@ -1028,15 +1092,15 @@ Let $\mathcal{F}$ be a small set of diagram types and let $(A^{op},\Phi)$ be a s
 \end{lemma}
 \begin{proof}
 This follows from the fact that $K_{\Phi}$ is a $\Phi$-comodel and the fully faithful inclusion $D_{\Phi,\mathcal{F}}\hookrightarrow C_{\Phi}$ reflects colimits.\end{proof}
- 
+
 \begin{lemma}
 Let $\mathcal{F}$ be a small set of diagram types and let $(A^{op},\Phi)$ be a small $\mathcal{F}$-sketch. Given an $\mathcal{F}$-cocontinuous functor $H:D_{\Phi,\mathcal{F}}\to B$, the composite $\begin{tikzcd}
 	A & D_{\Phi,\mathcal{F}} & B
 	\arrow["Z_{\Phi,\mathcal{F}}", from=1-1, to=1-2]
 	\arrow["H", from=1-2, to=1-3]
 \end{tikzcd}$ is a $\Phi$-comodel.\end{lemma}
- \begin{proof}Recall that $Z_{\Phi,\mathcal{F}}$ is a $\Phi$-comodel, i.e. it sends $\Phi$-cocones in $A$ to colimit cocones in $D_{\Phi,\mathcal{F}}$. Since $\mathcal{F}$ contains the type of every $\Phi$-cocone, $Z_{\Phi,\mathcal{F}}$ sends $\Phi$-cocones in $A$ to $\mathcal{F}$-colimit cocones in $D_{\Phi,\mathcal{F}}$. But $H$ sends $\mathcal{F}$-colimits in $D_{\Phi,\mathcal{F}}$ to $\mathcal{F}$-colimits in $B$, so finally the composite sends $\Phi$-cocones in $A$ to colimit cocones in $B$.\end{proof} 
-  
+ \begin{proof}Recall that $Z_{\Phi,\mathcal{F}}$ is a $\Phi$-comodel, i.e. it sends $\Phi$-cocones in $A$ to colimit cocones in $D_{\Phi,\mathcal{F}}$. Since $\mathcal{F}$ contains the type of every $\Phi$-cocone, $Z_{\Phi,\mathcal{F}}$ sends $\Phi$-cocones in $A$ to $\mathcal{F}$-colimit cocones in $D_{\Phi,\mathcal{F}}$. But $H$ sends $\mathcal{F}$-colimits in $D_{\Phi,\mathcal{F}}$ to $\mathcal{F}$-colimits in $B$, so finally the composite sends $\Phi$-cocones in $A$ to colimit cocones in $B$.\end{proof}
+
 This means that precomposition with $Z_{\Phi,\mathcal{F}}$ defines a functor $Z_{\Phi,\mathcal{F}}^*:\mathcal{F}-Cocts(D_{\Phi,\mathcal{F}},B)\to\Phi-Com(A,B)$ for any category $B$.
 
 \begin{theorem}\cite[Theorem 6.23]{kelly/basic-concepts-enriched}\label{f_theory_small_sketch}
@@ -1044,21 +1108,24 @@ Let $\mathcal{F}$ be a small set of diagram types and let $(A^{op},\Phi)$ be a s
 \end{theorem}
 
 In section \ref{section-nonsemisimple}, we use the procedure described here to define $M\boxtimes_C^{sk}N$. We have $A=M\otimes_C N$, which is a small category whenever $M,N,C$ are small. We take $\mathcal{F}$ to be a set of finite categories containing exactly one representative of each isomorphism class (it is a small set). So $\mathcal{F}$-colimits are just finite colimits. We take $\Phi$ to be the set of all cocones of the kinds $m_i\otimes n\to m\otimes n$ and $m\otimes n_i\to m\otimes n$ where $m_i\to m$ is any finite colimit cocone in $M$ (with type in $\mathcal{F}$) and $n_i\to n$ is any finite colimit cocone in $N$ (with type in $\mathcal{F}$). The fact that we require the types to be in the small set $\mathcal{F}$ and the fact that the categories $M$, $N$ are small together imply that $\Phi$ is a small set.  Then one obtains $C_{\Phi}=\Phi-Alg=Bilex((M\otimes_C N)^{op},\Vect_k)$ and $K_{\Phi}:M\otimes_C N\to Bilex((M\otimes_C N)^{op},\Vect_k)$ is the functor $K$ of Definition \ref{def_K}. Finally, the category $D_{\Phi,\mathcal{F}}$ obtained as the closure of the full image of $K_{\Phi}$ in $C_{\Phi}$ under finite colimits is exactly $M\boxtimes_C^{sk}N$ (Definition \ref{sk_nonsemisimple}). Now $\mathcal{F}$-cocomplete is synonymous with finitely cocomplete and $\mathcal{F}$-cocontinuous means right exact. So the $\mathcal{F}$-cocontinuous functors $M\boxtimes_C^{sk}N\to L$ are exactly the linear functors. Moreover, $\Phi$-comodels $M\otimes_C N\to L$ are exactly the bilinear functors. So we obtain Proposition \ref{univ_sk_nonsemisimple}.
- 
-\subsection{Rigidity} 
- 
+
+\subsubsection{Rigidity}
+
 We now clarify the role of rigidity in the construction of the balanced tensor product. We start by defining $M\otimes_C N$ when $C$ is not assumed to have duals.
 
 \begin{definition}
- 
-Let $C$ be a monoidal category and let $M_C$ and $_{C}N$ be $C$-module categories. We define $M\otimes_C N$ as the category whose objects are pairs $(m,n)$ and whose morphism spaces are the spaces of alternating skeins of arbitrary (finite) length, as depicted below. 
 
-\begin{center}\includegraphics{graphics/up_down_skein.pdf}\end{center} This should of course be interpreted as a suitable direct sum of tensor products of morpihsm spaces in $M$, $C$ and $N$. We impose relations analogous to those in Definition \ref{pre-skein}, plus the two extra relations below (and two obvious reflections of those).
+Let $C$ be a monoidal category and let $M_C$ and $_{C}N$ be $C$-module categories. We define $M\otimes_C N$ as the category whose objects are pairs $(m,n)$ and whose morphism spaces are the spaces of alternating skeins of arbitrary (finite) length, as depicted below.
 
-\begin{center}\begin{tabular}{l}
-\includegraphics{graphics/relation2.pdf} \\
-\includegraphics{graphics/relation3.pdf}
-\end{tabular}\end{center}
+[TODO: Manuel changes this to include svg in later commits.]
+% \begin{center}\includegraphics{graphics/up_down_skein.pdf}\end{center}
+This should of course be interpreted as a suitable direct sum of tensor products of morphism spaces in $M$, $C$ and $N$. We impose relations analogous to those in Definition \ref{pre-skein}, plus the two extra relations below (and two obvious reflections of those).
+
+[TODO: Manuel changes this to include svg in later commits.]
+% \begin{center}\begin{tabular}{l}
+% \includegraphics{graphics/relation2.pdf} \\
+% \includegraphics{graphics/relation3.pdf}
+% \end{tabular}\end{center}
 
 Composition is defined by horizontally stacking the two diagrams and then applying the composition rule from Definition \ref{pre-skein} until there are no more parallel diagonal wires.\end{definition}
 
@@ -1067,12 +1134,10 @@ Let $C$ be a monoidal category, let $M_C$ and $_{C}N$ be $C$-module categories a
   $M\otimes N \to M\otimes_C N$ induces an equivalence of categories
   $Fun(M\otimes_C N,L)\to Fun^{C-bal}(M\otimes N,L)$.\end{proposition}
 \begin{proof}
- The only difference between this and the proof of Proposition \ref{univ_bal} is that now providing an inverse to the balancing $\beta_{m,c,n}:(m\lhd c, n)\to (m,c\rhd n)$ does not require duals, as we can simply use the skein with a $c$ wire going up.\end{proof}
+  The only difference between this and the proof of Proposition \ref{univ_bal} is that now providing an inverse to the balancing $\beta_{m,c,n}:(m\lhd c, n)\to (m,c\rhd n)$ does not require duals, as we can simply use the skein with a $c$ wire going up.\end{proof}
 
- 
 \subsection{Other}
-   
-    
+
 \begin{notation} (${}^{m'}_{n'}I^{m}_{n}$)
 
   \noindent Denote the equivalence class of the vector
@@ -1112,7 +1177,6 @@ Let $C$ be a monoidal category, let $M_C$ and $_{C}N$ be $C$-module categories a
 \end{remark}
 
 \begin{remark}\label{remark/hom-space-reduction} (Hom Space Reduction)
-%TODO: pictures
   \noindent By the relations in the definition, the transformation
   \[
     \pi = 1_{\overline{c}} \circ \pi = \pi \circ 1_{c}
@@ -1172,7 +1236,7 @@ constructed in \ref{proposition/basis-theorem}.
 
 \begin{definition}\label{definition/skein-category} (Skein Category)
 
-  \noindent Let $C$ be a tensor category. Let $M_{C}$ and $_{C}N$ be module
+  \noindent Let $C$ be a tensor category [TODO: (Manuel) or do we just have to require right duals?]. Let $M_{C}$ and $_{C}N$ be module
   categories. \quad Define the skein category $sk(M,C,N)$ to the Karoubi
   completion of its pre-skein category
   \[
@@ -1187,17 +1251,13 @@ constructed in \ref{proposition/basis-theorem}.
   obviously enriched over $\Vect_{\mathbb{C}}$.
 
   More generally, for any $n \in \mathbb{N}$, let
-  $C_{0}, C_{1}, \ldots, C_{n}$ be tensor categories. Let
+  $C_{0}, C_{1}, \ldots, C_{n}$ be tensor categories [TODO: (Manuel) or do we just have to require right duals?]. Let
   ${}_{C_{0}}M^{1}_{C_{1}}, \, {}_{C_{1}}M^{2}_{C_{2}}, \ldots, {}_{C_{n{\text -}1}}M^{n}_{C_{n}}$
   be bimodule categories. One can in a similar way define the
   $C_{0}{\text -}C_{n}$ bimodule category
   \[
     sk(M^{1}, C_{1}, M^{2}, C_{2}, M^{3}, \ldots, C_{n{\text -}1}, M^{n}).
   \]
-  % % TODO: Make a better picture.
-  % \begin{center}
-  %   \includegraphics[width=12cm]{3}
-  % \end{center}
   \begin{center}
     \includesvg[width=12cm]{drawing-3}
   \end{center}
@@ -1234,7 +1294,7 @@ property.
 
 \begin{definition}\label{definition/canonical-map} (Canonical Map $\boxtimes_{C}$)
 
-  \noindent Let $C$ be a tensor category, and $M_{C}, _{C}N$ be module
+  \noindent Let $C$ be a tensor category [TODO: (Manuel) or do we just have to require right duals?], and $M_{C}, _{C}N$ be module
   categories. \quad Define the functor
   \[
     M \times N \xrightarrow{\boxtimes_{C}} sk(M,C,N)
@@ -1256,7 +1316,7 @@ provide another direct proof for this equivalence in the appendix (cf
 
 \begin{lemma}\label{lemma/I-provides-subobject} (Objects are Retracts)
 
-  \noindent Let $C$ be a tensor category, and $M_{C}, _{C}N$ be module
+  \noindent Let $C$ be a tensor category [TODO: (Manuel) or do we just have to require right duals?], and $M_{C}, _{C}N$ be module
   categories. \quad Then any typical object $\II{}{}{m}{n}{\phi}{\psi}{c}$ in
   $sk(M,C,N)$ is a retract (in particular, a subobject) of the canonical
   object $\boxtimes_{C}((m,n)) = \II{}{}{m}{n}{1_{m}}{1_{n}}{1}$.
@@ -1302,7 +1362,7 @@ obvious generalization to the case of more bimodule categories.
   \noindent (Morphism) Let $G \xrightarrow{\eta} G'$ be a morphism in
   $Fun(sk(M,C,N), L)$. Its image under $\Theta$ is simply the horizontal
   composition $\eta \star (1_{\boxtimes_{C}})$. The remaining commutativity to be checked
-  % TODO: cf p11 of Jin's note 20240906-110000
+  % cf p11 of Jin's note 20240906-110000
   is a direct consequence of $\eta$'s naturality.
 \end{proof}
 
@@ -1378,9 +1438,8 @@ obvious generalization to the case of more bimodule categories.
 lemma.
 
 \begin{lemma} (Images of skeins) \label{lemma/image-of-skein}
-  % TODO: Discussion: Can we relax conditions? We need to use the basis theorem,
+  % Discussion: Can we relax conditions? We need to use the basis theorem,
   % so it seems that we must require semisimplicity here.
-
   \noindent
   Let $(F,\alpha) \in Fun^{C{\text -}bal}(M \times N, L)$. For each morphism
   in $sk(M,C,N)$ of the form $\III{m'}{n'}{m}{n}{\phi}{\psi}{c}{\pi}{c'}$,
@@ -1574,37 +1633,6 @@ lemma.
   \]
 \end{lemma}
 
-% % TODO: Ask Manuel to provide a proof.
-% \begin{remark}
-%   The whole proof can be conceptually simplified while viewed at the level of
-%   arrows. Indeed, from $M \times N$ to $sk(M,C,N)$, we have a chain of
-%   functors:
-%   \[
-%     sk(M,C,N)
-%     \leftarrow
-%     psk(M,C,N)
-%     \leftarrow
-%     M \boxtimes N
-%     \leftarrow
-%     M \otimes N
-%     \leftarrow
-%     M \times N.
-%   \]
-%   All we need to show is that while applying $Fun(-, L)$, we obtain a chain of
-%   equivalences:
-%   \[
-%     Fun(sk(M,C,N), L)
-%     \rightarrow
-%     Fun(psk(M,C,N), L)
-%     \rightarrow
-%     Fun^{C{\text -}bal}(M \boxtimes N, L)
-%     \rightarrow
-%     Fun^{C{\text -}bal}(M \otimes N, L)
-%     \rightarrow
-%     Fun^{C{\text -}bal}(M \times N, L).
-%   \]
-% \end{remark}
-
 \begin{proof}
   We only need to show that $sk(M,C,N)$ is a $k$-linear category (in
   particular, an abelian category, following the definition in
@@ -1632,7 +1660,7 @@ lemma.
   \]
 
   \noindent (2) More generally, for any $n \in \mathbb{N}$, let
-  $C_{0}, C_{1}, \ldots, C_{n}$ be tensor categories. Let
+  $C_{0}, C_{1}, \ldots, C_{n}$ be tensor categories [TODO: (Manuel) or do we just have to require right duals?]. Let
   ${}_{C_{0}}M^{1}_{C_{1}}, \, {}_{C_{1}}M^{2}_{C_{2}}, \ldots, {}_{C_{n{\text -}1}}M^{n}_{C_{n}}, \, $
   be bimodule categories. \quad Then we have an equivalence of
   $C_{0}{\text -}C_{n}$ bimodule categories.
@@ -1677,12 +1705,13 @@ lemma.
   dimensions $(1+1)$ \cite{guu/tv-as-3-functor}.
 \end{remark}
 
-% TODO This corollary is wrong. Remove it later.
-%
+% The following corollary is commented out. The statement itself is not
+% incorrect, but the proof is wrong (circular). We must have proven that they
+% are abelian before showing that skein categories are actually balanced
+% tensor products.
 % \begin{corollary}\label{corollary/skein-category-is-abelian} (Skein Categories are Abelian)
-
 %   \noindent For any $n \in \mathbb{N}$, let $C_{0}, C_{1}, \ldots, C_{n}$ be
-%   tensor categories. Let
+%   tensor categories [TODO: (Manuel) or do we just have to require right duals?]. Let
 %   \[
 %     {}_{C_{0}}M^{1}_{C_{1}}, \, {}_{C_{1}}M^{2}_{C_{2}}, \ldots, {}_{C_{n{\text -}1}}M^{n}_{C_{n}}, \,
 %   \]
@@ -1712,7 +1741,7 @@ provide another direct proof for this equivalence:
 
 \begin{proposition} \label{proposition/degenerated-main-theorem}
 
-  \noindent Let $C$ be a tensor category. Let $M_{C}$ be a right $C$-module
+  \noindent Let $C$ be a tensor category [TODO: (Manuel) or do we just have to require right duals?]. Let $M_{C}$ be a right $C$-module
   category. \quad Then we have an equivalence of categories
   $sk(M,C,C) \simeq M$.
 \end{proposition}
@@ -1769,27 +1798,15 @@ provide another direct proof for this equivalence:
   which objects must be ``absorbed'' into morphism). The following pictures
   show that they compose to the identities.
 
-  % % TODO: Add better pictures.
-  % \begin{center}
-  %   \includegraphics[width=8cm]{4}
-  %   \includegraphics[width=8cm]{5}
-  % \end{center}
-
   \begin{center}
     \includesvg[width=18cm]{drawing-4}
   \end{center}
 \end{proof}
 
-\noindent For computation purpose (cf. sec \ref{section/applications}), one
+\noindent For computation purpose (cf. one of the applications in the introduction), one
 may find the following basis theorem useful.
 
-% TODO I think this is the only place we need semisimplicity and finiteness?
-% We many have to fix the definition of skein category as well (it's currently
-% defined on simple ones and extend by direct sums), if we are to remove the
-% assumptions. // EDIT: Actually no, ss and finiteness makes Deligne products
-% easier to handle.
 \begin{proposition} (Basis Theorem) \label{proposition/basis-theorem}
-
   \noindent Let $C$ be a finite, semisimple tensor category, and
   $M_{C}, _{C}N$ be finite, semisimple module categories over $C$. \quad Thus
   the vector spaces $Hom_{M}(m, m' \lhd c), Hom_{N}(c \rhd n, n')$ have finite bases
