@@ -254,7 +254,7 @@ from \cite{douglas/balanced-product}.
  We denote by $Bilin^{C{\text -}bal}(M \otimes N, L)$ the full subcategory of $Fun^{C{\text -}bal}(M \otimes N, L)$ whose objects are bilinear (thus right exact) $C$-balanced functors.
 \end{definition}
 
-\begin{definition}\label{def_balanced} (Balanced Tensor Product)
+\begin{definition}\label{definition/balanced-tensor-product} (Balanced Tensor Product)
   \noindent Let $C$ be a tensor category, and let $M_C$, $_{C}N$ be $k$-linear module categories over $C$.
   \quad Then the balanced tensor product $M \boxtimes_{C} N$ is a $k$-linear
   category together with a $C$-balanced bilinear functor
@@ -549,7 +549,15 @@ characterizing $sk(M,C,N)$.
   equivalence of categories $$Fun(sk(M,C,N),L)\to Fun^{C-bal}(M\otimes N,L).$$
 \end{proposition}
 
-\noindent [TODO: Jin adds a remark there explaining that we are close to our goal $Lin(sk(M,C,N),L) \simeq Bilin^{C-bal}(M \otimes N, L)$. All we need now is to deal with the ``right-exact'' functors, i.e. passing to ``Lin'' and ``Bilin''.]
+\begin{remark}
+  Comparing \ref{univ_sk} with \ref{definition/balanced-tensor-product}, the defining universal property of balanced tensor product, we know we are closed to proving that the skein category $sk(M,C,N)$ is indeed equivalent to the balanced tensor product. What is missing so far are
+  \begin{enumerate}
+    \item $sk(M,C,N)$ is $k$-linear (in particular, abelian) (cf \ref{semisimple}).
+    \item The equivalence in \ref{univ_sk} has to be restricted to their
+          right-exact counterparts:
+          $Lin(M \boxtimes_{C} N, L) \to Bilin^{C-bal}(M \otimes N, L)$ (cf \ref{sk_bal}).
+  \end{enumerate}
+\end{remark}
 
 \subsection{Proof of the Main Theorem}
 
@@ -643,7 +651,7 @@ categories.
   is $k$-linear.
   Moreover $Fun^{C-bal}(M\otimes N, L)=Bilin^{C-bal}(M\otimes N, L)$ and $Fun(sk(M,C,N),L)=Lin(sk(M,C,N),L)$ because
   $M$, $N$ and $sk(M,C,N)$ are semisimple. So $M\otimes N\to sk(M,C,N)$ satisfies the defining
-  universal property of the balanced tensor product (Definition \ref{def_balanced}).
+  universal property of the balanced tensor product (Definition \ref{definition/balanced-tensor-product}).
 \end{proof}
 
 \begin{remark}\label{semisimple_douglas/dualizable-tensor-categories}
