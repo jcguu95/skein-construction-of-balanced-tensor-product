@@ -629,14 +629,28 @@ categories.
 \end{lemma}
 
 \begin{proof}
-  [TODO: Jin rewrites the proof to stress that the point is to get right-exactness.]
-  By Proposition \ref{semisimple} we know $sk(M,C,N)$ is $k$-linear finite semisimple. By Proposition \ref{univ_sk} the restriction map
-  $Fun(sk(M,C,N),L)\to Fun^{C-bal}(M\otimes N,L)$ is an equivalence, for every
-  Cauchy complete category $L$. In particular, this is an equivalence when $L$
-  is $k$-linear.
-  Moreover $Fun^{C-bal}(M\otimes N, L)=Bilin^{C-bal}(M\otimes N, L)$ and $Fun(sk(M,C,N),L)=Lin(sk(M,C,N),L)$ because
-  $M$, $N$ and $sk(M,C,N)$ are semisimple. So $M\otimes N\to sk(M,C,N)$ satisfies the defining
-  universal property of the balanced tensor product (Definition \ref{definition/balanced-tensor-product}).
+  Recall that proposition \ref{univ_sk} asserts that the restriction map
+  \[
+   l Fun(sk(M,C,N),L) \xrightarrow{\sim} Fun^{C-bal}(M \otimes N,L)
+  \]
+  is an equivalence for every Cauchy complete category $L$. Compare this with
+  the defining universal property of balanced tensor product (cf
+  \ref{definition/balanced-tensor-product}), we need to show that $sk(M,C,N)$
+  is $k$-linear (in particular, abelian), and to restrict the equivalence to
+  their right-exact counterparts:
+  \[
+    Lin(sk(M,C,N),L) \xrightarrow{\sim} Bilin^{C-bal}(M \otimes N, L).
+  \]
+  By \ref{semisimple} we know $sk(M,C,N)$ is $k$-linear, so that resolves the
+  first part, and we also know that it is semisimple, so
+  \[
+    Fun(sk(M,C,N), L) = Lin(sk(M,C,N), L).
+  \]
+  Finally, $M \otimes N$ is semisimple because $M, N$ are [TODO: Manuel
+  explains this part.], so
+  \[
+    Fun^{C-bal}(M \otimes N, L) = Bilin^{C-bal}(M \otimes N, L).
+  \]
 \end{proof}
 
 \begin{remark}\label{semisimple_douglas/dualizable-tensor-categories}
