@@ -942,7 +942,7 @@ Given a small sketch $(A^{op},\Phi)$, we define $\Theta_{\Phi}$ to be the set of
 
 \begin{definition}
  
-Given a category $P$, we say that an object $p\in P$ is orthogonal to a morphism $\theta:m\to n$ in $P$ if $\theta^*:Hom_P(n,b)\to Hom_P(m,p)$ is an isomorphism.\end{definition}
+Given a category $P$, we say that an object $p\in P$ is orthogonal to a morphism $\theta:m\to n$ in $P$ if $\theta^*:Hom_P(n,p)\to Hom_P(m,p)$ is an isomorphism.\end{definition}
 
 \begin{definition}
 A full subcategory $C\subset P$ is called reflective if the fully faithful inclusion functor $C\hookrightarrow P$ has a left adjoint $R:P\to C$. The left adjoint is called the reflector.\end{definition}
@@ -999,36 +999,40 @@ A subcategory $D\subset C$ is replete if given $d\in D$ and an isomorphism $f:d\
  
 
 \begin{definition}
-Let $\mathcal{F}$ be a set of diagram types and suppose $C$ is $\mathcal{F}$-cocomplete. Let $K\subset C$ be a full subcategory. the closure of $K$ under $\mathcal{F}$-colimits in $C$ is the smallest replete full subcategory of $C$ containing $K$ and closed under $\mathcal{F}$-colimits. \end{definition}
-
-\begin{definition}
-
-Let $(A^{op},\Phi)$ be a small sketch. Define $D_{\Phi}$ as the closure of the full image of $K_{\Phi}$ in $C_{\Phi}$ under $\mathcal{F}$-colimits. Notice that $K_{\Phi}:A\to C_{\Phi}$ factors through $D_{\Phi}\hookrightarrow C_{\Phi}$, so we obtain a functor $Z_{\Phi}:A_{\Phi}\to D_{\Phi}$.\end{definition}
-
-\begin{lemma}
-Suppose $(A^{op},\Phi)$ is a small sketch. Then the functor $Z_{\Phi}:A\to D_{\Phi}$ is a $\Phi$-comodel, i.e. it sends $\Phi$-cocones in $A$ to colimit cocones in $D_{\Phi}$.
-\end{lemma}
-\begin{proof}
-This follows from the fact that $K_{\Phi}$ is a $\Phi$-comodel and the fully faithful inclusion $D_{\Phi}\hookrightarrow C_{\Phi}$ reflects colimits.\end{proof}
+Let $\mathcal{F}$ be a set of diagram types and suppose $C$ is $\mathcal{F}$-cocomplete. Let $K\subset C$ be a full subcategory. The closure of $K$ under $\mathcal{F}$-colimits in $C$ is the smallest replete full subcategory of $C$ containing $K$ and closed under $\mathcal{F}$-colimits. \end{definition}
 
 \begin{definition}
  The type of a cocone $a\Rightarrow F$ is the type of the diagram $F$.\end{definition}
+
+\begin{definition}
+Let $\mathcal{F}$ be a small set of diagram types. A small $\mathcal{F}$-sketch is a small sketch $(A^{op},\Phi)$ where the type of every $\Phi$-cocone is in $\mathcal{F}$.\end{definition}
+
+
+\begin{definition}
+
+Let $\mathcal{F}$ be a small set of diagram types and let $(A^{op},\Phi)$ be a small $\mathcal{F}$-sketch. Define $D_{\Phi,\mathcal{F}}$ as the closure of the full image of $K_{\Phi}$ in $C_{\Phi}$ under $\mathcal{F}$-colimits. Notice that $K_{\Phi}:A\to C_{\Phi}$ factors through $D_{\Phi,\mathcal{F}}\hookrightarrow C_{\Phi}$, so we obtain a functor $Z_{\Phi,\mathcal{F}}:A\to D_{\Phi,\mathcal{F}}$.\end{definition}
+
+\begin{lemma}
+Let $\mathcal{F}$ be a small set of diagram types and let $(A^{op},\Phi)$ be a small $\mathcal{F}$-sketch. Then the functor $Z_{\Phi,\mathcal{F}}:A\to D_{\Phi}$ is a $\Phi$-comodel, i.e. it sends $\Phi$-cocones in $A$ to colimit cocones in $D_{\Phi,\mathcal{F}}$.
+\end{lemma}
+\begin{proof}
+This follows from the fact that $K_{\Phi}$ is a $\Phi$-comodel and the fully faithful inclusion $D_{\Phi,\mathcal{F}}\hookrightarrow C_{\Phi}$ reflects colimits.\end{proof}
  
 \begin{lemma}
-Let $(A^{op},\Phi)$ be a small sketch and let $\mathcal{F}$ be a small set of diagram types, containing the types of all $\Phi$-cocones. Given an $\mathcal{F}$-cocontinuous functor $H:D_{\Phi}\to B$, the composite $\begin{tikzcd}
-	A & D_{\Phi} & B
-	\arrow["Z_{\Phi}", from=1-1, to=1-2]
+Let $\mathcal{F}$ be a small set of diagram types and let $(A^{op},\Phi)$ be a small $\mathcal{F}$-sketch. Given an $\mathcal{F}$-cocontinuous functor $H:D_{\Phi,\mathcal{F}}\to B$, the composite $\begin{tikzcd}
+	A & D_{\Phi,\mathcal{F}} & B
+	\arrow["Z_{\Phi,\mathcal{F}}", from=1-1, to=1-2]
 	\arrow["H", from=1-2, to=1-3]
 \end{tikzcd}$ is a $\Phi$-comodel.\end{lemma}
- \begin{proof}Recall that $Z_{\Phi}$ is a $\Phi$-comodel, i.e. it sends $\Phi$-cocones in $A$ to colimit cocones in $D_{\Phi}$. Since $\mathcal{F}$ contains the type of every $\Phi$-cocone, $Z_{\Phi}$ sends $\Phi$-cocones in $A$ to $\mathcal{F}$-colimit cocones in $D_{\Phi}$. But $H$ sends $\mathcal{F}$-colimits in $D_{\Phi}$ to $\mathcal{F}$-colimits in $B$, so finally the composite sends $\Phi$-cocones in $A$ to colimit cocones in $B$.\end{proof} 
+ \begin{proof}Recall that $Z_{\Phi,\mathcal{F}}$ is a $\Phi$-comodel, i.e. it sends $\Phi$-cocones in $A$ to colimit cocones in $D_{\Phi,\mathcal{F}}$. Since $\mathcal{F}$ contains the type of every $\Phi$-cocone, $Z_{\Phi,\mathcal{F}}$ sends $\Phi$-cocones in $A$ to $\mathcal{F}$-colimit cocones in $D_{\Phi,\mathcal{F}}$. But $H$ sends $\mathcal{F}$-colimits in $D_{\Phi,\mathcal{F}}$ to $\mathcal{F}$-colimits in $B$, so finally the composite sends $\Phi$-cocones in $A$ to colimit cocones in $B$.\end{proof} 
   
-This means that precomposition with $Z_{\Phi}$ defines a functor $Z_{\Phi}^*:\mathcal{F}-Cocts(A,B)\to\Phi-Com(A,B)$ for any category $B$.
+This means that precomposition with $Z_{\Phi,\mathcal{F}}$ defines a functor $Z_{\Phi,\mathcal{F}}^*:\mathcal{F}-Cocts(D_{\Phi,\mathcal{F}},B)\to\Phi-Com(A,B)$ for any category $B$.
 
 \begin{theorem}\cite[Theorem 6.23]{kelly/basic-concepts-enriched}\label{f_theory_small_sketch}
-Suppose $(A^{op},\Phi)$ is a small sketch and $\mathcal{F}$ is a small set of diagram types containing the types of all $\Phi$-cocones. Let $B$ be an $\mathcal{F}$-cocomplete category. Then $$Z_{\Phi}^*:\mathcal{F}-Cocts(D_{\Phi},B)\to\Phi-Com(A,B)$$ is an equivalence.
+Let $\mathcal{F}$ be a small set of diagram types and let $(A^{op},\Phi)$ be a small $\mathcal{F}$-sketch. Let $B$ be an $\mathcal{F}$-cocomplete category. Then $$Z_{\Phi,\mathcal{F}}^*:\mathcal{F}-Cocts(D_{\Phi,\mathcal{F}},B)\to\Phi-Com(A,B)$$ is an equivalence.
 \end{theorem}
 
-In section \ref{section-nonsemisimple}, we use the procedure described here to define $sk(M,C,N)$. We have $A=M\otimes_C N$, which is a small category whenever $M,N,C$ are small. We take $\mathcal{F}$ to be a set of finite categories containing exactly one representative of each isomorphism class (it is a small set). So $\mathcal{F}$-colimits are just finite colimits. We take $\Phi$ to be the set of all cocones of the kinds $m_i\otimes n\to m\otimes n$ and $m\otimes n_i\to m\otimes n$ where $m_i\to m$ is any finite colimit cocone in $M$ (with type in $\mathcal{F}$) and $n_i\to n$ is any finite colimit cocone in $N$ (with type in $\mathcal{F}$). The fact that we require the types to be in the small set $\mathcal{F}$ and the fact that the categories $M$, $N$ are small together imply that $\Phi$ is a small set.  Then one obtains $C_{\Phi}=\Phi-Alg=Bilex((M\otimes_C N)^{op},\Vect_k)$ and $K_{\Phi}:M\otimes_C N\to Bilex((M\otimes_C N)^{op},\Vect_k)$ is the functor $K$ of Definition \ref{def_K}. Finally, the category $D_{\Phi}$ obtained as the closure of the full image of $K_{\Phi}$ in $C_{\Phi}$ under finite colimits is exactly $sk(M,C,N)$ (Definition \ref{sk_nonsemisimple}). Now $\mathcal{F}$-cocomplete is synonymous with finitely cocomplete and $\mathcal{F}$-cocontinuous means right exact. So the $\mathcal{F}$-cocontinuous functors $sk(M,C,N)\to L$ are exaclty the linear functors. Moreover, $\Phi$-comodels $M\otimes_C N\to L$ are exactly the bilinear functors. So we obtain Proposition \ref{univ_sk_nonsemisimple}.
+In section \ref{section-nonsemisimple}, we use the procedure described here to define $sk(M,C,N)$. We have $A=M\otimes_C N$, which is a small category whenever $M,N,C$ are small. We take $\mathcal{F}$ to be a set of finite categories containing exactly one representative of each isomorphism class (it is a small set). So $\mathcal{F}$-colimits are just finite colimits. We take $\Phi$ to be the set of all cocones of the kinds $m_i\otimes n\to m\otimes n$ and $m\otimes n_i\to m\otimes n$ where $m_i\to m$ is any finite colimit cocone in $M$ (with type in $\mathcal{F}$) and $n_i\to n$ is any finite colimit cocone in $N$ (with type in $\mathcal{F}$). The fact that we require the types to be in the small set $\mathcal{F}$ and the fact that the categories $M$, $N$ are small together imply that $\Phi$ is a small set.  Then one obtains $C_{\Phi}=\Phi-Alg=Bilex((M\otimes_C N)^{op},\Vect_k)$ and $K_{\Phi}:M\otimes_C N\to Bilex((M\otimes_C N)^{op},\Vect_k)$ is the functor $K$ of Definition \ref{def_K}. Finally, the category $D_{\Phi,\mathcal{F}}$ obtained as the closure of the full image of $K_{\Phi}$ in $C_{\Phi}$ under finite colimits is exactly $sk(M,C,N)$ (Definition \ref{sk_nonsemisimple}). Now $\mathcal{F}$-cocomplete is synonymous with finitely cocomplete and $\mathcal{F}$-cocontinuous means right exact. So the $\mathcal{F}$-cocontinuous functors $sk(M,C,N)\to L$ are exaclty the linear functors. Moreover, $\Phi$-comodels $M\otimes_C N\to L$ are exactly the bilinear functors. So we obtain Proposition \ref{univ_sk_nonsemisimple}.
  
  
  
