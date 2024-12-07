@@ -90,7 +90,7 @@ which strikes a better mix between algebra and topology. It has a few advantages
 % We then obtain a $C$-balanced functor $M\otimes N\to sk(M,C,N)$. The main result in our paper is the following.
 
 % \begin{theorem}\label{sk_bal2}
-%   Let $C$ be a tensor category and let $M_C$,$_{C}N$ be $k$-linear finite semisimple $C$-module categories. Suppose $M\boxtimes_C N$ is also $k$-linear finite semisimple. Then the
+%   Let $C$ be a tensor category [TODO: (Manuel) or do we just have to require right duals?] and let $M_C$,$_{C}N$ be $k$-linear finite semisimple $C$-module categories. Suppose $M\boxtimes_C N$ is also $k$-linear finite semisimple. Then the
 %   $C$-balanced functor $M\otimes N\to sk(M,C,N)$ exhibits $sk(M,C,N)$ as the
 %   balanced tensor product $M\boxtimes_C N$.
 % \end{theorem}
@@ -98,7 +98,7 @@ which strikes a better mix between algebra and topology. It has a few advantages
 % \noindent Using results from \cite{douglas/dualizable-tensor-categories} (see Remark \ref{semisimple_douglas/dualizable-tensor-categories}), this has the following immediate Corollary.
 
 % \begin{corollary}
-%    Suppose that $k$ has characteristic $0$, $C$ is a finite semisimple tensor category, and $M_C$,$_{C}N$ are $k$-linear finite semisimple $C$-module categories. Then the $C$-balanced functor $M\otimes N\to sk(M,C,N)$ exhibits
+%    Suppose that $k$ has characteristic $0$, $C$ is a finite semisimple tensor category [TODO: (Manuel) or do we just have to require right duals?], and $M_C$,$_{C}N$ are $k$-linear finite semisimple $C$-module categories. Then the $C$-balanced functor $M\otimes N\to sk(M,C,N)$ exhibits
 %    $sk(M,C,N)$ as the balanced tensor product $M\boxtimes_C N$.
 % \end{corollary}
 
@@ -111,7 +111,7 @@ which strikes a better mix between algebra and topology. It has a few advantages
 
 % \begin{corollary}
 
-% Let $C$ be a finite tensor category, $M_C$, $_{C}N$ finite $k$-linear $C$-module categories. Then $sk(M,C,N)$ is $k$-linear and the $C$-balanced functor $M\otimes N\to sk(M,C,N)$ presents $sk(M,C,N)$ as the balanced tensor product of $M$ and $N$ over $C$.
+% Let $C$ be a finite tensor category [TODO: (Manuel) or do we just have to require right duals?], $M_C$, $_{C}N$ finite $k$-linear $C$-module categories. Then $sk(M,C,N)$ is $k$-linear and the $C$-balanced functor $M\otimes N\to sk(M,C,N)$ presents $sk(M,C,N)$ as the balanced tensor product of $M$ and $N$ over $C$.
 % \end{corollary}
 % [TODO (END/001): Remove this section if we turn out not to solve the non-semisimple case.]
 
@@ -140,44 +140,28 @@ Given categories $M,N$ we denote by $M\otimes N$ the category whose objects are 
   A $k$-linear category an abelian $\Vect_{k}$-enriched category.
 \end{definition}
 
-\begin{definition} (\cite{egno/tensor-cats})
-  An object in a $k$-linear category is simple if it has no nontrivial subobjects.
-\end{definition}
-
-\begin{definition} (\cite{egno/tensor-cats})
-  A $k$-linear category is semisimple if every object splits as a direct sum
-  of simple objects.
-\end{definition}
-
-
-\begin{definition} (\cite{egno/tensor-cats})
-  A $k$-linear category $M$ is finite if
+\begin{definition} \cite{egno/tensor-cats} An object in a $k$-linear category is simple if it has no
+  nontrivial subobjects. A $k$-linear category is semisimple if every object
+  splits as a direct sum of simple objects. A $k$-linear category $M$ is
+  finite if
   \begin{itemize}
-    \item $Hom_M(X,Y)$ is finite dimensional, for all objects $X,Y\in M$;
-    \item every object of $M$ has finite length;
-    \item $M$ has enough projectives;
+    \item $Hom_M(X,Y)$ is finite dimensional, for all objects $X,Y\in M$.
+    \item Every object of $M$ has finite length.
+    \item $M$ has enough projectives.
     \item $M$ has finitely many isomorphism classes of simple objects.
   \end{itemize}
-\end{definition}
-
-\begin{remark}
-  In a finite semisimple $k$-linear category, every object splits as a finite
-  direct sum of simple objects.
-\end{remark}
-
-\begin{remark}
-  When $M,N$ are semisimple, every $\Vect_{k}$-enriched functor $M\to L$ is automatically exact (thus linear)
-  and every $\Vect_{k}$-enriched functor $M\otimes N\to L$ is automatically bilinear.
-\end{remark}
-
-\begin{definition}
   A tensor category is a rigid $k$-linear monoidal category, where the
-  monoidal structure is given by a bilinear functor. 
+  monoidal structure is given by a bilinear functor.
 \end{definition}
 
-\begin{definition}
+\noindent In a finite semisimple $k$-linear category, every object splits as a
+finite direct sum of simple objects. When $M,N$ are semisimple, every
+$\Vect_{k}$-enriched functor $M\to L$ is automatically exact (thus linear) and
+every $\Vect_{k}$-enriched functor $M\otimes N\to L$ is automatically bilinear.
+
+\begin{assumption}
  When $C$ is a tensor category, any $C$-module category $M$ is assumed to be $k$-linear by definition and the structure map $C\otimes M\to M$ is assumed to be bilinear. 
-\end{definition}
+\end{assumption}
 
 \begin{notation} ($m \lhd c$)
 
@@ -255,7 +239,7 @@ from \cite{douglas/balanced-product}.
 \end{definition}
 
 \begin{definition}\label{definition/balanced-tensor-product} (Balanced Tensor Product)
-  \noindent Let $C$ be a tensor category, and let $M_C$, $_{C}N$ be $k$-linear module categories over $C$.
+  \noindent Let $C$ be a tensor category [TODO: (Manuel) or do we just have to require right duals?], and let $M_C$, $_{C}N$ be $k$-linear module categories over $C$.
   \quad Then the balanced tensor product $M \boxtimes_{C} N$ is a $k$-linear
   category together with a $C$-balanced bilinear functor
   $M\otimes N\to M\boxtimes_{C} N$ such
@@ -571,7 +555,7 @@ in this case the universal property described above still holds when $L$ is
 just a finitely cocomplete category. We record this in the following lemma.
 
 \begin{lemma}\label{univ_box}
-  Let $C$ be a finite tensor category, $M_C$, $_{C}N$ finite $k$-linear $C$-module
+  Let $C$ be a finite tensor category [TODO: (Manuel) or do we just have to require right duals?], $M_C$, $_{C}N$ finite $k$-linear $C$-module
   categories, and $L$ a finitely cocomplete category. Then the restriction
   functor is an equivalence: \[Lin(M \boxtimes_{C} N, L) \xrightarrow{\sim} Bilin^{C-bal}(M \otimes N, L).\]
 \end{lemma}
@@ -602,7 +586,8 @@ $M\otimes N\to Fin(M\otimes_C N)$. [TODO: Jin adds the $\beta$ data explicitly.]
 
 \begin{proposition}\label{fin_eq_bal}
 
-  Suppose $C$ is a finite tensor category and $M_C$ and $_{C}N$ are $k$-linear finite
+  Suppose $C$ is a finite tensor category [TODO: (Manuel) or do we just have to require right duals?]
+  and $M_C$ and $_{C}N$ are $k$-linear finite
   semisimple module categories. Then the map
   $Fin(M\otimes_C N)\to M\boxtimes_C N$ corresponding to the $C$-balanced
   functor $M\otimes N\to M\boxtimes_C N$ via the equivalence of Lemma
@@ -624,7 +609,7 @@ whenever $M$, $N$ and $M\boxtimes_C N$ are finite semisimple $k$-linear
 categories.
 
 \begin{lemma}\label{semisimple}
-  Let $C$ be a tensor category and let $M_C$,$_{C}N$ be $k$-linear finite semisimple $C$-module categories. Suppose $M\boxtimes_C N$ is also $k$-linear finite semisimple. [TODO: Manuel wants to call it a theorem, but Jin wants to call it a lemma.] Then $sk(M,C,N)$ is
+  Let $C$ be a tensor category [TODO: (Manuel) or do we just have to require right duals?], and let $M_C$,$_{C}N$ be $k$-linear finite semisimple $C$-module categories. Suppose $M\boxtimes_C N$ is also $k$-linear finite semisimple. [TODO: Manuel wants to call it a theorem, but Jin wants to call it a lemma.] Then $sk(M,C,N)$ is
   $k$-linear finite semisimple.
 \end{lemma}
 
@@ -638,7 +623,7 @@ categories.
 \end{proof}
 
 \begin{lemma}\label{sk_bal}
-  Let $C$ be a tensor category and let $M_C$,$_{C}N$ be $k$-linear finite semisimple $C$-module categories. Suppose $M\boxtimes_C N$ is also $k$-linear finite semisimple. Then the
+  Let $C$ be a tensor category [TODO: (Manuel) or do we just have to require right duals?], and let $M_C$,$_{C}N$ be $k$-linear finite semisimple $C$-module categories. Suppose $M\boxtimes_C N$ is also $k$-linear finite semisimple. Then the
   $C$-balanced functor $M\otimes N\to sk(M,C,N)$ exhibits $sk(M,C,N)$ as the
   balanced tensor product $M\boxtimes_C N$.
 \end{lemma}
@@ -673,7 +658,7 @@ categories.
 Since we are mostly interested in the characteristic zero case, we record the following direct consequence of lemma \ref{sk_bal}.
 
 \begin{theorem}
-   Suppose $k$ has characteristic $0$, $C$ is a finite semisimple tensor category and $M_C$,$_{C}N$ are $k$-linear finite semisimple $C$-module categories. Then the $C$-balanced functor $M\otimes N\to sk(M,C,N)$ exhibits
+   Suppose $k$ has characteristic $0$, $C$ is a finite semisimple tensor category [TODO: (Manuel) or do we just have to require right duals?], and $M_C$,$_{C}N$ are $k$-linear finite semisimple $C$-module categories. Then the $C$-balanced functor $M\otimes N\to sk(M,C,N)$ exhibits
    $sk(M,C,N)$ as the balanced tensor product $M\boxtimes_C N$.
  \end{theorem}
 
@@ -683,7 +668,8 @@ Since we are mostly interested in the characteristic zero case, we record the fo
 
 \begin{corollary}
   Suppose that $n \in \mathbb{N}$, $k$ has characteristic $0$,
-  $C_{0}, \ldots, C_{n}$ are finite semisimple tensor categories, and
+  $C_{0}, \ldots, C_{n}$ are finite semisimple tensor categories
+  [TODO: (Manuel) or do we just have to require right duals?], and
   $_{C_{0}}M^{1}_{C_{1}}, _{C_{1}}M^{2}_{C_{2}}, \ldots, _{C_{n{\text -}1}}M^{n}_{C_{n}}$
   are $k$-linear finite semisimple module categories. Then we have an
   equivalence of $C_{0}{\text -}C_{n}$ module categories
@@ -834,7 +820,7 @@ Given a category $M$, we define $Mat(M)$ to be the category whose objects are tu
 \begin{proposition}\label{cau_semi}
   Suppose we have a fully faithful functor $M\hookrightarrow N$,
   where $M$ is Cauchy complete and $N$ is $k$-linear finite semisimple. Then
-  $M$ is $k$-linear finite semisimple.
+  $M$ is a $k$-linear finite semisimple category.
 \end{proposition}
 
 \begin{proof}
@@ -941,7 +927,7 @@ This follows from Proposition \ref{univ_sk_nonsemisimple} and Lemma \ref{univ_bi
 
 \begin{corollary}
  
-Let $C$ be a finite tensor category, $M_C$, $_{C}N$ finite $k$-linear $C$-module categories. Then $sk(M,C,N)$ is $k$-linear and the $C$-balanced functor $M\otimes N\to sk(M,C,N)$ presents $sk(M,C,N)$ as the balanced tensor product of $M$ and $N$ over $C$.
+Let $C$ be a finite tensor category [TODO: (Manuel) or do we just have to require right duals?], $M_C$, $_{C}N$ finite $k$-linear $C$-module categories. Then $sk(M,C,N)$ is $k$-linear and the $C$-balanced functor $M\otimes N\to sk(M,C,N)$ presents $sk(M,C,N)$ as the balanced tensor product of $M$ and $N$ over $C$.
 \end{corollary}
 \begin{proof}
  
@@ -1056,7 +1042,7 @@ constructed in \ref{proposition/basis-theorem}.
 
 \begin{definition}\label{definition/skein-category} (Skein Category)
 
-  \noindent Let $C$ be a tensor category. Let $M_{C}$ and $_{C}N$ be module
+  \noindent Let $C$ be a tensor category [TODO: (Manuel) or do we just have to require right duals?]. Let $M_{C}$ and $_{C}N$ be module
   categories. \quad Define the skein category $sk(M,C,N)$ to the Karoubi
   completion of its pre-skein category
   \[
@@ -1071,7 +1057,7 @@ constructed in \ref{proposition/basis-theorem}.
   obviously enriched over $\Vect_{\mathbb{C}}$.
 
   More generally, for any $n \in \mathbb{N}$, let
-  $C_{0}, C_{1}, \ldots, C_{n}$ be tensor categories. Let
+  $C_{0}, C_{1}, \ldots, C_{n}$ be tensor categories [TODO: (Manuel) or do we just have to require right duals?]. Let
   ${}_{C_{0}}M^{1}_{C_{1}}, \, {}_{C_{1}}M^{2}_{C_{2}}, \ldots, {}_{C_{n{\text -}1}}M^{n}_{C_{n}}$
   be bimodule categories. One can in a similar way define the
   $C_{0}{\text -}C_{n}$ bimodule category
@@ -1114,7 +1100,7 @@ property.
 
 \begin{definition}\label{definition/canonical-map} (Canonical Map $\boxtimes_{C}$)
 
-  \noindent Let $C$ be a tensor category, and $M_{C}, _{C}N$ be module
+  \noindent Let $C$ be a tensor category [TODO: (Manuel) or do we just have to require right duals?], and $M_{C}, _{C}N$ be module
   categories. \quad Define the functor
   \[
     M \times N \xrightarrow{\boxtimes_{C}} sk(M,C,N)
@@ -1136,7 +1122,7 @@ provide another direct proof for this equivalence in the appendix (cf
 
 \begin{lemma}\label{lemma/I-provides-subobject} (Objects are Retracts)
 
-  \noindent Let $C$ be a tensor category, and $M_{C}, _{C}N$ be module
+  \noindent Let $C$ be a tensor category [TODO: (Manuel) or do we just have to require right duals?], and $M_{C}, _{C}N$ be module
   categories. \quad Then any typical object $\II{}{}{m}{n}{\phi}{\psi}{c}$ in
   $sk(M,C,N)$ is a retract (in particular, a subobject) of the canonical
   object $\boxtimes_{C}((m,n)) = \II{}{}{m}{n}{1_{m}}{1_{n}}{1}$.
@@ -1480,7 +1466,7 @@ lemma.
   \]
 
   \noindent (2) More generally, for any $n \in \mathbb{N}$, let
-  $C_{0}, C_{1}, \ldots, C_{n}$ be tensor categories. Let
+  $C_{0}, C_{1}, \ldots, C_{n}$ be tensor categories [TODO: (Manuel) or do we just have to require right duals?]. Let
   ${}_{C_{0}}M^{1}_{C_{1}}, \, {}_{C_{1}}M^{2}_{C_{2}}, \ldots, {}_{C_{n{\text -}1}}M^{n}_{C_{n}}, \, $
   be bimodule categories. \quad Then we have an equivalence of
   $C_{0}{\text -}C_{n}$ bimodule categories.
@@ -1531,7 +1517,7 @@ lemma.
 % tensor products.
 % \begin{corollary}\label{corollary/skein-category-is-abelian} (Skein Categories are Abelian)
 %   \noindent For any $n \in \mathbb{N}$, let $C_{0}, C_{1}, \ldots, C_{n}$ be
-%   tensor categories. Let
+%   tensor categories [TODO: (Manuel) or do we just have to require right duals?]. Let
 %   \[
 %     {}_{C_{0}}M^{1}_{C_{1}}, \, {}_{C_{1}}M^{2}_{C_{2}}, \ldots, {}_{C_{n{\text -}1}}M^{n}_{C_{n}}, \,
 %   \]
@@ -1561,7 +1547,7 @@ provide another direct proof for this equivalence:
 
 \begin{proposition} \label{proposition/degenerated-main-theorem}
 
-  \noindent Let $C$ be a tensor category. Let $M_{C}$ be a right $C$-module
+  \noindent Let $C$ be a tensor category [TODO: (Manuel) or do we just have to require right duals?]. Let $M_{C}$ be a right $C$-module
   category. \quad Then we have an equivalence of categories
   $sk(M,C,C) \simeq M$.
 \end{proposition}
