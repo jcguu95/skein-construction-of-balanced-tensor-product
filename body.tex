@@ -524,17 +524,23 @@ composite $M\otimes N\to M\otimes_C N\to sk(M,C,N)$ by [TODO: Jin adds reference
 \begin{remark}
 An object in $sk(M,C,N)$ is an idempotent matrix $A:(m_1,n_1)\oplus\cdots\oplus (m_k,n_k)\to (m_1,n_1)\oplus\cdots\oplus (m_k,n_k)$ whose entries are skeins, i.e. elements in (???) [TODO: Manuel fixes this part]\end{remark}
 
-
-[TODO: Jin checks this paragraph.] From Proposition \ref{univ_bal} and the universal property of the Cauchy
-completion, we immediately obtain the following universal property
-characterizing $sk(M,C,N)$.
-
-[TODO: Jin checks this proposition.]
 \begin{proposition}\label{univ_sk}
   Let $L$ be Cauchy complete and suppose $C$ has right duals. Then composition
   with the $C$-balanced functor $M\otimes N\to sk(M,C,N)$ induces an
   equivalence of categories $$Fun(sk(M,C,N),L)\to Fun^{C-bal}(M\otimes N,L).$$
 \end{proposition}
+
+\begin{proof}
+  \noindent [TODO: Manuel rewrites the proof. (Jin: I know it is immediate,
+  but from \ref{univ_bal} and a fact that you mentioned in the definition of
+  Cauchy completion. However, I hope you can separate that fact to a easily
+  referable entry ``X'' (so the unfamiliar readers can quickly get to the
+  statement)), and say explicitly that \ref{univ_bal} and ``X'' prove this
+  statement directly.]
+  % Old sketch: From Proposition \ref{univ_bal} and the universal property of
+  % the Cauchy completion, we immediately obtain the following universal
+  % property characterizing $sk(M,C,N)$.
+\end{proof}
 
 \begin{remark}
   Comparing \ref{univ_sk} with \ref{definition/balanced-tensor-product}, the defining universal property of balanced tensor product, we know we are closed to proving that the skein category $sk(M,C,N)$ is indeed equivalent to the balanced tensor product. What is missing so far are
