@@ -284,6 +284,12 @@ In \cite{douglas/balanced-product} the authors construct $M\boxtimes_C N$ for an
 \noindent In this section, we present the pre-skein category $M \otimes_{C} N$
 and develop some of its properties.
 
+[TODO: Should we include ``right-dual'' in the definition of preskein category
+as Manuel suggested in
+https://github.com/jcguu95/skein-construction-of-balanced-tensor-product/issues/7
+? Or should we just add a remark explain why the exchanged particle only goes
+one way?]
+
 \begin{definition}\label{pre-skein} (Pre-Skein Category)
   For $C$ a monoidal category and $M_C$, $_{C}N$ module categories, we define
   the pre-skein category $M\otimes_C N$ as follows. Its objects are pairs $(m,n)$ with
@@ -396,6 +402,8 @@ We abuse notation by writing $(\phi\otimes\pi\otimes\psi)$ to denote the corresp
   $Hom_{M\otimes_C N}$ one can check that both composites equal
   $(\phi\lhd\id_c)\otimes\pi\otimes(\id_{\bar{c}}\rhd\psi)$.
 \end{proof}
+
+[TODO: Jin, Manuel Do we really just need right dual?]
 
 \begin{lemma}\label{balanced}
   If every object in $C$ has a right dual, then the natural transformation
