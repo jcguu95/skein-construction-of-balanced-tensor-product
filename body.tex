@@ -345,7 +345,10 @@ We abuse notation by writing $(\phi\otimes\pi\otimes\psi)$ to denote the corresp
   \circ
   (\phi\otimes\id_1\otimes\id_n)$.
 \end{proof}
-    
+
+[TODO: Manuel makes this definition into a proposition, which says that there
+is a $C$-balanced functor $M \otimes C \to M \otimes_{C} N$, and provide an
+explicit balanced data $\alpha$ for the functor.]
 \begin{definition}\label{definition/preskeinification}.
   We define a functor $M\otimes N\to M\otimes_C N$ by the identity on objects,
   and $\phi\otimes\psi\mapsto\phi\otimes\id_1\otimes\psi$ on morphisms. We
@@ -519,7 +522,9 @@ property characterizes [TODO: Manuel explains this.] $M\otimes N \to M\otimes_C 
 \end{definition}
 
 \noindent It has a $C$-balanced functor $M\otimes N \to sk(M,C,N)$, namely the
-composite $M\otimes N\to M\otimes_C N\to sk(M,C,N)$ by [TODO: Jin adds reference].
+composite $M\otimes N\to M\otimes_C N\to sk(M,C,N)$. [TODO: Manuel explains what the two
+$C$-balanced functors are. In particular, though it is easy, provide the
+explicit $C$-balanced data $\alpha$..
 
 \begin{remark}
 An object in $sk(M,C,N)$ is an idempotent matrix $A:(m_1,n_1)\oplus\cdots\oplus (m_k,n_k)\to (m_1,n_1)\oplus\cdots\oplus (m_k,n_k)$ whose entries are skeins, i.e. elements in (???) [TODO: Manuel fixes this part]\end{remark}
@@ -573,10 +578,11 @@ just a finitely cocomplete category. We record this in the following lemma.
   \cite[Remark 3.4]{douglas/balanced-product} [TODO: Manuel adds a clearer proof for this.]
 \end{proof}
 
-Recall that \ref{definition/preskeinification} and \ref{balanced} provide a $C$-balanced functor
-$M\otimes N \to M\otimes_C N$ provided that $C$ has right duals. Compose it with
-$M\otimes_C N \to Fin(M\otimes_C N)$, and we obtain a $C$-balanced functor
-$M\otimes N\to Fin(M\otimes_C N)$. [TODO: Jin adds the $\beta$ data explicitly.]
+Recall that \ref{definition/preskeinification} and \ref{balanced} provide a $C$-balanced functor $M\otimes N \to M\otimes_C N$
+provided that $C$ has right duals. Compose it with $M\otimes_C N \to Fin(M\otimes_C N)$, and
+we obtain a $C$-balanced functor $M\otimes N\to Fin(M\otimes_C N)$. [TODO: Manuel explains
+where all $C$-balanced functors are from (which statement?), and adds missing
+balanced data $\alpha$ explicitly.]
 
 \begin{lemma}\label{univ_finbal}
 
