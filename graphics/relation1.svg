@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 210 297"
+   width="89.99987mm"
+   height="25.4328mm"
+   viewBox="0 0 89.99987 25.4328"
    version="1.1"
    id="svg1"
    inkscape:version="1.4 (86a8ad7, 2024-10-11)"
@@ -26,8 +26,8 @@
      inkscape:document-units="mm"
      showgrid="true"
      inkscape:zoom="1.3950758"
-     inkscape:cx="224.00217"
-     inkscape:cy="241.20554"
+     inkscape:cx="15.769752"
+     inkscape:cy="145.87021"
      inkscape:window-width="1920"
      inkscape:window-height="1001"
      inkscape:window-x="-9"
@@ -37,8 +37,8 @@
     <inkscape:grid
        id="grid1"
        units="mm"
-       originx="0"
-       originy="0"
+       originx="-55.000059"
+       originy="-25.228657"
        spacingx="0.99999998"
        spacingy="1"
        empcolor="#0099e5"
@@ -115,7 +115,8 @@
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(-55.000058,-25.228658)">
     <circle
        style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-dasharray:0.264583, 0.264583"
        id="path6-7-4-6-7-1-1-1-4-9-2-4-1-6-8-9"
@@ -259,7 +260,7 @@
        id="path24-3-8-4-5-8"
        sodipodi:nodetypes="cc" />
     <g
-       transform="matrix(0.352778 0 0 0.352778 96.368 69.1812)"
+       transform="matrix(0.352778,0,0,0.352778,96.368,69.1812)"
        ns9:version="1.10.2"
        ns9:texconverter="pdflatex"
        ns9:pdfconverter="inkscape"
