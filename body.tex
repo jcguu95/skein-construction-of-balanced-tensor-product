@@ -149,9 +149,9 @@ Given categories $M,N$ we denote by $M\otimes N$ the category whose objects are 
     \item $M$ has enough projectives.
     \item $M$ has finitely many isomorphism classes of simple objects.
   \end{itemize}
-  A tensor category is a rigid $k$-linear monoidal category, where the
-  monoidal structure is given by a bilinear functor.
-\end{definition}
+  A $k$-linear monoidal category is a $k$-linear category $C$ with a monoidal structure where the functor $C\otimes C\to C$ is bilinear.
+  A tensor category is a rigid $k$-linear monoidal category.
+\end{definition}%added k-linear monoidal category. related to previous change in definition of balanced tensor prod.
 
 \noindent In a finite semisimple $k$-linear category, every object splits as a
 finite direct sum of simple objects. When $M,N$ are semisimple, every
@@ -159,8 +159,8 @@ $\Vect_{k}$-enriched functor $M\to L$ is automatically exact (thus linear) and
 every $\Vect_{k}$-enriched functor $M\otimes N\to L$ is automatically bilinear.
 
 \begin{assumption}
- When $C$ is a tensor category, any $C$-module category $M$ is assumed to be $k$-linear by definition and the structure map $C\otimes M\to M$ is assumed to be bilinear. 
-\end{assumption}
+ When $C$ is a $k$-linear monoidal category (e.g. a tensor category), any $C$-module category $M$ is assumed to be $k$-linear by definition and the structure map $C\otimes M\to M$ is assumed to be bilinear. 
+\end{assumption}%extended this from tensor category to k-linear monoidal category
 
 \begin{notation} ($m \lhd c$)
 
