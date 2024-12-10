@@ -355,7 +355,7 @@ explicit balanced data $\alpha$ for the functor.]
   $\beta_{m,c,n}=\id_{m\lhd c}\otimes\id_c\otimes\id_{c\lhd n}.$
 \end{definition}
 
-\begin{lemma}
+\begin{lemma}\label{beta_natural}
   The collection of morphisms $\beta_{m,c,n}$ defines a natural transformation
   of functors $M\otimes C \otimes N\to M\otimes_C N$.
 \end{lemma}
@@ -378,10 +378,9 @@ explicit balanced data $\alpha$ for the functor.]
   $(\phi\lhd\id_c)\otimes\pi\otimes(\id_{\bar{c}}\rhd\psi)$.
 \end{proof}
 
-\begin{lemma}\label{balanced}
+\begin{lemma}\label{beta_invertible}
   If every object in $C$ has a right dual, then the natural transformation
-  $\beta$ described above is an isomorphism, so it provides a balancing for
-  the functor $M\otimes N\to M\otimes_C N$ given in \ref{definition/preskeinification}.
+  $\beta$ described above is an isomorphism.
 \end{lemma}
 
 \begin{proof}
@@ -391,6 +390,13 @@ explicit balanced data $\alpha$ for the functor.]
   To prove that this is inverse to $\beta_{m,c,n}$ we use only one of the
   snake equations. [TODO: Manuel explains it in more details.]
 \end{proof}
+
+\begin{proposition}
+Suppose $C$ is a monoidal category with right duals and $M_C$, $_{C}N$ are $C$-module categories. Then the data specified in Definition \ref{definition/preskeinification} constitutes a $C$-balanced functor $M\otimes N\to M\otimes_C N$.\end{proposition}
+\begin{proof}
+This is the content of Lemmas \ref{beta_natural} and \ref{beta_invertible}.\end{proof}
+
+
 
 [TODO: (Manuel) Jin proposes to not make this global assumption, but to call it every
 time it's needed. If we end up making this assumption, we need to at least
