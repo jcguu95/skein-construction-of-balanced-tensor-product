@@ -391,7 +391,7 @@ explicit balanced data $\alpha$ for the functor.]
   snake equations. [TODO: Manuel explains it in more details.]
 \end{proof}
 
-\begin{proposition}
+\begin{proposition}\label{is_balanced}
 Suppose $C$ is a monoidal category with right duals and $M_C$, $_{C}N$ are $C$-module categories. Then the data specified in Definition \ref{definition/preskeinification} constitutes a $C$-balanced functor $M\otimes N\to M\otimes_C N$.\end{proposition}
 \begin{proof}
 This is the content of Lemmas \ref{beta_natural} and \ref{beta_invertible}.\end{proof}
@@ -582,7 +582,7 @@ just a finitely cocomplete category. We record this in the following lemma.
   \cite[Remark 3.4]{douglas/balanced-product} [TODO: Manuel adds a clearer proof for this.]
 \end{proof}
 
-Recall that \ref{definition/preskeinification} and \ref{balanced} provide a $C$-balanced functor $M\otimes N \to M\otimes_C N$
+Recall from \ref{is_balanced} that we have a $C$-balanced functor $M\otimes N \to M\otimes_C N$
 provided that $C$ has right duals. Compose it with $M\otimes_C N \to Fin(M\otimes_C N)$, and
 we obtain a $C$-balanced functor $M\otimes N\to Fin(M\otimes_C N)$. [TODO: Manuel explains
 where all $C$-balanced functors are from (which statement?), and adds missing
