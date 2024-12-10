@@ -582,11 +582,12 @@ just a finitely cocomplete category. We record this in the following lemma.
   \cite[Remark 3.4]{douglas/balanced-product} [TODO: Manuel adds a clearer proof for this.]
 \end{proof}
 
+\begin{notation}
+Given a category $M$, we denote by $Fin(M)$ its finite cocompletion. See Definition \ref{definition/finite-cocompletion} for its definition and properties. \end{notation}
+
 Recall from \ref{is_balanced} that we have a $C$-balanced functor $M\otimes N \to M\otimes_C N$
 provided that $C$ has right duals. Compose it with $M\otimes_C N \to Fin(M\otimes_C N)$, and
-we obtain a $C$-balanced functor $M\otimes N\to Fin(M\otimes_C N)$. [TODO: Manuel explains
-where all $C$-balanced functors are from (which statement?), and adds missing
-balanced data $\alpha$ explicitly.]
+we obtain a $C$-balanced functor $M\otimes N\to Fin(M\otimes_C N)$.  %when have M N -> L c-balanced and you compose to get M N -> L -> K the composite is automatically C-balanced. we could write this in a Lemma if ou want, but i think if we go to this level of detail it starts getting heavy
 
 \begin{lemma}\label{univ_finbal}
 
