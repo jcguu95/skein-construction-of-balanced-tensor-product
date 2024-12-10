@@ -602,11 +602,11 @@ we obtain a $C$-balanced functor $M\otimes N\to Fin(M\otimes_C N)$.  %when have 
 
 \begin{proposition}\label{fin_eq_bal}
 
-  Suppose $C$ is a finite tensor category [TODO: (Manuel) or do we just have to require right duals?]
+  Suppose $C$ is a finite tensor category 
   and $M_C$ and $_{C}N$ are $k$-linear finite
   semisimple module categories.
-  Then we have an equivalence of categories $Fin(M\otimes_C N) \to M\boxtimes_C N$.
-  [TODO: Manuel explains in the proof where that functor is from, and why it is an equivalence.]
+  Then we have a canonical equivalence of categories $Fin(M\otimes_C N) \simeq M\boxtimes_C N$.
+    
   % Then the map
   % $Fin(M\otimes_C N)\to M\boxtimes_C N$ corresponding to the $C$-balanced
   % functor $M\otimes N\to M\boxtimes_C N$ via the equivalence of Lemma
@@ -614,17 +614,12 @@ we obtain a $C$-balanced functor $M\otimes N\to Fin(M\otimes_C N)$.  %when have 
 \end{proposition}
 
 \begin{proof}
-  [TODO: Manuel makes this proof clearer. Why are two functors inverse to each
-  other? (And what are the two functors, explicitly?) Don't say ``now it is
-  easy''.]
-  % Since $M,N$ are semisimple, any functor $M\otimes N\to L$ is bilinear. So
-  % Lemma \ref{univ_box} states
-  % that \[Lin(M \boxtimes_{C} N, L) \to Fun^{C-bal}(M \otimes N, L)\] is an
-  % equivalence for any finitely cocomplete $L$. So the $C$-balanced functor
-  % $M\otimes N\to Fin(M\otimes_C N)$ induces a map
-  % $M\boxtimes_C N\to Fin(M\otimes_C N)$. It is now easy to check that these
-  % two functors are inverse to each other.
-\end{proof}
+
+Since $M,N$ are semisimple, any functor $M\otimes N\to L$ is bilinear. So by Lemma \ref{univ_finbal} the map \[Lin(Fin(M \otimes_{C} N), L) \to Bilin^{C-bal}(M \otimes N, L)\] defined by composing with $M\otimes N\to Fin(M\otimes_C N)$ is an equivalence for any finitely cocomplete $L$. 
+
+By Lemma \ref{univ_box}, composing with $M\otimes N\to M\boxtimes_C N$ gives an equivalence \[Lin(M \boxtimes_{C} N, L) \xrightarrow{\sim} Bilin^{C-bal}(M \otimes N, L)\] for any finitely cocomplete category $L$.
+
+So $Fin(M\otimes_C N)$ and $M \boxtimes_{C} N$ are both finitely cocomplete categories, characterized by the same universal property, so they are canonically equivalent.\end{proof} 
 
 Now we prove that $sk(M,C,N)$ is a finite semisimple $k$-linear category,
 whenever $M$, $N$ and $M\boxtimes_C N$ are finite semisimple $k$-linear
