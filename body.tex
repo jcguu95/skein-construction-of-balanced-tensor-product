@@ -1022,30 +1022,36 @@ Let $C$ be a finite tensor category, $M_C$, $_{C}N$ finite $k$-linear $C$-module
 
 This follows from Theorem \ref{main_nonsemisimple} and Lemma \ref{univ_box}.\end{proof}
 
-We now make contact between the construction of $M\boxtimes_C^{sk}N$ in this section and our previous constructions in the semisimple case.
+The following Lemma makes the connection between the construction of $M\boxtimes_C^{sk}N$ in this section and our previous constructions in the semisimple case.
 
-\begin{lemma}
-Suppose $Y(m,n)\in Bilex((M\otimes_C N)^{op},\Vect_k)$ for all $(m,n)\in M\otimes_C N$. Denote by $\tilde{Y}:M\otimes_C N\hookrightarrow Bilex((M\otimes_C N)^{op},\Vect_k)$ the resulting functor. Then we have a natural isomorphism $\tilde{Y}\simeq K$. \end{lemma}
-\begin{proof}
- Note that we have $i\tilde{Y}=Y$. Since $i$ is fully faithful, the counit $Ri\Rightarrow \id_{Bilex((M\otimes_C N)^{op}),\Vect_k)}$ of the adjunction $R\dashv i$ is an isomorphism. Finally we have $K=Ry=Ri\tilde{Y}\simeq\tilde{Y}.$\end{proof}
- 
- \begin{lemma}
+% \begin{lemma}
+% Suppose $Y(m,n)\in Bilex((M\otimes_C N)^{op},\Vect_k)$ for all $(m,n)\in M\otimes_C N$. Denote by $\tilde{Y}:M\otimes_C N\hookrightarrow Bilex((M\otimes_C N)^{op},\Vect_k)$ the resulting functor. Then we have a natural isomorphism $\tilde{Y}\simeq K$. \end{lemma}
+% \begin{proof}
+%  Note that we have $i\tilde{Y}=Y$. Since $i$ is fully faithful, the counit $Ri\Rightarrow \id_{Bilex((M\otimes_C N)^{op}),\Vect_k)}$ of the adjunction $R\dashv i$ is an isomorphism. Finally we have $K=Ry=Ri\tilde{Y}\simeq\tilde{Y}.$\end{proof}
+%  
+ \begin{lemma}\label{fin_boxsk}
 Let $C$ be a monoidal category, and let $M_C$ and $_{C}N$ be $k$-linear semisimple $C$-module categories. Then $M\boxtimes_C^{sk}N\simeq Fin(M\otimes_C N)$.
  \end{lemma}
 \begin{proof}
- In this case we have $Bilex((M\otimes_C N)^{op},\Vect_k)=Fun((M\otimes_C N)^{op},\Vect_k)$. So the functor $K$ is simply the Yoneda embedding $M\otimes_C N\hookrightarrow Fun((M\otimes_C N)^{op},\Vect_k)$ and so $M\boxtimes_C^{sk} N$ is simply the finite cocompletion of $M\otimes_C N$.\end{proof}
+ In this case we have $Bilex((M\otimes_C N)^{op},\Vect_k)=Fun((M\otimes_C N)^{op},\Vect_k)$. So the functor $K$ in Definition \ref{sk_nonsemisimple} is simply the Yoneda embedding $M\otimes_C N\hookrightarrow Fun((M\otimes_C N)^{op},\Vect_k)$ and so $M\boxtimes_C^{sk} N$ is simply the finite cocompletion of $M\otimes_C N$.\end{proof}
 
-
+\begin{corollary}\label{fin_kelly}
+Let $C$ be a monoidal category, and let $M_C$ and $_{C}N$ be $k$-linear semisimple $C$-module categories. Then $M\otimes_CN\to Fin(M\otimes_C N)$ presents $Fin(M\otimes_C N)$ as the balanced Kelly tensor product of $M$ and $N$ over $C$. 
+\end{corollary}
 
 \begin{remark}
-When $C$ is a monoidal category and $M_C,_{C}N$ are $k$-linear semisimple $C$-module categories, we have $$M\boxtimes^K_{C}N\simeq M\boxtimes_C^{sk}N\simeq Fin(M\otimes_C N).$$
+In Lemma \ref{fin_boxsk} and Corollary \label{fin_kelly}, semisimplicity of $M$ and $N$ can be replaced by the weaker condition that every short exact sequence splits in $M$ and $N$. \end{remark}
 
-\noindent When, additionally, $Fin(M\otimes_C N)$ is semisimple, we have $$M\boxtimes^K_{C}N\simeq M\boxtimes_C^{sk}N\simeq Fin(M\otimes_C N)\simeq Cau(M\otimes_C N)=sk(M,C,N).$$
 
-\noindent When $C$ is a finite tensor category and $M,N$ are $k$-linear finite semisimple $C$-module categories, we have $$M\boxtimes^{sk}_C N\simeq Fin(M\otimes_C N)\simeq M\boxtimes_C N.$$
-
-\noindent When $C$ is a finite tensor category and $M,N, M\boxtimes_C N$ are all $k$-linear finite semisimple, we have $$M\boxtimes_C^{sk}N\simeq Fin(M\otimes_C N)\simeq Cau(M\otimes_C N)=sk(M,C,N)\simeq M\boxtimes_C N.$$ See Remark \ref{semisimple_douglas/dualizable-tensor-categories} for conditions on $M,N$ and $C$ under which $M\boxtimes_C N$ is finite semisimple.
-\end{remark}
+% \begin{remark}
+% When $C$ is a monoidal category and $M_C,_{C}N$ are $k$-linear semisimple $C$-module categories, we have $$M\boxtimes^K_{C}N\simeq M\boxtimes_C^{sk}N\simeq Fin(M\otimes_C N).$$
+% 
+% \noindent When, additionally, $Fin(M\otimes_C N)$ is semisimple, we have $$M\boxtimes^K_{C}N\simeq M\boxtimes_C^{sk}N\simeq Fin(M\otimes_C N)\simeq Cau(M\otimes_C N)=sk(M,C,N).$$
+% 
+% \noindent When $C$ is a finite tensor category and $M,N$ are $k$-linear finite semisimple $C$-module categories, we have $$M\boxtimes^{sk}_C N\simeq Fin(M\otimes_C N)\simeq M\boxtimes_C N.$$
+% 
+% \noindent When $C$ is a finite tensor category and $M,N, M\boxtimes_C N$ are all $k$-linear finite semisimple, we have $$M\boxtimes_C^{sk}N\simeq Fin(M\otimes_C N)\simeq Cau(M\otimes_C N)=sk(M,C,N)\simeq M\boxtimes_C N.$$ See Remark \ref{semisimple_douglas/dualizable-tensor-categories} for conditions on $M,N$ and $C$ under which $M\boxtimes_C N$ is finite semisimple.
+% \end{remark}
 
 
 \subsubsection{Review of necessary results from \cite{kelly/basic-concepts-enriched}}\label{review_kelly}
