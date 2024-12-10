@@ -238,13 +238,13 @@ from \cite{douglas/balanced-product}.
 \end{definition}
 
 \begin{definition}\label{definition/balanced-tensor-product} (Balanced Tensor Product)
-  \noindent Let $C$ be a tensor category [TODO: (Manuel) or do we just have to require right duals?], and let $M_C$, $_{C}N$ be $k$-linear module categories over $C$.
+  \noindent Let $C$ be a $k$-linear monoidal category, and let $M_C$, $_{C}N$ be $k$-linear module categories over $C$.
   \quad Then the balanced tensor product $M \boxtimes_{C} N$ is a $k$-linear
   category together with a $C$-balanced bilinear functor
   $M\otimes N\to M\boxtimes_{C} N$ such
   that \[Lin(M \boxtimes_{C} N, L) \to Bilin^{C-bal}(M \otimes N, L)\] is an
   equivalence, for any $k$-linear category $L$.
-\end{definition}
+\end{definition}%now i made this the same as what is in \cite{douglas/balanced-product}. they define it in this generality: just require everything k-linear, with no assumptions on duals or finiteness. but then they only prove that it *exists* when C has duals and C,M,N are finite.
 
 In \cite{douglas/balanced-product} the authors construct $M\boxtimes_C N$ for any finite tensor category $C$ and any finite $C$-module categories $M, N$, thus establishing existence in this setting. They do this by using the fact that the module categories $M,N$ can be realized as categories of modules over algebra objects $A_M$ and $A_N$ in $C$ and then showing that the category of $A_M-A_N$-bimodule objects in $C$ is $k$-linear and satisfies the required universal property. In the present paper, we will give an alternative construction of $M\boxtimes_C N$ when $M$, $N$, and $M \boxtimes_{C} N$ are semisimple.
 
