@@ -926,7 +926,7 @@ A monoidal category with weak right duals is a monoidal category where every obj
 Let $C$ be a monoidal category with weak right duals and let $M_C$ and $_{C}N$ be $C$-module categories. Suppose $(c^*,\eta,\epsilon)$ is a weak right dual for $c$. Then \begin{center}\includesvg{graphics/up_skein}\end{center} in $M\otimes_C N$.
 \end{lemma}
 
-\begin{proof} Both sides of the equation are inverse to \begin{center}\includesvg{down_skein}.\end{center} For the left hand side, this follows from the relations in Definition \ref{pre-skein_no-duals}. For the right hand side, it follows from the proof of Lemma \ref{balanced}, where only the fact that $(c^*,\eta,\epsilon)$ is a weak right dual for $c$ is used.\end{proof}
+\begin{proof} Both sides of the equation are inverse to \begin{center}\includesvg{down_skein}.\end{center} For the left hand side, this follows from the relations in Definition \ref{pre-skein_no-duals}. For the right hand side, it follows from the proof of Lemma \ref{beta_invertible}, where only the fact that $(c^*,\eta,\epsilon)$ is a weak right dual for $c$ is used.\end{proof}
 
 Let us temporarily denote by $M\otimes_C^d N$ the category of Definition \ref{pre-skein}, where the diagonal wires flow downwards.
 
@@ -943,7 +943,7 @@ Let $C$ be a monoidal category, let $M_C$ and $_{C}N$ be $C$-module categories a
   $M\otimes N \to M\otimes_C N$ induces an equivalence of categories
   $Fun(M\otimes_C N,L)\to Fun^{C-bal}(M\otimes N,L)$.\end{proposition}
 \begin{proof}
-  The only difference between this and the proof of Proposition \ref{univ_bal} is that now providing an inverse to the balancing $\beta_{m,c,n}:(m\lhd c, n)\to (m,c\rhd n)$ (see Lemma \ref{balanced}) does not require duals, as we can simply use the skein with a $c$ wire going up.\end{proof}
+  The only difference between this and the proof of Proposition \ref{univ_bal} is that now providing an inverse to the balancing $\beta_{m,c,n}:(m\lhd c, n)\to (m,c\rhd n)$ (see Lemma \ref{beta_invertible}) does not require duals, as we can simply use the skein with a $c$ wire going up.\end{proof}
   
   \begin{remark}
    We could also define a category $M\otimes_C^u N$ where the diagonal wires go up. This category is isomorphic to the category $M\otimes_C N$ of Definition \ref{pre-skein_no-duals} when $C$ has weak left duals (defined in an analogous way to weak right duals). When $C$ has both weak left and right duals (in particular, when $C$ is rigid), then all three categories $M\otimes_C N$, $M\otimes^u_C N$ and $M\otimes_C^d N$ are isomorphic.\end{remark}
