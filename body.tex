@@ -351,6 +351,7 @@ We abuse notation by writing $(\phi\otimes\pi\otimes\psi)$ to denote the corresp
   and $\phi\otimes\psi\mapsto\phi\otimes\id_1\otimes\psi$ on morphisms. We
   define also morphisms $\beta_{m,c,n}:(m\lhd c,n)\to (m, c \rhd n)$ by
   $\beta_{m,c,n}=\id_{m\lhd c}\otimes\id_c\otimes\id_{c\lhd n}.$
+  \begin{center}\includesvg{graphics/beta}\end{center}
 \end{definition}
 
 \begin{lemma}\label{beta_natural}
@@ -385,9 +386,7 @@ We abuse notation by writing $(\phi\otimes\pi\otimes\psi)$ to denote the corresp
   Given $(m,c,n)$ we provide an explicit inverse for $\beta_{m,c,n}$. Let
   $(c^*,\eta,\epsilon)$ denote a right dual for $c$. We define
   $\beta^{-1}_{m,c,n}=(\id_m\lhd\eta)\otimes\id_{c^*}\otimes (\epsilon\rhd\id_n)$.
-  To prove that this is inverse to $\beta_{m,c,n}$ we use only one of the
-  snake equations. [TODO: Manuel explains it in more details.]
-\end{proof}
+  The following is a proof that $\beta_{m,c,n}\circ\beta_{m,c,n}^{-1}=\id_{m,c\rhd n}$. \begin{center}\includesvg{graphics/calculation1}\end{center} The proof that $\beta_{m,c,n}^{-1}\circ\beta_{m,c,n}=\id_{m\lhd c,n}$ is similar, using the same snake equation.\end{proof}
 
 \begin{proposition}\label{is_balanced}
 Suppose $C$ is a monoidal category with right duals and $M_C$, $_{C}N$ are $C$-module categories. Then the data specified in Definition \ref{definition/preskeinification} constitutes a $C$-balanced functor $M\otimes N\to M\otimes_C N$.\end{proposition}
