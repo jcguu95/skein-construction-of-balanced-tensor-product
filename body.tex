@@ -901,15 +901,40 @@ We now clarify the role of rigidity in the construction of the balanced tensor p
 Let $C$ be a monoidal category and let $M_C$ and $_{C}N$ be $C$-module categories. We define $M\otimes_C N$ as the category whose objects are pairs $(m,n)$ and whose morphism spaces are the spaces of alternating skeins of arbitrary (finite) length, as depicted below.
 
 \begin{center}\includesvg{graphics/up_down_skein}\end{center}
-This should of course be interpreted as a suitable direct sum of tensor products of morphism spaces in $M$, $C$ and $N$. We impose relations analogous to those in Definition \ref{pre-skein}, plus the two extra relations below (and two obvious reflections of those).
+This should of course be interpreted as a suitable direct sum of tensor products of morphism spaces in $M$, $C$ and $N$. We impose relations analogous to those in Definition \ref{pre-skein}, plus the two extra relations below (and one obvious reflection of each of those).
 
 
 \begin{center}\begin{tabular}{l}
 \includesvg{graphics/relation2} \\
-\includesvg{graphics/relation3}
-\end{tabular}\end{center}
+\includesvg{graphics/relation3} \\
+\includesvg{graphics/relation4}
+\end{tabular}\end{center} Each of these relations may be applied locally to any finite length alternating skein. In the case of the third relation, after applying it one must apply the composition rule from Definition \ref{pre-skein} to obtain an alternating skein again.
 
-Composition is defined by horizontally stacking the two diagrams and then applying the composition rule from Definition \ref{pre-skein} until there are no more parallel diagonal wires.\end{definition}
+Composition is defined by horizontally stacking the two diagrams and then applying the composition rule from Definition \ref{pre-skein} if there are parallel diagonal wires.\end{definition}
+
+\begin{definition}(Alternative)
+ 
+\end{definition}
+Let $C$ be a monoidal category and let $M_C$ and $_{C}N$ be $C$-module categories. We define $M\otimes_C N$ as the category whose objects are pairs $(m,n)$ and whose morphism spaces are freely generated under composition by 
+\begin{center}
+\begin{tabular}{lllll}
+\includesvg{graphics/beta_notext} &  & \includesvg{graphics/beta_inv} &  & \includesvg{graphics/phi_psi} 
+\end{tabular}
+\end{center}
+
+subject to the relations
+
+\begin{center}
+\begin{tabular}{l}
+\includesvg{graphics/relation5} \\ \\
+
+\includesvg{graphics/relation6} \\ \\ 
+
+\includesvg{graphics/relation7} \\ \\
+
+\includesvg{graphics/relation8}
+\end{tabular}
+\end{center}
 
 \begin{definition}
  
