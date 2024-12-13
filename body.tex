@@ -137,14 +137,26 @@ denote by $\Vect_k$ the category of $k$-vector spaces. We assume all
 categories, functors and natural transformations are enriched over $\Vect_k$.
 We always write $\otimes$ instead of $\otimes_k$.
 
-\begin{definition} ($M \otimes N$)
+
+\begin{definition} \label{definition/bilinearized-product} ($M \otimes N$)
 
 \noindent
 Given categories $M,N$ we denote by $M\otimes N$ the category whose objects
 are pairs $(m,n)$ with $m\in M$ and $n\in N$ and where $Hom_{M\otimes
-N}((m,n),(m',n'))=Hom_M(m,m')\otimes Hom(n,n')$.
-
+N}((m,n),(m',n'))=Hom_M(m,m')\otimes Hom(n,n')$. Heuristically, $M \otimes N$
+is $M \times N$ with bi-linearlized hom spaces.
 \end{definition}
+
+\begin{remark} (Products: $M \otimes N$, $M \otimes_C N$, $M \boxtimes N$, $M \boxtimes_C N$)
+
+  \noindent Throughout the paper, we have four kinds of products of two categories.
+  \begin{enumerate}
+    \item Bilinearized product $M \otimes N$ (\ref{definition/bilinearized-product}).
+    \item Pre-skein category $M\otimes_C N$ (\ref{pre-skein}).
+    \item Deligne tensor product $M \boxtimes N$ (\ref{remark/deligne-tensor-product})
+    \item Balanced tensor product $M \boxtimes_C N$ (\ref{definition/balanced-tensor-product})
+  \end{enumerate}
+\end{remark}
 
 \begin{definition} (Linear functor, $Fun(M,N)$, $Lin(M,N)$, $Bilin(M,N)$)
 
@@ -203,11 +215,6 @@ denote by $m\lhd c$ ($n \rhd n$, resp.) the object in $M$ ($N$, resp.) that
 results from acting with $c\in C$ on $m\in M$.
 
 \end{notation}
-
-[TODO: Jin adds a remark collecting similar notations, and give pointers to
-where they are defined: $M \otimes N$, $M \boxtimes N$, $M \boxtimes_{C} N$;
-$Fun$, $Lin$, $Bilin$, $Fun^{C-bal}$, $Lin^{C-bal}$,$Bilin^{C-bal}$.]
-
 
 % [TODO: We may want to uncomment this subsection.]
 % \subsection{A Note to Experts}\label{subsection/a-note-to-experts}
@@ -311,6 +318,11 @@ $A_M-A_N$-bimodule objects in $C$ is $k$-linear and satisfies the required
 universal property. In the present paper, we will give an alternative
 construction of $M\boxtimes_C N$ when $M$, $N$, and $M \boxtimes_{C} N$ are
 semisimple.
+
+\begin{remark} \label{remark/deligne-tensor-product}
+  Notice that the Deligne tensor product $M \boxtimes N$ is just
+  $M \boxtimes_{\Vect_k} N$.
+\end{remark}
 
 \section{Skein Construction (Topology)}\label{section/skein-construction}
 
