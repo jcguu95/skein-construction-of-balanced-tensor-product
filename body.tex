@@ -138,7 +138,7 @@ Given categories $M,N$ we denote by $M\otimes N$ the category whose objects are 
 
 \noindent We make the following definition following \cite{douglas/balanced-product}.
 
-\begin{definition} A $k$-linear category is an abelian category with a compatible $\Vect_{k}$-enrichment. %in an abelian category, there is a canonical enrichment over abelian groups. the Vect_k-enrichment should be compatible, in the sense that the underlying abelian group of each hom vector space agrees with this.
+\begin{definition} A $k$-linear category is an abelian category with a compatible $\Vect_{k}$-enrichment. % TODO in an abelian category, there is a canonical enrichment over abelian groups. the Vect_k-enrichment should be compatible, in the sense that the underlying abelian group of each hom vector space agrees with this.
 \end{definition}
 
 \begin{definition} \cite{egno/tensor-cats} An object in a $k$-linear category is simple if it has no
@@ -153,7 +153,7 @@ Given categories $M,N$ we denote by $M\otimes N$ the category whose objects are 
   \end{itemize}
   A $k$-linear monoidal category is a $k$-linear category $C$ with a monoidal structure where the functor $C\otimes C\to C$ is bilinear.
   A tensor category is a rigid $k$-linear monoidal category.
-\end{definition}%added k-linear monoidal category. related to previous change in definition of balanced tensor prod.
+\end{definition}% TODO added k-linear monoidal category. related to previous change in definition of balanced tensor prod.
 
 \noindent In a finite semisimple $k$-linear category, every object splits as a
 finite direct sum of simple objects. When $M,N$ are semisimple, every
@@ -162,7 +162,7 @@ every $\Vect_{k}$-enriched functor $M\otimes N\to L$ is automatically bilinear.
 
 \begin{assumption}
  When $C$ is a $k$-linear monoidal category (e.g. a tensor category), any $C$-module category $M$ is assumed to be $k$-linear by definition and the structure map $C\otimes M\to M$ is assumed to be bilinear. 
-\end{assumption}%extended this from tensor category to k-linear monoidal category
+\end{assumption}% TODO extended this from tensor category to k-linear monoidal category
 
 \begin{notation} ($m \lhd c$)
 
@@ -211,7 +211,7 @@ from \cite{douglas/balanced-product}.
   \]
   where the object $(m,c,n)$ in $M \otimes C \otimes N$ is sent by the first
   upper arrow to $(m \lhd c, n)$, and by the first lower arrow to $(m, c \rhd n)$.
-\end{definition}% here we don't need to require F bilinear, aka right exact in each variable. the definition of balanced is more general. then we can talk about C-balanced functors Fun^{C-bal}(,) and C-balanced bilinear functors Bilin^{C-bal}(,). however, there is an implicit assumption (from the conventions) that F is a Vect_k-enriched functor (as we assume all functors to be).
+\end{definition}% TODO here we don't need to require F bilinear, aka right exact in each variable. the definition of balanced is more general. then we can talk about C-balanced functors Fun^{C-bal}(,) and C-balanced bilinear functors Bilin^{C-bal}(,). however, there is an implicit assumption (from the conventions) that F is a Vect_k-enriched functor (as we assume all functors to be).
 
 \begin{definition} (Balanced Natural Transformation)
 
@@ -246,7 +246,7 @@ from \cite{douglas/balanced-product}.
   $M\otimes N\to M\boxtimes_{C} N$ such
   that \[Lin(M \boxtimes_{C} N, L) \to Bilin^{C-bal}(M \otimes N, L)\] is an
   equivalence, for any $k$-linear category $L$.
-\end{definition}%now i made this the same as what is in \cite{douglas/balanced-product}. they define it in this generality: just require everything k-linear, with no assumptions on duals or finiteness. but then they only prove that it *exists* when C has duals and C,M,N are finite.
+\end{definition} %TODO: now i made this the same as what is in \cite{douglas/balanced-product}. they define it in this generality: just require everything k-linear, with no assumptions on duals or finiteness. but then they only prove that it *exists* when C has duals and C,M,N are finite.
 
 In \cite{douglas/balanced-product} the authors construct $M\boxtimes_C N$ for any finite tensor category $C$ and any finite $C$-module categories $M, N$, thus establishing existence in this setting. They do this by using the fact that the module categories $M,N$ can be realized as categories of modules over algebra objects $A_M$ and $A_N$ in $C$ and then showing that the category of $A_M-A_N$-bimodule objects in $C$ is $k$-linear and satisfies the required universal property. In the present paper, we will give an alternative construction of $M\boxtimes_C N$ when $M$, $N$, and $M \boxtimes_{C} N$ are semisimple.
 
@@ -526,7 +526,7 @@ property characterizes [TODO: Manuel explains this.] $M\otimes N \to M\otimes_C 
 \end{definition}
 
 \noindent It has a $C$-balanced functor $M\otimes N \to sk(M,C,N)$, namely the
-composite $M\otimes N\to M\otimes_C N\to sk(M,C,N)$ of the $C$-balanced functor $M\otimes N\to M\otimes_C N$ of Proposition \ref{is_balanced} with the canonical functor $M\otimes_C N\to sk(M,C,N)=Cau(M\otimes_C N)$ (see \ref{definition/cauchy-completion/abstract}). %if you compose a C-balanced functor M N -> L with a functor L -> K you get a C-balanced functor. we could add this as a lemma, but i think if we go to this level of detail things start to get heavy.
+composite $M\otimes N\to M\otimes_C N\to sk(M,C,N)$ of the $C$-balanced functor $M\otimes N\to M\otimes_C N$ of Proposition \ref{is_balanced} with the canonical functor $M\otimes_C N\to sk(M,C,N)=Cau(M\otimes_C N)$ (see \ref{definition/cauchy-completion/abstract}). %TODO if you compose a C-balanced functor M N -> L with a functor L -> K you get a C-balanced functor. we could add this as a lemma, but i think if we go to this level of detail things start to get heavy.
 
 \begin{remark}
 An object in $sk(M,C,N)$ is an idempotent matrix $A:(m_1,n_1)\oplus\cdots\oplus (m_k,n_k)\to (m_1,n_1)\oplus\cdots\oplus (m_k,n_k)$ whose $(i,j)$-entry is a morphism $(m_j,n_j)\to (m_i,n_i)$ in $M\otimes_C N$.\end{remark}
@@ -574,7 +574,7 @@ just a finitely cocomplete category. We record this in the following lemma.
   Let $C$ be a finite tensor category, $M_C$, $_{C}N$ finite $k$-linear $C$-module
   categories, and $L$ a finitely cocomplete category. Then the restriction
   functor is an equivalence: \[Lin(M \boxtimes_{C} N, L) \xrightarrow{\sim} Bilin^{C-bal}(M \otimes N, L).\]
-\end{lemma}%here we are citing douglas/balanced-product, so we need to use their assumptions.
+\end{lemma}%TODO here we are citing douglas/balanced-product, so we need to use their assumptions.
 \begin{proof}
   \cite[Remark 3.4]{douglas/balanced-product} [TODO: Manuel adds a clearer proof for this.]%I don't see how to make this clearer. If L were k-linear, this would be the universal property of the balanced tensor prod. When L is just finitely cocomplete, this is an a priori stronger univ prop. But in this remark the authors explain how their proof actually shows this stronger univ prop.
 \end{proof}
@@ -629,7 +629,7 @@ categories.
 \begin{lemma}\label{semisimple}
   Let $C$ be a tensor category, and let $M_C$,$_{C}N$ be $k$-linear finite semisimple $C$-module categories. Suppose $M\boxtimes_C N$ is also $k$-linear finite semisimple. [TODO: Manuel wants to call it a theorem, but Jin wants to call it a lemma.] Then $sk(M,C,N)$ is
   $k$-linear finite semisimple.
-\end{lemma}%this is not the one i want to be a theorem
+\end{lemma}% TODO this is not the one i want to be a theorem
 
 \begin{proof}
   We have a fully faithful inclusion
@@ -644,7 +644,7 @@ categories.
   Let $C$ be a tensor category, and let $M_C$,$_{C}N$ be $k$-linear finite semisimple $C$-module categories. Suppose $M\boxtimes_C N$ is also $k$-linear finite semisimple. Then the
   $C$-balanced functor $M\otimes N\to sk(M,C,N)$ exhibits $sk(M,C,N)$ as the
   balanced tensor product $M\boxtimes_C N$.
-\end{lemma}%this is the one i want to call a theorem
+\end{lemma}% TODO this is the one i want to call a theorem
 
 \begin{proof}
   Recall that proposition \ref{univ_sk} asserts that the restriction map
