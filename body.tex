@@ -600,17 +600,18 @@ following lemma.
 
   \noindent
   Let $C$ be a finite tensor category, $M_C$, $_{C}N$ finite $k$-linear $C$-module
-  categories, and $L$ a finitely cocomplete category. Then the restriction
-  functor is an equivalence: \[Lin(M \boxtimes_{C} N, L) \xrightarrow{\sim} Bilin^{C-bal}(M \otimes N, L).\]
+  categories, and $L$ a finitely cocomplete category.
+  Suppose the balanced tensor product $M \boxtimes_C N$ exists.
+  Then the restriction
+  functor is an equivalence:
+  \[Lin(M \boxtimes_{C} N, L) \xrightarrow{\sim} Bilin^{C-bal}(M \otimes N, L).\]
 \end{lemma}
 
 \begin{proof}
-  \cite[Remark 3.4]{douglas/balanced-product} [TODO: Jin adds a clearer proof
-  for this. Recall that Manuel comments: I don't see how to make this clearer.
-  If L were k-linear, this would be the universal property of the balanced
-  tensor prod. When L is just finitely cocomplete, this is an a priori
-  stronger univ prop. But in this remark the authors explain how their proof
-  actually shows this stronger univ prop.]
+  If $L$ is assumed to be $k$-linear, this follows from the universal property
+  of the balanced tensor product. Here, $L$ is only assumed to be finite
+  cocomplete, and a proof is outlined in \cite[Remark 3.4]{douglas/balanced-product}.
+  % NOTE This argument is given by Manuel. Jin does not understand it well.
 \end{proof}
 
 \begin{remark}
