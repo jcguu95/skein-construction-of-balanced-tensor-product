@@ -433,14 +433,12 @@ why we only need right-dual well in the appendix.]
 \end{lemma}
 
 \begin{proof}
-  [TODO: Jin checks proof]
-
   Given a $C$-balanced functor $F:M\otimes N \to L$ with balancing $\beta$, we
-  must define $\tilde{F}:M\otimes_C N \to L$ such that its composite with
-  $M\otimes N\to M\otimes_C N$ is $F$. We must take $\tilde{F}=F$ on objects.
-  To define $\tilde{F}$ on morphisms, let $\phi\in Hom_M(m,m'\lhd c)$, $\pi\in
-  Hom_C(c,\bar{c})$ and $\psi\in Hom_N(\bar{c}\rhd n,n')$. We define
-  $\tilde{F}(\phi\otimes\pi\otimes\psi)$ to be the composite
+  will construct $\tilde{F}:M\otimes_C N \to L$ such that its composite with
+  $M\otimes N\to M\otimes_C N$ is $F$. Define $\tilde{F} = F$ on objects.
+  For morphisms, let $\phi\in Hom_M(m,m'\lhd c)$, $\pi\in Hom_C(c,\bar{c})$
+  and $\psi\in Hom_N(\bar{c}\rhd n,n')$. We define
+  $\tilde{F}([\phi\otimes\pi\otimes\psi])$ to be the composite
 
   \[
     \begin{tikzcd}
@@ -452,8 +450,8 @@ why we only need right-dual well in the appendix.]
     \end{tikzcd}.
   \]
 
-  The naturality of $\beta$ with respect to morphisms in $C$ implies that this
-  is equal to the composite
+  \noindent The naturality of $\beta$ with respect to morphisms in $C$ implies
+  that this is equal to the composite
 
   \[
     \begin{tikzcd}
