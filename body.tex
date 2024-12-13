@@ -610,14 +610,13 @@ why we only need right-dual well in the appendix.]
   of the pre-skein category $M \otimes_{C} N$.
 \end{definition}
 
-\noindent It has a $C$-balanced functor $M\otimes N \to sk(M,C,N)$, namely the
-composite $M\otimes N\to M\otimes_C N\to sk(M,C,N)$ of the $C$-balanced
-functor $M\otimes N\to M\otimes_C N$ of Proposition \ref{is_balanced} with the
-canonical functor $M\otimes_C N\to sk(M,C,N)=Cau(M\otimes_C N)$
-(see \ref{definition/cauchy-completion/abstract}).
-%TODO if you compose a C-balanced functor M N -> L with a functor L -> K you
-%get a C-balanced functor. we could add this as a lemma, but i think if we go
-%to this level of detail things start to get heavy.
+\begin{remark}
+  There is a $C$-balanced functor $M\otimes N \to sk(M,C,N)$ obtained by the
+  composite $M\otimes N\to M\otimes_C N\to sk(M,C,N)$, where the first arrow
+  is the $C$-balanced functor in \ref{is_balanced} (thus the composite is
+  automatically $C$-balanced), and the second is the canonical functor to
+  (\ref{definition/cauchy-completion/abstract}).
+\end{remark}
 
 \begin{remark}
   An object in $sk(M,C,N)$ is an idempotent matrix
