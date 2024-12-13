@@ -316,14 +316,6 @@ semisimple.
 \noindent In this section, we present the pre-skein category $M \otimes_{C} N$
 and develop some of its properties.
 
-[TODO: Should we include ``right-dual'' in the definition of preskein category
-as Manuel suggested in
-https://github.com/jcguu95/skein-construction-of-balanced-tensor-product/issues/7
-? Or should we just add a remark explain why the exchanged particle only goes
-one way?
-
-Jin thinks we need bi-dual.]
-
 \begin{definition}\label{pre-skein} (Pre-Skein Category)
   For $C$ a monoidal category and $M_C$, $_{C}N$ module categories, we define
   the pre-skein category $M\otimes_C N$ as follows. Its objects are pairs
@@ -447,6 +439,8 @@ refer to a morphism $(\phi\otimes\pi\otimes\psi)$ as a skein.\end{remark}
   $Hom_{M\otimes_C N}$ one can check that both composites equal
   $(\phi\lhd\id_c)\otimes\pi\otimes(\id_{\bar{c}}\rhd\psi)$.
 \end{proof}
+
+\noindent [TODO: (Jin) Make sure that Manuel explain why we only need right-dual well in the appendix.]
 
 \begin{lemma}\label{beta_invertible}
   If every object in $C$ has a right dual, then the natural transformation
