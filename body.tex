@@ -1,6 +1,5 @@
 \section{Introduction}
 
-
 The notion of a balanced tensor product was first given in
 \cite{etingof/fusion-cat-and-homotopy}, and mainly developed in
 \cite{douglas/balanced-product} and \cite{douglas/dualizable-tensor-categories}. It has different interpretations in various
@@ -120,17 +119,20 @@ which strikes a better mix between algebra and topology. It has a few advantages
 Throughout the whole paper, unless mentioned otherwise, we fix a field $k$ and denote by $\Vect_k$ the category of $k$-vector spaces. We assume all categories, functors and natural transformations are enriched over $\Vect_k$. We always write $\otimes$ instead of $\otimes_k$.
 
 \begin{definition} ($M \otimes N$)
+
+\noindent
 Given categories $M,N$ we denote by $M\otimes N$ the category whose objects are pairs $(m,n)$ with $m\in M$ and $n\in N$ and where $Hom_{M\otimes N}((m,n),(m',n'))=Hom_M(m,m')\otimes Hom(n,n')$.
+
 \end{definition}
 
+\begin{definition} (Linear functor, $Fun(M,N)$, $Lin(M,N)$, $Bilin(M,N)$)
 
-\begin{definition} (Linear functor, $Lin(M,N)$, $Bilin(M,N)$)
-  [TODO: (Jin) Introduce the notation $Fun(M,N)$ in this definition. Explain somewhere the difference between Fun, Lin, and Bilin. Stress that the key difference is the right-exactness. We may consider to use LinRex instead of Lin, as I find it very confusing.]
-  A $\Vect_k$-enriched functor $F:M\to N$ is called linear if it is right
-  exact, i.e. if it preserves all finite colimits. We denote the category of
-  linear functors $M\to N$ by $Lin(M,N)$. A $\Vect_k$-enriched functor
-  $M\otimes N \to L$ is called bilinear if it is linear in each variable. We
-  denote the category of bilinear functors $M\otimes N \to L$ by
+  \noindent Given categories $M, N, L$, denote by $Fun(M,N)$ the category of
+  ($\Vect_k$-enriched) functors from $M$ to $N$. A functor $F \in Fun(M,N)$ is
+  linear if it is right exact (i.e. if it preserves all finite colimits). We
+  denote the category of linear functors $M \to N$ by $Lin(M,N)$. A functor
+  $F \in Fun(M \otimes N, L)$ is called bilinear if it is linear in each
+  variable. We denote the category of bilinear functors $M\otimes N \to L$ by
   $Bilin(M\otimes N, L)$.
 \end{definition}
 
