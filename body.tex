@@ -890,11 +890,11 @@ Given a category $M$, we define $Mat(M)$ to be the category whose objects are tu
 \end{lemma}
 
 \begin{proof}
-  [TODO: Jin checks proof]
+  \noindent We start by showing that $M$ is $k$-linear (essentially, we need to check that $M$ is abelian). We now
+  show that $M$ has kernels, and they are preserved by $F$. (The proof for
+  cokernels is dual to this proof).
 
-  We start by showing that $M$ is $k$-linear (in particular, abelian). We now
-  show that $M$ has kernels, and these are preserved by $F$. The proof for
-  cokernels is dual. So let $x\to y$ be a morphism in $M$. Then $F(x)\to F(y)$ has
+  So let $x\to y$ be a morphism in $M$. Then $F(x)\to F(y)$ has
   a kernel $k'\to F(x)$ in $N$. The short exact sequence $0\to k'\to F(x)\to c'\to 0$
   splits, where $c'$ is the cokernel of $k'\to F(x)$. So we get $F(x)=k'\oplus c'$.
   Then, by Lemma \ref{direct_sum}, we have $x=k\oplus c$ where $F(k)\simeq k'$ and
@@ -908,8 +908,8 @@ Given a category $M$, we define $Mat(M)$ to be the category whose objects are tu
   $F$ is fully faithful, so it reflects limits, hence $k\to x$ is a kernel of
   $x\to y$.
 
-  We will now show that every monomorphism is a kernel. The proof that every
-  epimorphism is a cokernel is dual. Let $a\hookrightarrow x$ be a
+  Next, we show that every monomorphism is a kernel. (The proof that every
+  epimorphism is a cokernel is dual to this proof). Let $a\hookrightarrow x$ be a
   monomorphism in $M$. Since $F$ preserves kernels, we know
   $F(a)\hookrightarrow F(x)$ is a monomorphism. Moreover, if $x\to c$ is the
   cokernel of $a\hookrightarrow x$, then $F(x)\to F(c)$ is the cokernel of
@@ -917,9 +917,11 @@ Given a category $M$, we define $Mat(M)$ to be the category whose objects are tu
   $F(x)=F(a)\oplus F(c)$. Then $x=a\oplus c$ (by Lemma \ref{direct_sum}) and
   so $a\to x$ is the kernel of $x\to c$.
 
-  This concludes the proof that $M$ is $k$-linear. Additionally, we showed that $F:M\to N$ is exact. The fact that every short exact sequence splits in $M$ follows easily from
-  Lemma \ref{direct_sum}, and the facts that $F$ is exact and every short
-  exact sequence splits in $N$.
+  This concludes the proof that $M$ is $k$-linear.
+
+  Finally, we show that $F:M\to N$ is exact. The fact that every short exact
+  sequence splits in $M$ follows easily from Lemma \ref{direct_sum}, and the
+  facts that $F$ is exact and every short exact sequence splits in $N$.
 \end{proof}
 
 \begin{proposition}\label{cau_semi}
