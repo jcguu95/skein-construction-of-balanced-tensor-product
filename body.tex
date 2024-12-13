@@ -670,12 +670,12 @@ holds when $L$ is just a finitely cocomplete category. We record this in the
 following lemma.
 
 \begin{lemma}\label{univ_box}
+
+  \noindent
   Let $C$ be a finite tensor category, $M_C$, $_{C}N$ finite $k$-linear $C$-module
   categories, and $L$ a finitely cocomplete category. Then the restriction
   functor is an equivalence: \[Lin(M \boxtimes_{C} N, L) \xrightarrow{\sim} Bilin^{C-bal}(M \otimes N, L).\]
 \end{lemma}
-%TODO here we are citing douglas/balanced-product, so we need to use their
-%assumptions.
 
 \begin{proof}
   \cite[Remark 3.4]{douglas/balanced-product} [TODO: Manuel adds a clearer
@@ -686,6 +686,14 @@ following lemma.
   % remark the authors explain how their proof actually shows this stronger
   % univ prop.
 \end{proof}
+
+\begin{remark}
+  Some statements in this subsection are based
+  on \cite{douglas/balanced-product}, which assumes $C$ to be a finite tensor
+  category. In particular, that assumes $C$ has both right and left duals.
+  However, we believe some of them could be weakened to $C$ having only right
+  duals.
+\end{remark}
 
 \begin{notation}
   Given a category $M$, we denote by $Fin(M)$ its finite cocompletion. See
