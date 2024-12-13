@@ -240,7 +240,7 @@ from \cite{douglas/balanced-product}.
   N\to L$ is a pair
 
   \[(M \otimes N \xrightarrow{F} L, \alpha)\]
-  where $F$ is a functor and $\alpha$ is a natural isomorphism
+  where $F$ is a ($\Vect_k$-enriched) functor and $\alpha$ is a natural isomorphism
   \[
     \begin{tikzcd}
       M \otimes C \otimes N \arrow[r] \arrow[dr] &
@@ -252,12 +252,6 @@ from \cite{douglas/balanced-product}.
   where the object $(m,c,n)$ in $M \otimes C \otimes N$ is sent by the first
   upper arrow to $(m \lhd c, n)$, and by the first lower arrow to $(m, c \rhd n)$.
 \end{definition}
-% TODO here we don't need to require F bilinear, aka right exact in each
-% variable. the definition of balanced is more general. then we can talk about
-% C-balanced functors Fun^{C-bal}(,) and C-balanced bilinear functors
-% Bilin^{C-bal}(,). however, there is an implicit assumption (from the
-% conventions) that F is a Vect_k-enriched functor (as we assume all functors
-% to be).
 
 \begin{definition} (Balanced Natural Transformation)
 
