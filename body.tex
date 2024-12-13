@@ -440,8 +440,6 @@ refer to a morphism $(\phi\otimes\pi\otimes\psi)$ as a skein.\end{remark}
   $(\phi\lhd\id_c)\otimes\pi\otimes(\id_{\bar{c}}\rhd\psi)$.
 \end{proof}
 
-\noindent [TODO: (Jin) Make sure that Manuel explain why we only need right-dual well in the appendix.]
-
 \begin{lemma}\label{beta_invertible}
   If every object in $C$ has a right dual, then the natural transformation
   $\beta$ described above is an isomorphism.
@@ -472,11 +470,14 @@ functor $M\otimes N\to M\otimes_C N$.
   This is the content of Lemmas \ref{beta_natural} and \ref{beta_invertible}.
 \end{proof}
 
-[TODO: (Manuel) Jin proposes to not make this global assumption, but to call
-it every time it's needed. If we end up making this assumption, we need to at
-least mention it in the convention section.] From now on, we assume that any
-monoidal category $C$ has right duals. The following universal property
-characterizes [TODO: Manuel explains this.] $M\otimes N \to M\otimes_C N$.
+\noindent Therefore, it is natural to assume $C$ to have right duals.
+We will do this frequently from now on. Recall that by definition any tensor
+category has right and left duals. [TODO: (Jin) Make sure that Manuel explain
+why we only need right-dual well in the appendix.]
+
+From now on, we assume that any monoidal category $C$ has right duals. The
+following universal property characterizes [TODO: Manuel explains this.]
+$M\otimes N \to M\otimes_C N$.
 
 \begin{proposition}\label{univ_bal}
   Suppose $C$ is a monoidal category with right duals and $M_C$, $_{C}N$ are
