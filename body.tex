@@ -3,7 +3,6 @@
 
 %% Approved but need to make TODO tags for Jin
 
-%% + TODO 2ba821f (Jin checks.)
 %% + TODO 042ace0 (Jin: be clear why we "need" duals from both sides)
 %% + TODO 5e70d31 (Jin: adds "see main lemma (etc)" in the introduction where we advertise our main theorem)
 %% + TODO 02e655e (Jin: removes the extra period.)
@@ -675,18 +674,18 @@ $M\otimes N\to Fin(M\otimes_C N)$ (because the first one is $C$-balanced).
   % Lemma \ref{univ_finbal} is an equivalence.
 \end{proposition}
 
-\begin{proof}
+\begin{proof} % TODO (Jin) Checks this proof.
 
-  Since $M,N$ are semisimple, any functor $M\otimes N\to L$ is bilinear. So by
-  Lemma \ref{univ_finbal} the map \[Lin(Fin(M \otimes_{C} N), L) \to
+  \noindent Since $M,N$ are semisimple, any functor $M\otimes N\to L$ is bilinear. So by
+  \ref{univ_finbal} the map \[Lin(Fin(M \otimes_{C} N), L) \to
   Bilin^{C-bal}(M \otimes N, L)\] defined by composing with $M\otimes N\to
   Fin(M\otimes_C N)$ is an equivalence for any finitely cocomplete $L$.
 
-  By Lemma \ref{univ_box}, composing with $M\otimes N\to M\boxtimes_C N$ gives
+  \noindent By \ref{univ_box}, composing with $M\otimes N\to M\boxtimes_C N$ gives
   an equivalence \[Lin(M \boxtimes_{C} N, L) \xrightarrow{\sim}
   Bilin^{C-bal}(M \otimes N, L)\] for any finitely cocomplete category $L$.
 
-  So $Fin(M\otimes_C N)$ and $M \boxtimes_{C} N$ are both finitely cocomplete
+  \noindent So $Fin(M\otimes_C N)$ and $M \boxtimes_{C} N$ are both finitely cocomplete
   categories, characterized by the same universal property, so they are
   canonically equivalent.
 \end{proof}
