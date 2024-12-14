@@ -3,7 +3,6 @@
 
 %% Approved but need to make TODO tags for Jin
 
-%% + TODO 2d10cbf
 %% + TODO c4c7b03 (2d10cbf)
 %% + TODO b683e3a
 %% + TODO 08eb1b1 [see c4c7b03]
@@ -375,7 +374,8 @@ refer to a morphism $(\phi\otimes\pi\otimes\psi)$ as a skein.\end{remark}
 
 \begin{lemma}\label{beta_natural}
   The collection of morphisms $\beta_{m,c,n}$ defines a natural transformation
-  of functors $M\otimes C \otimes N\to M\otimes_C N$.
+  of functors $\lhd \otimes 1$ and $1 \otimes \rhd$ from $M\otimes C \otimes
+  N$ to $ M\otimes_C N$.
 \end{lemma}
 
 \begin{proof}
@@ -417,13 +417,13 @@ refer to a morphism $(\phi\otimes\pi\otimes\psi)$ as a skein.\end{remark}
 \begin{proposition}\label{is_balanced}
 
 \noindent Suppose $C$ is a monoidal category with right duals and $M_C$, $_{C}N$ are
-$C$-module categories. Then the data specified in
-Definition \ref{definition/preskeinification} constitutes a $C$-balanced
+$C$-module categories. Then
+\ref{definition/preskeinification} provides a $C$-balanced
 functor $M\otimes N\to M\otimes_C N$.
 \end{proposition}
 
 \begin{proof}
-  This is the content of Lemmas \ref{beta_natural} and \ref{beta_invertible}.
+  This is the content of lemmas \ref{beta_natural} and \ref{beta_invertible}.
 \end{proof}
 
 \noindent Therefore, it is natural to assume $C$ to have right duals.
