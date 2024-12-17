@@ -372,12 +372,14 @@ and develop some of its properties.
 
 \begin{lemma}\label{beta_natural}
   The collection of morphisms $\beta_{m,c,n}$ defines a natural transformation
-  \[\begin{tikzcd}
-	{M\otimes C\otimes N} & {M\otimes_C N}
-	\arrow[""{name=0, anchor=center, inner sep=0}, "{\lhd\otimes\id_N}", curve={height=-12pt}, from=1-1, to=1-2]
-	\arrow[""{name=1, anchor=center, inner sep=0}, "{\id_M\otimes\rhd}"', curve={height=12pt}, from=1-1, to=1-2]
-	\arrow["\beta", shorten <=3pt, shorten >=3pt, Rightarrow, from=0, to=1]
-\end{tikzcd}.\]
+  \[
+    \begin{tikzcd}
+      {M\otimes C\otimes N} & {M\otimes_C N}
+      \arrow[""{name=0, anchor=center, inner sep=0}, "{\lhd\otimes\id_N}", curve={height=-12pt}, from=1-1, to=1-2]
+      \arrow[""{name=1, anchor=center, inner sep=0}, "{\id_M\otimes\rhd}"', curve={height=12pt}, from=1-1, to=1-2]
+      \arrow["\beta", shorten <=3pt, shorten >=3pt, Rightarrow, from=0, to=1]
+    \end{tikzcd}.
+    \]
 \end{lemma}
 
 \begin{proof}
@@ -983,7 +985,7 @@ m_k.$$
   $x=a\oplus c$ (by Lemma \ref{direct_sum}) and so $a\to x$ is the kernel of
   $x\to c$.
 
-  This concludes the proof that $M$ is $k$-linear. Notice that we also showed that $F$ is exact.
+  This concludes the proof that $M$ is $k$-linear, and that $F$ is exact.
 
   Finally, we need that $F:M \to N$ is exact. The fact that every short exact
   sequence splits in $M$ follows easily from Lemma \ref{direct_sum}, and the
@@ -1840,7 +1842,5 @@ introduction), one may find the following basis theorem useful.
 \end{proof}
 
 % TODO: (Jin) Some references are broken. Fix them. (e.g. search ``?'' in the compiled pdf file.)
-
-% TODO: (Jin) Review pull request 12 carefully.
 %
 % TODO: (Jin) Asks PIMS what we should do before pushing to arxiv.
