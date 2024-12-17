@@ -1052,10 +1052,6 @@ We now clarify the role of rigidity in the construction of the balanced tensor
 product. We start by defining $M\otimes_C N$ when $C$ is not assumed to have
 duals.
 
-% TODO (Manuel) Make a remark that says right dual is only good for making the
-% definition of preskeins smaller. And why do we even need both duals? A
-% priori, Kelly tensor product doesn't need any duals.
-
 \begin{definition}\label{pre-skein_no-duals}
 
   \noindent Let $C$ be a monoidal category and let $M_C$ and $_{C}N$ be
@@ -1161,7 +1157,7 @@ duals.
 Let us temporarily denote by $M\otimes_C^d N$ the category of Definition
 \ref{pre-skein}, where the diagonal wires flow downwards (when read from right to left).
 
-\begin{lemma}
+\begin{lemma}\label{equivalent_preskeins}
   
   \noindent Let $C$ be a monoidal category with weak right duals and let $M_C$
   and $_{C}N$ be $C$-module categories. Then the two categories $M\otimes_C N$
@@ -1198,6 +1194,17 @@ Let us temporarily denote by $M\otimes_C^d N$ the category of Definition
   duals (in particular, when $C$ is rigid), then all three categories
   $M\otimes_C N$, $M\otimes^u_C N$ and $M\otimes_C^d N$ are isomorphic.
 \end{remark}
+
+\begin{remark}
+The reuslts of this section explain the role of duals in the theory
+of the balanced Kelly tensor product (of finitely cocomplete categories).
+Namely, the existence of left or right duals in $C$ allows for the category 
+$M\otimes_C N$ to have finite dimensional hom spaces, whenever $M$, $N$ and 
+$C$ have finite dimensional hom spaces. The relevance of having both left and 
+right duals (rigidity) remains unclear from this perspective, although rigidity 
+is a standing assumption in the most general known
+construction of the balanced Deligne tensor product of finite $k$-linear categories 
+(see \cite{douglas/balanced-product}).\end{remark}
 
 \subsection{The Non-semisimple Case} \label{section-nonsemisimple}
 
