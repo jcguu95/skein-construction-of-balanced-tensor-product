@@ -47,8 +47,11 @@ which strikes a better mix between algebra and topology. It has a few advantages
         \cite{douglas/dualizable-tensor-categories}
         \cite{guu/tv-as-3-functor}.
   \item It generalizes seamlessly to balanced tensor products involving more than
-        two module categories (see the picture in definition
-        \ref{definition/skein-category}).
+        two module categories.
+        %% (see the picture in definition \ref{definition/skein-category})
+        %%
+        %% TODO (Manuel) Please add the picture back after explaining the
+        %% iterated version, and make a suitable reference here.
       \end{enumerate}
 
 \noindent Some of the (potential) applications of this work are as follows.
@@ -785,7 +788,7 @@ categories.
 Since we are mostly interested in the characteristic zero case, we record the
 following direct consequence of lemma \ref{sk_bal}.
 
-\begin{theorem}
+\begin{theorem} \label{main-theorem-ver-2}
    Suppose $k$ has characteristic $0$, $C$ is a finite semisimple tensor
    category, and $M_C$,$_{C}N$ are $k$-linear finite semisimple $C$-module
    categories. Then the $C$-balanced functor $M\otimes N\to sk(M,C,N)$
@@ -1767,13 +1770,22 @@ provide another direct proof for this equivalence:
 \end{proposition}
 
 \begin{proof}
-  We provide two proofs. The first proof is to use the main theorem
-  \ref{theorem/main-theorem}, and the known fact that $M \boxtimes_{C} C
+  We provide two proofs. The first proof is immediate upon using the main theorem
+  \ref{main-theorem-ver-2},
+  %% \ref{theorem/main-theorem},
+  and the known fact that $M \boxtimes_{C} C
   \simeq M$. The second proof is direct, without using the main theorem:
 
   Construct the functor $M \xrightarrow{1_{M} \times 1} M \times C
   \xrightarrow{\boxtimes_{C}} sk(M,C,C)$, where $\boxtimes_{C}$ is the
-  canonical map (\ref{definition/canonical-map}). We contend that this is an
+  canonical map
+  %% (\ref{definition/canonical-map})
+  %%
+  %% TODO (Manuel) The reference to definition/canonical-map is currently
+  %% broken. That label currently resides in tmp.3.tex. Please fix this
+  %% reference, or redo the proof.
+  .
+  We contend that this is an
   equivalence of categories. It is straightforward to see that it is indeed
   fully faithful, so it suffices to show that it is essentially surjective. A
   typical object in the codomain $sk(M,C,C)$ is some idempotent skein
@@ -1841,8 +1853,10 @@ introduction), one may find the following basis theorem useful.
 \begin{proof}
   This follows immediately from the reductions given in
   \ref{remark/hom-space-reduction}.
+  % TODO (Manuel) This reference to remark-hom-space-reduction is currently
+  % broken. It is now resided in tmp.3.tex. Jin tried pulling it back, but
+  % Manuel has introduced different notations from Jin's macros \II and \III.
+  % Manuel will fix this reference.
 \end{proof}
 
-% TODO: (Jin) Some references are broken. Fix them. (e.g. search ``?'' in the compiled pdf file.)
-%
 % TODO: (Jin) Asks PIMS what we should do before pushing to arxiv.
