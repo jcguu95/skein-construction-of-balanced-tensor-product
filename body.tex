@@ -86,7 +86,7 @@ denote by $\Vect_k$ the category of $k$-vector spaces. We assume all
 categories, functors and natural transformations are enriched over $\Vect_k$.
 We always write $\otimes$ instead of $\otimes_k$.
 
-\begin{definition} \label{definition/bilinearized-product} ($M \otimes N$)
+\begin{definition} \label{definition/linearized-product} ($M \otimes N$)
 
 \noindent
 Given categories $M,N$ we denote by $M\otimes N$ the category whose objects
@@ -99,14 +99,14 @@ is $M \times N$ with bi-linearlized hom spaces.
 
   \noindent Throughout the paper, we have four kinds of products of two categories.
   \begin{enumerate}
-    \item Bilinearized product $M \otimes N$ (\ref{definition/bilinearized-product}).
+    \item Linearized product $M \otimes N$ (\ref{definition/linearized-product}).
     \item Pre-skein category $M\otimes_C N$ (\ref{pre-skein}).
     \item Deligne tensor product $M \boxtimes N$ (\ref{remark/deligne-tensor-product})
     \item Balanced tensor product $M \boxtimes_C N$ (\ref{definition/balanced-tensor-product})
   \end{enumerate}
 \end{remark}
 
-\begin{definition} (Linear functor, $Fun(M,N)$, $Lin(M,N)$, $Bilin(M,N)$)
+\begin{definition} (Linear functor, $Fun(M,N)$, $Lin(M,N)$, $Bilin(M \otimes N, L)$)
 
   \noindent Given categories $M, N, L$, denote by $Fun(M,N)$ the category of
   ($\Vect_k$-enriched) functors from $M$ to $N$. A functor $F \in Fun(M,N)$ is
@@ -599,11 +599,11 @@ following lemma.
 \begin{lemma}\label{univ_box}
 
   \noindent
-  Let $C$ be a finite tensor category, $M_C$, $_{C}N$ finite $k$-linear $C$-module
-  categories, and $L$ a finitely cocomplete category.
-  Suppose the balanced tensor product $M \boxtimes_C N$ exists.
-  Then the restriction
-  functor is an equivalence:
+  Let $C$ be a finite tensor category, $M_C$, $_{C}N$ finite $k$-linear
+  $C$-module categories, and $L$ a finitely cocomplete category. (Thus the
+  balanced tensor product $M \boxtimes_C N$ exists by
+  \cite{douglas/balanced-product}.) Then the restriction functor is an
+  equivalence:
   \[Lin(M \boxtimes_{C} N, L) \xrightarrow{\sim} Bilin^{C-bal}(M \otimes N, L).\]
 \end{lemma}
 
@@ -966,7 +966,7 @@ m_k.$$
 
   This concludes the proof that $M$ is $k$-linear.
 
-  Finally, we show that $F:M\to N$ is exact. The fact that every short exact
+  Finally, we need that $F:M \to N$ is exact. The fact that every short exact
   sequence splits in $M$ follows easily from Lemma \ref{direct_sum}, and the
   facts that $F$ is exact and every short exact sequence splits in $N$.
 \end{proof}
