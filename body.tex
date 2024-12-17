@@ -562,13 +562,9 @@ why we only need right-dual well in the appendix.]
 \end{proposition}
 
 \begin{proof}
-  \noindent [TODO: (Manuel) Work on refactoring the big definition of Cauchy
-  completion, and isolate the properties into referable entries. Add
-  (implicit) comments pointing out the gap. Use the referable entries to
-  rewrite this proof. ]
-  % Old sketch: From Proposition \ref{univ_bal} and the universal property of
-  % the Cauchy completion, we immediately obtain the following universal
-  % property characterizing $sk(M,C,N)$.
+ We wish to show the composite $$Fun(sk(M,C,N),L)\to Fun(M\otimes_C N, L)\to Fun^{C-bal}(M\otimes N,L)$$ is an equivalence.
+ The first functor is an equivalence by the universal property of the Cauchy completion (\ref{univ_prop_cau})
+ and the second one is an equivalence by Proposition \ref{univ_bal}.
 \end{proof}
 
 \begin{remark}
@@ -796,23 +792,29 @@ algebraic ones (i.e. those defined by modules over algebras).]
 
 \noindent In this subsection, we collect results about completions of categories.
 
+\begin{definition} (Cauchy complete category)
+
+\noindent A ($\Vect_k$-enriched) category $M$ is Cauchy complete if it has all finite direct sums and all idempotents split. \end{definition}
+
+%Below we collect well known facts about Cauchy completion in the \Vect_k-enriched setting. Unfortunately, we have not been able to find satisfactory references for all of this.
+
 \begin{definition} \label{definition/cauchy-completion/abstract} (Cauchy Completion (Abstract))
-  A category $M$ is Cauchy complete if it has all finite direct sums and all
-  idempotents split [TODO: Manuel explains this]. Given any $M$, we denote by $\Cau(M)$ the Cauchy
-  completion of $M$, the smallest subcategory of $Fun(M^{op},\Vect_k)$
+
+\noindent Given a category $M$, we denote by $\Cau(M)$ the Cauchy
+  completion of $M$. It is the smallest subcategory of $Fun(M^{op},\Vect_k)$
   containing all the representables and closed under finite direct sums and
   retracts. Its objects can be identified as those $X\in Fun(M^{op},\Vect_k)$
-  such that $\underline{Hom}(X,-):Fun(M^{op},\Vect_k)\to\Vect_k$ preserves all
+  such that $Hom_{Fun(M^{op},\Vect_k)}(X,-):Fun(M^{op},\Vect_k)\to\Vect_k$ preserves all
   small colimits. Alternatively, they are the retracts of finite direct sums
-  of representables.
+  of representables. The Yoneda embedding induces a fully faithful functor $M\hookrightarrow Cau(M)$. A reference is \cite[Sections 5.5 and 5.7]{kelly/basic-concepts-enriched}.\end{definition}  
+ 
+ \begin{lemma}\label{univ_prop_cau}
+  For any category $M$, the category $Cau(M)$ is Cauchy complete. For any Cauchy complete category $L$, the restriction
+  map $$Fun(\Cau(M),L)\to Fun(M,L)$$ is an equivalence.\end{lemma}
+\begin{proof}
+See \cite[Sections 5.5 and 5.7]{kelly/basic-concepts-enriched}.\end{proof}
 
-  $Cau(M)$ is Cauchy complete [TODO: Manuel explains this], and comes equipped with a functor
-  $M\to \Cau(M)$. It is characterized by a universal property. Namely, given
-  any Cauchy complete category $L$, the restriction
-  map $$Fun(\Cau(M),L)\to Fun(M,L)$$ is an equivalence. A reference is
-  \cite[Sections 5.5 and 5.7]{kelly/basic-concepts-enriched}.
-\end{definition}
-
+  
 \noindent We recall the usual explicit construction of the Cauchy completion $Cau(M)$ of a ($\Vect_k$-enriched) category $M$ in [TODO: Manuel adds reference].
 
 \begin{definition}
@@ -820,7 +822,7 @@ algebraic ones (i.e. those defined by modules over algebras).]
 Given a category $M$, we define $Mat(M)$ to be the category whose objects are tuples of objects in $M$. We denote such an object by $m_1\oplus\cdots\oplus m_k$. We then define $$Hom_{Mat(M)}(m_1\oplus\cdots\oplus m_k,n_1\oplus\cdots\oplus n_{\ell})$$ to be the $k$-vector space of $(\ell\times k)$ matrices whose $(i,j)$-th entry is a morphism $m_j\to n_i$ in $M$. Composition is defined by matrix product. \end{definition}
 
 \begin{definition}
-  Given a category $M$, we define its Karoubi completion $Kar(M)$ to be the category whose objects are idempotent endomorphisms $m \xrightarrow{p} m$ in $M$, and the hom space $Hom_{Kar(C)}(m \xrightarrow{p} m, n \xrightarrow{q} n)$ is the $k$-linear subspace of $Hom_{M}(m,n)$ consisting of $f$ such that the following diagram commutes
+  Given a category $M$, we define its Karoubi completion $Kar(M)$ to be the category whose objects are idempotent endomorphisms $m \xrightarrow{p} m$ in $M$, and the hom space $Hom_{Kar(C)}(m \xrightarrow{p} m, n \xrightarrow{q} n)$ is the $k$-linear subspace of $Hom_{M}(m,n)$ consisting of $f$ such that the following diagram commutes.
   \[\begin{tikzcd}
 	m & n \\
 	m & n
@@ -829,11 +831,11 @@ Given a category $M$, we define $Mat(M)$ to be the category whose objects are tu
 	\arrow["f", from=1-1, to=2-2]
 	\arrow["q", from=1-2, to=2-2]
 	\arrow["f"', from=2-1, to=2-2]
-\end{tikzcd}\] commutes.\end{definition}
+\end{tikzcd}\] \end{definition}
 
 \begin{definition} \label{definition/cauchy-completion/explicit} (Cauchy Completion, Explicit)
 
-  The explicit construction of the Cauchy completion is given by $Cau(M)=Kar(Mat(M))$. \end{definition}
+\noindent The explicit construction of the Cauchy completion is given by $Cau(M)=Kar(Mat(M))$. \end{definition}
 
 \noindent So an object in $Cau(M)$ is an idempotent matrix $$m_1\oplus\cdots\oplus m_k \xrightarrow{A} m_1\oplus\cdots\oplus m_k.$$
 
@@ -949,28 +951,37 @@ Given a category $M$, we define $Mat(M)$ to be the category whose objects are tu
   $F(x_i)\simeq x_i'$ so $x_i$ is simple.
 \end{proof}
 
+\begin{definition}\label{definition/finitely-cocomplete}(Finitely cocomplete category)
+
+\noindent A category $M$ is finitely cocomplete if it has all finite colimits. 
+\end{definition}
+
+
 \begin{definition} \label{definition/finite-cocompletion} ($Fin(M)$, finite cocompletion)
-  A category $M$ is finitely cocomplete if it has all finite colimits. Given a
-  category $M$, we denote by $Fin(M)$ its finite cocompletion, the
+
+ \noindent Given a category $M$, we denote by $Fin(M)$ its finite cocompletion. It is the
   smallest finitely cocomplete subcategory of $Fun(M^{op},\Vect_k)$ that
   contains all the representables. Its objects can be identified as those
   $X\in Fun(M^{op},\Vect_k)$ such that
   $Hom_{Fun(M^{op},\Vect_k)}(X,-):Fun(M^{op},\Vect_k)\to \Vect_k$ preserves filtered
   colimits. Alternatively, they are the coequalisers of pairs of morphisms
-  between finite coproducts of representables. [TODO: Manuel provides better references for each claim given here.]
-
-  There is fully
-  faithful functor $M\to Fin(M)$ induced by the Yoneda embedding $M \to Fun(M^{op}, \Vect_{k})$. It is characterized by a universal
-  property: for any finitely cocomplete $L$, the restriction map
-  $Lin(Fin(M),L)\to Fun(M,L)$ is an equivalence. References include
+  between finite coproducts of representables. The Yoneda embedding induces a fully
+  faithful functor $M\hookrightarrow Fin(M)$. References include
   \cite[Section 5.7]{kelly/basic-concepts-enriched} and \cite[Section
-  2.2.1]{lopezfranco/tensor-products}.
+  2.2.1]{lopezfranco/tensor-products}. [TODO: Manuel provides better references for each claim given here.]
 \end{definition}
+
+\begin{lemma}\label{univ_prop_fin}
+For any finitely cocomplete $L$, the restriction map $Lin(Fin(M),L)\to Fun(M,L)$ is an equivalence.  
+\end{lemma}
+\begin{proof}
+ See \cite[Section 5.7]{kelly/basic-concepts-enriched} and \cite[Section
+  2.2.1]{lopezfranco/tensor-products}.\end{proof}
+
 
 \begin{remark}
   From our descriptions of $Cau(M)$
-  (\ref{definition/cauchy-completion/abstract},
-  \ref{definition/cauchy-completion/explicit}) and $Fin(M)$
+  (\ref{definition/cauchy-completion/abstract}) and $Fin(M)$
   (\ref{definition/finite-cocompletion}) it is immediate that we have fully
   faithful functors $M\hookrightarrow Cau(M)\hookrightarrow Fin(M)$.
 \end{remark}
@@ -984,40 +995,47 @@ We now clarify the role of rigidity in the construction of the balanced tensor p
 Let $C$ be a monoidal category and let $M_C$ and $_{C}N$ be $C$-module categories. We define $M\otimes_C N$ as the category whose objects are pairs $(m,n)$ and whose morphism spaces are the spaces of alternating skeins of arbitrary (finite) length, as depicted below.
 
 \begin{center}\includesvg{graphics/up_down_skein}\end{center}
-This should of course be interpreted as a suitable direct sum of tensor products of morphism spaces in $M$, $C$ and $N$. We impose relations analogous to those in Definition \ref{pre-skein}, plus the two extra relations below (and one obvious reflection of each of those).
+This should of course be interpreted as a suitable direct sum of tensor products of morphism spaces in $M$, $C$ and $N$. We impose relations analogous to those in Definition \ref{pre-skein}, plus the extra relations below.
 
 
 \begin{center}\begin{tabular}{l}
 \includesvg{graphics/relation2} \\
+\includesvg{graphics/relation2b} \\
 \includesvg{graphics/relation3} \\
-\includesvg{graphics/relation4}
-\end{tabular}\end{center} Each of these relations may be applied locally to any finite length alternating skein. In the case of the third relation, after applying it one must apply the composition rule from Definition \ref{pre-skein} to obtain an alternating skein again.
+\includesvg{graphics/relation3b} \\
+\includesvg{graphics/relation4} \\
+\includesvg{graphics/relation4b}
+\end{tabular}\end{center} Each of these relations may be applied locally to any finite length alternating skein. In the case of the last two relations, after applying the relation one must apply the composition rule from Definition \ref{pre-skein} to obtain an alternating skein again.
 
 Composition is defined by horizontally stacking the two diagrams and then applying the composition rule from Definition \ref{pre-skein} if there are parallel diagonal wires.\end{definition}
 
 \begin{definition}(Alternative)
  
-\end{definition}
-Let $C$ be a monoidal category and let $M_C$ and $_{C}N$ be $C$-module categories. We define $M\otimes_C N$ as the category whose objects are pairs $(m,n)$ and whose morphism spaces are freely generated under composition by 
+Let $C$ be a monoidal category and let $M_C$ and $_{C}N$ be $C$-module categories. We define $M\otimes_C N$ by starting with $M\otimes N$, then freely adjoining morphisms $(m\lhd c, n)\to (m,c\rhd n)$ and $(m,c\rhd n)\to (m\lhd c, n)$ for each $m\in M$, $n\in N$ and $c\in C$ (depicted below)
 \begin{center}
-\begin{tabular}{lllll}
-\includesvg{graphics/beta_notext} &  & \includesvg{graphics/beta_inv} &  & \includesvg{graphics/phi_psi} 
+\begin{tabular}{ll}
+\includesvg{graphics/generator1} & \includesvg{graphics/generator2}
+
 \end{tabular}
 \end{center}
 
-subject to the relations
+and finally imposing the relations below (where we denote composition by concatenation).
 
 \begin{center}
 \begin{tabular}{l}
-\includesvg{graphics/relation5} \\ \\
 
 \includesvg{graphics/relation6} \\ \\ 
 
 \includesvg{graphics/relation7} \\ \\
 
-\includesvg{graphics/relation8}
+\includesvg{graphics/relation8} \\ \\
+
+\includesvg{graphics/relation9} where $\pi:c\to\bar{c}$ is a morphism in $C$ \\ \\
+
+\includesvg{graphics/relation10} where $\pi:c\to\bar{c}$ is a morphism in $C$
 \end{tabular}
-\end{center}
+\end{center}\end{definition}
+
 
 \begin{definition}
  
@@ -1031,7 +1049,7 @@ A monoidal category with weak right duals is a monoidal category where every obj
 
 \begin{lemma}\label{up_skein}
   
-Let $C$ be a monoidal category with weak right duals and let $M_C$ and $_{C}N$ be $C$-module categories. Suppose $(c^*,\eta,\epsilon)$ is a weak right dual for $c$. Then \begin{center}\includesvg{graphics/up_skein}\end{center} in $M\otimes_C N$.
+Let $C$ be a monoidal category with weak right duals and let $M_C$ and $_{C}N$ be $C$-module categories. Suppose $(c^*,\eta,\epsilon)$ is a weak right dual for $c$. Then \begin{center}\includesvg{graphics/up_equals_dual_down}\end{center} in $M\otimes_C N$.
 \end{lemma}
 
 \begin{proof} Both sides of the equation are inverse to \begin{center}\includesvg{down_skein}.\end{center} For the left hand side, this follows from the relations in Definition \ref{pre-skein_no-duals}. For the right hand side, it follows from the proof of Lemma \ref{beta_invertible}, where only the fact that $(c^*,\eta,\epsilon)$ is a weak right dual for $c$ is used.\end{proof}
@@ -1233,7 +1251,7 @@ So we obtain an adjunction \[\begin{tikzcd}
 
 \begin{lemma}
 Given a small sketch $(A^{op},\Phi)$, the functor $K_{\Phi}:A\to C_{\Phi}$ is a $\Phi$-comodel, i.e. it sends $\Phi$-cocones in $A$ to colimit cocones in $C_{\Phi}$.\end{lemma}
-\begin{proof}This is (a special case of) statement (5.51) in \cite{kelly/basic-concepts-enriched}. Since the proof is short, we can record it here. We must show that, given any object $\phi\in C_{\Phi}=\Phi-Alg$, the functor $C_{\Phi}(RY-,\phi):A^{op}\to\Vect_k$ is a $\Phi$-algebra, i.e. sends $\Phi$-cocones in $A$ to limit cones in $\Vect_k$. But $C_{\Phi}(R_{\Phi}Y-,\phi)\simeq Fun(A^{op},\Vect_k)(Y-,\phi)\simeq\phi$.\end{proof}
+\begin{proof}This is (a special case of) statement (5.51) in \cite{kelly/basic-concepts-enriched}. Since the proof is short, we can record it here. We must show that, given any object $\phi\in C_{\Phi}=\Phi-Alg$, the functor $C_{\Phi}(R_{\Phi}Y-,\phi):A^{op}\to\Vect_k$ is a $\Phi$-algebra, i.e. sends $\Phi$-cocones in $A$ to limit cones in $\Vect_k$. But $C_{\Phi}(R_{\Phi}Y-,\phi)\simeq Fun(A^{op},\Vect_k)(Y-,\phi)\simeq\phi$.\end{proof}
 
 
 \begin{remark}
@@ -1380,5 +1398,3 @@ may find the following basis theorem useful.
 \begin{proof}
   This follows immediately from the reductions given in \ref{remark/hom-space-reduction}.
 \end{proof}
-
-\noindent [TODO: (Manuel) Updates the bibliography.]
