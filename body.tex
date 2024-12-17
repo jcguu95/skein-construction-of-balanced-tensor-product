@@ -353,8 +353,12 @@ refer to a morphism $(\phi\otimes\pi\otimes\psi)$ as a skein.\end{remark}
 
 \begin{lemma}\label{beta_natural}
   The collection of morphisms $\beta_{m,c,n}$ defines a natural transformation
-  of functors $\lhd \otimes 1$ and $1 \otimes \rhd$ from $M\otimes C \otimes
-  N$ to $ M\otimes_C N$.
+  \[\begin{tikzcd}
+	{M\otimes C\otimes N} & {M\otimes_C N}
+	\arrow[""{name=0, anchor=center, inner sep=0}, "{\lhd\otimes\id_N}", curve={height=-12pt}, from=1-1, to=1-2]
+	\arrow[""{name=1, anchor=center, inner sep=0}, "{\id_M\otimes\rhd}"', curve={height=12pt}, from=1-1, to=1-2]
+	\arrow["\beta", shorten <=3pt, shorten >=3pt, Rightarrow, from=0, to=1]
+\end{tikzcd}.\]
 \end{lemma}
 
 \begin{proof}
