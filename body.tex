@@ -825,7 +825,14 @@ See \cite[Sections 5.5 and 5.7]{kelly/basic-concepts-enriched}.\end{proof}
 
 \begin{definition}
 
-Given a category $M$, we define $Mat(M)$ to be the category whose objects are tuples of objects in $M$. We denote such an object by $m_1\oplus\cdots\oplus m_k$. We then define $$Hom_{Mat(M)}(m_1\oplus\cdots\oplus m_k,n_1\oplus\cdots\oplus n_{\ell})$$ to be the $k$-vector space of $(\ell\times k)$ matrices whose $(i,j)$ entry is a morphism $m_j\to n_i$ in $M$. Composition is defined by matrix product. \end{definition}
+\noindent Given a category $M$, we define $Mat(M)$ to be the category whose
+  objects are tuples of objects in $M$. We denote such an object by
+  $m_1\oplus\cdots\oplus m_k$. We then
+  define $$Hom_{Mat(M)}(m_1\oplus\cdots\oplus m_k,n_1\oplus\cdots\oplus
+  n_{\ell})$$ to be the $k$-vector space of $(\ell\times k)$ matrices whose
+  $(i,j)$-th entry is a morphism $m_j\to n_i$ in $M$. Composition is defined
+  by matrix product. 
+\end{definition}
 
 \begin{definition}
   Given a category $M$, we define its Karoubi completion $Kar(M)$ to be the category whose objects are idempotent endomorphisms $m \xrightarrow{p} m$ in $M$, and the hom space $Hom_{Kar(C)}(m \xrightarrow{p} m, n \xrightarrow{q} n)$ is the $k$-linear subspace of $Hom_{M}(m,n)$ consisting of $f$ such that the following diagram commutes.
