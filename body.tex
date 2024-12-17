@@ -257,17 +257,9 @@ semisimple.
 \noindent In this section, we present the pre-skein category $M \otimes_{C} N$
 and develop some of its properties.
 
-% TODO (Jin) resolves this after reading `rigidity'.
-%% Comment from Manuel: I think this definition should include the condition
-%% that C has right duals. Although the definition (and some of the results
-%% below) makes sense without this condition, it only has the correct
-%% universal property (\ref{univ_bal}) when C has right duals. In the appendix
-%% we then define the preskein category without assuming duals, but then we
-%% need to allow skeins going up and down. Maybe add a pointer here to the
-%% definition without duals in the appendix.
-
 \begin{definition}\label{pre-skein} (Pre-Skein Category)
-  For $C$ a monoidal category and $M_C$, $_{C}N$ module categories, we define
+  For $C$ a monoidal category having weak right duals (cf \ref{definition/weak-right-dual})
+  and $M_C$, $_{C}N$ module categories, we define
   the pre-skein category $M\otimes_C N$ as follows. Its objects are pairs
   $(m,n)$ with $m\in M$ and $n\in N$, which we denote by $m\boxtimes n$. The
   hom space $Hom_{M\otimes_C N}(m\boxtimes n, m'\boxtimes n')$, as a
@@ -321,10 +313,21 @@ and develop some of its properties.
 
 \begin{remark}
  
-We abuse notation by writing $(\phi\otimes\pi\otimes\psi)$ to denote the
-corresponding equivalence class in $Hom_{M\otimes_C N}((m,n),(m',n'))$. We
-refer to a morphism $(\phi\otimes\pi\otimes\psi)$ as a skein.\end{remark}
+  \noindent We abuse notation by writing $(\phi\otimes\pi\otimes\psi)$ to
+  denote the corresponding equivalence class in $Hom_{M\otimes_C
+    N}((m,n),(m',n'))$. We refer to a morphism $(\phi\otimes\pi\otimes\psi)$
+  as a skein.
+\end{remark}
 
+\begin{remark}
+
+  \noindent In definition \ref{pre-skein}, we require $C$ to have weak right
+  duals. Algebraically, the construction makes sense even without this
+  assumption, but then it would lose contact with its topological nature. To
+  clarify the role played by the weak duals, we define the general preskein
+  category cor $C$ not necessarily having weak duals at all
+  in \label{pre-skein_no-duals} and \label{pre-skein_no-duals_2}.
+\end{remark}
 
 \begin{remark}\label{absorb}
   
@@ -426,8 +429,7 @@ functor $M\otimes N\to M\otimes_C N$.
 
 \noindent Therefore, it is natural to assume $C$ to have right duals.
 We will do this frequently from now on. Recall that by definition any tensor
-category has right and left duals. [TODO: (Jin) Make sure that Manuel explain
-why we only need right-dual well in the appendix.]
+category has right and left duals.
 
 \begin{proposition}\label{univ_bal}
   Suppose $C$ is a monoidal category with right duals and $M_C$, $_{C}N$ are
@@ -1048,16 +1050,29 @@ m_k.$$
   faithful functors $M\hookrightarrow Cau(M)\hookrightarrow Fin(M)$.
 \end{remark}
 
-\subsection{Rigidity} % TODO (Jin) has to check this subsection after Manuel finishes it.
+\subsection{Rigidity}
 
-We now clarify the role of rigidity in the construction of the balanced tensor
-product. We start by defining $M\otimes_C N$ when $C$ is not assumed to have
-duals.
+\noindent This section explains the role of duals in the theory of the
+balanced Kelly tensor product (of finitely cocomplete categories). Namely, the
+existence of left or right duals in $C$ allows for the category $M \otimes_C
+N$ to have finite dimensional hom spaces, whenever $M$, $N$ and $C$ have
+finite dimensional hom spaces. The relevance of having both left and right
+duals (rigidity) remains unclear to us from this perspective, although
+rigidity is a standing assumption in the most general known construction of
+the balanced Deligne tensor product of finite $k$-linear categories (see
+\cite{douglas/balanced-product}).
 
-\begin{definition}\label{pre-skein_no-duals}
+Similar to the preskein category $M \otimes_C N$, we define the general
+preskein category $M \hat{\otimes}_C N$ that works for monoidal categories $C$
+not necessarily with duals in \ref{pre-skein_no-duals},
+\ref{pre-skein_no-duals_2}. We then prove that they are in fact isomorphic
+categories when $C$ has weak duals
+(\ref{lemma/equivalence-of-two-preskein-cats}).
 
-  \noindent Let $C$ be a monoidal category and let $M_C$ and $_{C}N$ be
-  $C$-module categories. We define $M\otimes_C N$ as the category whose
+\begin{definition} \label{pre-skein_no-duals} (General Preskein Category, $M \hat{\otimes}_C N$)
+
+  \noindent Let $C$ be a monoidal category (not necessarily with duals) and let $M_C$ and $_{C}N$ be
+  $C$-module categories. We define $M \hat{\otimes}_C N$ as the category whose
   objects are pairs $(m,n)$ and whose morphism spaces are the spaces of
   alternating skeins of arbitrary (finite) length, as depicted below.
 
@@ -1083,7 +1098,7 @@ duals.
 
   Each of these relations may be applied locally to any finite length
   alternating skein. In the case of the last two relations, after applying the
-  relation one must apply the composition rule from Definition \ref{pre-skein}
+  relation one must apply the composition rule from definition \ref{pre-skein}
   to obtain an alternating skein again.
 
   Composition is defined by horizontally stacking the two diagrams and then
@@ -1091,10 +1106,10 @@ duals.
   parallel diagonal wires.
 \end{definition}
 
-\begin{definition}(Alternative)
+\begin{definition} \label{pre-skein_no-duals_2} (General Preskein Category (alternative))
  
   \noindent Let $C$ be a monoidal category and let $M_C$ and $_{C}N$ be
-  $C$-module categories. We define $M\otimes_C N$ by starting with $M\otimes
+  $C$-module categories. We define $M \hat{\otimes}_C N$ by starting with $M \otimes
   N$, then freely adjoining morphisms $(m\lhd c, n)\to (m,c\rhd n)$ and
   $(m,c\rhd n)\to (m\lhd c, n)$ for each $m\in M$, $n\in N$ and $c\in C$
   (depicted below)
@@ -1106,7 +1121,7 @@ duals.
     \end{tabular}
   \end{center}
 
-  and finally imposing the relations below (where we denote composition by
+  \noindent and finally imposing the relations below (where we denote composition by
   concatenation).
 
   \begin{center}
@@ -1122,8 +1137,7 @@ duals.
 
 \end{definition}
 
-
-\begin{definition}
+\begin{definition} \label{definition/weak-right-dual}
  
   \noindent Given an object $c$ in a monoidal category $C$, a weak right dual
   for $c$ is a triple $(c^*,\eta,\epsilon)$, where $c^*$ is an object in $C$
@@ -1144,41 +1158,39 @@ duals.
   and $_{C}N$ be $C$-module categories. Suppose $(c^*,\eta,\epsilon)$ is a
   weak right dual for $c$.
   Then \begin{center}\includesvg{graphics/up_equals_dual_down}\end{center} in
-  $M\otimes_C N$.
+  $M \hat{\otimes}_C N$.
 \end{lemma}
 
 \begin{proof}
   Both sides of the equation are inverse
   to \begin{center}\includesvg{down_skein}.\end{center} For the left hand
-  side, this follows from the relations in Definition
+  side, this follows from the relations in definition
   \ref{pre-skein_no-duals}. For the right hand side, it follows from the proof
-  of Lemma \ref{beta_invertible}, where only the fact that
+  of lemma \ref{beta_invertible}, where only the fact that
   $(c^*,\eta,\epsilon)$ is a weak right dual for $c$ is used.
 \end{proof}
 
-Let us temporarily denote by $M\otimes_C^d N$ the category of Definition
-\ref{pre-skein}, where the diagonal wires flow downwards (when read from right to left).
-
-\begin{lemma}\label{equivalent_preskeins}
+\begin{lemma} \label{lemma/equivalence-of-two-preskein-cats}
   
   \noindent Let $C$ be a monoidal category with weak right duals and let $M_C$
-  and $_{C}N$ be $C$-module categories. Then the two categories $M\otimes_C N$
-  and $M\otimes^{d}_C N$ are isomorphic.
+  and $_{C}N$ be $C$-module categories. Then the preskein category $M
+  \otimes_C N$ and the general preskein category $M \hat{\otimes}_C N$ are
+  isomorphic.
 \end{lemma}
 
 \begin{proof}
-  There is an obvious functor $M\otimes_C^d N\to M\otimes_C N$ which is a
+  There is an obvious functor $M \otimes_C N \to M \hat{\otimes}_C N$ which is a
   bijection on objects. To show that it is an isomorphism on morphism spaces,
-  we use Lemma \ref{up_skein} to reduce every morphism in $M\otimes_C N$ to a
-  morphism in $M\otimes^d_C N$.
+  we use Lemma \ref{up_skein} to reduce every morphism in $M \hat{\otimes}_C N$ to a
+  morphism in $M\otimes_C N$.
 \end{proof}
 
 \begin{proposition}
 
   \noindent Let $C$ be a monoidal category, let $M_C$ and $_{C}N$ be
   $C$-module categories and let $L$ be a category. Then composition with
-  $M\otimes N \to M\otimes_C N$ induces an equivalence of categories
-  $Fun(M\otimes_C N,L)\to Fun^{C-bal}(M\otimes N,L)$.
+  $M \otimes N \to M \otimes_C N$ induces an equivalence of categories
+  $Fun(M \hat{\otimes}_C N,L) \to Fun^{C-bal}(M \otimes N,L)$.
 \end{proposition}
 
 \begin{proof}
@@ -1189,25 +1201,15 @@ Let us temporarily denote by $M\otimes_C^d N$ the category of Definition
 \end{proof}
   
 \begin{remark}
-  We could also define a category $M\otimes_C^u N$ where the diagonal wires go
-  up. This category is isomorphic to the category $M\otimes_C N$ of Definition
-  \ref{pre-skein_no-duals} when $C$ has weak left duals (defined in an
-  analogous way to weak right duals). When $C$ has both weak left and right
-  duals (in particular, when $C$ is rigid), then all three categories
-  $M\otimes_C N$, $M\otimes^u_C N$ and $M\otimes_C^d N$ are isomorphic.
-\end{remark}
-
-\begin{remark}
-
-  \noindent This section explains the role of duals in the theory of the
-  balanced Kelly tensor product (of finitely cocomplete categories). Namely,
-  the existence of left or right duals in $C$ allows for the category
-  $M \otimes_C N$ to have finite dimensional hom spaces, whenever $M$, $N$ and
-  $C$ have finite dimensional hom spaces. The relevance of having both left
-  and right duals (rigidity) remains unclear from this perspective, although
-  rigidity is a standing assumption in the most general known construction of
-  the balanced Deligne tensor product of finite $k$-linear categories (see
-  \cite{douglas/balanced-product}).
+  While read from right to left, the wires in the definition of preskein
+  category go down, while the wires in the definition of the general preskein
+  category go both ways. We could also define the ``opposite'' preskein
+  category where the diagonal wires go up (read from right to left). This
+  category is isomorphic to the general preskein category $M \hat{\otimes}_C
+  N$ of definition \ref{pre-skein_no-duals} when $C$ has weak left duals
+  (defined in an analogous way to weak right duals). When $C$ has both weak
+  left and right duals (in particular, when $C$ is rigid), then all three
+  categories are isomorphic.
 \end{remark}
 
 \subsection{The Non-semisimple Case} \label{section-nonsemisimple}
