@@ -602,12 +602,15 @@ We will show that $M\otimes N\to sk(M,C,N)$ presents $sk(M,C,N)$ as the
 balanced tensor product $M\boxtimes_C N$ whenever $C$ is a finite tensor category 
 and $M$, $N$ and $M\boxtimes_C N$ are finite semisimple.
 
-In \cite{douglas/balanced-product}, the existence of the balanced tensor
+\begin{remark} In \cite{douglas/balanced-product}, the existence of the balanced tensor
 product is established, when $C$ is a finite tensor category and $M_C,_{C}N$ 
-are finite $C$-module categories. The authors
-also remark that in this case the universal property described in definition 
-\ref{definition/balanced-tensor-product} still
-holds when $L$ is just a finitely cocomplete category.
+are finite $k$-linear $C$-module categories. That is the reason for the appearance of the finiteness conditions
+on $M$, $C$, $N$ and the rigidity assumption on $C$ in the statements of all results in
+the present paper which involve the balanced tensor product.\end{remark}
+
+In \cite{douglas/balanced-product} the authors remark that their construction of $M\boxtimes_C N$ 
+allows them to extend its universal property (as described in \ref{definition/balanced-tensor-product})
+to the case when the target category $L$ is just a finitely cocomplete category.
 We record this in the following lemma.
 
 \begin{lemma}\label{univ_box}
@@ -627,16 +630,6 @@ We record this in the following lemma.
   cocomplete, and a proof is outlined in \cite[Remark 3.4]{douglas/balanced-product}.
   % NOTE This argument is given by Manuel. Jin does not understand it well.
 \end{proof}
-
-\begin{remark}
-  Some statements in this subsection are based
-  on \cite{douglas/balanced-product}, which assumes $C$ to be a finite tensor
-  category. In particular, that assumes $C$ has both right and left duals, while
-  some of them could be weakened to $C$ having only right
-  duals.
-  % TODO (Manuel) remove this part, but explain when exactly we need rigt
-  % duals, and when exactly do we need both duals (tensor category).
-\end{remark}
 
 \begin{notation}
   Given a category $M$, we denote by $Fin(M)$ its finite cocompletion
