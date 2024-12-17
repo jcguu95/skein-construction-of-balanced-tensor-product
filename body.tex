@@ -86,8 +86,8 @@ which strikes a better mix between algebra and topology. It has a few advantages
         aspects of balanced tensor products.
 \end{enumerate}
 
-% TODO Add this section back, or remove it.
-\include{tmp.1}
+%% % TODO Add this section back, or remove it.
+%% \include{tmp.1}
 
 \subsection{Preliminaries}\label{subsection/preliminaries}
 
@@ -168,8 +168,8 @@ results from acting with $c\in C$ on $m\in M$.
 
 \end{notation}
 
-% TODO Add this section back, or remove it.
-\include{tmp.2}
+%% % TODO Add this section back, or remove it.
+%% \include{tmp.2}
 
 \section{Balanced Tensor Product (Algebra)}\label{section/balanced-tensor-product}
 
@@ -675,20 +675,20 @@ $M\otimes N\to Fin(M\otimes_C N)$ (because the first one is $C$-balanced).
   % Lemma \ref{univ_finbal} is an equivalence.
 \end{proposition}
 
-\begin{proof} % TODO (Jin) Checks this proof.
+\begin{proof}
 
   \noindent Since $M,N$ are semisimple, any functor $M\otimes N\to L$ is
-  bilinear. So by \ref{univ_finbal} the map \[Lin(Fin(M \otimes_{C} N), L) \to
+  bilinear (right exact in both variables).
+  So by \ref{univ_finbal} the map \[Lin(Fin(M \otimes_{C} N), L) \to
   Bilin^{C-bal}(M \otimes N, L)\] defined by composing with $M\otimes N\to
   Fin(M\otimes_C N)$ is an equivalence for any finitely cocomplete $L$.
-
   By \ref{univ_box}, composing with $M\otimes N\to M\boxtimes_C N$ gives
   an equivalence \[Lin(M \boxtimes_{C} N, L) \xrightarrow{\sim}
   Bilin^{C-bal}(M \otimes N, L)\] for any finitely cocomplete category $L$.
 
-  So $Fin(M\otimes_C N)$ and $M \boxtimes_{C} N$ are both finitely cocomplete
-  categories, characterized by the same universal property, so they are
-  canonically equivalent.
+  Thus, $Fin(M\otimes_C N)$ and $M \boxtimes_{C} N$ are both finitely cocomplete
+  categories and are both characterized by the same universal property.
+  Therefore, they are canonically equivalent.
 \end{proof}
 
 Now we prove that $sk(M,C,N)$ is a finite semisimple $k$-linear category,
@@ -1201,19 +1201,19 @@ Let us temporarily denote by $M\otimes_C^d N$ the category of Definition
 \end{remark}
 
 \begin{remark}
-The reuslts of this section explain the role of duals in the theory
-of the balanced Kelly tensor product (of finitely cocomplete categories).
-Namely, the existence of left or right duals in $C$ allows for the category 
-$M\otimes_C N$ to have finite dimensional hom spaces, whenever $M$, $N$ and 
-$C$ have finite dimensional hom spaces. The relevance of having both left and 
-right duals (rigidity) remains unclear from this perspective, although rigidity 
-is a standing assumption in the most general known
-construction of the balanced Deligne tensor product of finite $k$-linear categories 
-(see \cite{douglas/balanced-product}).\end{remark}
+
+  \noindent This section explains the role of duals in the theory of the
+  balanced Kelly tensor product (of finitely cocomplete categories). Namely,
+  the existence of left or right duals in $C$ allows for the category
+  $M \otimes_C N$ to have finite dimensional hom spaces, whenever $M$, $N$ and
+  $C$ have finite dimensional hom spaces. The relevance of having both left
+  and right duals (rigidity) remains unclear from this perspective, although
+  rigidity is a standing assumption in the most general known construction of
+  the balanced Deligne tensor product of finite $k$-linear categories (see
+  \cite{douglas/balanced-product}).
+\end{remark}
 
 \subsection{The Non-semisimple Case} \label{section-nonsemisimple}
-
-% TODO (Jin) Adds responsibility of A.3.1 on Manuel.
 
 We explain how one can adapt the construction of $sk(M,C,N)$ to the
 non-semisimple case. We will refer to results in
@@ -1440,8 +1440,8 @@ semisimple case.
 % \noindent When $C$ is a finite tensor category and $M,N, M\boxtimes_C N$ are all $k$-linear finite semisimple, we have $$M\boxtimes_C^{sk}N\simeq Fin(M\otimes_C N)\simeq Cau(M\otimes_C N)=sk(M,C,N)\simeq M\boxtimes_C N.$$ See Remark \ref{semisimple_douglas/dualizable-tensor-categories} for conditions on $M,N$ and $C$ under which $M\boxtimes_C N$ is finite semisimple.
 % \end{remark}
 
-
-\subsubsection{Review of necessary results from \cite{kelly/basic-concepts-enriched}}\label{review_kelly}
+% This subsubsection `Results from Kelly' is maintained by Manuel.
+\subsubsection{Results from \cite{kelly/basic-concepts-enriched}}\label{review_kelly}
 
 Here we review the concepts from \cite{kelly/basic-concepts-enriched} that are
 needed in \ref{section-nonsemisimple}.
@@ -1729,9 +1729,8 @@ $\mathcal{F}$-cocontinuous functors $M\boxtimes_C^{sk}N\to L$ are exactly the
 linear functors. Moreover, $\Phi$-comodels $M\otimes_C N\to L$ are exactly the
 bilinear functors. So we obtain Proposition \ref{univ_sk_nonsemisimple}.
 
-% TODO (Jin) Remove this whole section?
-% TODO (Jin) Note that currently some content still refers to content in tmp.3.
-\include{tmp.3}
+%% % TODO Remove this whole section?
+%% \include{tmp.3}
 
 \subsection{Misc. Results}
 
