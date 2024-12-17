@@ -1212,29 +1212,42 @@ Let us temporarily denote by $M\otimes_C^d N$ the category of Definition
 
 \subsection{The Non-semisimple Case} \label{section-nonsemisimple}
 
-We explain how one can adapt the construction of $sk(M,C,N)$ to the
-non-semisimple case. We will refer to results in
-\cite{kelly/basic-concepts-enriched}. For the reader's convenience, we review
-all the necessary results in \ref{review_kelly}.
+In this subsection, we extend the construction of the skein category
+$sk(M,C,N)$ to the non-semisimple skein category $M \boxtimes_C^{sk} N$ for
+$C, M, N$ that are not necessarily semisimple. While this generalizes what we
+did in the main text of the paper, we put it in the appendix because the tools
+we use here rely on several results (either proven or loosely claimed) in
+\cite{kelly/basic-concepts-enriched}. For convenience, we include the
+necessary results from the work of Kelly in section \ref{review_kelly})
 
-\begin{remark}The general idea is to start from $M\otimes_C N$ and then add finite colimits, to
-obtain a finitely cocomplete category $M\boxtimes_C^{sk} N$. 
-However, we also want the functor $M\otimes N \to M\boxtimes^{sk}_C N$ to be right exact
-in each variable. In the case where $M$, $N$ are semisimple this is automatic, so
-we can simply take $M\boxtimes_C^{sk} N=Fin(M\otimes_C N)$, i.e. the finite cocompletion
-of $M\otimes_C N$, i.e. the closure of the image of $$M\otimes_C N\hookrightarrow Fun((M\otimes_C N)^{op},\Vect_k)$$
-under finite colimits. 
+\noindent The general idea is to start from $M\otimes_C N$ and then add finite
+colimits, to obtain a finitely cocomplete category $M\boxtimes_C^{sk} N$.
+However, we also want the functor $M\otimes N \to M\boxtimes^{sk}_C N$ to be
+right exact in each variable.
 
-When $M$, $N$ are not 
-necessarily semisimple, we must simultaneously complete $M\otimes_C N$ under finite
-colimits and also force diagrams coming from colimit diagrams in $M$ and $N$ to become
-colimits in $M\boxtimes_C^{sk} N$. This is achieved below, by defining $M\boxtimes_C^{sk} N$ as the closure of the
-image of $$M\otimes_C N\hookrightarrow Fun((M\otimes_C N)^{op},\Vect_k)\to Bilex((M\otimes_C N)^{op},\Vect_k)$$ 
-under finite colimits, where the first functor is the Yoneda embedding and 
-the second one is right adjoint the the inclusion 
-$Bilex((M\otimes_C N)^{op},\Vect_k)\hookrightarrow Fun((M\otimes_C N)^{op},\Vect_k)$ 
-of the full subcategory  whose objects are those functors wich are left exact in each variable. 
-Note that when $M$, $N$ are semisimple we have $Bilex((M\otimes_C N)^{op},\Vect_k)=Fun((M\otimes_C N)^{op},\Vect_k)$.\end{remark}
+When $M$, $N$ are semisimple, this is automatic, so we can simply take
+$M\boxtimes_C^{sk} N = Fin(M\otimes_C N)$, i.e. the finite cocompletion of
+$M\otimes_C N$, i.e. the closure of the image of $$M\otimes_C N\hookrightarrow
+Fun((M\otimes_C N)^{op},\Vect_k)$$ under finite colimits.
+
+When $M$, $N$ are not necessarily semisimple, we must simultaneously complete
+$M\otimes_C N$ under finite colimits and also force diagrams coming from
+colimit diagrams in $M, N$ to become colimits in $M \boxtimes_C^{sk} N$. This
+is achieved by changing from $Fun$ to $Bilex$ (both are the same in the
+semisimple case). More precisely, we define $M\boxtimes_C^{sk} N$ as the
+closure under finite colimits of the image of
+\[
+  M \otimes_C N
+  \hookrightarrow
+  Fun((M\otimes_C N)^{op},\Vect_k)
+  \xrightarrow{R}
+  Bilex((M\otimes_C N)^{op},\Vect_k),
+\]
+where, the first functor is the Yoneda embedding, and the second functor $R$
+is right adjoint to the inclusion $Bilex((M\otimes_C N)^{op},\Vect_k)
+\hookrightarrow Fun((M\otimes_C N)^{op},\Vect_k)$ of the full subcategory. The
+existence of $R$ is the most nontrivial result from
+\cite{kelly/basic-concepts-enriched}.
 
 \begin{definition}
   \noindent Suppose $C$ is a monoidal category and $M_C, _{C}N$ are finitely
