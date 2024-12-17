@@ -249,8 +249,15 @@ semisimple.
 \noindent In this section, we present the pre-skein category $M \otimes_{C} N$
 and develop some of its properties.
 
-[TODO: I think this definition should include the condition that C has right duals. Although the definition (and some of the results below) makes sense without this condition, it only has the correct universal property (\ref{univ_bal}) when C has right duals. In the appendix we then define the preskein category without assuming duals, but then we need to allow skeins going up and down.]
-[TODO: Maybe add a pointer here to the definition without duals in the appendix.]
+% TODO (Jin) resolves this after reading `rigidity'.
+%% Comment from Manuel: I think this definition should include the condition
+%% that C has right duals. Although the definition (and some of the results
+%% below) makes sense without this condition, it only has the correct
+%% universal property (\ref{univ_bal}) when C has right duals. In the appendix
+%% we then define the preskein category without assuming duals, but then we
+%% need to allow skeins going up and down. Maybe add a pointer here to the
+%% definition without duals in the appendix.
+
 \begin{definition}\label{pre-skein} (Pre-Skein Category)
   For $C$ a monoidal category and $M_C$, $_{C}N$ module categories, we define
   the pre-skein category $M\otimes_C N$ as follows. Its objects are pairs
@@ -567,7 +574,6 @@ why we only need right-dual well in the appendix.]
   equivalence of categories $$Fun(sk(M,C,N),L)\to Fun^{C-bal}(M\otimes N,L).$$
 \end{proposition}
 
-% TODO (Jin) checks this new argument.
 \begin{proof}
   We wish to show the composite $$Fun(sk(M,C,N),L)\to Fun(M\otimes_C N, L)\to
   Fun^{C-bal}(M\otimes N,L)$$ is an equivalence. The first functor is an
@@ -626,6 +632,8 @@ following lemma.
   category. In particular, that assumes $C$ has both right and left duals, while
   some of them could be weakened to $C$ having only right
   duals.
+  % TODO (Manuel) remove this part, but explain when exactly we need rigt
+  % duals, and when exactly do we need both duals (tensor category).
 \end{remark}
 
 \begin{notation}
@@ -670,11 +678,11 @@ $M\otimes N\to Fin(M\otimes_C N)$ (because the first one is $C$-balanced).
   Bilin^{C-bal}(M \otimes N, L)\] defined by composing with $M\otimes N\to
   Fin(M\otimes_C N)$ is an equivalence for any finitely cocomplete $L$.
 
-  \noindent By \ref{univ_box}, composing with $M\otimes N\to M\boxtimes_C N$ gives
+  By \ref{univ_box}, composing with $M\otimes N\to M\boxtimes_C N$ gives
   an equivalence \[Lin(M \boxtimes_{C} N, L) \xrightarrow{\sim}
   Bilin^{C-bal}(M \otimes N, L)\] for any finitely cocomplete category $L$.
 
-  \noindent So $Fin(M\otimes_C N)$ and $M \boxtimes_{C} N$ are both finitely cocomplete
+  So $Fin(M\otimes_C N)$ and $M \boxtimes_{C} N$ are both finitely cocomplete
   categories, characterized by the same universal property, so they are
   canonically equivalent.
 \end{proof}
@@ -807,9 +815,11 @@ algebraic ones (i.e. those defined by modules over algebras).]
   all finite direct sums and all idempotents split.
 \end{definition}
 
-% TODO (Jin checks this comment.) Below we collect well known facts about
-% Cauchy completion in the \Vect_k-enriched setting. Unfortunately, we have
-% not been able to find satisfactory references for all of this.
+% <<Acknowledgement of Gap>> Below we collect well known facts about Cauchy
+% completion in the $\Vect_k$-enriched setting. Unfortunately, we have not
+% been able to find satisfactory references for all of this. The main
+% reference we use is from Kelly's work, which only mentions the Ab-enriched
+% statements (not Vect_k) without proofs.
 
 \begin{definition} \label{definition/cauchy-completion/abstract} (Cauchy Completion (abstract version)) \cite[Sections 5.5 and 5.7]{kelly/basic-concepts-enriched}.
 
@@ -1042,6 +1052,10 @@ We now clarify the role of rigidity in the construction of the balanced tensor
 product. We start by defining $M\otimes_C N$ when $C$ is not assumed to have
 duals.
 
+% TODO (Manuel) Make a remark that says right dual is only good for making the
+% definition of preskeins smaller. And why do we even need both duals? A
+% priori, Kelly tensor product doesn't need any duals.
+
 \begin{definition}\label{pre-skein_no-duals}
 
   \noindent Let $C$ be a monoidal category and let $M_C$ and $_{C}N$ be
@@ -1186,6 +1200,12 @@ Let us temporarily denote by $M\otimes_C^d N$ the category of Definition
 \end{remark}
 
 \subsection{The Non-semisimple Case} \label{section-nonsemisimple}
+
+% TODO (Jin) ensures Manuel explains the main difference between semisimple
+% case and non-semisimple case. 1) Bilex = Fun, 2) Why Bilex? - Key of the
+% reflection (adjoint functor theorem).
+
+% TODO (Jin) Adds responsibility of A.3.1 on Manuel.
 
 We explain how one can adapt the construction of $sk(M,C,N)$ to the
 non-semisimple case. We will refer to results in
@@ -1696,6 +1716,7 @@ should approach it as a collection of standalone items.
 convince the reader that the main theorem is true before it is proven, we
 provide another direct proof for this equivalence:
 
+% TODO (Jin) Make sure that this gets referenced.
 \begin{proposition} \label{proposition/degenerated-main-theorem}
 
   \noindent Let $C$ be a tensor category. Let $M_{C}$ be a right $C$-module
@@ -1782,6 +1803,6 @@ introduction), one may find the following basis theorem useful.
 
 % TODO: (Jin) Some references are broken. Fix them. (e.g. search ``?'' in the compiled pdf file.)
 
-% TODO: (Jin) Change Bilin to BiRex, Lin to Rex, Fun to Lin.
+% TODO: (Jin) Change Bilin to BiRex, Lin to Rex.
 
 % TODO: (Jin) Review pull request 12 carefully.
