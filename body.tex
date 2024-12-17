@@ -249,6 +249,8 @@ semisimple.
 \noindent In this section, we present the pre-skein category $M \otimes_{C} N$
 and develop some of its properties.
 
+[TODO: I think this definition should include the condition that C has right duals. Although the definition (and some of the results below) makes sense without this condition, it only has the correct universal property (\ref{univ_bal}) when C has right duals. In the appendix we then define the preskein category without assuming duals, but then we need to allow skeins going up and down.]
+[TODO: Maybe add a pointer here to the definition without duals in the appendix.]
 \begin{definition}\label{pre-skein} (Pre-Skein Category)
   For $C$ a monoidal category and $M_C$, $_{C}N$ module categories, we define
   the pre-skein category $M\otimes_C N$ as follows. Its objects are pairs
@@ -352,8 +354,12 @@ refer to a morphism $(\phi\otimes\pi\otimes\psi)$ as a skein.\end{remark}
 
 \begin{lemma}\label{beta_natural}
   The collection of morphisms $\beta_{m,c,n}$ defines a natural transformation
-  of functors $\lhd \otimes 1$ and $1 \otimes \rhd$ from $M\otimes C \otimes
-  N$ to $ M\otimes_C N$.
+  \[\begin{tikzcd}
+	{M\otimes C\otimes N} & {M\otimes_C N}
+	\arrow[""{name=0, anchor=center, inner sep=0}, "{\lhd\otimes\id_N}", curve={height=-12pt}, from=1-1, to=1-2]
+	\arrow[""{name=1, anchor=center, inner sep=0}, "{\id_M\otimes\rhd}"', curve={height=12pt}, from=1-1, to=1-2]
+	\arrow["\beta", shorten <=3pt, shorten >=3pt, Rightarrow, from=0, to=1]
+\end{tikzcd}.\]
 \end{lemma}
 
 \begin{proof}
@@ -963,7 +969,7 @@ m_k.$$
   $x=a\oplus c$ (by Lemma \ref{direct_sum}) and so $a\to x$ is the kernel of
   $x\to c$.
 
-  This concludes the proof that $M$ is $k$-linear.
+  This concludes the proof that $M$ is $k$-linear. Notice that we also showed that $F$ is exact.
 
   Finally, we need that $F:M \to N$ is exact. The fact that every short exact
   sequence splits in $M$ follows easily from Lemma \ref{direct_sum}, and the
