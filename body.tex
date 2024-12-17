@@ -950,23 +950,31 @@ Given a category $M$, we define $Mat(M)$ to be the category whose objects are tu
   $F(x_i)\simeq x_i'$ so $x_i$ is simple.
 \end{proof}
 
+\begin{definition}\label{definition/finitely-cocomplete}(Finitely cocomplete category)
+  A category $M$ is finitely cocomplete if it has all finite colimits. 
+\end{definition}
+
+
 \begin{definition} \label{definition/finite-cocompletion} ($Fin(M)$, finite cocompletion)
-  A category $M$ is finitely cocomplete if it has all finite colimits. Given a
-  category $M$, we denote by $Fin(M)$ its finite cocompletion, the
+ Given a category $M$, we denote by $Fin(M)$ its finite cocompletion. It is the
   smallest finitely cocomplete subcategory of $Fun(M^{op},\Vect_k)$ that
   contains all the representables. Its objects can be identified as those
   $X\in Fun(M^{op},\Vect_k)$ such that
   $Hom_{Fun(M^{op},\Vect_k)}(X,-):Fun(M^{op},\Vect_k)\to \Vect_k$ preserves filtered
   colimits. Alternatively, they are the coequalisers of pairs of morphisms
-  between finite coproducts of representables. [TODO: Manuel provides better references for each claim given here.]
-
-  There is fully
-  faithful functor $M\to Fin(M)$ induced by the Yoneda embedding $M \to Fun(M^{op}, \Vect_{k})$. It is characterized by a universal
-  property: for any finitely cocomplete $L$, the restriction map
-  $Lin(Fin(M),L)\to Fun(M,L)$ is an equivalence. References include
+  between finite coproducts of representables. The Yoneda embedding induces a fully
+  faithful functor $M\to Fin(M)$. References include
   \cite[Section 5.7]{kelly/basic-concepts-enriched} and \cite[Section
-  2.2.1]{lopezfranco/tensor-products}.
+  2.2.1]{lopezfranco/tensor-products}. [TODO: Manuel provides better references for each claim given here.]
 \end{definition}
+
+\begin{lemma}\label{univ_prop_fin}
+For any finitely cocomplete $L$, the restriction map $Lin(Fin(M),L)\to Fun(M,L)$ is an equivalence.  
+\end{lemma}
+\begin{proof}
+ See \cite[Section 5.7]{kelly/basic-concepts-enriched} and \cite[Section
+  2.2.1]{lopezfranco/tensor-products}.\end{proof}
+
 
 \begin{remark}
   From our descriptions of $Cau(M)$
