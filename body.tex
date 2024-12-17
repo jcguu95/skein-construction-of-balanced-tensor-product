@@ -796,23 +796,26 @@ algebraic ones (i.e. those defined by modules over algebras).]
 
 \noindent In this subsection, we collect results about completions of categories.
 
+\begin{definition} (Cauchy complete category)
+
+\noindent A ($\Vect_k$-enriched) category $M$ is Cauchy complete if it has all finite direct sums and all idempotents split. \end{definition}
+
 \begin{definition} \label{definition/cauchy-completion/abstract} (Cauchy Completion (Abstract))
-  A category $M$ is Cauchy complete if it has all finite direct sums and all
-  idempotents split [TODO: Manuel explains this]. Given any $M$, we denote by $\Cau(M)$ the Cauchy
-  completion of $M$, the smallest subcategory of $Fun(M^{op},\Vect_k)$
+  Given a category $M$, we denote by $\Cau(M)$ the Cauchy
+  completion of $M$. It is the smallest subcategory of $Fun(M^{op},\Vect_k)$
   containing all the representables and closed under finite direct sums and
   retracts. Its objects can be identified as those $X\in Fun(M^{op},\Vect_k)$
-  such that $\underline{Hom}(X,-):Fun(M^{op},\Vect_k)\to\Vect_k$ preserves all
+  such that $Hom_{Fun(M^{op},\Vect_k)}(X,-):Fun(M^{op},\Vect_k)\to\Vect_k$ preserves all
   small colimits. Alternatively, they are the retracts of finite direct sums
-  of representables.
+  of representables. The Yoneda embedding induces a functor $M\to Cau(M)$. A reference is \cite[Sections 5.5 and 5.7]{kelly/basic-concepts-enriched}.\end{definition}  
+ 
+ \begin{lemma}\label{univ_prop_cau}
+  For any category $M$, the category $Cau(M)$ is Cauchy complete. For any Cauchy complete category $L$, the restriction
+  map $$Fun(\Cau(M),L)\to Fun(M,L)$$ is an equivalence.\end{lemma}
+\begin{proof}
+See \cite[Sections 5.5 and 5.7]{kelly/basic-concepts-enriched}.\end{proof}
 
-  $Cau(M)$ is Cauchy complete [TODO: Manuel explains this], and comes equipped with a functor
-  $M\to \Cau(M)$. It is characterized by a universal property. Namely, given
-  any Cauchy complete category $L$, the restriction
-  map $$Fun(\Cau(M),L)\to Fun(M,L)$$ is an equivalence. A reference is
-  \cite[Sections 5.5 and 5.7]{kelly/basic-concepts-enriched}.
-\end{definition}
-
+  
 \noindent We recall the usual explicit construction of the Cauchy completion $Cau(M)$ of a ($\Vect_k$-enriched) category $M$ in [TODO: Manuel adds reference].
 
 \begin{definition}
