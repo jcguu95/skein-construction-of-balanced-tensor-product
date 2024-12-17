@@ -24,9 +24,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="1.9729351"
-     inkscape:cx="341.623"
-     inkscape:cy="496.9753"
+     inkscape:zoom="5.5803031"
+     inkscape:cx="305.35975"
+     inkscape:cy="403.65191"
      inkscape:window-width="1920"
      inkscape:window-height="1001"
      inkscape:window-x="-9"
@@ -183,72 +183,33 @@
     <circle
        style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-dasharray:0.264583, 0.264583"
        id="path6-7-4-6-7-1-1-1-4-9-2-4-1-6-8-2"
-       cx="-80.036346"
-       cy="98.163322"
+       cx="-71.729927"
+       cy="98.098373"
        r="0.66145831"
        transform="scale(-1,1)" />
     <circle
        style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-dasharray:0.264583, 0.264583"
        id="path6-7-4-6-7-1-1-1-4-9-2-4-8-33-2-8"
-       cx="-85.199265"
-       cy="117.41006"
+       cx="-76.892845"
+       cy="117.34511"
        r="0.66145831"
        transform="scale(-1,1)" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 92.717862,98.264676 h -21.027"
+       d="m 84.411442,98.199726 h -21.027"
        id="path1-6-9-4-7-7-5-3-1-1-0-5-1-2"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 92.575862,117.45367 h -21.027"
+       d="m 84.269442,117.38872 h -21.027"
        id="path1-6-9-4-7-7-5-3-1-1-5-4-5-6-5"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264999;stroke-dasharray:none;stroke-opacity:1"
-       d="m 80.090502,98.290826 5.21371,19.280884"
+       d="m 71.784082,98.225876 5.21371,19.280884"
        id="path24-3-8-3" />
     <g
-       transform="matrix(0.352778,0,0,0.352778,66.806872,107.79033)"
-       ns9:version="1.10.2"
-       ns9:texconverter="pdflatex"
-       ns9:pdfconverter="inkscape"
-       ns9:text="$\\circ$"
-       ns9:preamble="C:\Users\test\AppData\Roaming\inkscape\extensions\textext\default_packages.tex"
-       ns9:scale="1.0"
-       ns9:alignment="middle center"
-       ns9:stroke-to-path="0"
-       ns9:inkscapeversion="1.4"
-       ns9:jacobian_sqrt="0.352778"
-       id="g317">
-      <defs
-         id="id-3ad2e379-fdb7-4299-ade4-6ee0eb5b3dad">
-        <g
-           id="g4">
-          <g
-             id="g3">
-            <path
-               d="m 4.421875,-2.5 c 0,-1.0625 -0.890625,-1.921875 -1.921875,-1.921875 -1.078125,0 -1.953125,0.890625 -1.953125,1.921875 0,1.0625 0.875,1.9375 1.953125,1.9375 1.03125,0 1.921875,-0.859375 1.921875,-1.9375 z M 2.5,-0.953125 c -0.875,0 -1.546875,-0.703125 -1.546875,-1.546875 0,-0.828125 0.6875,-1.53125 1.546875,-1.53125 0.8125,0 1.53125,0.6875 1.53125,1.53125 0,0.859375 -0.71875,1.546875 -1.53125,1.546875 z m 0,0"
-               id="path2" />
-          </g>
-        </g>
-      </defs>
-      <g
-         fill="#000000"
-         fill-opacity="1"
-         id="id-6cbdd03c-1a09-4465-8bd2-c02f02c9ab7d"
-         transform="translate(-149.259,-130.343)">
-        <g
-           transform="translate(148.712,134.765)"
-           id="g316">
-          <path
-             d="m 4.421875,-2.5 c 0,-1.0625 -0.890625,-1.921875 -1.921875,-1.921875 -1.078125,0 -1.953125,0.890625 -1.953125,1.921875 0,1.0625 0.875,1.9375 1.953125,1.9375 1.03125,0 1.921875,-0.859375 1.921875,-1.9375 z M 2.5,-0.953125 c -0.875,0 -1.546875,-0.703125 -1.546875,-1.546875 0,-0.828125 0.6875,-1.53125 1.546875,-1.53125 0.8125,0 1.53125,0.6875 1.53125,1.53125 0,0.859375 -0.71875,1.546875 -1.53125,1.546875 z m 0,0"
-             id="id-591683d7-f77c-4bd2-98a4-97be1c2e5c7c" />
-        </g>
-      </g>
-    </g>
-    <g
-       transform="matrix(0.352778,0,0,0.352778,95.910722,108.52145)"
+       transform="matrix(0.352778,0,0,0.352778,87.604302,108.4565)"
        ns9:version="1.10.2"
        ns9:texconverter="pdflatex"
        ns9:pdfconverter="inkscape"
@@ -287,7 +248,7 @@
       </g>
     </g>
     <g
-       transform="matrix(0.352778,0,0,0.352778,84.868313,106.59261)"
+       transform="matrix(0.352778,0,0,0.352778,76.561893,106.52766)"
        ns9:version="1.10.2"
        ns9:texconverter="pdflatex"
        ns9:pdfconverter="inkscape"
@@ -346,33 +307,33 @@
     <circle
        style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-dasharray:0.264583, 0.264583"
        id="path6-7-4-6-7-1-1-1-4-9-2-4-1-6-8-2-8"
-       cx="-110.23866"
-       cy="98.213684"
+       cx="-101.93224"
+       cy="98.148735"
        r="0.66145831"
        transform="scale(-1,1)" />
     <circle
        style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-dasharray:0.264583, 0.264583"
        id="path6-7-4-6-7-1-1-1-4-9-2-4-8-33-2-8-1"
-       cx="-115.40156"
-       cy="117.46043"
+       cx="-107.09514"
+       cy="117.39548"
        r="0.66145831"
        transform="scale(-1,1)" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 122.92016,98.315026 h -21.027"
+       d="m 114.61374,98.250076 h -21.027"
        id="path1-6-9-4-7-7-5-3-1-1-0-5-1-2-2"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 122.77816,117.50402 h -21.027"
+       d="m 114.47174,117.43907 h -21.027"
        id="path1-6-9-4-7-7-5-3-1-1-5-4-5-6-5-5"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264999;stroke-dasharray:none;stroke-opacity:1"
-       d="m 110.2928,98.341176 5.21371,19.280884"
+       d="m 101.98638,98.276226 5.21371,19.280884"
        id="path24-3-8-3-7" />
     <g
-       transform="matrix(0.352778,0,0,0.352778,114.81063,106.27595)"
+       transform="matrix(0.352778,0,0,0.352778,106.50421,106.211)"
        ns9:version="1.10.2"
        ns9:texconverter="pdflatex"
        ns9:pdfconverter="inkscape"

@@ -995,40 +995,47 @@ We now clarify the role of rigidity in the construction of the balanced tensor p
 Let $C$ be a monoidal category and let $M_C$ and $_{C}N$ be $C$-module categories. We define $M\otimes_C N$ as the category whose objects are pairs $(m,n)$ and whose morphism spaces are the spaces of alternating skeins of arbitrary (finite) length, as depicted below.
 
 \begin{center}\includesvg{graphics/up_down_skein}\end{center}
-This should of course be interpreted as a suitable direct sum of tensor products of morphism spaces in $M$, $C$ and $N$. We impose relations analogous to those in Definition \ref{pre-skein}, plus the two extra relations below (and one obvious reflection of each of those).
+This should of course be interpreted as a suitable direct sum of tensor products of morphism spaces in $M$, $C$ and $N$. We impose relations analogous to those in Definition \ref{pre-skein}, plus the extra relations below.
 
 
 \begin{center}\begin{tabular}{l}
 \includesvg{graphics/relation2} \\
+\includesvg{graphics/relation2b} \\
 \includesvg{graphics/relation3} \\
-\includesvg{graphics/relation4}
-\end{tabular}\end{center} Each of these relations may be applied locally to any finite length alternating skein. In the case of the third relation, after applying it one must apply the composition rule from Definition \ref{pre-skein} to obtain an alternating skein again.
+\includesvg{graphics/relation3b} \\
+\includesvg{graphics/relation4} \\
+\includesvg{graphics/relation4b}
+\end{tabular}\end{center} Each of these relations may be applied locally to any finite length alternating skein. In the case of the last two relations, after applying the relation one must apply the composition rule from Definition \ref{pre-skein} to obtain an alternating skein again.
 
 Composition is defined by horizontally stacking the two diagrams and then applying the composition rule from Definition \ref{pre-skein} if there are parallel diagonal wires.\end{definition}
 
 \begin{definition}(Alternative)
  
-\end{definition}
-Let $C$ be a monoidal category and let $M_C$ and $_{C}N$ be $C$-module categories. We define $M\otimes_C N$ as the category whose objects are pairs $(m,n)$ and whose morphism spaces are freely generated under composition by 
+Let $C$ be a monoidal category and let $M_C$ and $_{C}N$ be $C$-module categories. We define $M\otimes_C N$ by starting with $M\otimes N$, then freely adjoining morphisms $(m\lhd c, n)\to (m,c\rhd n)$ and $(m,c\rhd n)\to (m\lhd c, n)$ for each $m\in M$, $n\in N$ and $c\in C$ (depicted below)
 \begin{center}
-\begin{tabular}{lllll}
-\includesvg{graphics/beta_notext} &  & \includesvg{graphics/beta_inv} &  & \includesvg{graphics/phi_psi} 
+\begin{tabular}{ll}
+\includesvg{graphics/generator1} & \includesvg{graphics/generator2}
+
 \end{tabular}
 \end{center}
 
-subject to the relations
+and finally imposing the relations below (where we denote composition by concatenation).
 
 \begin{center}
 \begin{tabular}{l}
-\includesvg{graphics/relation5} \\ \\
 
 \includesvg{graphics/relation6} \\ \\ 
 
 \includesvg{graphics/relation7} \\ \\
 
-\includesvg{graphics/relation8}
+\includesvg{graphics/relation8} \\ \\
+
+\includesvg{graphics/relation9} where $\pi:c\to\bar{c}$ is a morphism in $C$ \\ \\
+
+\includesvg{graphics/relation10} where $\pi:c\to\bar{c}$ is a morphism in $C$
 \end{tabular}
-\end{center}
+\end{center}\end{definition}
+
 
 \begin{definition}
  
@@ -1042,7 +1049,7 @@ A monoidal category with weak right duals is a monoidal category where every obj
 
 \begin{lemma}\label{up_skein}
   
-Let $C$ be a monoidal category with weak right duals and let $M_C$ and $_{C}N$ be $C$-module categories. Suppose $(c^*,\eta,\epsilon)$ is a weak right dual for $c$. Then \begin{center}\includesvg{graphics/up_skein}\end{center} in $M\otimes_C N$.
+Let $C$ be a monoidal category with weak right duals and let $M_C$ and $_{C}N$ be $C$-module categories. Suppose $(c^*,\eta,\epsilon)$ is a weak right dual for $c$. Then \begin{center}\includesvg{graphics/up_equals_dual_down}\end{center} in $M\otimes_C N$.
 \end{lemma}
 
 \begin{proof} Both sides of the equation are inverse to \begin{center}\includesvg{down_skein}.\end{center} For the left hand side, this follows from the relations in Definition \ref{pre-skein_no-duals}. For the right hand side, it follows from the proof of Lemma \ref{beta_invertible}, where only the fact that $(c^*,\eta,\epsilon)$ is a weak right dual for $c$ is used.\end{proof}

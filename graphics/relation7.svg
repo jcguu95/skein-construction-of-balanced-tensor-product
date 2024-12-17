@@ -24,9 +24,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="1.3950758"
-     inkscape:cx="70.963888"
-     inkscape:cy="73.472713"
+     inkscape:zoom="3.9458702"
+     inkscape:cx="114.80357"
+     inkscape:cy="68.552685"
      inkscape:window-width="1920"
      inkscape:window-height="1001"
      inkscape:window-x="-9"
@@ -224,70 +224,31 @@
     <circle
        style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-dasharray:0.264583, 0.264583"
        id="path6-7-4-6-7-1-1-1-4-9-2-4-1-6-8-2"
-       cx="137.77318"
-       cy="116.90959"
+       cx="129.46675"
+       cy="116.84464"
        r="0.66145831" />
     <circle
        style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-dasharray:0.264583, 0.264583"
        id="path6-7-4-6-7-1-1-1-4-9-2-4-8-33-2-8"
-       cx="132.61026"
-       cy="136.15634"
+       cx="124.30384"
+       cy="136.09138"
        r="0.66145831" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 125.09167,117.01094 h 21.027"
+       d="m 116.78525,116.94599 h 21.027"
        id="path1-6-9-4-7-7-5-3-1-1-0-5-1-2"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 125.23367,136.19993 h 21.027"
+       d="m 116.92725,136.13498 h 21.027"
        id="path1-6-9-4-7-7-5-3-1-1-5-4-5-6-5"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264999;stroke-dasharray:none;stroke-opacity:1"
-       d="m 137.71903,117.03709 -5.21371,19.28088"
+       d="m 129.41261,116.97214 -5.21371,19.28088"
        id="path24-3-8-3" />
     <g
-       transform="matrix(0.352778,0,0,0.352778,120.34968,126.53659)"
-       ns9:version="1.10.2"
-       ns9:texconverter="pdflatex"
-       ns9:pdfconverter="inkscape"
-       ns9:text="$\\circ$"
-       ns9:preamble="C:\Users\test\AppData\Roaming\inkscape\extensions\textext\default_packages.tex"
-       ns9:scale="1.0"
-       ns9:alignment="middle center"
-       ns9:stroke-to-path="0"
-       ns9:inkscapeversion="1.4"
-       ns9:jacobian_sqrt="0.352778"
-       id="g317">
-      <defs
-         id="id-3ad2e379-fdb7-4299-ade4-6ee0eb5b3dad">
-        <g
-           id="g29">
-          <g
-             id="g28">
-            <path
-               d="m 4.421875,-2.5 c 0,-1.0625 -0.890625,-1.921875 -1.921875,-1.921875 -1.078125,0 -1.953125,0.890625 -1.953125,1.921875 0,1.0625 0.875,1.9375 1.953125,1.9375 1.03125,0 1.921875,-0.859375 1.921875,-1.9375 z M 2.5,-0.953125 c -0.875,0 -1.546875,-0.703125 -1.546875,-1.546875 0,-0.828125 0.6875,-1.53125 1.546875,-1.53125 0.8125,0 1.53125,0.6875 1.53125,1.53125 0,0.859375 -0.71875,1.546875 -1.53125,1.546875 z m 0,0"
-               id="path27" />
-          </g>
-        </g>
-      </defs>
-      <g
-         fill="#000000"
-         fill-opacity="1"
-         id="id-6cbdd03c-1a09-4465-8bd2-c02f02c9ab7d"
-         transform="translate(-149.259,-130.343)">
-        <g
-           transform="translate(148.712,134.765)"
-           id="g316">
-          <path
-             d="m 4.421875,-2.5 c 0,-1.0625 -0.890625,-1.921875 -1.921875,-1.921875 -1.078125,0 -1.953125,0.890625 -1.953125,1.921875 0,1.0625 0.875,1.9375 1.953125,1.9375 1.03125,0 1.921875,-0.859375 1.921875,-1.9375 z M 2.5,-0.953125 c -0.875,0 -1.546875,-0.703125 -1.546875,-1.546875 0,-0.828125 0.6875,-1.53125 1.546875,-1.53125 0.8125,0 1.53125,0.6875 1.53125,1.53125 0,0.859375 -0.71875,1.546875 -1.53125,1.546875 z m 0,0"
-             id="id-591683d7-f77c-4bd2-98a4-97be1c2e5c7c" />
-        </g>
-      </g>
-    </g>
-    <g
-       transform="matrix(0.352778,0,0,0.352778,149.45353,127.26771)"
+       transform="matrix(0.352778,0,0,0.352778,141.14711,127.20276)"
        ns9:version="1.10.2"
        ns9:texconverter="pdflatex"
        ns9:pdfconverter="inkscape"
@@ -326,7 +287,7 @@
       </g>
     </g>
     <g
-       transform="matrix(0.352778,0,0,0.352778,136.82362,125.86804)"
+       transform="matrix(0.352778,0,0,0.352778,128.5172,125.80309)"
        ns9:version="1.10.2"
        ns9:texconverter="pdflatex"
        ns9:pdfconverter="inkscape"
@@ -385,31 +346,31 @@
     <circle
        style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-dasharray:0.264583, 0.264583"
        id="path6-7-4-6-7-1-1-1-4-9-2-4-1-6-8-2-8"
-       cx="167.97548"
-       cy="116.95995"
+       cx="159.66905"
+       cy="116.895"
        r="0.66145831" />
     <circle
        style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-dasharray:0.264583, 0.264583"
        id="path6-7-4-6-7-1-1-1-4-9-2-4-8-33-2-8-1"
-       cx="162.81256"
-       cy="136.2067"
+       cx="154.50613"
+       cy="136.14174"
        r="0.66145831" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 155.29397,117.06129 h 21.027"
+       d="m 146.98755,116.99634 h 21.027"
        id="path1-6-9-4-7-7-5-3-1-1-0-5-1-2-2"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 155.43597,136.25028 h 21.027"
+       d="m 147.12955,136.18533 h 21.027"
        id="path1-6-9-4-7-7-5-3-1-1-5-4-5-6-5-5"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264999;stroke-dasharray:none;stroke-opacity:1"
-       d="m 167.92133,117.08744 -5.21371,19.28088"
+       d="m 159.61491,117.02249 -5.21371,19.28088"
        id="path24-3-8-3-7" />
     <g
-       transform="matrix(0.352778,0,0,0.352778,167.2951,125.55138)"
+       transform="matrix(0.352778,0,0,0.352778,158.98868,125.48643)"
        ns9:version="1.10.2"
        ns9:texconverter="pdflatex"
        ns9:pdfconverter="inkscape"
