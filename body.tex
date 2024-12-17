@@ -795,7 +795,7 @@ algebraic ones (i.e. those defined by modules over algebras).]
 
 \noindent In this subsection, we collect results about completions of categories.
 
-\begin{definition} (Cauchy complete category)
+\begin{definition} (Cauchy Complete)
 
   \noindent A ($\Vect_k$-enriched) category $M$ is Cauchy complete if it has
   all finite direct sums and all idempotents split.
@@ -805,35 +805,34 @@ algebraic ones (i.e. those defined by modules over algebras).]
 % Cauchy completion in the \Vect_k-enriched setting. Unfortunately, we have
 % not been able to find satisfactory references for all of this.
 
-\begin{definition} \label{definition/cauchy-completion/abstract} (Cauchy Completion (Abstract))
+\begin{definition} \label{definition/cauchy-completion/abstract} (Cauchy Completion (abstract version)) \cite[Sections 5.5 and 5.7]{kelly/basic-concepts-enriched}.
 
   \noindent Given a category $M$, we denote by $\Cau(M)$ the Cauchy completion
-  of $M$. It is the smallest subcategory of $Fun(M^{op},\Vect_k)$ containing
+  of $M$, the smallest subcategory of $Fun(M^{op},\Vect_k)$ containing
   all the representables and closed under finite direct sums and retracts. Its
-  objects can be identified as those $X\in Fun(M^{op},\Vect_k)$ such that
-  $Hom_{Fun(M^{op},\Vect_k)}(X,-):Fun(M^{op},\Vect_k)\to\Vect_k$ preserves all
+  objects can be identified as those $X \in Fun(M^{op},\Vect_k)$ such that
+  $$Hom_{Fun(M^{op},\Vect_k)}(X,-): Fun(M^{op},\Vect_k) \to \Vect_k$$ preserves all
   small colimits. Alternatively, they are the retracts of finite direct sums
-  of representables. The Yoneda embedding induces a fully faithful functor
-  $M\hookrightarrow Cau(M)$. A reference is \cite[Sections 5.5 and
-    5.7]{kelly/basic-concepts-enriched}.
-\end{definition}  
+  of representables.
+\end{definition}
  
 \begin{lemma}\label{univ_prop_cau}
 
   \noindent For any category $M$, the category $Cau(M)$ is Cauchy complete.
-  For any Cauchy complete category $L$, the restriction
-  map $$Fun(\Cau(M),L)\to Fun(M,L)$$ is an equivalence.
+  The Yoneda embedding induces a fully faithful functor $M \hookrightarrow
+  Cau(M)$, restriction of which gives an equivalence: $$Fun(\Cau(M),L)
+  \xrightarrow{\sim} Fun(M,L)$$ for any Cauchy complete category $L$
 \end{lemma}
 
 \begin{proof}
   See \cite[Sections 5.5 and 5.7]{kelly/basic-concepts-enriched}.
 \end{proof}
 
-\noindent We recall the usual explicit construction of the Cauchy completion
-$Cau(M)$ of a ($\Vect_k$-enriched) category $M$ in TODO: Manuel adds
-reference].
+\noindent Next, we recall the usual explicit construction of the Cauchy
+completion $Cau(M)$ of a ($\Vect_k$-enriched) category $M$ in
+\ref{definition/cauchy-completion/explicit}.
 
-\begin{definition}
+\begin{definition} (Matrix Category)
 
   \noindent Given a category $M$, we define $Mat(M)$ to be the category whose
   objects are tuples of objects in $M$. We denote such an object by
@@ -844,7 +843,7 @@ reference].
   by matrix product.
 \end{definition}
 
-\begin{definition}
+\begin{definition} (Karoubi Completion)
 
   \noindent Given a category $M$, we define its Karoubi completion $Kar(M)$ to
   be the category whose objects are idempotent endomorphisms $m
@@ -864,7 +863,7 @@ reference].
   \]
 \end{definition}
 
-\begin{definition} \label{definition/cauchy-completion/explicit} (Cauchy Completion, Explicit)
+\begin{definition} \label{definition/cauchy-completion/explicit} (Cauchy Completion (explicit version))
 
   \noindent The explicit construction of the Cauchy completion is given by
   $Cau(M)=Kar(Mat(M))$.
@@ -876,7 +875,7 @@ m_k.$$
 
 \noindent We introduce a few lemmas about Cauchy complete categories.
 
-\begin{lemma}\label{direct_sum}
+\begin{lemma} \label{direct_sum}
   Suppose we have a fully faithful functor $F:M\hookrightarrow N$ where $M$ is
   Cauchy complete. If $F(x)=a'\oplus b'$ then we have $x=a\oplus b$ and
   isomorphisms $F(a)\simeq a'$, $F(b)\simeq b'$ such that the following
@@ -994,13 +993,14 @@ m_k.$$
   $F(x_i)\simeq x_i'$ so $x_i$ is simple.
 \end{proof}
 
-\begin{definition}\label{definition/finitely-cocomplete}(Finitely cocomplete category)
+\begin{definition}\label{definition/finitely-cocomplete} (Finitely Cocomplete)
 
-\noindent A category $M$ is finitely cocomplete if it has all finite colimits. 
+  \noindent A category $M$ is finitely cocomplete if it has all finite colimits.
 \end{definition}
 
 
-\begin{definition} \label{definition/finite-cocompletion} ($Fin(M)$, finite cocompletion)
+\begin{definition} \label{definition/finite-cocompletion}
+  (Finite Cocompletion, $Fin(M)$) \cite[Section 5.7]{kelly/basic-concepts-enriched}, \cite[Section 2.2.1]{lopezfranco/tensor-products}.
 
   \noindent Given a category $M$, we denote by $Fin(M)$ its finite
   cocompletion. It is the smallest finitely cocomplete subcategory of
@@ -1009,10 +1009,7 @@ m_k.$$
   $Hom_{Fun(M^{op},\Vect_k)}(X,-):Fun(M^{op},\Vect_k)\to \Vect_k$ preserves
   filtered colimits. Alternatively, they are the coequalisers of pairs of
   morphisms between finite coproducts of representables. The Yoneda embedding
-  induces a fully faithful functor $M\hookrightarrow Fin(M)$. References
-  include \cite[Section 5.7]{kelly/basic-concepts-enriched} and \cite[Section
-    2.2.1]{lopezfranco/tensor-products}.
-  % TODO: Manuel provides better references for each claim given here.
+  induces a fully faithful functor $M\hookrightarrow Fin(M)$.
 \end{definition}
 
 \begin{lemma}\label{univ_prop_fin}
@@ -1029,7 +1026,7 @@ m_k.$$
 \begin{remark}
   From our descriptions of $Cau(M)$
   (\ref{definition/cauchy-completion/abstract}) and $Fin(M)$
-  (\ref{definition/finite-cocompletion}) it is immediate that we have fully
+  (\ref{definition/finite-cocompletion}), it is immediate that we have fully
   faithful functors $M\hookrightarrow Cau(M)\hookrightarrow Fin(M)$.
 \end{remark}
 
