@@ -1,4 +1,6 @@
 \section{Introduction}
+%TODO:Maybe write balanced Deligne tensor product instead of just balanced tensor product (to distinguish from Kelly)?
+%TODO:Pictures: morphisms go right to left. tensor products are read top down.
 
 The notion of a balanced tensor product was first given in
 \cite{etingof/fusion-cat-and-homotopy}, and mainly developed in
@@ -599,14 +601,19 @@ why we only need right-dual well in the appendix.]
 \subsection{Proof of the Main Theorem}
 
 We will show that $M\otimes N\to sk(M,C,N)$ presents $sk(M,C,N)$ as the
-balanced tensor product $M\boxtimes_C N$ whenever $M$, $N$ and $M\boxtimes_C
-N$ are finite semisimple.
+balanced tensor product $M\boxtimes_C N$ whenever $C$ is a finite tensor category 
+and $M$, $N$ and $M\boxtimes_C N$ are finite semisimple.
 
-In \cite{douglas/balanced-product}, the existence of the balanced tensor
-product is established, for the cases where $M,N,C$ are finite. The authors
-also remark that in this case the universal property described above still
-holds when $L$ is just a finitely cocomplete category. We record this in the
-following lemma.
+\begin{remark} In \cite{douglas/balanced-product}, the existence of the balanced tensor
+product is established, when $C$ is a finite tensor category and $M_C,_{C}N$ 
+are finite $k$-linear $C$-module categories. That is the reason for the appearance of the finiteness conditions
+on $M$, $C$, $N$ and the rigidity assumption on $C$ in the statements of all results in
+the present paper which involve the balanced tensor product.\end{remark}
+
+In \cite{douglas/balanced-product} the authors remark that their construction of $M\boxtimes_C N$ 
+allows them to extend its universal property (as described in \ref{definition/balanced-tensor-product})
+to the case when the target category $L$ is just a finitely cocomplete category.
+We record this in the following lemma.
 
 \begin{lemma}\label{univ_box}
 
@@ -621,20 +628,10 @@ following lemma.
 
 \begin{proof}
   If $L$ is assumed to be $k$-linear, this follows from the universal property
-  of the balanced tensor product. Here, $L$ is only assumed to be finite
+  of the balanced tensor product. Here, $L$ is only assumed to be finitely
   cocomplete, and a proof is outlined in \cite[Remark 3.4]{douglas/balanced-product}.
   % NOTE This argument is given by Manuel. Jin does not understand it well.
 \end{proof}
-
-\begin{remark}
-  Some statements in this subsection are based
-  on \cite{douglas/balanced-product}, which assumes $C$ to be a finite tensor
-  category. In particular, that assumes $C$ has both right and left duals, while
-  some of them could be weakened to $C$ having only right
-  duals.
-  % TODO (Manuel) remove this part, but explain when exactly we need rigt
-  % duals, and when exactly do we need both duals (tensor category).
-\end{remark}
 
 \begin{notation}
   Given a category $M$, we denote by $Fin(M)$ its finite cocompletion
@@ -665,7 +662,6 @@ $M\otimes N\to Fin(M\otimes_C N)$ (because the first one is $C$-balanced).
   Suppose $C$ is a finite tensor category and $M_C$ and $_{C}N$ are $k$-linear
   finite semisimple module categories. Then we have a canonical equivalence of
   categories $Fin(M\otimes_C N) \simeq M\boxtimes_C N$.
-    
   % Then the map $Fin(M\otimes_C N)\to M\boxtimes_C N$ corresponding to the
   % $C$-balanced functor $M\otimes N\to M\boxtimes_C N$ via the equivalence of
   % Lemma \ref{univ_finbal} is an equivalence.
@@ -695,7 +691,7 @@ categories.
 % it's demoted to a lemma. In the introduction, we need to make this point
 % clear.
 \begin{lemma}\label{semisimple}
-  Let $C$ be a tensor category, and let $M_C$,$_{C}N$ be $k$-linear finite
+  Let $C$ be a finite tensor category, and let $M_C$,$_{C}N$ be $k$-linear finite
   semisimple $C$-module categories. Suppose $M\boxtimes_C N$ is also
   $k$-linear finite semisimple.
   Then $sk(M,C,N)$ is $k$-linear finite
@@ -711,7 +707,7 @@ categories.
 \end{proof}
 
 \begin{lemma}\label{sk_bal}
-  Let $C$ be a tensor category, and let $M_C$,$_{C}N$ be $k$-linear finite
+  Let $C$ be a finite tensor category, and let $M_C$,$_{C}N$ be $k$-linear finite
   semisimple $C$-module categories. Suppose $M\boxtimes_C N$ is also
   $k$-linear finite semisimple. Then the $C$-balanced functor $M\otimes N\to
   sk(M,C,N)$ exhibits $sk(M,C,N)$ as the balanced tensor product $M\boxtimes_C
@@ -755,7 +751,7 @@ categories.
   \noindent Collecting results
   from \cite{douglas/dualizable-tensor-categories}, we can conclude that
   $M\boxtimes_C N$ is finite semisimple (so lemma \ref{sk_bal} applies) in any
-  of the following situations:
+  of the following situations (in decreasing level of generality):
 
   \begin{itemize}
 
@@ -1035,7 +1031,7 @@ m_k.$$
 \end{lemma}
 
 \begin{proof}
- See \cite[Section 5.7]{kelly/basic-concepts-enriched} and \cite[Section
+ See \cite[Section 5.7]{kelly/basic-concepts-enriched} or \cite[Section
    2.2.1]{lopezfranco/tensor-products}.
 \end{proof}
 
@@ -1051,10 +1047,6 @@ m_k.$$
 We now clarify the role of rigidity in the construction of the balanced tensor
 product. We start by defining $M\otimes_C N$ when $C$ is not assumed to have
 duals.
-
-% TODO (Manuel) Make a remark that says right dual is only good for making the
-% definition of preskeins smaller. And why do we even need both duals? A
-% priori, Kelly tensor product doesn't need any duals.
 
 \begin{definition}\label{pre-skein_no-duals}
 
@@ -1128,7 +1120,7 @@ duals.
 \begin{definition}
  
   \noindent Given an object $c$ in a monoidal category $C$, a weak right dual
-  for $c$ is a triple $(C^*,\eta,\epsilon)$, where $c^*$ is an object in $C$
+  for $c$ is a triple $(c^*,\eta,\epsilon)$, where $c^*$ is an object in $C$
   and $\eta:1\to c\otimes c^*$ and $\epsilon:c^*\otimes c\to 1$ are morphisms
   in $c$, such that the following equation holds.
 
@@ -1159,9 +1151,9 @@ duals.
 \end{proof}
 
 Let us temporarily denote by $M\otimes_C^d N$ the category of Definition
-\ref{pre-skein}, where the diagonal wires flow downwards.
+\ref{pre-skein}, where the diagonal wires flow downwards (when read from right to left).
 
-\begin{lemma}
+\begin{lemma}\label{equivalent_preskeins}
   
   \noindent Let $C$ be a monoidal category with weak right duals and let $M_C$
   and $_{C}N$ be $C$-module categories. Then the two categories $M\otimes_C N$
@@ -1199,11 +1191,18 @@ Let us temporarily denote by $M\otimes_C^d N$ the category of Definition
   $M\otimes_C N$, $M\otimes^u_C N$ and $M\otimes_C^d N$ are isomorphic.
 \end{remark}
 
-\subsection{The Non-semisimple Case} \label{section-nonsemisimple}
+\begin{remark}
+The reuslts of this section explain the role of duals in the theory
+of the balanced Kelly tensor product (of finitely cocomplete categories).
+Namely, the existence of left or right duals in $C$ allows for the category 
+$M\otimes_C N$ to have finite dimensional hom spaces, whenever $M$, $N$ and 
+$C$ have finite dimensional hom spaces. The relevance of having both left and 
+right duals (rigidity) remains unclear from this perspective, although rigidity 
+is a standing assumption in the most general known
+construction of the balanced Deligne tensor product of finite $k$-linear categories 
+(see \cite{douglas/balanced-product}).\end{remark}
 
-% TODO (Jin) ensures Manuel explains the main difference between semisimple
-% case and non-semisimple case. 1) Bilex = Fun, 2) Why Bilex? - Key of the
-% reflection (adjoint functor theorem).
+\subsection{The Non-semisimple Case} \label{section-nonsemisimple}
 
 % TODO (Jin) Adds responsibility of A.3.1 on Manuel.
 
@@ -1211,6 +1210,25 @@ We explain how one can adapt the construction of $sk(M,C,N)$ to the
 non-semisimple case. We will refer to results in
 \cite{kelly/basic-concepts-enriched}. For the reader's convenience, we review
 all the necessary results in \ref{review_kelly}.
+
+\begin{remark}The general idea is to start from $M\otimes_C N$ and then add finite colimits, to
+obtain a finitely cocomplete category $M\boxtimes_C^{sk} N$. 
+However, we also want the functor $M\otimes N \to M\boxtimes^{sk}_C N$ to be right exact
+in each variable. In the case where $M$, $N$ are semisimple this is automatic, so
+we can simply take $M\boxtimes_C^{sk} N=Fin(M\otimes_C N)$, i.e. the finite cocompletion
+of $M\otimes_C N$, i.e. the closure of the image of $$M\otimes_C N\hookrightarrow Fun((M\otimes_C N)^{op},\Vect_k)$$
+under finite colimits. 
+
+When $M$, $N$ are not 
+necessarily semisimple, we must simultaneously complete $M\otimes_C N$ under finite
+colimits and also force diagrams coming from colimit diagrams in $M$ and $N$ to become
+colimits in $M\boxtimes_C^{sk} N$. This is achieved below, by defining $M\boxtimes_C^{sk} N$ as the closure of the
+image of $$M\otimes_C N\hookrightarrow Fun((M\otimes_C N)^{op},\Vect_k)\to Bilex((M\otimes_C N)^{op},\Vect_k)$$ 
+under finite colimits, where the first functor is the Yoneda embedding and 
+the second one is right adjoint the the inclusion 
+$Bilex((M\otimes_C N)^{op},\Vect_k)\hookrightarrow Fun((M\otimes_C N)^{op},\Vect_k)$ 
+of the full subcategory  whose objects are those functors wich are left exact in each variable. 
+Note that when $M$, $N$ are semisimple we have $Bilex((M\otimes_C N)^{op},\Vect_k)=Fun((M\otimes_C N)^{op},\Vect_k)$.\end{remark}
 
 \begin{definition}
   \noindent Suppose $C$ is a monoidal category and $M_C, _{C}N$ are finitely
