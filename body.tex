@@ -30,7 +30,7 @@ It has different interpretations in various fields:
         \cite{douglas/dualizable-tensor-categories}.
 \end{itemize}
 
-Before this work, several algebraic constructions for balanced tensor products
+\noindent Before this work, several algebraic constructions for balanced tensor products
 were known, including categories of modules \cite{douglas/balanced-product},
 internal Hom spaces \cite{davydov/picard}, and generalized categorical centers
 \cite{etingof/fusion-cat-and-homotopy} \cite{kirillov/fact-homo-4d-tqft}
@@ -47,7 +47,7 @@ which strikes a better mix between algebra and topology. It has a few advantages
         \cite{douglas/dualizable-tensor-categories}
         \cite{guu/tv-as-3-functor}.
   \item It generalizes seamlessly to balanced tensor products involving more than
-        two module categories.
+        two module categories: $M_1 \boxtimes_{C_1} M_2 \boxtimes_{C_2} M_3 \ldots$.
         %% (see the picture in definition \ref{definition/skein-category})
         %%
         %% TODO (Manuel) Please add the picture back after explaining the
@@ -95,9 +95,8 @@ which strikes a better mix between algebra and topology. It has a few advantages
 Throughout the whole paper, unless mentioned otherwise, we fix a field $k$ and
 denote by $\Vect_k$ the category of $k$-vector spaces. We assume all
 categories, functors and natural transformations are enriched over $\Vect_k$.
-We always write $\otimes$ instead of $\otimes_k$.
 
-\begin{definition} \label{definition/linearized-product} ($M \otimes N$)
+\begin{definition} \label{definition/linearized-product} (Linearized Product, $M \otimes N$)
 
 \noindent
 Given categories $M,N$ we denote by $M\otimes N$ the category whose objects
@@ -108,7 +107,8 @@ is $M \times N$ with bi-linearlized hom spaces.
 
 \begin{remark} (Products: $M \otimes N$, $M \otimes_C N$, $M \hat{\otimes}_C N$, $M \boxtimes N$, $M \boxtimes_C N$)
 
-  \noindent Throughout the paper, we have at five kinds of products of two categories.
+  \noindent For convenience, we collect the five kinds of categorical products
+  we use throughout the paper.
   \begin{enumerate}
     \item Linearized product $M \otimes N$ (\ref{definition/linearized-product}).
     \item Pre-skein category $M\otimes_C N$ (\ref{pre-skein}).
@@ -116,9 +116,10 @@ is $M \times N$ with bi-linearlized hom spaces.
     \item Deligne tensor product $M \boxtimes N$ (\ref{remark/deligne-tensor-product})
     \item Balanced tensor product $M \boxtimes_C N$ (\ref{definition/balanced-tensor-product})
   \end{enumerate}
+  \vspace{-30pt}
 \end{remark}
 
-\begin{definition} (Linear functor, $Fun(M,N)$, $Lin(M,N)$, $Bilin(M \otimes N, L)$)
+\begin{definition} ((Bi)linear functor, $Fun(M,N)$, $Lin(M,N)$, $Bilin(M \otimes N, L)$)
 
   \noindent Given categories $M, N, L$, denote by $Fun(M,N)$ the category of
   ($\Vect_k$-enriched) functors from $M$ to $N$. A functor $F \in Fun(M,N)$ is
@@ -133,6 +134,16 @@ is $M \times N$ with bi-linearlized hom spaces.
 
 \noindent A $k$-linear category is an abelian category with a compatible $\Vect_{k}$-enrichment.
 \end{definition}
+
+\begin{assumption}
+When $C$ is a $k$-linear monoidal category (e.g. a tensor category), any
+$C$-module category $M$ is assumed to be $k$-linear and the
+structure map $C \otimes M\to M$ is assumed to be bilinear.
+
+Given a right (left, resp.) $C$-module category $M_C$ ($_{C}N$, resp.), we
+denote by $m\lhd c$ ($n \rhd n$, resp.) the object in $M$ ($N$, resp.) that
+results from acting with $c\in C$ on $m\in M$.
+\end{assumption}
 
 \begin{definition} \cite{egno/tensor-cats}
   An object in a $k$-linear category is simple if it has no nontrivial
@@ -155,20 +166,6 @@ finite direct sum of simple objects. When $M,N$ are semisimple, every
 $\Vect_{k}$-enriched functor $M\to L$ is automatically exact (thus linear) and
 every $\Vect_{k}$-enriched functor $M\otimes N\to L$ is automatically
 bilinear.
-
-\begin{assumption}
-When $C$ is a $k$-linear monoidal category (e.g. a tensor category), any
-$C$-module category $M$ is assumed to be $k$-linear by definition and the
-structure map $C\otimes M\to M$ is assumed to be bilinear.
-\end{assumption}
-
-\begin{notation} ($m \lhd c$)
-
-Given a right (left, resp.) $C$-module category $M_C$ ($_{C}N$, resp.), we
-denote by $m\lhd c$ ($n \rhd n$, resp.) the object in $M$ ($N$, resp.) that
-results from acting with $c\in C$ on $m\in M$.
-
-\end{notation}
 
 %% % NOTE Add this section back, or remove it.
 %% \include{tmp.2}
@@ -239,7 +236,7 @@ from \cite{douglas/balanced-product}.
   equivalence, for any $k$-linear category $L$.
 \end{definition}
 
-In \cite{douglas/balanced-product} the authors construct $M\boxtimes_C N$ for
+\noindent In \cite{douglas/balanced-product} the authors construct $M\boxtimes_C N$ for
 any finite tensor category $C$ and any finite $C$-module categories $M, N$,
 thus establishing existence in this setting. They do this by using the fact
 that the module categories $M,N$ can be realized as categories of modules over
@@ -311,7 +308,7 @@ and develop some of its properties.
     \includesvg[width=18cm]{drawing-2}
   \end{center}
 
-  It is straightforward to check that this composition law respects the
+  \noindent It is straightforward to check that this composition law respects the
   relations defining $Hom_{M\otimes_C N}$.
 \end{definition}
 
@@ -498,7 +495,7 @@ category has right and left duals.
   \end{proof}
 
   \begin{remark}
-    Using Lemma \ref{decompose}, the functor $\tilde{F}:M\otimes_C N\to L$
+    Using lemma \ref{decompose}, the functor $\tilde{F}:M\otimes_C N\to L$
     whose composite with $M\otimes N\to M\otimes_C N$ is the $C$-balanced
     functor $F:M\otimes N\to L$ with balancing $\beta$ is also determined by
     $\tilde{F}(m,n)=F(m,n)$,
@@ -594,7 +591,7 @@ category has right and left duals.
   We wish to show the composite $$Fun(sk(M,C,N),L)\to Fun(M\otimes_C N, L)\to
   Fun^{C-bal}(M\otimes N,L)$$ is an equivalence. The first functor is an
   equivalence by the universal property of the Cauchy completion
-  (\ref{univ_prop_cau}) and the second one is an equivalence by Proposition
+  (\ref{univ_prop_cau}) and the second one is an equivalence by proposition
   \ref{univ_bal}.
 \end{proof}
 
@@ -680,7 +677,7 @@ $M\otimes N\to Fin(M\otimes_C N)$ (because the first one is $C$-balanced).
   categories $Fin(M\otimes_C N) \simeq M\boxtimes_C N$.
   % Then the map $Fin(M\otimes_C N)\to M\boxtimes_C N$ corresponding to the
   % $C$-balanced functor $M\otimes N\to M\boxtimes_C N$ via the equivalence of
-  % Lemma \ref{univ_finbal} is an equivalence.
+  % lemma \ref{univ_finbal} is an equivalence.
 \end{proposition}
 
 \begin{proof}
@@ -716,10 +713,10 @@ categories.
 
 \begin{proof}
   We have a fully faithful inclusion $sk(M,C,N)=Cau(M\otimes_C
-  N)\hookrightarrow Fin(M\otimes_C N)$. By Proposition \ref{fin_eq_bal}, we
+  N)\hookrightarrow Fin(M\otimes_C N)$. By proposition \ref{fin_eq_bal}, we
   have $Fin(M\otimes_C N)\simeq M\boxtimes_C N$, because $M$, $N$ are finite
   semisimple. Therefore $sk(M,C,N)$ is finite semisimple, by
-  Proposition \ref{cau_semi}.
+  proposition \ref{cau_semi}.
 \end{proof}
 
 \begin{lemma}\label{sk_bal}
@@ -772,11 +769,11 @@ categories.
   \begin{itemize}
 
     \item $C$ is a finite semisimple tensor category and $_{\Vect_k}M_C$,
-    $_{C}N_{\Vect_k}$ are separable bimodule categories (\cite[Proposition
-    2.5.3, Theorem 2.5.5]{douglas/dualizable-tensor-categories});
+    $_{C}N_{\Vect_k}$ are separable bimodule categories (\cite[proposition
+    2.5.3, theorem 2.5.5]{douglas/dualizable-tensor-categories});
 
     \item $k$ is perfect, $C$ is a separable tensor category and $M,N$ are
-    finite semisimple (\cite[Proposition
+    finite semisimple (\cite[proposition
     2.5.10]{douglas/dualizable-tensor-categories});
 
     \item $k$ has characteristic $0$ and $C,M,N$ are finite semisimple
@@ -785,7 +782,7 @@ categories.
   \end{itemize}
 \end{remark}
 
-Since we are mostly interested in the characteristic zero case, we record the
+\noindent Since we are mostly interested in the characteristic zero case, we record the
 following direct consequence of lemma \ref{sk_bal}.
 
 \begin{theorem} \label{main-theorem-ver-2}
@@ -964,7 +961,7 @@ m_k.$$
   So let $x\to y$ be a morphism in $M$. Then $F(x)\to F(y)$ has a kernel
   $k'\to F(x)$ in $N$. The short exact sequence $0\to k'\to F(x)\to c'\to 0$
   splits, where $c'$ is the cokernel of $k'\to F(x)$. So we get $F(x)=k'\oplus
-  c'$. Then, by Lemma \ref{direct_sum}, we have $x=k\oplus c$ where
+  c'$. Then, by lemma \ref{direct_sum}, we have $x=k\oplus c$ where
   $F(k)\simeq k'$ and
 
   \[
@@ -988,13 +985,13 @@ m_k.$$
   cokernel of $a\hookrightarrow x$, then $F(x)\to F(c)$ is the cokernel of
   $F(a)\hookrightarrow F(x)$ (because $F$ also preserves cokernels). So $0\to
   F(a)\to F(x)\to F(c)\to 0$ is exact, so $F(x)=F(a)\oplus F(c)$. Then
-  $x=a\oplus c$ (by Lemma \ref{direct_sum}) and so $a\to x$ is the kernel of
+  $x=a\oplus c$ (by lemma \ref{direct_sum}) and so $a\to x$ is the kernel of
   $x\to c$.
 
   This concludes the proof that $M$ is $k$-linear, and that $F$ is exact.
 
   Finally, we need that $F:M \to N$ is exact. The fact that every short exact
-  sequence splits in $M$ follows easily from Lemma \ref{direct_sum}, and the
+  sequence splits in $M$ follows easily from lemma \ref{direct_sum}, and the
   facts that $F$ is exact and every short exact sequence splits in $N$.
 \end{proof}
 
@@ -1006,7 +1003,7 @@ m_k.$$
 \end{proposition}
 
 \begin{proof}
-  By Lemma \ref{abelian} the category $M$ also $k$-linear and every short
+  By lemma \ref{abelian} the category $M$ also $k$-linear and every short
   exact sequence splits in $M$, which implies that every object in $M$ is
   projective and also that $F:M\to N$ exact. Since $F$ is faithful and $N$ is
   finite, all hom spaces in $M$ are finite dimensional.
@@ -1017,7 +1014,7 @@ m_k.$$
   simple objects, the same is true of $M$.
 
   If $F(x)=\bigoplus_{i=1}^n x'_i$ with $x'_i$ simple, then by induction and
-  Lemma \ref{direct_sum} we have $x=\bigoplus_{i=1}^n x_i$ where
+  lemma \ref{direct_sum} we have $x=\bigoplus_{i=1}^n x_i$ where
   $F(x_i)\simeq x_i'$ so $x_i$ is simple.
 \end{proof}
 
@@ -1090,7 +1087,7 @@ categories when $C$ has weak duals
 
   This should of course be interpreted as a suitable direct sum of tensor
   products of morphism spaces in $M$, $C$ and $N$. We impose relations
-  analogous to those in Definition \ref{pre-skein}, plus the extra relations
+  analogous to those in definition \ref{pre-skein}, plus the extra relations
   below.
 
   \begin{center}
@@ -1110,7 +1107,7 @@ categories when $C$ has weak duals
   to obtain an alternating skein again.
 
   Composition is defined by horizontally stacking the two diagrams and then
-  applying the composition rule from Definition \ref{pre-skein} if there are
+  applying the composition rule from definition \ref{pre-skein} if there are
   parallel diagonal wires.
 \end{definition}
 
@@ -1189,7 +1186,7 @@ categories when $C$ has weak duals
 \begin{proof}
   There is an obvious functor $M \otimes_C N \to M \hat{\otimes}_C N$ which is a
   bijection on objects. To show that it is an isomorphism on morphism spaces,
-  we use Lemma \ref{up_skein} to reduce every morphism in $M \hat{\otimes}_C N$ to a
+  we use lemma \ref{up_skein} to reduce every morphism in $M \hat{\otimes}_C N$ to a
   morphism in $M\otimes_C N$.
 \end{proof}
 
@@ -1202,9 +1199,9 @@ categories when $C$ has weak duals
 \end{proposition}
 
 \begin{proof}
-  The only difference between this and the proof of Proposition \ref{univ_bal}
+  The only difference between this and the proof of proposition \ref{univ_bal}
   is that now providing an inverse to the balancing $\beta_{m,c,n}:(m\lhd c,
-  n)\to (m,c\rhd n)$ (see Lemma \ref{beta_invertible}) does not require duals,
+  n)\to (m,c\rhd n)$ (see lemma \ref{beta_invertible}) does not require duals,
   as we can simply use the skein with a $c$ wire going up.
 \end{proof}
   
@@ -1295,9 +1292,9 @@ construct the unbalanced Kelly tensor product, starting from $M\otimes N$.
   functors.
 \end{definition}
 
-The subcategory $Bilex((M\otimes_C N)^{op},\Vect_k)\subset Fun((M\otimes_C
-N)^{op},\Vect_k)$ is reflective (see \cite[Theorem
-  6.5]{kelly/basic-concepts-enriched} or Theorem \ref{reflective}) so that we
+\noindent The subcategory $Bilex((M\otimes_C N)^{op},\Vect_k)\subset Fun((M\otimes_C
+N)^{op},\Vect_k)$ is reflective (see \cite[theorem
+  6.5]{kelly/basic-concepts-enriched} or theorem \ref{reflective}) so that we
 have an adjunction
 
 \[\begin{tikzcd}
@@ -1332,7 +1329,7 @@ The functor $K:M\otimes_C N\to Bilex((M\otimes_C N)^{op}$ is bilinear.\end{lemma
   follows from the calculation $$Bilex((M\otimes_C
   N)^{op},\Vect_k)(RY-,\phi)\simeq Fun((M\otimes_C
   N)^{op},\Vect_k)(Y-,\phi)\simeq \phi$$ where the first step uses the
-  adjunction $R\dashv i$ and the second step is the Yoneda Lemma.
+  adjunction $R\dashv i$ and the second step is the Yoneda lemma.
 \end{proof}
 
 \begin{definition}\label{sk_nonsemisimple}
@@ -1353,7 +1350,7 @@ The functor $K:M\otimes_C N\to Bilex((M\otimes_C N)^{op}$ is bilinear.\end{lemma
 \end{lemma}
 
 \begin{proof}
-  This follows from Lemma \ref{right_exact_0} and the fact that the fully
+  This follows from lemma \ref{right_exact_0} and the fact that the fully
   faithful functor $$M\boxtimes_C^{sk}N\hookrightarrow Bilex((M\otimes_C
   N)^{op},\Vect_k)$$ reflects colimits.
 \end{proof}
@@ -1366,7 +1363,7 @@ The functor $K:M\otimes_C N\to Bilex((M\otimes_C N)^{op}$ is bilinear.\end{lemma
 \end{proposition}
 
 \begin{proof}
-  See \cite[Theorem 6.23]{kelly/basic-concepts-enriched} or Theorem
+  See \cite[theorem 6.23]{kelly/basic-concepts-enriched} or theorem
   \ref{f_theory_small_sketch}.
 \end{proof}
 
@@ -1377,7 +1374,7 @@ The functor $K:M\otimes_C N\to Bilex((M\otimes_C N)^{op}$ is bilinear.\end{lemma
 \end{lemma}
 
 \begin{proof}
-By Lemma \ref{univ_bal} we know that $Fun(M\otimes_C N,K)\to
+By lemma \ref{univ_bal} we know that $Fun(M\otimes_C N,K)\to
 Fun^{C-bal}(M\otimes N, L)$ is an equivalence. By definition, a functor
 $M\otimes_C N\to L$ is bilinear if and only if the composite $M\otimes N\to
 M\otimes_C N\to L$ is bilinear, so we obtain an equivalence between the two
@@ -1394,7 +1391,7 @@ subcategories.
 
 \begin{proof}
 
-This follows from Proposition \ref{univ_sk_nonsemisimple} and Lemma
+This follows from proposition \ref{univ_sk_nonsemisimple} and lemma
 \ref{univ_bilin_bal}.
 \end{proof}
 
@@ -1408,10 +1405,10 @@ This follows from Proposition \ref{univ_sk_nonsemisimple} and Lemma
 \end{corollary}
 
 \begin{proof}
-  This follows from Theorem \ref{main_nonsemisimple} and Lemma \ref{univ_box}.
+  This follows from theorem \ref{main_nonsemisimple} and lemma \ref{univ_box}.
 \end{proof}
 
-The following Lemma makes the connection between the construction of
+\noindent The following lemma makes the connection between the construction of
 $M\boxtimes_C^{sk}N$ in this section and our previous constructions in the
 semisimple case.
 
@@ -1430,7 +1427,7 @@ semisimple case.
 
 \begin{proof}
   In this case we have $Bilex((M\otimes_C N)^{op},\Vect_k)=Fun((M\otimes_C
-  N)^{op},\Vect_k)$. So the functor $K$ in Definition \ref{sk_nonsemisimple}
+  N)^{op},\Vect_k)$. So the functor $K$ in definition \ref{sk_nonsemisimple}
   is simply the Yoneda embedding $M\otimes_C N\hookrightarrow Fun((M\otimes_C
   N)^{op},\Vect_k)$ and so $M\boxtimes_C^{sk} N$ is simply the finite
   cocompletion of $M\otimes_C N$.
@@ -1444,7 +1441,7 @@ semisimple case.
 \end{corollary}
 
 \begin{remark}
-  In Lemma \ref{fin_boxsk} and Corollary \label{fin_kelly}, semisimplicity of
+  In lemma \ref{fin_boxsk} and Corollary \label{fin_kelly}, semisimplicity of
   $M$ and $N$ can be replaced by the weaker condition that every short exact
   sequence splits in $M$ and $N$.
 \end{remark}
@@ -1460,8 +1457,8 @@ semisimple case.
 % \noindent When $C$ is a finite tensor category and $M,N, M\boxtimes_C N$ are all $k$-linear finite semisimple, we have $$M\boxtimes_C^{sk}N\simeq Fin(M\otimes_C N)\simeq Cau(M\otimes_C N)=sk(M,C,N)\simeq M\boxtimes_C N.$$ See Remark \ref{semisimple_douglas/dualizable-tensor-categories} for conditions on $M,N$ and $C$ under which $M\boxtimes_C N$ is finite semisimple.
 % \end{remark}
 
-% This subsubsection `Results from Kelly' is maintained by Manuel.
-\subsubsection{Results from \cite{kelly/basic-concepts-enriched}}\label{review_kelly}
+% This subsubsection `Categorical Results of G. M. Kelly' is maintained by Manuel.
+\subsubsection{Categorical Results of G. M. Kelly} \label{review_kelly}
 
 Here we review the concepts from \cite{kelly/basic-concepts-enriched} that are
 needed in \ref{section-nonsemisimple}.
@@ -1540,7 +1537,7 @@ corresponding to $i\in I$.
   C$. The left adjoint is called the reflector.
 \end{definition}
 
-\begin{theorem}\cite[Theorem 6.5]{kelly/basic-concepts-enriched}\label{reflective}
+\begin{theorem}\cite[theorem 6.5]{kelly/basic-concepts-enriched}\label{reflective}
 
   \noindent Let $A$ be a small category and let $\Theta$ be a set of morphisms
   in $Fun(A^{op},\Vect_k)$. Let $C_{\Theta}\subset Fun(A^{op},\Vect_k)$ be the
@@ -1554,7 +1551,7 @@ corresponding to $i\in I$.
 \end{remark}
 
 
-\begin{lemma}\cite[Theorem 6.11]{kelly/basic-concepts-enriched}
+\begin{lemma}\cite[theorem 6.11]{kelly/basic-concepts-enriched}
   Let $(A^{op},\Phi)$ be a small sketch. Then the reflective subcategory
   $C_{\Theta_{\Phi}}\subset Fun(A^{op},\Vect_k)$ is the category $\Phi$-Alg.
 \end{lemma}
@@ -1718,7 +1715,7 @@ This means that precomposition with $Z_{\Phi,\mathcal{F}}$ defines a functor
 $Z_{\Phi,\mathcal{F}}^*:\mathcal{F}-Cocts(D_{\Phi,\mathcal{F}},B)\to\Phi-Com(A,B)$
 for any category $B$.
 
-\begin{theorem}\cite[Theorem 6.23]{kelly/basic-concepts-enriched}\label{f_theory_small_sketch}
+\begin{theorem}\cite[theorem 6.23]{kelly/basic-concepts-enriched}\label{f_theory_small_sketch}
 
   \noindent Let $\mathcal{F}$ be a small set of diagram types and let
   $(A^{op},\Phi)$ be a small $\mathcal{F}$-sketch. Let $B$ be an
@@ -1740,14 +1737,14 @@ require the types to be in the small set $\mathcal{F}$ and the fact that the
 categories $M$, $N$ are small together imply that $\Phi$ is a small set. Then
 one obtains $C_{\Phi}=\Phi-Alg=Bilex((M\otimes_C N)^{op},\Vect_k)$ and
 $K_{\Phi}:M\otimes_C N\to Bilex((M\otimes_C N)^{op},\Vect_k)$ is the functor
-$K$ of Definition \ref{def_K}. Finally, the category $D_{\Phi,\mathcal{F}}$
+$K$ of definition \ref{def_K}. Finally, the category $D_{\Phi,\mathcal{F}}$
 obtained as the closure of the full image of $K_{\Phi}$ in $C_{\Phi}$ under
-finite colimits is exactly $M\boxtimes_C^{sk}N$ (Definition
+finite colimits is exactly $M\boxtimes_C^{sk}N$ (definition
 \ref{sk_nonsemisimple}). Now $\mathcal{F}$-cocomplete is synonymous with
 finitely cocomplete and $\mathcal{F}$-cocontinuous means right exact. So the
 $\mathcal{F}$-cocontinuous functors $M\boxtimes_C^{sk}N\to L$ are exactly the
 linear functors. Moreover, $\Phi$-comodels $M\otimes_C N\to L$ are exactly the
-bilinear functors. So we obtain Proposition \ref{univ_sk_nonsemisimple}.
+bilinear functors. So we obtain proposition \ref{univ_sk_nonsemisimple}.
 
 %% % NOTE Remove this whole section?
 %% \include{tmp.3}
