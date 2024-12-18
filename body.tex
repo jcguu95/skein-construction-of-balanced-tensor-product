@@ -90,6 +90,28 @@ which strikes a better mix between algebra and topology. It has a few advantages
 %% % NOTE Add this section back, or remove it.
 %% \include{tmp.1}
 
+\subsection{Outline}\label{subsection/outline}
+
+% TODO (Manuel) check this outline by Jin.
+
+% TODO (Manuel) decide whether this outline is enough to replace the
+% subsection ''Results`' (written by Manuel), and whether we must mention the
+% ''main lemma'' (see \label{semisimple}).
+\noindent Given a finite semisimple tensor category $C$, and finite semisimple
+module categories $M_C$ and $_CN$ (over $C$), we aim to provide a mathematical
+construction of their balanced tensor product $M \boxtimes_C N$ based on skein
+theory. We start by defining the preskein category $M \otimes_C N$
+(\ref{pre-skein}), which satisfies a similar defining universal property
+(\ref{univ_bal}), but fails to be $k$-linear. We then (Cauchy) complete it to
+the skein category $sk(M,C,N)$ (\ref{definition/balanced-tensor-product}), and
+prove that it is indeed equivalent to $M \boxtimes_C N$ (Main Theorem,
+\ref{main-theorem-ver-2}). This generalizes immediately to the balanced tensor
+product of multiple module categories: $M_1 \boxtimes_{C_1} M_2 \boxtimes_{C_2}
+M_3 \ldots$ ([TODO: Manuel adds a reference]). We then drop the semisimplicity
+assumption, and prove a similar, yet more general, statement
+(\ref{main_nonsemisimple}), where the balanced tensor product is generalized
+to Kelly balanced tensor product.
+
 \subsection{Preliminaries}\label{subsection/preliminaries}
 
 Throughout the whole paper, unless mentioned otherwise, we fix a field $k$ and
@@ -105,16 +127,17 @@ N}((m,n),(m',n'))=Hom_M(m,m')\otimes Hom(n,n')$. Heuristically, $M \otimes N$
 is $M \times N$ with bi-linearlized hom spaces.
 \end{definition}
 
-\begin{remark} (Products: $M \otimes N$, $M \otimes_C N$, $M \hat{\otimes}_C N$, $M \boxtimes N$, $M \boxtimes_C N$)
+\begin{remark} (Categorical Products: $M \otimes N$, $M \otimes_C N$, $M \hat{\otimes}_C N$, $M \boxtimes N$, $M \boxtimes_C N$)
 
-  \noindent For convenience, we collect the five kinds of categorical products
+  \noindent For convenience, we collect the six kinds of categorical products
   we use throughout the paper.
   \begin{enumerate}
     \item Linearized product $M \otimes N$ (\ref{definition/linearized-product}).
     \item Pre-skein category $M\otimes_C N$ (\ref{pre-skein}).
+    \item Deligne tensor product $M \boxtimes N$ (\ref{remark/deligne-tensor-product}).
+    \item Balanced tensor product $M \boxtimes_C N$ (\ref{definition/balanced-tensor-product}).
     \item General Pre-skein category $M \hat{\otimes}_C N$ (\ref{pre-skein_no-duals}).
-    \item Deligne tensor product $M \boxtimes N$ (\ref{remark/deligne-tensor-product})
-    \item Balanced tensor product $M \boxtimes_C N$ (\ref{definition/balanced-tensor-product})
+    \item Kelly Balanced tensor product $M \boxtimes_C^K N$ (\ref{definition/kelly-balanced-tensor-product}).
   \end{enumerate}
   \vspace{-30pt}
 \end{remark}
@@ -672,7 +695,7 @@ $M\otimes N\to Fin(M\otimes_C N)$ (because the first one is $C$-balanced).
 
 \begin{proposition}\label{fin_eq_bal}
 
-  Suppose $C$ is a finite tensor category and $M_C$ and $_{C}N$ are $k$-linear
+  \noindent Suppose $C$ is a finite tensor category and $M_C$ and $_{C}N$ are $k$-linear
   finite semisimple module categories. Then we have a canonical equivalence of
   categories $Fin(M\otimes_C N) \simeq M\boxtimes_C N$.
   % Then the map $Fin(M\otimes_C N)\to M\boxtimes_C N$ corresponding to the
@@ -700,9 +723,6 @@ Now we prove that $sk(M,C,N)$ is a finite semisimple $k$-linear category,
 whenever $M$, $N$ and $M\boxtimes_C N$ are finite semisimple $k$-linear
 categories.
 
-% TODO (Jin) This is really the main theorem, but it's less advertisable, so
-% it's demoted to a lemma. In the introduction, we need to make this point
-% clear.
 \begin{lemma}\label{semisimple}
   Let $C$ be a finite tensor category, and let $M_C$,$_{C}N$ be $k$-linear finite
   semisimple $C$-module categories. Suppose $M\boxtimes_C N$ is also
@@ -1256,7 +1276,8 @@ is right adjoint to the inclusion $Bilex((M\otimes_C N)^{op},\Vect_k)
 existence of $R$ is the most nontrivial result from
 \cite{kelly/basic-concepts-enriched}.
 
-\begin{definition}
+\begin{definition} \label{definition/kelly-balanced-tensor-product} (Kelly Balanced Tensor Product)
+
   \noindent Suppose $C$ is a monoidal category and $M_C, _{C}N$ are finitely
   cocomplete $C$-module categories. Their balanced Kelly tensor product is a
   finitely cocomplete category $M\boxtimes^K_C N$ together with a $C$-balanced
@@ -1265,7 +1286,7 @@ existence of $R$ is the most nontrivial result from
   N, L)$$ for any finitely cocomplete category $L$.
 \end{definition}
 
-Suppose $C$ is a monoidal category and $M_C, _{C}N$ are finitely cocomplete
+\noindent Suppose $C$ is a monoidal category and $M_C, _{C}N$ are finitely cocomplete
 $C$-module categories. We explain how to construct a category
 $M\boxtimes_C^{sk}N$ so that $M\otimes N\to M\boxtimes_C^{sk}N$ presents it as
 the balanced Kelly tensor product of $M$ and $N$ over $C$. We follow very
