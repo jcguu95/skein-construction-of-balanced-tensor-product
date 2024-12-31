@@ -44,7 +44,6 @@ which strikes a better mix between algebra and topology. It has a few advantages
   \item It generalizes seamlessly to balanced tensor products involving more than
         two module categories: $M_1 \boxtimes_{C_1} M_2 \boxtimes_{C_2} M_3 \ldots$.
         (see the picture in \ref{iterated_remark}).
-        %TODO(Jin): check this reference to the picture
       \end{enumerate}
 
 \noindent Some of the (potential) applications of this work are as follows.
@@ -85,7 +84,6 @@ which strikes a better mix between algebra and topology. It has a few advantages
 
 \subsection{Outline}\label{subsection/outline}
 
-%TODO: Jin checks edited outline
 \noindent Given a finite semisimple tensor category $C$, and finite semisimple
 module categories $M_C$ and $_CN$ (over $C$), we aim to provide a mathematical
 construction of their balanced tensor product $M \boxtimes_C N$ based on skein
@@ -802,18 +800,6 @@ following direct consequence of lemma \ref{sk_bal}.
    N$.
 \end{theorem}
 
-[TODO (Jin): check this part about iterated products]
-
-% \begin{definition}
-% 
-% Define $M^{1} \otimes_{C_{1}} M^{2} \otimes_{C_{2}} \ldots \otimes_{C_{n{\text -}1}} M^{n}$
-% 
-% \end{definition}
-% 
-% \begin{definition}
-% Define $sk(M^{1}, C_{1}, M^{2}, C_{2}, \ldots, C_{n{\text -} 1}, M^{n})=Cau(M^{1} \otimes_{C_{1}} M^{2} \otimes_{C_{2}} \ldots \otimes_{C_{n{\text -}1}} M^{n})$. 
-% \end{definition}
-
 \begin{remark}\label{iterated_remark}
 One can immediately generalize \ref{pre-skein} to obtain a definition of $M^{1} \otimes_{C_{1}} M^{2} \otimes_{C_{2}} \ldots \otimes_{C_{n{\text -}1}} M^{n}$ where morphisms are skeins as in the picture below. \begin{center}\includesvg{drawing-3.svg}\end{center}
 
@@ -863,12 +849,11 @@ Just like Theorem \ref{main-theorem-ver-2}, Corollary \ref{iterated} also holds 
   all finite direct sums and all idempotents split.
 \end{definition}
 
-% (TODO Jin reviews this.)
 % <<Acknowledgement of Gap>> Below we collect well known facts about Cauchy
 % completion in the $\Vect_k$-enriched setting. Unfortunately, we have not
 % been able to find satisfactory references for all of this. The main
 % reference we use is from Kelly's work, which only mentions the Ab-enriched
-% statements (not Vect_k) without proofs.
+% statements (instead of Vect_k) without proofs.
 
 \begin{definition} \label{definition/cauchy-completion/abstract} (Cauchy Completion (abstract version)) \cite[Sections 5.5 and 5.7]{kelly/basic-concepts-enriched}.
 
@@ -1832,8 +1817,10 @@ provide another direct proof for this equivalence:
 
   Construct the functor $M \xrightarrow{1_{M} \times 1} M \times C
   \xrightarrow{\boxtimes_{C}} sk(M,C,C)$, where $\boxtimes_{C}$ is the
-  canonical map (\ref{definition/canonical_map}).
- %TODO: Jin checks that this reference is what he wanted
+  canonical map (\ref{canonical_map}).
+  % TODO Manuel fixes this. First, the canonical map there doesn't start from
+  % $M \otimes C$, but $M \times C$. Second, that map isn't called
+  % $\boxtimes_C$ there.
   We contend that this is an
   equivalence of categories. It is straightforward to see that it is indeed
   fully faithful, so it suffices to show that it is essentially surjective. A
