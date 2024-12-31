@@ -577,7 +577,7 @@ category has right and left duals.
   \otimes_{C} N$.
 \end{definition}
 
-\begin{remark}
+\begin{remark}\label{canonical_map}
   There is a $C$-balanced functor $M\otimes N \to sk(M,C,N)$ obtained by the
   composite $M\otimes N\to M\otimes_C N\to sk(M,C,N)$, where the first arrow
   is the $C$-balanced functor in \ref{is_balanced} (thus the composite is
@@ -1816,15 +1816,8 @@ provide another direct proof for this equivalence:
 
   Construct the functor $M \xrightarrow{1_{M} \times 1} M \times C
   \xrightarrow{\boxtimes_{C}} sk(M,C,C)$, where $\boxtimes_{C}$ is the
-  canonical map.
-  %% (\ref{definition/canonical-map})
-  %%
-  %% TODO (Manuel) The reference to definition/canonical-map is currently
-  %% broken. That label currently resides in tmp.3.tex. Please fix this
-  %% reference, or redo the proof.
-  %%
-  %% TODO Manuel and Jin will discuss this in our next meeting.
-  %% https://github.com/jcguu95/skein-construction-of-balanced-tensor-product/commit/99a94ba49171d8a9dc4304806743b0ef12af00ae#r150608796
+  canonical map (\ref{definition/canonical_map}).
+ 
   We contend that this is an
   equivalence of categories. It is straightforward to see that it is indeed
   fully faithful, so it suffices to show that it is essentially surjective. A
