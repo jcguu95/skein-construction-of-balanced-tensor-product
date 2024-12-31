@@ -826,11 +826,14 @@ algebraic ones (i.e. those defined by modules over algebras).]
 % \end{definition}
 
 \begin{remark}
-One can immediately generalize \ref{pre-skein} to obtain a definition of $M^{1} \otimes_{C_{1}} M^{2} \otimes_{C_{2}} \ldots \otimes_{C_{n{\text -}1}} M^{n}$ where morphisms are skeins as in the picture below. 
+One can immediately generalize \ref{pre-skein} to obtain a definition of $M^{1} \otimes_{C_{1}} M^{2} \otimes_{C_{2}} \ldots \otimes_{C_{n{\text -}1}} M^{n}$ where morphisms are skeins as in the picture below. \begin{center}\includesvg{drawing-3.svg}\end{center}
+
+Then one can define $sk(M^{1}, C_{1}, M^{2}, C_{2}, \ldots, C_{n{\text -} 1}, M^{n})$ by Cauchy completion and thus extend Theorem \ref{main-theorem-ver-2} to iterated products.
+
 \end{remark}
 
 
-\begin{corollary}
+\begin{corollary}\label{iterated}
   Suppose that $n \in \mathbb{N}$, $k$ has characteristic $0$, $C_{0}, \ldots,
   C_{n}$ are finite semisimple tensor categories, and $_{C_{0}}M^{1}_{C_{1}},
   _{C_{1}}M^{2}_{C_{2}}, \ldots, _{C_{n{\text -}1}}M^{n}_{C_{n}}$ are
@@ -844,14 +847,18 @@ One can immediately generalize \ref{pre-skein} to obtain a definition of $M^{1} 
   \]
 \end{corollary}
 
-\begin{proof}
+% \begin{proof}
+% 
+% Note that $M^{1} \boxtimes_{C_{1}} M^{2} \boxtimes_{C_{2}} \ldots \boxtimes_{C_{n{\text -}1}} M^{n}$ is an abelian category, characterized by a universal property: the functor $Lin(M^{1} \boxtimes_{C_{1}} M^{2} \boxtimes_{C_{2}} \ldots \boxtimes_{C_{n{\text -}1}} M^{n},L)\to Multilin^{C_i-bal}(M^{1} \otimes_{C_{1}} M^{2} \otimes_{C_{2}} \ldots \otimes_{C_{n{\text -}1}} M^{n},L)$ given by precomposition with $M^{1} \otimes_{C_{1}} M^{2} \otimes_{C_{2}} \ldots \otimes_{C_{n{\text -}1}} M^{n}\to M^{1} \boxtimes_{C_{1}} M^{2} \boxtimes_{C_{2}} \ldots \boxtimes_{C_{n{\text -}1}} M^{n}$ is an equivalence.
+% 
+% We can show that $sk(M^{1}, C_{1}, M^{2}, C_{2}, \ldots, C_{n{\text -} 1}, M^{n})$ satisfies the same universal property by first establishing a universal property of $(M^{1} \otimes_{C_{1}} M^{2} \otimes_{C_{2}} \ldots \otimes_{C_{n{\text -}1}} M^{n})$ analogous to \ref{univ_bal}, and then using the universal property of the Cauchy completion (\ref{univ_prop_cau}). 
+% 
+% Finally, to show that $sk(M^{1}, C_{1}, M^{2}, C_{2}, \ldots, C_{n{\text -} 1}, M^{n})$ is abelian we exploit the fact that  $M^{1} \boxtimes_{C_{1}} M^{2} \boxtimes_{C_{2}} \ldots \boxtimes_{C_{n{\text -}1}} M^{n}$ is semisimple and argue as in \ref{semisimple}.
+% \end{proof}
 
-Note that $M^{1} \boxtimes_{C_{1}} M^{2} \boxtimes_{C_{2}} \ldots \boxtimes_{C_{n{\text -}1}} M^{n}$ is an abelian category, characterized by a universal property: the functor $Lin(M^{1} \boxtimes_{C_{1}} M^{2} \boxtimes_{C_{2}} \ldots \boxtimes_{C_{n{\text -}1}} M^{n},L)\to Multilin^{C_i-bal}(M^{1} \otimes_{C_{1}} M^{2} \otimes_{C_{2}} \ldots \otimes_{C_{n{\text -}1}} M^{n},L)$ given by precomposition with $M^{1} \otimes_{C_{1}} M^{2} \otimes_{C_{2}} \ldots \otimes_{C_{n{\text -}1}} M^{n}\to M^{1} \boxtimes_{C_{1}} M^{2} \boxtimes_{C_{2}} \ldots \boxtimes_{C_{n{\text -}1}} M^{n}$ is an equivalence.
-
-We can show that $sk(M^{1}, C_{1}, M^{2}, C_{2}, \ldots, C_{n{\text -} 1}, M^{n})$ satisfies the same universal property by first establishing a universal property of $(M^{1} \otimes_{C_{1}} M^{2} \otimes_{C_{2}} \ldots \otimes_{C_{n{\text -}1}} M^{n})$ analogous to \ref{univ_bal}, and then using the universal property of the Cauchy completion (\ref{univ_prop_cau}). 
-
-Finally, to show that $sk(M^{1}, C_{1}, M^{2}, C_{2}, \ldots, C_{n{\text -} 1}, M^{n})$ is abelian we exploit the fact that  $M^{1} \boxtimes_{C_{1}} M^{2} \boxtimes_{C_{2}} \ldots \boxtimes_{C_{n{\text -}1}} M^{n}$ is semisimple and argue as in \ref{semisimple}.
-\end{proof}
+\begin{remark}
+Just like Theorem \ref{main-theorem-ver-2}, Corollary \ref{iterated} also holds in any of the more general settings described in Remark \ref{semisimple_douglas/dualizable-tensor-categories}.
+\end{remark}
 
 
 \appendix
