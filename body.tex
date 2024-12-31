@@ -43,10 +43,8 @@ which strikes a better mix between algebra and topology. It has a few advantages
         \cite{guu/tv-as-3-functor}.
   \item It generalizes seamlessly to balanced tensor products involving more than
         two module categories: $M_1 \boxtimes_{C_1} M_2 \boxtimes_{C_2} M_3 \ldots$.
-        %% (see the picture in definition \ref{definition/skein-category}, ``drawing-3.svg''')
-        %%
-        %% TODO (Manuel) Please add the picture back after explaining the
-        %% iterated version, and make a suitable reference here.
+        (see the picture in \ref{iterated_remark}).
+        %TODO(Jin): check this reference to the picture
       \end{enumerate}
 
 \noindent Some of the (potential) applications of this work are as follows.
@@ -87,14 +85,7 @@ which strikes a better mix between algebra and topology. It has a few advantages
 
 \subsection{Outline}\label{subsection/outline}
 
-% TODO (Manuel) check this outline by Jin.
-
-% TODO (Manuel) decide whether this outline is enough to replace the
-% subsection ''Results`' (written by Manuel), and whether we must mention the
-% ''main lemma'' (see \label{semisimple}).
-
-% TODO Manuel makes change as he suggested, and adds 'TODO: Jin checks the
-% change.' afterward.
+%TODO: Jin checks edited outline
 \noindent Given a finite semisimple tensor category $C$, and finite semisimple
 module categories $M_C$ and $_CN$ (over $C$), we aim to provide a mathematical
 construction of their balanced tensor product $M \boxtimes_C N$ based on skein
@@ -102,10 +93,10 @@ theory. We start by defining the preskein category $M \otimes_C N$
 (\ref{pre-skein}), which satisfies a similar defining universal property
 (\ref{univ_bal}), but fails to be $k$-linear. We then (Cauchy) complete it to
 the skein category $sk(M,C,N)$ (\ref{definition/balanced-tensor-product}), and
-prove that it is indeed equivalent to $M \boxtimes_C N$ (Main Theorem,
-\ref{main-theorem-ver-2}). This generalizes immediately to the balanced tensor
+prove that it is indeed equivalent to $M \boxtimes_C N$ when $k$ has characteristic $0$ (Main Theorem,
+\ref{main-theorem-ver-2}). We also obtain analogous results in prime characteristic (see \ref{sk_bal} and \ref{semisimple_douglas/dualizable-tensor-categories}). This generalizes immediately to the balanced tensor
 product of multiple module categories: $M_1 \boxtimes_{C_1} M_2 \boxtimes_{C_2}
-M_3 \ldots$ ([TODO: Manuel adds a reference]). We then drop the semisimplicity
+M_3 \ldots$ (\ref{iterated}). We then drop the semisimplicity
 assumption, and prove a similar, yet more general, statement
 (\ref{main_nonsemisimple}), where the balanced tensor product is generalized
 to Kelly balanced tensor product.
@@ -586,7 +577,7 @@ category has right and left duals.
   \otimes_{C} N$.
 \end{definition}
 
-\begin{remark}
+\begin{remark}\label{canonical_map}
   There is a $C$-balanced functor $M\otimes N \to sk(M,C,N)$ obtained by the
   composite $M\otimes N\to M\otimes_C N\to sk(M,C,N)$, where the first arrow
   is the $C$-balanced functor in \ref{is_balanced} (thus the composite is
@@ -789,11 +780,12 @@ categories.
     $_{C}N_{\Vect_k}$ are separable bimodule categories (\cite[proposition
     2.5.3, theorem 2.5.5]{douglas/dualizable-tensor-categories});
 
-    \item $k$ is perfect, $C$ is a separable tensor category and $M,N$ are
-    finite semisimple (\cite[proposition
+    \item $k$ is perfect, $C$ is a separable tensor category and $M_C,_{C}N$ 
+    are finite semisimple $C$-module categories (\cite[proposition
     2.5.10]{douglas/dualizable-tensor-categories});
 
-    \item $k$ has characteristic $0$ and $C,M,N$ are finite semisimple
+    \item $k$ has characteristic $0$, $C$ is a finite semisimple tensor category 
+    and $M_C,_{C}N$ are finite semisimple $C$-module categories
     (\cite[Corollary 2.6.9]{douglas/dualizable-tensor-categories});
 
   \end{itemize}
@@ -810,23 +802,53 @@ following direct consequence of lemma \ref{sk_bal}.
    N$.
 \end{theorem}
 
-[TODO: Manuel adds the definition of $sk(M^{1},..,M^{n})$, and more
-importantly, explain why such a definition is more ``intuitive'' than the
-algebraic ones (i.e. those defined by modules over algebras).]
+[TODO (Jin): check this part about iterated products]
 
-\begin{corollary}
-  Suppose that $n \in \mathbb{N}$, $k$ has characteristic $0$, $C_{0}, \ldots,
-  C_{n}$ are finite semisimple tensor categories, and $_{C_{0}}M^{1}_{C_{1}},
-  _{C_{1}}M^{2}_{C_{2}}, \ldots, _{C_{n{\text -}1}}M^{n}_{C_{n}}$ are
-  $k$-linear finite semisimple module categories. Then we have an equivalence
-  of $C_{0}{\text -}C_{n}$ module categories
+% \begin{definition}
+% 
+% Define $M^{1} \otimes_{C_{1}} M^{2} \otimes_{C_{2}} \ldots \otimes_{C_{n{\text -}1}} M^{n}$
+% 
+% \end{definition}
+% 
+% \begin{definition}
+% Define $sk(M^{1}, C_{1}, M^{2}, C_{2}, \ldots, C_{n{\text -} 1}, M^{n})=Cau(M^{1} \otimes_{C_{1}} M^{2} \otimes_{C_{2}} \ldots \otimes_{C_{n{\text -}1}} M^{n})$. 
+% \end{definition}
+
+\begin{remark}\label{iterated_remark}
+One can immediately generalize \ref{pre-skein} to obtain a definition of $M^{1} \otimes_{C_{1}} M^{2} \otimes_{C_{2}} \ldots \otimes_{C_{n{\text -}1}} M^{n}$ where morphisms are skeins as in the picture below. \begin{center}\includesvg{drawing-3.svg}\end{center}
+
+Then one can define $sk(M^{1}, C_{1}, M^{2}, C_{2}, \ldots, C_{n{\text -} 1}, M^{n})$ by Cauchy completion and thus extend Theorem \ref{main-theorem-ver-2} to iterated products.
+
+\end{remark}
+
+
+\begin{corollary}\label{iterated}
+  Suppose $k$ is a field of characteristic $0$. Let $C_{1}, \ldots,
+  C_{n-1}$ be finite semisimple tensor categories, and let $M^{1}_{C_{1}},
+  _{C_{1}}M^{2}_{C_{2}}, \ldots, _{C_{n{\text -}1}}M^{n}$ be
+  $k$-linear finite semisimple bimodule categories. Then we have an equivalence
+  of categories
 
   \[
     sk(M^{1}, C_{1}, M^{2}, C_{2}, \ldots, C_{n{\text -} 1}, M^{n})
     \simeq
-    (M^{1} \boxtimes_{C_{1}} M^{2} \boxtimes_{C_{2}} \ldots \boxtimes_{C_{n{\text -}1}} M^{n}).
+    M^{1} \boxtimes_{C_{1}} M^{2} \boxtimes_{C_{2}} \ldots \boxtimes_{C_{n{\text -}1}} M^{n}.
   \]
 \end{corollary}
+
+% \begin{proof}
+% 
+% Note that $M^{1} \boxtimes_{C_{1}} M^{2} \boxtimes_{C_{2}} \ldots \boxtimes_{C_{n{\text -}1}} M^{n}$ is an abelian category, characterized by a universal property: the functor $Lin(M^{1} \boxtimes_{C_{1}} M^{2} \boxtimes_{C_{2}} \ldots \boxtimes_{C_{n{\text -}1}} M^{n},L)\to Multilin^{C_i-bal}(M^{1} \otimes_{C_{1}} M^{2} \otimes_{C_{2}} \ldots \otimes_{C_{n{\text -}1}} M^{n},L)$ given by precomposition with $M^{1} \otimes_{C_{1}} M^{2} \otimes_{C_{2}} \ldots \otimes_{C_{n{\text -}1}} M^{n}\to M^{1} \boxtimes_{C_{1}} M^{2} \boxtimes_{C_{2}} \ldots \boxtimes_{C_{n{\text -}1}} M^{n}$ is an equivalence.
+% 
+% We can show that $sk(M^{1}, C_{1}, M^{2}, C_{2}, \ldots, C_{n{\text -} 1}, M^{n})$ satisfies the same universal property by first establishing a universal property of $(M^{1} \otimes_{C_{1}} M^{2} \otimes_{C_{2}} \ldots \otimes_{C_{n{\text -}1}} M^{n})$ analogous to \ref{univ_bal}, and then using the universal property of the Cauchy completion (\ref{univ_prop_cau}). 
+% 
+% Finally, to show that $sk(M^{1}, C_{1}, M^{2}, C_{2}, \ldots, C_{n{\text -} 1}, M^{n})$ is abelian we exploit the fact that  $M^{1} \boxtimes_{C_{1}} M^{2} \boxtimes_{C_{2}} \ldots \boxtimes_{C_{n{\text -}1}} M^{n}$ is semisimple and argue as in \ref{semisimple}.
+% \end{proof}
+
+\begin{remark}
+Just like Theorem \ref{main-theorem-ver-2}, Corollary \ref{iterated} also holds in any of the more general settings described in Remark \ref{semisimple_douglas/dualizable-tensor-categories}.
+\end{remark}
+
 
 \appendix
 \section{Appendix}
@@ -1477,7 +1499,7 @@ semisimple case.
 % \end{remark}
 
 % This subsubsection `Categorical Results of G. M. Kelly' is maintained by Manuel.
-\subsubsection{Categorical Results of G. M. Kelly} \label{review_kelly}
+\subsubsection{Review of some basic concepts of enriched category theory} \label{review_kelly}
 
 Here we review the concepts from \cite{kelly/basic-concepts-enriched} that are
 needed in \ref{section-nonsemisimple}.
@@ -1765,6 +1787,22 @@ $\mathcal{F}$-cocontinuous functors $M\boxtimes_C^{sk}N\to L$ are exactly the
 linear functors. Moreover, $\Phi$-comodels $M\otimes_C N\to L$ are exactly the
 bilinear functors. So we obtain proposition \ref{univ_sk_nonsemisimple}.
 
+\subsubsection{Questions}
+
+We record here two questions which remain to be explored. 
+
+\begin{question}Suppose $C$ is a monoidal category and $M_C$, $_{C}N$ are module categories (all enriched over $\Vect_k$). Under what conditions is the functor $M\otimes N\to M\otimes_C N$ right exact in each variable?\end{question}
+
+This is true for example in the unbalanced case, i.e. when $C=\Vect_k$. When this holds, one can show that the Yoneda embedding $M\otimes_C N\hookrightarrow Fun((M\otimes_C N)^{op},\Vect_k)$ factors through the inclusion $Bilex((M\otimes_C N)^{op},\Vect_k)\hookrightarrow Fun((M\otimes_C N)^{op},\Vect_k)$, yielding a functor $K:M\otimes_C N\hookrightarrow Bilex((M\otimes_C N)^{op},\Vect_k)$, so we can simply define  $M\boxtimes^{sk}_C N$ as the closure of the image of this functor under finite colimits. This means we don't need to use the reflection $R:Fun((M\otimes_C N)^{op},\Vect_k)\to Bilex((M\otimes_C N)^{op},\Vect_k)$. 
+
+We note that in \ref{section-nonsemisimple} we have not made the assumption that the action of $C$ on $M$ and $N$ is right exact in each variable. It seems like this hypothesis should play a role in answering the question above.
+
+\begin{question}
+If the balanced tensor product of $k$-linear categories $M\boxtimes_C N$ exists, then must it agree with the Kelly tensor product $M\boxtimes_C^{K}N$ (and therefore with $M\boxtimes^{sk}_C N$)?  
+\end{question}
+
+We know this is true when $C$ is a finite tensor category and $M$, $N$ are finite $k$-linear $C$-module categories (see \cite[Remark 3.4]{douglas/balanced-product}.) This also holds in the unbalanced case, i.e. when $C=\Vect_k$ (see \cite[Theorem 18]{lopezfranco/tensor-products}). 
+
 %% % NOTE Remove this whole section?
 %% \include{tmp.3}
 
@@ -1794,15 +1832,8 @@ provide another direct proof for this equivalence:
 
   Construct the functor $M \xrightarrow{1_{M} \times 1} M \times C
   \xrightarrow{\boxtimes_{C}} sk(M,C,C)$, where $\boxtimes_{C}$ is the
-  canonical map.
-  %% (\ref{definition/canonical-map})
-  %%
-  %% TODO (Manuel) The reference to definition/canonical-map is currently
-  %% broken. That label currently resides in tmp.3.tex. Please fix this
-  %% reference, or redo the proof.
-  %%
-  %% TODO Manuel and Jin will discuss this in our next meeting.
-  %% https://github.com/jcguu95/skein-construction-of-balanced-tensor-product/commit/99a94ba49171d8a9dc4304806743b0ef12af00ae#r150608796
+  canonical map (\ref{definition/canonical_map}).
+ %TODO: Jin checks that this reference is what he wanted
   We contend that this is an
   equivalence of categories. It is straightforward to see that it is indeed
   fully faithful, so it suffices to show that it is essentially surjective. A
