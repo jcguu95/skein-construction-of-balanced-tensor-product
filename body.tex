@@ -43,7 +43,7 @@ which strikes a better mix between algebra and topology. It has a few advantages
         \cite{guu/tv-as-3-functor}.
   \item It generalizes seamlessly to balanced tensor products involving more than
         two module categories: $M_1 \boxtimes_{C_1} M_2 \boxtimes_{C_2} M_3 \ldots$.
-        %% (see the picture in definition \ref{definition/skein-category})
+        %% (see the picture in definition \ref{definition/skein-category}, ``drawing-3.svg''')
         %%
         %% TODO (Manuel) Please add the picture back after explaining the
         %% iterated version, and make a suitable reference here.
@@ -280,9 +280,7 @@ semisimple.
 and develop some of its properties.
 
 \begin{definition}\label{pre-skein} (Pre-Skein Category)
-  For $C$ a monoidal category having weak right duals (cf \ref{definition/weak-right-dual})
-  % TODO Manuel and Jin discuss this in our next meeting.
-  % https://github.com/jcguu95/skein-construction-of-balanced-tensor-product/commit/d48e21e5a3118f7da7be16f98d97c314ba7ab82d#r150602008
+  For $C$ a monoidal category having right duals
   and $M_C$, $_{C}N$ module categories, we define
   the pre-skein category $M\otimes_C N$ as follows. Its objects are pairs
   $(m,n)$ with $m\in M$ and $n\in N$, which we denote by $m\boxtimes n$. The
@@ -345,14 +343,11 @@ and develop some of its properties.
 
 \begin{remark}
 
-  \noindent In definition \ref{pre-skein}, we require $C$ to have weak right
-  duals. Algebraically, the construction makes sense even without this
-  assumption, but then it would lose contact with its topological nature. To
-  % TODO Manuel and Jin discuss this part in the next meeting.
-  % https://github.com/jcguu95/skein-construction-of-balanced-tensor-product/commit/d48e21e5a3118f7da7be16f98d97c314ba7ab82d#r150602055
-  clarify the role played by the weak duals, we define the general preskein
-  category cor $C$ not necessarily having weak duals at all
-  in \label{pre-skein_no-duals} and \label{pre-skein_no-duals_2}.
+  \noindent In definition \ref{pre-skein}, we require $C$ to have right duals.
+  The construction makes sense even without this assumption. To clarify the
+  role played by the duals, we define the general preskein category cor $C$
+  not necessarily having duals at all in \ref{pre-skein_no-duals} and
+  \ref{pre-skein_no-duals_2}.
 \end{remark}
 
 \begin{remark}\label{absorb}
@@ -872,6 +867,7 @@ Finally, to show that $sk(M^{1}, C_{1}, M^{2}, C_{2}, \ldots, C_{n{\text -} 1}, 
   all finite direct sums and all idempotents split.
 \end{definition}
 
+% (TODO Jin reviews this.)
 % <<Acknowledgement of Gap>> Below we collect well known facts about Cauchy
 % completion in the $\Vect_k$-enriched setting. Unfortunately, we have not
 % been able to find satisfactory references for all of this. The main
@@ -1272,7 +1268,6 @@ $sk(M,C,N)$ to the non-semisimple skein category $M \boxtimes_C^{sk} N$ for
 $C, M, N$ that are not necessarily semisimple. While this generalizes what we
 did in the main text of the paper, we put it in the appendix because the tools
 we use here rely on several results in
-% TODO Manuel writes explicitly on which analogue results we used are not proven.
 \cite{kelly/basic-concepts-enriched}. For convenience, we include the
 necessary results from \cite{kelly/basic-concepts-enriched} in section \ref{review_kelly})
 
@@ -1825,7 +1820,7 @@ provide another direct proof for this equivalence:
 
   Construct the functor $M \xrightarrow{1_{M} \times 1} M \times C
   \xrightarrow{\boxtimes_{C}} sk(M,C,C)$, where $\boxtimes_{C}$ is the
-  canonical map
+  canonical map.
   %% (\ref{definition/canonical-map})
   %%
   %% TODO (Manuel) The reference to definition/canonical-map is currently
@@ -1834,7 +1829,6 @@ provide another direct proof for this equivalence:
   %%
   %% TODO Manuel and Jin will discuss this in our next meeting.
   %% https://github.com/jcguu95/skein-construction-of-balanced-tensor-product/commit/99a94ba49171d8a9dc4304806743b0ef12af00ae#r150608796
-  .
   We contend that this is an
   equivalence of categories. It is straightforward to see that it is indeed
   fully faithful, so it suffices to show that it is essentially surjective. A
