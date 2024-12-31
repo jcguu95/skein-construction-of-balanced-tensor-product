@@ -827,12 +827,23 @@ following direct consequence of lemma \ref{sk_bal}.
 importantly, explain why such a definition is more ``intuitive'' than the
 algebraic ones (i.e. those defined by modules over algebras).]
 
+\begin{definition}
+
+Define $M^{1} \otimes_{C_{1}} M^{2} \otimes_{C_{2}} \ldots \otimes_{C_{n{\text -}1}} M^{n}$
+
+\end{definition}
+
+\begin{definition}
+Define $sk(M^{1}, C_{1}, M^{2}, C_{2}, \ldots, C_{n{\text -} 1}, M^{n})=Cau(M^{1} \otimes_{C_{1}} M^{2} \otimes_{C_{2}} \ldots \otimes_{C_{n{\text -}1}} M^{n})$. 
+\end{definition}
+
+
 \begin{corollary}
   Suppose that $n \in \mathbb{N}$, $k$ has characteristic $0$, $C_{0}, \ldots,
   C_{n}$ are finite semisimple tensor categories, and $_{C_{0}}M^{1}_{C_{1}},
   _{C_{1}}M^{2}_{C_{2}}, \ldots, _{C_{n{\text -}1}}M^{n}_{C_{n}}$ are
-  $k$-linear finite semisimple module categories. Then we have an equivalence
-  of $C_{0}{\text -}C_{n}$ module categories
+  $k$-linear finite semisimple bimodule categories. Then we have an equivalence
+  of categories
 
   \[
     sk(M^{1}, C_{1}, M^{2}, C_{2}, \ldots, C_{n{\text -} 1}, M^{n})
@@ -840,6 +851,16 @@ algebraic ones (i.e. those defined by modules over algebras).]
     (M^{1} \boxtimes_{C_{1}} M^{2} \boxtimes_{C_{2}} \ldots \boxtimes_{C_{n{\text -}1}} M^{n}).
   \]
 \end{corollary}
+
+\begin{proof}
+
+Note that $M^{1} \boxtimes_{C_{1}} M^{2} \boxtimes_{C_{2}} \ldots \boxtimes_{C_{n{\text -}1}} M^{n}$ is an abelian category, characterized by a universal property: the functor $Lin(M^{1} \boxtimes_{C_{1}} M^{2} \boxtimes_{C_{2}} \ldots \boxtimes_{C_{n{\text -}1}} M^{n},L)\to Multilin^{C_i-bal}(M^{1} \otimes_{C_{1}} M^{2} \otimes_{C_{2}} \ldots \otimes_{C_{n{\text -}1}} M^{n},L)$ given by precomposition with $M^{1} \otimes_{C_{1}} M^{2} \otimes_{C_{2}} \ldots \otimes_{C_{n{\text -}1}} M^{n}\to M^{1} \boxtimes_{C_{1}} M^{2} \boxtimes_{C_{2}} \ldots \boxtimes_{C_{n{\text -}1}} M^{n}$ is an equivalence.
+
+We can show that $sk(M^{1}, C_{1}, M^{2}, C_{2}, \ldots, C_{n{\text -} 1}, M^{n})$ satisfies the same universal property by first establishing a universal property of $(M^{1} \otimes_{C_{1}} M^{2} \otimes_{C_{2}} \ldots \otimes_{C_{n{\text -}1}} M^{n})$ analogous to \ref{univ_bal}, and then using the universal property of the Cauchy completion (\ref{univ_prop_cau}). 
+
+Finally, to show that $sk(M^{1}, C_{1}, M^{2}, C_{2}, \ldots, C_{n{\text -} 1}, M^{n})$ is abelian we exploit the fact that  $M^{1} \boxtimes_{C_{1}} M^{2} \boxtimes_{C_{2}} \ldots \boxtimes_{C_{n{\text -}1}} M^{n}$ is semisimple and argue as in \ref{semisimple}.
+\end{proof}
+
 
 \appendix
 \section{Appendix}
