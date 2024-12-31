@@ -99,6 +99,9 @@ which strikes a better mix between algebra and topology. It has a few advantages
 % TODO (Manuel) decide whether this outline is enough to replace the
 % subsection ''Results`' (written by Manuel), and whether we must mention the
 % ''main lemma'' (see \label{semisimple}).
+
+% TODO Manuel makes change as he suggested, and adds 'TODO: Jin checks the
+% change.' afterward.
 \noindent Given a finite semisimple tensor category $C$, and finite semisimple
 module categories $M_C$ and $_CN$ (over $C$), we aim to provide a mathematical
 construction of their balanced tensor product $M \boxtimes_C N$ based on skein
@@ -285,6 +288,8 @@ and develop some of its properties.
 
 \begin{definition}\label{pre-skein} (Pre-Skein Category)
   For $C$ a monoidal category having weak right duals (cf \ref{definition/weak-right-dual})
+  % TODO Manuel and Jin discuss this in our next meeting.
+  % https://github.com/jcguu95/skein-construction-of-balanced-tensor-product/commit/d48e21e5a3118f7da7be16f98d97c314ba7ab82d#r150602008
   and $M_C$, $_{C}N$ module categories, we define
   the pre-skein category $M\otimes_C N$ as follows. Its objects are pairs
   $(m,n)$ with $m\in M$ and $n\in N$, which we denote by $m\boxtimes n$. The
@@ -350,6 +355,8 @@ and develop some of its properties.
   \noindent In definition \ref{pre-skein}, we require $C$ to have weak right
   duals. Algebraically, the construction makes sense even without this
   assumption, but then it would lose contact with its topological nature. To
+  % TODO Manuel and Jin discuss this part in the next meeting.
+  % https://github.com/jcguu95/skein-construction-of-balanced-tensor-product/commit/d48e21e5a3118f7da7be16f98d97c314ba7ab82d#r150602055
   clarify the role played by the weak duals, we define the general preskein
   category cor $C$ not necessarily having weak duals at all
   in \label{pre-skein_no-duals} and \label{pre-skein_no-duals_2}.
@@ -708,7 +715,7 @@ $M\otimes N\to Fin(M\otimes_C N)$ (because the first one is $C$-balanced).
 \begin{proof}
 
   \noindent Since $M,N$ are semisimple, any functor $M\otimes N\to L$ is
-  bilinear (right exact in both variables).
+  bilinear (right exact in each variable).
   So by \ref{univ_finbal} the map \[Lin(Fin(M \otimes_{C} N), L) \to
   Bilin^{C-bal}(M \otimes N, L)\] defined by composing with $M\otimes N\to
   Fin(M\otimes_C N)$ is an equivalence for any finitely cocomplete $L$.
@@ -1246,9 +1253,10 @@ In this subsection, we extend the construction of the skein category
 $sk(M,C,N)$ to the non-semisimple skein category $M \boxtimes_C^{sk} N$ for
 $C, M, N$ that are not necessarily semisimple. While this generalizes what we
 did in the main text of the paper, we put it in the appendix because the tools
-we use here rely on several results (either proven or loosely claimed) in
+we use here rely on several results in
+% TODO Manuel writes explicitly on which analogue results we used are not proven.
 \cite{kelly/basic-concepts-enriched}. For convenience, we include the
-necessary results from the work of Kelly in section \ref{review_kelly})
+necessary results from \cite{kelly/basic-concepts-enriched} in section \ref{review_kelly})
 
 \noindent The general idea is to start from $M\otimes_C N$ and then add finite
 colimits, to obtain a finitely cocomplete category $M\boxtimes_C^{sk} N$.
@@ -1276,8 +1284,8 @@ closure under finite colimits of the image of
 where, the first functor is the Yoneda embedding, and the second functor $R$
 is right adjoint to the inclusion $Bilex((M\otimes_C N)^{op},\Vect_k)
 \hookrightarrow Fun((M\otimes_C N)^{op},\Vect_k)$ of the full subcategory. The
-existence of $R$ is the most nontrivial result from
-\cite{kelly/basic-concepts-enriched}.
+existence of $R$ is the most substantial result from
+\cite{kelly/basic-concepts-enriched} that we rely on.
 
 \begin{definition} \label{definition/kelly-balanced-tensor-product} (Kelly Balanced Tensor Product)
 
@@ -1805,6 +1813,9 @@ provide another direct proof for this equivalence:
   %% TODO (Manuel) The reference to definition/canonical-map is currently
   %% broken. That label currently resides in tmp.3.tex. Please fix this
   %% reference, or redo the proof.
+  %%
+  %% TODO Manuel and Jin will discuss this in our next meeting.
+  %% https://github.com/jcguu95/skein-construction-of-balanced-tensor-product/commit/99a94ba49171d8a9dc4304806743b0ef12af00ae#r150608796
   .
   We contend that this is an
   equivalence of categories. It is straightforward to see that it is indeed
@@ -1858,27 +1869,32 @@ provide another direct proof for this equivalence:
 \noindent For computation purpose (cf. one of the applications in the
 introduction), one may find the following basis theorem useful.
 
-\begin{proposition} (Basis Theorem) \label{proposition/basis-theorem}
+%% The following proposition is commented out due to
+%% https://github.com/jcguu95/skein-construction-of-balanced-tensor-product/commit/99a94ba49171d8a9dc4304806743b0ef12af00ae#r150602988
 
-  \noindent Let $C$ be a finite, semisimple tensor category, and $M_{C},
-  _{C}N$ be finite, semisimple module categories over $C$. \quad Thus the
-  vector spaces $Hom_{M}(m, m' \lhd c), Hom_{N}(c \rhd n, n')$ have finite
-  bases $\beta(m, m' \lhd c), \beta(c \rhd n, n')$ respectively. \quad Then
-  the hom space $Hom_{p.sk(M,C,N)}(m \boxtimes n, m' \boxtimes n')$ has a
-  linear basis
-  \[
-    \bigsqcup_{c \in Irr(C)} \beta(m, m' \lhd c) \times \beta(c \rhd n, n').
-  \]
-\end{proposition}
+%% \begin{proposition} (Basis Theorem) \label{proposition/basis-theorem}
 
-\begin{proof}
-  This follows immediately from the reductions given in
-  \ref{remark/hom-space-reduction}.
-  % TODO (Manuel) This reference to remark-hom-space-reduction is currently
-  % broken. It is now resided in tmp.3.tex. Jin tried pulling it back, but
-  % Manuel has introduced different notations from Jin's macros \II and \III.
-  % Manuel will fix this reference.
-\end{proof}
+%%   \noindent Let $C$ be a finite, semisimple tensor category, and $M_{C},
+%%   _{C}N$ be finite, semisimple module categories over $C$. \quad Thus the
+%%   vector spaces $Hom_{M}(m, m' \lhd c), Hom_{N}(c \rhd n, n')$ have finite
+%%   bases $\beta(m, m' \lhd c), \beta(c \rhd n, n')$ respectively. \quad Then
+%%   the hom space $Hom_{p.sk(M,C,N)}(m \boxtimes n, m' \boxtimes n')$ has a
+%%   linear basis
+%%   \[
+%%     \bigsqcup_{c \in Irr(C)} \beta(m, m' \lhd c) \times \beta(c \rhd n, n').
+%%   \]
+%% \end{proposition}
+
+%% \begin{proof}
+%%   This follows immediately from the reductions given in
+%%   \ref{remark/hom-space-reduction}.
+%%   % TODO (Manuel) This reference to remark-hom-space-reduction is currently
+%%   % broken. It is now resided in tmp.3.tex. Jin tried pulling it back, but
+%%   % Manuel has introduced different notations from Jin's macros \II and \III.
+%%   % Manuel will fix this reference.
+%% \end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % TODO: (Jin) Asks PIMS what we should do before pushing to arxiv.
 %   FOLLOW UP (Joanne Jiang from PIMS) https://mail.google.com/mail/u/0/#search/PIMS/FMfcgzQVzFTShwbtcjzZTXcZcdkCTBbX
