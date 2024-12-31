@@ -1795,12 +1795,13 @@ We record here two questions which remain to be explored.
 
 This is true for example in the unbalanced case, i.e. when $C=\Vect_k$. When this holds, one can show that the Yoneda embedding $M\otimes_C N\hookrightarrow Fun((M\otimes_C N)^{op},\Vect_k)$ factors through the inclusion $Bilex((M\otimes_C N)^{op},\Vect_k)\hookrightarrow Fun((M\otimes_C N)^{op},\Vect_k)$, yielding a functor $K:M\otimes_C N Bilex((M\otimes_C N)^{op},\Vect_k)$, so we can simply define  $M\boxtimes^{sk}_C N$ as the closure of the image of this functor under finite colimits. This means we dont't need to use the reflection $R:Fun((M\otimes_C N)^{op},\Vect_k)\to Bilex((M\otimes_C N)^{op},\Vect_k)$. 
 
-We note that in \ref{section-nonsemisimple} we have not made the assumption that the action of $C$ on $M$, $N$ is bilinear. It seems like this hypothesis should play a role in answering the question above.
+We note that in \ref{section-nonsemisimple} we have not made the assumption that the action of $C$ on $M$ and $N$ is right exact in each variable. It seems like this hypothesis should play a role in answering the question above.
 
 \begin{question}
- 
+If the balanced tensor product of $k$-linear categories $M\boxtimes_C N$ exists, then must it agree with the Kelly tensor product $M\boxtimes_C^{K}N$ (and therefore with $M\boxtimes^{sk}_C N$)?  
 \end{question}
 
+We know this is true when $C$ is a finite tensor category and $M$, $N$ are finite $k$-linear $C$-module categories (see \cite[Remark 3.4]{douglas/balanced-product}.) This also holds in the unbalanced case, i.e. when $C=\Vect_k$ (see \cite[Theorem 18]{lopezfranco}). 
 
 %% % NOTE Remove this whole section?
 %% \include{tmp.3}
