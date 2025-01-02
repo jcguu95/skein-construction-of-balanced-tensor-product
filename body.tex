@@ -142,16 +142,6 @@ is $M \times N$ with bi-linearlized hom spaces.
 \noindent A $k$-linear category is an abelian category with a compatible $\Vect_{k}$-enrichment.
 \end{definition}
 
-\begin{assumption}
-When $C$ is a $k$-linear monoidal category (e.g. a tensor category), any
-$C$-module category $M$ is assumed to be $k$-linear and the
-structure map $C \otimes M\to M$ is assumed to be bilinear.
-
-Given a right (left, resp.) $C$-module category $M_C$ ($_{C}N$, resp.), we
-denote by $m\lhd c$ ($n \rhd n$, resp.) the object in $M$ ($N$, resp.) that
-results from acting with $c\in C$ on $m\in M$.
-\end{assumption}
-
 \begin{definition} \cite{egno/tensor-cats}
   An object in a $k$-linear category is simple if it has no nontrivial
   subobjects. A $k$-linear category is semisimple if every object splits as a
@@ -173,6 +163,16 @@ finite direct sum of simple objects. When $M,N$ are semisimple, every
 $\Vect_{k}$-enriched functor $M\to L$ is automatically exact (thus linear) and
 every $\Vect_{k}$-enriched functor $M\otimes N\to L$ is automatically
 bilinear.
+
+\begin{assumption}
+When $C$ is a $k$-linear monoidal category (e.g. a tensor category), any
+$C$-module category $M$ is assumed to be $k$-linear and the
+structure map $C \otimes M\to M$ is assumed to be bilinear.
+
+Given a right (left, resp.) $C$-module category $M_C$ ($_{C}N$, resp.), we
+denote by $m\lhd c$ ($n \rhd n$, resp.) the object in $M$ ($N$, resp.) that
+results from acting with $c\in C$ on $m\in M$.
+\end{assumption}
 
 %% % NOTE Add this section back, or remove it.
 %% \include{tmp.2}
