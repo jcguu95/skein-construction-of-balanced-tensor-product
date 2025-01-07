@@ -1,15 +1,8 @@
 # Compilation
 
-Structure is given in `main.tex`.
+To compile the pdf document, run `$ make all`.
 
-To make the document, run `$ make`.
+# Status
 
-# Reference
-
-+ [1] [Karoubi envelope in
-  nLab](https://ncatlab.org/nlab/show/Karoubi+envelope)
-+ [2] [[2406.13438] Computing the center of a fusion
-  category](https://arxiv.org/abs/2406.13438)
-+ [3] Representations of groups - A computational approach-[Klaus Lux, Herbert
-  Pahlings]
-+ [4] Work of Ignacio López Franco
+All todos were resolved at bersion `1.1.0`. It is almost ready to be pushed to
+arXiv. We are waiting for Skyler to double check every thing.

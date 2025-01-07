@@ -1,9 +1,24 @@
-Version 2: git@7f32963
-Version 3: git@1a5ca40
+Version 1.0.2: git@7f32963
+Version 1.0.3: git@1a5ca40
+Version 1.1.0: git@c076413
 
 ------
 
-CHANGE (3 <- 2):
+CHANGE (1.1.0 <- 1.0.3):
+
+This upgrade introduces several significant changes. Notably, Manuel rewrote
+almost all the proofs, broke down Jin's constructions into smaller, more
+manageable steps, and replaced certain proofs with well-known categorical
+theorems. Additionally, Manuel added a proof to address the non-semisimple
+case.
+
+Jin and Manuel collaborated to resolve numerous outstanding tasks. At this
+stage, the plan is for Skyler to thoroughly review everything. If no issues
+are found, we aim to submit this version to arXiv soon.
+
+------
+
+CHANGE (1.0.3 <- 1.0.2):
 
 1. Rewrite some parts in the introduction by make the following clear: (1)
    advantages of our methods (2) the applications. Declare that we do not
