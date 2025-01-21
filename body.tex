@@ -39,19 +39,22 @@ which strikes a better mix between algebra and topology. It has a few advantages
         \cite{douglas/dualizable-tensor-categories}
         \cite{guu/tv-as-3-functor}.
   \item It generalizes seamlessly to balanced tensor products involving more than
-        two module categories: $M_1 \boxtimes_{C_1} M_2 \boxtimes_{C_2} M_3 \ldots$.
+        two module categories: $M_1 \boxtimes_{C_1} M_2 \boxtimes_{C_2} M_3 \boxtimes_{C_3} \ldots \boxtimes_{C_{n-1}} M_n$.
         (see the picture in \ref{iterated_remark}).
       \end{enumerate}
 
 \noindent Some of the (potential) applications of this work are as follows.
 
 \begin{enumerate}
-  \item \textbf{(Skein Nature of eTFTs)} In an upcoming work
-        \cite{guu/tv-as-3-functor}, we build on the main result presented here
-        to prove the long-anticipated theorem that the Turaev-Viro state sum
-        model \cite{viro/turaev-viro-model} naturally and necessarily emerges
-        from the 3-functor in the classification of fully extended field
-        theories \cite{lurie/tqft} \cite{douglas/dualizable-tensor-categories}.
+  \item \textbf{(Skein Nature of eTFTs)} The balanced tensor product is the composition
+        of $1$-morphisms in the symmetric monoidal $3$-category TC 
+        (\cite{douglas/dualizable-tensor-categories}). By providing a diagrammatic description
+        of this composition law, we obtain a new approach to 
+        computing the values of the fully extended $3$-dimensional TQFTs with target TC
+        whose existence is established in \cite{douglas/dualizable-tensor-categories}, using
+        the classification of fully extended field theories (\cite{lurie/tqft}). In ongoing work,
+        we aim to use this approach to relate these fully extended TQFTs to the Turaev-Viro
+        state sum model (\cite{viro/turaev-viro-model}). 
   \item \textbf{(No-Go: Detection of Exotic Smooth Structures)} We anticipate
         that this approach can be extended to a $4$-dimensional analogue of
         Turaev-Viro theory, the Crane-Yetter model. Additionally, a similar
@@ -90,11 +93,10 @@ theory. We start by defining the preskein category $M \otimes_C N$
 the skein category $sk(M,C,N)$ (\ref{definition/balanced-tensor-product}), and
 prove that it is indeed equivalent to $M \boxtimes_C N$ when $k$ has characteristic $0$ (Main Theorem,
 \ref{main-theorem-ver-2}). We also obtain analogous results in prime characteristic (see \ref{sk_bal} and \ref{semisimple_douglas/dualizable-tensor-categories}). This generalizes immediately to the balanced tensor
-product of multiple module categories: $M_1 \boxtimes_{C_1} M_2 \boxtimes_{C_2}
-M_3 \ldots$ (\ref{iterated}). We then drop the semisimplicity
+product of multiple module categories: $M_1 \boxtimes_{C_1} M_2 \boxtimes_{C_2} M_3 \boxtimes_{C_3} \ldots \boxtimes_{C_{n-1}} M_n$
+(\ref{iterated}). We then drop the semisimplicity
 assumption, and prove a similar, yet more general, statement
-(\ref{main_nonsemisimple}), where the balanced tensor product is generalized
-to Kelly balanced tensor product.
+(\ref{cor_nonsemisimple}).
 
 \subsection{Preliminaries}\label{subsection/preliminaries}
 
@@ -108,7 +110,7 @@ categories, functors and natural transformations are enriched over $\Vect_k$.
 Given categories $M,N$ we denote by $M\otimes N$ the category whose objects
 are pairs $(m,n)$ with $m\in M$ and $n\in N$ and where $Hom_{M\otimes
 N}((m,n),(m',n'))=Hom_M(m,m')\otimes Hom(n,n')$. Heuristically, $M \otimes N$
-is $M \times N$ with bi-linearlized hom spaces.
+is $M \times N$ with linearlized hom spaces.
 \end{definition}
 
 \begin{remark} (Categorical Products: $M \otimes N$, $M \otimes_C N$, $M \hat{\otimes}_C N$, $M \boxtimes N$, $M \boxtimes_C N$)
@@ -1421,7 +1423,7 @@ This follows from proposition \ref{univ_sk_nonsemisimple} and lemma
 \ref{univ_bilin_bal}.
 \end{proof}
 
-\begin{corollary}
+\begin{corollary}\label{cor_nonsemisimple}
 
   \noindent Let $C$ be a finite tensor category, $M_C$, $_{C}N$ finite
   $k$-linear $C$-module categories. Then $M\boxtimes_C^{sk}N$ is $k$-linear
@@ -1467,7 +1469,7 @@ semisimple case.
 \end{corollary}
 
 \begin{remark}
-  In lemma \ref{fin_boxsk} and corollary \label{fin_kelly}, semisimplicity of
+  In lemma \ref{fin_boxsk} and corollary \ref{fin_kelly}, semisimplicity of
   $M$ and $N$ can be replaced by the weaker condition that every short exact
   sequence splits in $M$ and $N$.
 \end{remark}
