@@ -1,8 +1,7 @@
+# Status
+
+Version `1.1.1` is posted on [arXiv: [2501.05747] Skein Construction of Balanced Tensor Products](https://arxiv.org/abs/2501.05747).
+
 # Compilation
 
 To compile the pdf document, run `$ make all`.
-
-# Status
-
-All todos were resolved at bersion `1.1.0`. It is almost ready to be pushed to
-arXiv. We are waiting for Skyler to double check every thing.
