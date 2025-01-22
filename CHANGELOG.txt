@@ -7,7 +7,8 @@ Version 1.1.1: git@c57642e
 
 CHANGE (...):
 
-+ commit 13befad: We removed the reference to our future paper from bibliography, making the claim less formal.
++ commit 13befad, 7c506be: We removed the reference to our future paper from
+  bibliography, making the claim less formal.
 
 CHANGE (1.1.1 <- 1.1.0):
 
