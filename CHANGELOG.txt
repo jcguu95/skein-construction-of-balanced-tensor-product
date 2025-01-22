@@ -5,6 +5,10 @@ Version 1.1.1: git@c57642e
 
 ------
 
+CHANGE (...):
+
++ commit 13befad: We removed the reference to our future paper from bibliography, making the claim less formal.
+
 CHANGE (1.1.1 <- 1.1.0):
 
 The remaining tasks were addressed with minor fixes. We compiled this version
