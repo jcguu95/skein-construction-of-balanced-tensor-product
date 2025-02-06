@@ -37,7 +37,7 @@ which strikes a better mix between algebra and topology. It has a few advantages
         values of the fully extended $3$D field theories associated to a
         fusion category by the cobordism hypothesis \cite{lurie/tqft}
         \cite{douglas/dualizable-tensor-categories}.
-        We are pursuing it in progress.
+        We are pursuing this as work in progress.
   \item It generalizes seamlessly to balanced tensor products involving more than
         two module categories: $M_1 \boxtimes_{C_1} M_2 \boxtimes_{C_2} M_3 \boxtimes_{C_3} \ldots \boxtimes_{C_{n-1}} M_n$.
         (see the picture in \ref{iterated_remark}).
@@ -333,6 +333,13 @@ and develop some of its properties.
 \end{definition}
 
 \begin{remark}
+
+In \cite[Definition 3.1]{rowett/thesis} a very similar (and equivalent) formula is given to define the $Hom$ spaces of a category, whose additive completion is then called the \textit{ladder category}. In \cite[Definition 3.20]{karlsson/deformation-quantization} the authors define a \textit{coend relative tensor product} which is equivalent to our preskein category. They use a coend formula for the $Hom$ spaces, which is equivalent to our formula.   
+ 
+\end{remark}
+
+
+\begin{remark}
  
   \noindent We abuse notation by writing $(\phi\otimes\pi\otimes\psi)$ to
   denote the corresponding equivalence class in $Hom_{M\otimes_C
@@ -344,7 +351,7 @@ and develop some of its properties.
 
   \noindent In definition \ref{pre-skein}, we require $C$ to have right duals.
   The construction makes sense even without this assumption. To clarify the
-  role played by the duals, we define the general preskein category cor $C$
+  role played by the duals, we define the general preskein category for $C$
   not necessarily having duals at all in \ref{pre-skein_no-duals} and
   \ref{pre-skein_no-duals_2}.
 \end{remark}
@@ -434,7 +441,8 @@ and develop some of its properties.
   \begin{center}\includesvg{graphics/calculation1}\end{center}
 
   \noindent The proof that $\beta_{m,c,n}^{-1}\circ\beta_{m,c,n}=\id_{m\lhd c,n}$ is
-  similar, using the same snake equation.
+  similar, using the same snake equation. 
+  \noindent Note that the same argument is given in \cite[Proposition 3.3]{rowett/thesis}.
 \end{proof}
 
 \begin{proposition}\label{is_balanced}
@@ -810,6 +818,11 @@ following direct consequence of lemma \ref{sk_bal}.
    N$.
 \end{theorem}
 
+\begin{remark}
+A different proof of this Theorem in the case where $M,C,N$ are finite semisimple and $k=\mathbb{C}$ is sketched in \cite[Proposition 10]{barter/domain-walls}.  
+\end{remark}
+
+
 \begin{remark}\label{iterated_remark}
 One can immediately generalize \ref{pre-skein} to obtain a definition of $M^{1} \otimes_{C_{1}} M^{2} \otimes_{C_{2}} \ldots \otimes_{C_{n{\text -}1}} M^{n}$ where morphisms are skeins as in the picture below. \begin{center}\includesvg{drawing-3.svg}\end{center}
 
@@ -1171,11 +1184,18 @@ categories when $C$ has weak duals
     \includesvg{graphics/relation7} \\ \\
     \includesvg{graphics/relation8} \\ \\
     \includesvg{graphics/relation9} where $\pi:c\to\bar{c}$ is a morphism in $C$ \\ \\
-    \includesvg{graphics/relation10} where $\pi:c\to\bar{c}$ is a morphism in $C$
+    \includesvg{graphics/relation10} where $\pi:c\to\bar{c}$ is a morphism in $C$ \\ \\
+     \includesvg{graphics/relation11} \\ \\
+      \includesvg{graphics/relation12}
   \end{tabular}
 \end{center}
 
 \end{definition}
+
+\begin{remark}
+The above definition also appears in \cite[Definition 1.16]{cooke/excision-skein} and in \cite{tambara/duality}, although in the latter it is the additive completion of what we call general preskeins that is being considered. Note that in \cite{cooke/excision-skein} there are additional pentagon and triangle identities. We omit those, as explained in Remark %TODO: add here a ref to the remark about why we igonre associators and unitors%.
+\end{remark}
+
 
 \begin{definition} \label{definition/weak-right-dual}
  
@@ -1788,7 +1808,7 @@ We record here two questions which remain to be explored.
 
 \begin{question}Suppose $C$ is a monoidal category and $M_C$, $_{C}N$ are module categories (all enriched over $\Vect_k$). Under what conditions is the functor $M\otimes N\to M\otimes_C N$ right exact in each variable?\end{question}
 
-This is true for example in the unbalanced case, i.e. when $C=\Vect_k$. When this holds, one can show that the Yoneda embedding $M\otimes_C N\hookrightarrow Fun((M\otimes_C N)^{op},\Vect_k)$ factors through the inclusion $Bilex((M\otimes_C N)^{op},\Vect_k)\hookrightarrow Fun((M\otimes_C N)^{op},\Vect_k)$, yielding a functor $K:M\otimes_C N\hookrightarrow Bilex((M\otimes_C N)^{op},\Vect_k)$, so we can simply define  $M\boxtimes^{sk}_C N$ as the closure of the image of this functor under finite colimits. This means we don't need to use the reflection $R:Fun((M\otimes_C N)^{op},\Vect_k)\to Bilex((M\otimes_C N)^{op},\Vect_k)$. 
+This is true for example in the unbalanced case, i.e. when $C=\Vect_k$. When this holds, one can show that the Yoneda embedding $M\otimes_C N\hookrightarrow Fun((M\otimes_C N)^{op},\Vect_k)$ factors through the inclusion $Bilex((M\otimes_C N)^{op},\Vect_k)\hookrightarrow Fun((M\otimes_C N)^{op},\Vect_k)$, yielding a fully faithful functor $K:M\otimes_C N\hookrightarrow Bilex((M\otimes_C N)^{op},\Vect_k)$, so we can simply define  $M\boxtimes^{sk}_C N$ as the closure of the image of this functor under finite colimits. This means we don't need to use the reflection $R:Fun((M\otimes_C N)^{op},\Vect_k)\to Bilex((M\otimes_C N)^{op},\Vect_k)$. In particular, since the functor $M\otimes_C N\to M\boxtimes_C N$ becomes fully faithful, we obtain an explicit formula for the spaces of morphisms $Hom_{M\boxtimes_C N}(m\boxtimes n, m'\boxtimes n')$. 
 
 We note that in \ref{section-nonsemisimple} we have not made the assumption that the action of $C$ on $M$ and $N$ is right exact in each variable. It seems like this hypothesis should play a role in answering the question above.
 
