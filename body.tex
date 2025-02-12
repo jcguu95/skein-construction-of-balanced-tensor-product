@@ -33,15 +33,19 @@ In this paper, we provide a topological construction based on skein theory,
 which strikes a better mix between algebra and topology. It has a few advantages:
 
 \begin{enumerate}
-  \item Its topological nature allows us to use skein diagrams to calculate the
-        values of the fully extended $3$D field theories associated to a
-        fusion category by the cobordism hypothesis \cite{lurie/tqft}
-        \cite{douglas/dualizable-tensor-categories}.
-        We are pursuing this as work in progress.
+  \item Its topological nature allows one to use skein diagrams to calculate
+        within the balanced tensor products.
   \item It generalizes seamlessly to balanced tensor products involving more than
         two module categories: $M_1 \boxtimes_{C_1} M_2 \boxtimes_{C_2} M_3 \boxtimes_{C_3} \ldots \boxtimes_{C_{n-1}} M_n$.
         (see the picture in \ref{iterated_remark}).
       \end{enumerate}
+
+\noindent In fact, due to these advantages, many people have been using the
+skein theoretic descriptions for years, despite the lack of a rigorous proof
+that balanced tensor products can indeed be thought in this way. In
+particular, we are not claiming any novelty in this construction; the merit of
+this paper is only to establish such a proof under general enough conditions.
+See section \ref{section/past-work} for more details.
 
 \noindent Some of the (potential) applications of this work are as follows.
 
@@ -81,6 +85,31 @@ which strikes a better mix between algebra and topology. It has a few advantages
 
 %% % NOTE Add this section back, or remove it.
 %% \include{tmp.1}
+
+\subsection{Past Work}\label{section/past-work}
+
+\noindent This paper presents a rigorous proof that balanced tensor products
+can be understood in a skein-theoretic framework. While the underlying idea is
+not new—many researchers, particularly in physics, have been working with this
+perspective for years—no formal proof has been widely recognized or explicitly
+documented. Interestingly, it appears that some have even assumed such a proof
+already existed. Although we cannot account for every relevant publication, we
+believe that no prior work has provided the level of rigor we establish here
+(our main contribution). Here, we provide some publications that we are aware
+of.
+
+\begin{itemize}
+  \item The following provide (similar) skein constructions without proving
+    its relation to the balanced tensor product: \cite[definition
+      1.16]{cooke/excision-skein}, \cite{tambara/duality}, \cite[definition
+      3.1]{rowett/thesis} (constructs the same hom spaces as we do),
+    \cite[definition 3.20]{karlsson/deformation-quantization} (defines the
+    \textit{coend relative tensor product} equivalent to our preskein
+    category).
+  \item A proof of our main theorem under a restricted set of assumptions
+    (finite semisimple over $k=\mathbb{C}$) is loosely sketched in
+    \cite[proposition 10]{barter/domain-walls}.
+\end{itemize}
 
 \subsection{Outline}\label{subsection/outline}
 
@@ -176,13 +205,14 @@ denote by $m\lhd c$ ($n \rhd n$, resp.) the object in $M$ ($N$, resp.) that
 results from acting with $c\in C$ on $m\in M$.
 \end{assumption}
 
-\begin{notation}
+\begin{remark}\label{remark/omission-of-details}
 Objects in a monoidal category, formed using tensor products, are naturally
 expressed with multiple pairs of parentheses. For example, one such object
 could be written as $((x \otimes (y \otimes z)) \otimes w)$. However, since
-any two such parenthesized expressions are canonically isomorphic, we abuse
-notation and write it as $(x \otimes y \otimes z \otimes w)$.
-\end{notation}
+any two such parenthesized expressions are canonically isomorphic (via a
+composition of some unitors and associators), we abuse notation and write it
+as $(x \otimes y \otimes z \otimes w)$.
+\end{remark}
 
 %% % NOTE Add this section back, or remove it.
 %% \include{tmp.2}
